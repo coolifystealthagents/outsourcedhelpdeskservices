@@ -1,0 +1,1 @@
+export function GET(){return new Response(`User-agent: *\nAllow: /\nSitemap: https://outsourcedhelpdeskservices.com/sitemap.xml\n`,{headers:{'content-type':'text/plain'}})}

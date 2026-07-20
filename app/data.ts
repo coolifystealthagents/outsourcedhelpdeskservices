@@ -64,6 +64,48 @@ export const blogPosts = [
 ] as const;
 export const stats = [{label:'Typical savings target',value:'30-60%',note:'depends on role, management, and local hiring plan'},{label:'Best pilot length',value:'14 days',note:'enough time to test quality before scaling'},{label:'Start with',value:'5-10 tasks',note:'clear recurring tasks beat vague job descriptions'}] as const;
 
+export const blogDetails = {
+  'outsourced-helpdesk-services-provider-questions': {
+    keyTakeaways: [
+      'Ask who owns ticket quality before you ask about headcount.',
+      'Request a sample escalation rule for security, refunds, billing, outages, and angry customers.',
+      'Run a 14-day pilot with ticket notes, QA review, and one named manager.',
+    ],
+    sections: [
+      {
+        heading: 'Start with ticket ownership',
+        body: 'A helpdesk provider should explain who opens tickets, who answers them, who checks the answer, and who fixes bad handoffs. If that sounds vague on the sales call, it will feel worse after launch.',
+      },
+      {
+        heading: 'Check data access before the first login',
+        body: 'Support staff often need CRM, billing, chat, inbox, and knowledge base access. Give the least access that lets them do the job. Keep refunds, account changes, security resets, and customer data exports behind manager approval until trust is proven.',
+      },
+      {
+        heading: 'Ask for the QA sample, not the promise',
+        body: 'Good providers can show the scorecard they use for tone, accuracy, response time, notes, and escalation. You do not need a polished deck. You need the simple checklist a manager will use every week.',
+      },
+    ],
+    comparisonRows: [
+      ['Topic', 'Weak answer', 'Better answer'],
+      ['Coverage', 'We can cover any hours.', 'Here is the shift, backup plan, holiday plan, and manager overlap.'],
+      ['Escalation', 'The agent will ask when needed.', 'Billing, refunds, outages, VIP customers, and security tickets go to this owner.'],
+      ['Quality', 'We monitor performance.', 'We score five tickets per agent each week and review misses with examples.'],
+      ['Tools', 'Just send logins.', 'Use role-based access, a password manager, and an approval list for sensitive work.'],
+    ],
+    script: 'Before we start, can you send the QA scorecard, the escalation rules, and the first two weeks of manager check-ins you recommend for our helpdesk?',
+    sources: [
+      { name: 'Zendesk CX Trends 2024', url: 'https://www.zendesk.com/customer-experience-trends/' },
+      { name: 'NIST Digital Identity Guidelines', url: 'https://pages.nist.gov/800-63-3/' },
+      { name: 'HDI Support Center Practices and Salary Report', url: 'https://www.thinkhdi.com/library/supportworld/2024/hdi-support-center-practices-salary-report' },
+    ],
+    faqs: [
+      { q: 'How many questions should I ask a helpdesk provider?', a: 'Ask enough to test ownership, access, QA, coverage, escalation, and replacement rules. Ten focused questions beat a long vendor checklist.' },
+      { q: 'Should outsourced helpdesk staff get full system access?', a: 'No. Start with the access needed for common tickets. Keep billing changes, data exports, and security resets behind approval.' },
+      { q: 'What is a fair pilot length?', a: 'Fourteen days is usually enough to test ticket notes, tone, response time, escalations, and manager follow-up before you add more work.' },
+    ],
+  },
+} as const;
+
 export const stealthOffer = {
   partner: 'Stealth Agents',
   promise: 'Get a managed offshore staffing plan built around the work you need removed from your plate.',

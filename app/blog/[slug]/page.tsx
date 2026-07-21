@@ -68,7 +68,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   return (
     <>
       <Header />
-      <main className="section">
+      <main className="section guide-page">
         <JsonLd data={schema} />
         <article className="container guide-article" style={{ maxWidth: 920 }}>
           <p className="eyebrow">{site.brand} guide</p>

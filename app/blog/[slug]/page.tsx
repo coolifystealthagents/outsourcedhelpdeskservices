@@ -22,50 +22,10 @@ type BlogDetail = {
   faqs: readonly { q: string; a: string }[];
 };
 
-function fallbackDetail(): BlogDetail {
-  return {
-    keyTakeaways: [
-      'Start with one clear support lane before you add more work.',
-      'Write the approval rules before you hand over customer tickets.',
-      'Review the first two weeks with real ticket examples.',
-    ],
-    sections: [
-      {
-        heading: 'The short answer',
-        body: 'Start with one role, a short task list, and a weekly scorecard. Do not outsource a messy process until examples and rules are clear.',
-      },
-      {
-        heading: 'What to prepare',
-        body: 'Prepare sample replies, tool access rules, daily output targets, and escalation rules for anything sensitive.',
-      },
-      {
-        heading: 'What to ask',
-        body: 'Ask who screens the worker, who checks quality, what happens if fit is poor, and how passwords and customer data are handled.',
-      },
-    ],
-    comparisonRows: [
-      ['Plan item', 'Loose setup', 'Safer setup'],
-      ['Scope', 'General help with tickets', 'Named ticket types, limits, and examples'],
-      ['Access', 'Shared logins', 'Role-based access and approval rules'],
-      ['Review', 'Check in when needed', 'Daily notes and weekly ticket QA'],
-    ],
-    script: 'Can you show me the first-week plan, the QA checklist, and the escalation rules before we start?',
-    sources: [
-      { name: 'NIST Digital Identity Guidelines', url: 'https://pages.nist.gov/800-63-3/' },
-      { name: 'Zendesk customer service resources', url: 'https://www.zendesk.com/resources/' },
-    ],
-    faqs: [
-      { q: 'What should I outsource first?', a: 'Start with repeat tickets that have examples, clear answers, and a manager escalation rule.' },
-      { q: 'How should I check quality?', a: 'Review real tickets each week for accuracy, tone, notes, response time, and correct escalation.' },
-      { q: 'When should I add more work?', a: 'Add work after the first support lane is stable for at least two weeks.' },
-    ],
-  };
-}
-
 export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = blogPosts.find((x) => x.slug === slug) || blogPosts[0];
-  const detail = (blogDetails as Record<string, BlogDetail>)[post.slug] || fallbackDetail();
+  const detail = blogDetails[post.slug as keyof typeof blogDetails] as BlogDetail;
   const url = `${baseUrl}/blog/${post.slug}`;
   const schema = {
     '@context': 'https://schema.org',

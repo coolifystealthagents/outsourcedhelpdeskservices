@@ -1,5 +1,52 @@
-import { Header, Footer, CTA } from '../../components';
+import { Header, Footer, CTA, JsonLd } from '../../components';
 import { services, site } from '../../data';
-export function generateStaticParams(){return services.map(s=>({slug:s.slug}))}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const s=services.find(x=>x.slug===slug);return {title:s?.title||'Service',description:s?.desc}}
-export default async function Service({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const s=services.find(x=>x.slug===slug)||services[0];return <><Header/><main><section className='service-hero'><div className='container two'><div><p className='eyebrow'>{site.brand} service</p><h1>{s.title}</h1><p className='lead'>{s.desc}</p><a className='btn' href='/contact'>Plan this role</a></div><div className='hero-card'><img src={site.serviceImage} alt={`${s.title} offshore service team`}/></div></div></section><section className='section'><div className='container cards'><div className='card'><h3>Best tasks</h3><ul><li>Recurring work with examples</li><li>Inbox, tickets, reports, updates, or follow-up</li><li>Tasks with clear approval rules</li></ul></div><div className='card'><h3>Quality controls</h3><ul><li>Daily notes</li><li>Weekly scorecard</li><li>Escalation list</li></ul></div><div className='card'><h3>First week</h3><ul><li>Tool access</li><li>Sample work</li><li>Review call</li></ul></div></div></section><CTA/></main><Footer/></>}
+
+export function generateStaticParams() {
+  return services.map((service) => ({ slug: service.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
+  return { title: service?.title || 'Help desk service', description: service?.desc };
+}
+
+export default async function Service({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug) || services[0];
+  const url = `https://${site.domain.toLowerCase()}/services/${service.slug}`;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: service.title,
+        description: service.desc,
+        url,
+        provider: { '@type': 'Organization', name: site.brand, url: `https://${site.domain.toLowerCase()}` },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `https://${site.domain.toLowerCase()}` },
+          { '@type': 'ListItem', position: 2, name: service.title, item: url },
+        ],
+      },
+    ],
+  };
+
+  return <>
+    <Header />
+    <main>
+      <JsonLd data={schema} />
+      <section className="service-hero"><div className="container two"><div><p className="eyebrow">Help desk service</p><h1>{service.title}</h1><p className="lead">{service.desc}</p><a className="btn" href="/contact">Plan this support lane</a></div><div className="hero-card"><img src={site.serviceImage} alt={`Team reviewing ${service.title.toLowerCase()}`} /></div></div></section>
+      <section className="section"><div className="container cards">
+        <div className="card"><h2>Good tasks to start with</h2><ul>{service.bestTasks.map((item) => <li key={item}>{item}</li>)}</ul></div>
+        <div className="card"><h2>Keep these controls in place</h2><ul>{service.controls.map((item) => <li key={item}>{item}</li>)}</ul></div>
+        <div className="card"><h2>Set up the first week</h2><ul>{service.firstWeek.map((item) => <li key={item}>{item}</li>)}</ul></div>
+      </div></section>
+      <CTA />
+    </main>
+    <Footer />
+  </>;
+}

@@ -8,27 +8,53 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
-  return { title: service?.title || 'Help desk service', description: service?.desc };
+  const title = service?.title || 'Help desk service';
+  const description = service?.desc || 'Plan a clear help desk support lane with written tasks, controls, and first-week steps.';
+  const url = `https://${site.domain.toLowerCase()}/services/${service?.slug || slug}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${title} | ${site.brand}`,
+      description,
+      url,
+      type: 'website',
+    },
+  };
 }
 
 export default async function Service({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug) || services[0];
-  const url = `https://${site.domain.toLowerCase()}/services/${service.slug}`;
+  const baseUrl = `https://${site.domain.toLowerCase()}`;
+  const url = `${baseUrl}/services/${service.slug}`;
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Service',
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
         name: service.title,
         description: service.desc,
         url,
-        provider: { '@type': 'Organization', name: site.brand, url: `https://${site.domain.toLowerCase()}` },
+        mainEntity: { '@id': `${url}#service` },
+        breadcrumb: { '@id': `${url}#breadcrumb` },
+      },
+      {
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name: service.title,
+        description: service.desc,
+        url,
+        provider: { '@type': 'Organization', name: site.brand, url: baseUrl },
       },
       {
         '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: `https://${site.domain.toLowerCase()}` },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
           { '@type': 'ListItem', position: 2, name: service.title, item: url },
         ],
       },

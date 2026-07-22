@@ -16,38 +16,18 @@ export const site = {
 } as const;
 
 export const services = [
-  {
-    slug: 'operations-support',
-    title: 'Ticket operations support',
-    desc: 'Keep new tickets sorted, tagged, assigned, and moving without asking agents to make decisions that belong to a manager.',
-    bestTasks: ['Triage new tickets by type and urgency', 'Route exceptions to the named owner', 'Clean up tags, status, and ticket notes'],
-    controls: ['Written priority rules', 'A manager queue for risky requests', 'Daily review of missed or stale tickets'],
-    firstWeek: ['Share real ticket examples', 'Set tags and routing rules', 'Review the first small batch together'],
-  },
-  {
-    slug: 'customer-support',
-    title: 'Customer help desk support',
-    desc: 'Answer common product and account questions through inbox, chat, or a support portal using approved replies and clear escalation rules.',
-    bestTasks: ['Answer repeat how-to questions', 'Collect details before escalation', 'Send status updates on open requests'],
-    controls: ['Approved answer library', 'Identity checks for account requests', 'Manager approval for refunds and account changes'],
-    firstWeek: ['Choose the first ticket types', 'Practice with past conversations', 'Check tone and accuracy every day'],
-  },
-  {
-    slug: 'admin-support',
-    title: 'Knowledge base support',
-    desc: 'Turn solved tickets and manager notes into help articles that customers and agents can find, follow, and keep current.',
-    bestTasks: ['Draft articles from solved tickets', 'Fix broken links and stale steps', 'Organize article tags and search terms'],
-    controls: ['A subject owner approves each article', 'Screenshots hide private data', 'Old steps are flagged before publishing'],
-    firstWeek: ['Pick five repeat questions', 'Agree on one article format', 'Publish only after owner review'],
-  },
-  {
-    slug: 'reporting-and-qa',
-    title: 'Help desk QA and reporting',
-    desc: 'Review real tickets for accurate answers, useful notes, correct handoffs, and recurring problems the support lead should fix.',
-    bestTasks: ['Score a sample of resolved tickets', 'Track missed handoffs and repeat issues', 'Prepare a short manager review'],
-    controls: ['One written QA checklist', 'Links to the tickets behind each finding', 'A named owner for each follow-up'],
-    firstWeek: ['Agree on the review checklist', 'Score the same sample together', 'Set the manager review date'],
-  },
+  { slug: "level-one-ticket-triage", title: "Level One Ticket Triage", desc: "Filipino helpdesk specialists can handle level one ticket triage with documented workflows, approval limits, and owner review." },
+  { slug: "email-helpdesk-support", title: "Email Helpdesk Support", desc: "Filipino helpdesk specialists can handle email helpdesk support with documented workflows, approval limits, and owner review." },
+  { slug: "chat-helpdesk-support", title: "Chat Helpdesk Support", desc: "Filipino helpdesk specialists can handle chat helpdesk support with documented workflows, approval limits, and owner review." },
+  { slug: "account-access-support", title: "Account Access Support", desc: "Filipino helpdesk specialists can handle account access support with documented workflows, approval limits, and owner review." },
+  { slug: "password-reset-coordination", title: "Password Reset Coordination", desc: "Filipino helpdesk specialists can handle password reset coordination with documented workflows, approval limits, and owner review." },
+  { slug: "saas-user-support", title: "SaaS User Support", desc: "Filipino helpdesk specialists can handle saas user support with documented workflows, approval limits, and owner review." },
+  { slug: "ecommerce-customer-helpdesk", title: "Ecommerce Customer Helpdesk", desc: "Filipino helpdesk specialists can handle ecommerce customer helpdesk with documented workflows, approval limits, and owner review." },
+  { slug: "knowledge-base-maintenance", title: "Knowledge Base Maintenance", desc: "Filipino helpdesk specialists can handle knowledge base maintenance with documented workflows, approval limits, and owner review." },
+  { slug: "ticket-escalation-coordination", title: "Ticket Escalation Coordination", desc: "Filipino helpdesk specialists can handle ticket escalation coordination with documented workflows, approval limits, and owner review." },
+  { slug: "bug-report-documentation", title: "Bug Report Documentation", desc: "Filipino helpdesk specialists can handle bug report documentation with documented workflows, approval limits, and owner review." },
+  { slug: "helpdesk-quality-review", title: "Helpdesk Quality Review", desc: "Filipino helpdesk specialists can handle helpdesk quality review with documented workflows, approval limits, and owner review." },
+  { slug: "support-queue-reporting", title: "Support Queue Reporting", desc: "Filipino helpdesk specialists can handle support queue reporting with documented workflows, approval limits, and owner review." },
 ] as const;
 
 export const blogPosts = [
@@ -324,3 +304,6 @@ export const leadQuestions = [
 ] as const;
 
 export const helpdeskFitNote = 'The right setup depends on your ticket types, hours, tools, access rules, and available managers. Share those details so the first plan fits the queue you have.';
+
+
+export const researchPosts: Array<{ slug: string; title: string; excerpt: string; body: string[] }> = [];

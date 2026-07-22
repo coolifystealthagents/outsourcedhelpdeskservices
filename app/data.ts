@@ -181,9 +181,9 @@ export const blogDetails = {
       'The owner approves or rejects the change, then the agent records the result. During review, the support lead checks whether the correct owner received the ticket and whether the customer got a clear update within the promised window.',
     ],
     relatedLinks: [
-      { label: 'Plan ticket operations support', href: '/services/operations-support' },
-      { label: 'Review customer help desk support', href: '/services/customer-support' },
-      { label: 'Set up help desk QA and reporting', href: '/services/reporting-and-qa' },
+      { label: 'Plan level one ticket triage', href: '/services/level-one-ticket-triage' },
+      { label: 'Review email help desk support', href: '/services/email-helpdesk-support' },
+      { label: 'Set up support queue reporting', href: '/services/support-queue-reporting' },
       { label: 'Use the provider question guide', href: '/blog/outsourced-helpdesk-services-provider-questions' },
       { label: 'Request a Philippines-only help desk plan', href: '/contact' },
     ],

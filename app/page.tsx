@@ -1,10 +1,10 @@
 import { Footer, Header, JsonLd } from './components';
 
 const supportLanes = [
-  { number: '01', title: 'Ticket triage and routing', text: 'Sort new requests, set priority, add clean notes, and send urgent work to the right owner.', href: '/services/operations-support' },
-  { number: '02', title: 'User and customer support', text: 'Handle repeat questions across inbox, chat, and portal with an approved answer path.', href: '/services/customer-support' },
-  { number: '03', title: 'Knowledge base upkeep', text: 'Turn solved tickets into clear help articles so the same issue is easier next time.', href: '/services/admin-support' },
-  { number: '04', title: 'QA and service reporting', text: 'Review ticket notes, missed handoffs, response windows, and the fixes your team should make.', href: '/services/reporting-and-qa' },
+  { number: '01', title: 'Ticket triage and routing', text: 'Sort new requests, set priority, add clean notes, and send urgent work to the right owner.', href: '/services/level-one-ticket-triage' },
+  { number: '02', title: 'User and customer support', text: 'Handle repeat questions across inbox, chat, and portal with an approved answer path.', href: '/services/email-helpdesk-support' },
+  { number: '03', title: 'Knowledge base upkeep', text: 'Turn solved tickets into clear help articles so the same issue is easier next time.', href: '/services/knowledge-base-maintenance' },
+  { number: '04', title: 'QA and service reporting', text: 'Review ticket notes, missed handoffs, response windows, and the fixes your team should make.', href: '/services/helpdesk-quality-review' },
 ];
 
 const launchSteps = [
@@ -28,7 +28,7 @@ export default function Home() {
         '@id': 'https://outsourcedhelpdeskservices.com/#webpage',
         name: 'Outsourced Help Desk Services',
         url: 'https://outsourcedhelpdeskservices.com/',
-        description: 'Plan outsourced help desk coverage, ticket triage, escalation, knowledge base work, and quality review.',
+        description: 'Plan help desk coverage with Filipino support staff handling approved ticket triage, user support, knowledge base work, and quality review.',
       },
       {
         '@type': 'Service',
@@ -36,7 +36,7 @@ export default function Home() {
         serviceType: 'Outsourced help desk services',
         provider: { '@type': 'Organization', name: 'Outsourced Helpdesk Services', url: 'https://outsourcedhelpdeskservices.com/' },
         areaServed: 'US',
-        description: 'Help desk planning for ticket triage, user support, escalation, knowledge base upkeep, and QA reporting.',
+        description: 'Philippines-based help desk staffing for ticket triage, user support, escalation, knowledge base upkeep, and QA reporting.',
       },
     ],
   };
@@ -48,9 +48,9 @@ export default function Home() {
 
       <section className="desk-hero">
         <div className="desk-hero-copy">
-          <p className="desk-kicker"><span /> Outsourced help desk planning</p>
-          <h1>A calmer helpdesk starts here.</h1>
-          <p className="desk-lead">Build a support team around the queue you have now: clear ticket ownership, useful notes, safe access, and an escalation path people can follow.</p>
+          <p className="desk-kicker"><span /> Philippines-only help desk staffing</p>
+          <h1>Build a calmer help desk with Filipino support staff.</h1>
+          <p className="desk-lead">Add a Philippines-based team around the queue you have now. Give them clear ticket ownership, safe access, and an escalation path people can follow.</p>
           <a className="desk-button" href="/contact">Build my helpdesk plan <span aria-hidden="true">→</span></a>
           <p className="desk-tagline">Ticket coverage, clear escalation, one accountable launch.</p>
         </div>

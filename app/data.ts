@@ -32,6 +32,12 @@ export const services = [
 
 export const blogPosts = [
   {
+    slug: 'help-desk-outsourcing-companies-philippines-vetting',
+    title: 'Help desk outsourcing companies: A Philippines-only buyer guide',
+    excerpt: 'Compare Philippines-only help desk staffing providers by the controls they can show: scope, access, escalation, quality review, workforce support, and vendor risk.',
+    minutes: 12,
+  },
+  {
     slug: 'outsourced-helpdesk-services-planning',
     title: 'IT help desk outsourcing: A Philippines-only buyer plan',
     excerpt: 'Use a clear ticket scope, access limits, service targets, and a 30-day test plan to hire Philippine help desk staff without handing over risky decisions.',

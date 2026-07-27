@@ -14,9 +14,9 @@ const launchSteps = [
 ];
 
 const guides = [
-  { title: 'Questions to ask a help desk provider', text: 'Test ticket ownership, access, QA, coverage, and escalation before you sign.', href: '/blog/outsourced-helpdesk-services-provider-questions', time: '8 min' },
-  { title: 'First-week onboarding checklist', text: 'Set up tools, sample answers, review rules, and manager check-ins.', href: '/blog/outsourced-helpdesk-services-onboarding-checklist', time: '9 min' },
-  { title: 'Tasks to outsource first', text: 'Choose repeat work with clear examples instead of handing off the whole queue.', href: '/blog/outsourced-helpdesk-services-tasks-to-outsource', time: '7 min' },
+  { title: 'Questions to ask a help desk provider', text: 'Test ticket ownership, access, QA, coverage, and escalation before you sign.', href: '/blog', time: '8 min' },
+  { title: 'First-week onboarding checklist', text: 'Set up tools, sample answers, review rules, and manager check-ins.', href: '/blog', time: '9 min' },
+  { title: 'Tasks to outsource first', text: 'Choose repeat work with clear examples instead of handing off the whole queue.', href: '/blog', time: '7 min' },
 ];
 
 export default function Home() {

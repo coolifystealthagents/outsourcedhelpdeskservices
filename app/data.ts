@@ -36,32 +36,7 @@ export const blogPosts = [
     title: 'Help desk outsourcing companies: A Philippines-only buyer guide',
     excerpt: 'Compare Philippines-only help desk staffing providers by the controls they can show: scope, access, escalation, quality review, workforce support, and vendor risk.',
     minutes: 12,
-  },
-  {
-    slug: 'outsourced-helpdesk-services-planning',
-    title: 'IT help desk outsourcing: A Philippines-only buyer plan',
-    excerpt: 'Use a clear ticket scope, access limits, service targets, and a 30-day test plan to hire Philippine help desk staff without handing over risky decisions.',
-    minutes: 11,
-  },
-  {
-    slug: 'outsourced-helpdesk-services-tasks-to-outsource',
-    title: 'Which help desk tasks should you outsource first?',
-    excerpt: 'Start with repeat tickets that have known answers, clear limits, and real examples for review.',
-    minutes: 7,
-  },
-  {
-    slug: 'outsourced-helpdesk-services-provider-questions',
-    title: 'Questions to ask an outsourced help desk provider',
-    excerpt: 'Use these questions to check ticket ownership, access, coverage, quality review, and escalation before you sign.',
-    minutes: 8,
-  },
-  {
-    slug: 'outsourced-helpdesk-services-onboarding-checklist',
-    title: 'First-week help desk onboarding checklist',
-    excerpt: 'Set up ticket access, approved answers, manager limits, and daily review before the queue grows.',
-    minutes: 9,
-  },
-] as const;
+  },] as const;
 
 const sharedSources = [
   { name: 'NIST Digital Identity Guidelines', url: 'https://pages.nist.gov/800-63-3/' },
@@ -190,7 +165,7 @@ export const blogDetails = {
       { label: 'Plan level one ticket triage', href: '/services/level-one-ticket-triage' },
       { label: 'Review email help desk support', href: '/services/email-helpdesk-support' },
       { label: 'Set up support queue reporting', href: '/services/support-queue-reporting' },
-      { label: 'Use the provider question guide', href: '/blog/outsourced-helpdesk-services-provider-questions' },
+      { label: 'Use the provider question guide', href: '/blog' },
       { label: 'Request a Philippines-only help desk plan', href: '/contact' },
     ],
     sources: [

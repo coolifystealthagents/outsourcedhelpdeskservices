@@ -43,7 +43,7 @@ export default function Home() {
 
   return <>
     <Header />
-    <main className="desk-home">
+    <main className="desk-home" data-gi-rollout="two-illustration-packs-one-icon-pack">
       <JsonLd data={schema} />
 
       <section className="desk-hero">
@@ -55,11 +55,11 @@ export default function Home() {
           <p className="desk-tagline">Ticket coverage, clear escalation, one accountable launch.</p>
         </div>
         <div className="desk-hero-visual">
-          <img src="/helpdesk-team.jpg" alt="Support team reviewing a help desk queue together" />
+          <img src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/filipino-helpdesk-team.webp" alt="Illustration of Filipino help desk staff working in a connected support workspace" />
           <div className="desk-ticket-rail" aria-label="Example ticket flow">
             <p>Queue status</p>
-            <div><span className="status-dot new" /><b>New</b><small>triage and tag</small></div>
-            <div><span className="status-dot work" /><b>In progress</b><small>answer or route</small></div>
+            <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt=""/><b>New</b><small>triage and tag</small></div>
+            <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/support-chat.svg" alt=""/><b>In progress</b><small>answer or route</small></div>
             <div><span className="status-dot done" /><b>Resolved</b><small>note the fix</small></div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
           <header><span>Today’s support path</span><small>Example operating view</small></header>
           <div className="desk-flow-row"><b>01</b><span><strong>Password and access</strong><small>Verify identity before any reset</small></span><em>Manager rule</em></div>
           <div className="desk-flow-row"><b>02</b><span><strong>Product how-to</strong><small>Use approved answer and source link</small></span><em>Support owned</em></div>
-          <div className="desk-flow-row"><b>03</b><span><strong>Billing or refund</strong><small>Gather facts, then send for approval</small></span><em>Escalate</em></div>
+          <div className="desk-flow-row"><b>03</b><span><strong>Billing or refund</strong><small>Gather facts, then send for approval</small></span><em className="icon-status"><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt=""/>Escalate</em></div>
         </div>
       </section>
 
@@ -105,6 +105,11 @@ export default function Home() {
         <div className="desk-steps">
           {launchSteps.map((step) => <article key={step.day}><small>{step.day}</small><h3>{step.title}</h3><p>{step.text}</p></article>)}
         </div>
+      </section>
+
+      <section className="desk-section gi-proof" aria-label="Help desk communication controls">
+        <img className="gi-proof-art" src="/illustrations/getillustrations/communication-illustrations-pack-svg/ticket-support.webp" alt=""/>
+        <div><p className="desk-kicker"><span/>A clear answer path</p><h2>Move each ticket through the right channel.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt=""/>Ticket inbox</span><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/support-chat.svg" alt=""/>Support chat</span><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt=""/>Escalation</span></div></div>
       </section>
 
       <section className="desk-guides">

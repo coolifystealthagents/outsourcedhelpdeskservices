@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.title,
     description: post.excerpt,
     alternates: { canonical },
-    openGraph: { title: post.title, description: post.excerpt, url: canonical, type: "article" },
+    openGraph: { title: post.title, description: post.excerpt, url: canonical, type: "article", images: [{ url: "/blog-thumbnail.svg", width: 1200, height: 630, alt: "Outsourced Helpdesk Services blog" }] },
   };
 }
 
@@ -231,15 +231,19 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const url = `${baseUrl}/blog/${post.slug}`;
   return (
     <>
-      <Header />
+      <Header hidePricing />
       <main className="section">
-        <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: post.title, description: post.excerpt, url }} />
+        <JsonLd data={{ "@context": "https://schema.org", "@graph": [
+          { "@type": "BlogPosting", headline: post.title, description: post.excerpt, url, mainEntityOfPage: url, author: { "@type": "Organization", name: site.brand, url: baseUrl }, publisher: { "@type": "Organization", name: site.brand, url: baseUrl } },
+          { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: baseUrl }, { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` }, { "@type": "ListItem", position: 3, name: post.title, item: url }] },
+          { "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: "How should this help desk routine start?", acceptedAnswer: { "@type": "Answer", text: "Start with a narrow set of recurring requests, approved answers, named ownership, and a review sample." } }, { "@type": "Question", name: "What should stay with an owner?", acceptedAnswer: { "@type": "Answer", text: "Keep identity, money, security, policy, and unusual technical decisions with named owners until the controls are proven." } }] }
+        ] }} />
         <article className="container guide-article">
           <p className="eyebrow">Philippines staffing blog</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
-          <div className="card"><h2>Start with a defined role</h2><p>Write the recurring tasks, examples, tools, and approval boundaries before a Filipino specialist begins. This gives the role owner a practical basis for review.</p><h2>Build a controlled handoff</h2><p>Begin with low-risk samples and only the permissions required for the approved Philippines-based workload. Record questions and exceptions for the owner.</p><h2>Review the workload</h2><p>Use a weekly check of completed work, open decisions, and changing priorities. Update the role notes when the process changes.</p></div>
+          <div className="card"><p className="eyebrow">Direct answer</p><h2>Start with a defined workflow</h2><p>Write the recurring tasks, examples, tools, and approval boundaries before a Filipino specialist begins. This gives the role owner a practical basis for review. For the operating scope, compare <a href="/services/level-one-ticket-triage">level one ticket triage</a> with your queue and use the <a href="/services/ticket-escalation-coordination">ticket escalation coordination</a> page to name exception owners.</p><h2>Build a controlled handoff</h2><p>Begin with low-risk samples and only the permissions required for the approved Philippines-based workload. Record questions and exceptions for the owner. NIST's <a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final" rel="noreferrer">access control guidance</a> is a useful authoritative reference for least-privilege discussions.</p><h2>Review the workload</h2><p>Use a weekly check of completed work, open decisions, and changing priorities. Update the role notes when the process changes. Keep identity, money, security, policy, and unusual technical decisions with named owners.</p><h2>Three checks for the next review</h2><ul><li>Are the request types and approved answers specific enough for a new agent?</li><li>Does every exception have a destination, required facts, and backup owner?</li><li>Can the reviewer show ticket evidence for accuracy, notes, tone, and scope?</li></ul><h2>Related planning pages</h2><ul><li><a href="/services/knowledge-base-maintenance">Maintain the knowledge base</a></li><li><a href="/services/helpdesk-quality-review">Review help desk quality</a></li><li><a href="/services/support-queue-reporting">Report on the support queue</a></li></ul><div className="final-cta"><p className="eyebrow">Next step</p><h2>Define the role before hiring begins.</h2><p>Bring your ticket types, tools, schedule, and approval limits to a focused staffing conversation.</p><a className="btn primary" href="/contact">Contact Us</a></div></div>
         </article>
       </main>
-      <Footer />
+      <Footer hidePricing />
     </>
   );
 }

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Outsourced Helpdesk Services blog</title>
+  <desc id="desc">A help desk ticket workflow illustration in teal, navy, and amber.</desc>
+  <rect width="1200" height="630" fill="#041014"/>
+  <rect x="72" y="76" width="1056" height="478" rx="32" fill="#102c38" stroke="#2dd4bf" stroke-width="4"/>
+  <circle cx="140" cy="142" r="14" fill="#ff6b4a"/><circle cx="186" cy="142" r="14" fill="#f59e0b"/><circle cx="232" cy="142" r="14" fill="#2dd4bf"/>
+  <text x="140" y="270" fill="#bff2df" font-family="Arial, sans-serif" font-size="34" font-weight="700">OUTSOURCED HELPDESK SERVICES</text>
+  <text x="140" y="350" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="800">Clear tickets.</text>
+  <text x="140" y="420" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="800">Clean handoffs.</text>
+  <rect x="140" y="472" width="330" height="8" rx="4" fill="#ff6b4a"/>
+</svg>

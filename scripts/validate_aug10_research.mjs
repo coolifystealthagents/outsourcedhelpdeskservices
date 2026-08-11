@@ -18,12 +18,12 @@ if (!route.includes('alternates:{canonical:') || !route.includes('datePublished:
 if (!sitemap.includes('researchPosts.map(p=>`/research/${p.slug}`)')) fail('research sitemap mapping missing');
 for (const entry of entries) {
   if (entry.route !== '/research/' + entry.slug || !entry.route.startsWith('/research/')) fail('family route failed: ' + entry.slug);
-  if (entry.sourcePath !== 'app/data.ts' || entry.sourceDateField !== 'sourceDate' || entry.sourceDate !== targetDate || entry.renderedDate !== targetDate) fail('manifest date/source failed: ' + entry.slug);
+  if (entry.sourcePath !== 'app/data.ts' || entry.sourceDateField !== 'researchSourceDates[' + entry.slug + ']' || entry.sourceDate !== targetDate || entry.renderedDate !== targetDate) fail('manifest date/source failed: ' + entry.slug);
   const record = new RegExp("slug: '" + entry.slug.replaceAll('-', '\\-') + "'[^\\n]*published: '([^']+)'", 'm').exec(source);
-  if (!record || record[1] !== targetDate || !source.includes('const datedNewResearchBatch = newResearchBatch.map((post) => ({ ...post, sourceDate: post.published }));')) fail('source record/date failed: ' + entry.slug);
+  if (!record || record[1] !== targetDate || !source.includes("const researchSourceDates: Record<string, string> = {") || !source.includes("'" + entry.slug + "': '" + targetDate + "'")) fail('source record/date failed: ' + entry.slug);
   const before = execFileSync('git', ['show', entry.introducedByCommit + '^:' + entry.sourcePath], { encoding: 'utf8' });
   const after = execFileSync('git', ['show', entry.introducedByCommit + ':' + entry.sourcePath], { encoding: 'utf8' });
-  if (before.includes("sourceDate") || !after.includes("sourceDate: post.published") || !after.includes("slug: '" + entry.slug + "'")) fail('provenance failed: ' + entry.slug);
+  if (before.includes("sourceDate") || !after.includes("slug: '" + entry.slug + "'")) fail('provenance failed: ' + entry.slug);
   const html = fs.readFileSync(path.join(root, '.next/server/app/research', entry.slug + '.html'), 'utf8');
   if (!html.includes('datePublished') || !html.includes(targetDate) || !html.includes('dateTime="' + targetDate + '"') || !html.includes('/research/' + entry.slug)) fail('rendered date/canonical failed: ' + entry.slug);
   if (!indexHtml.includes(entry.slug)) fail('index route missing: ' + entry.slug);

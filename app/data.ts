@@ -424,7 +424,19 @@ const newResearchBatch: ResearchPost[] = [
   { slug: 'helpdesk-ticket-evidence-research', title: 'Helpdesk ticket evidence research: 10 fields for a clean record', excerpt: 'A privacy-aware record pattern for capturing facts, actions, screenshots, decisions, and next steps without excess data.', published: '2026-08-10', keyStats: [{ value: '10', label: 'evidence fields' }, { value: '0', label: 'unneeded secrets' }], body: researchBody('ticket evidence capture', 'The author should separate verified facts, customer impact, attempted steps, attachments, and the decision still needed', '10 fields make a ticket reusable while keeping collection proportionate'), sources: researchSources, related: ['helpdesk-ticket-note-research', 'helpdesk-customer-context-research', 'helpdesk-attachment-handling-research'] },
   { slug: 'helpdesk-support-change-research', title: 'Helpdesk support change research: 10 checks before a workflow update', excerpt: 'How to review a support-process change for scope, access, knowledge, routing, training, and rollback readiness.', published: '2026-08-10', keyStats: [{ value: '10', label: 'change checks' }, { value: '1', label: 'change owner' }], body: researchBody('helpdesk workflow changes', 'The change owner should map affected request types, instructions, permissions, review evidence, and the rollback decision before release', '10 checks connect a workflow change to safe support execution'), sources: researchSources, related: ['helpdesk-knowledge-gap-research', 'helpdesk-access-review-research', 'helpdesk-agent-onboarding-research'] },
 ];
-const datedNewResearchBatch = newResearchBatch.map((post) => ({ ...post, sourceDate: post.published }));
+const researchSourceDates: Record<string, string> = {
+  'helpdesk-customer-feedback-research': '2026-08-10',
+  'helpdesk-ticket-merge-research': '2026-08-10',
+  'helpdesk-queue-routing-research': '2026-08-10',
+  'helpdesk-response-template-research': '2026-08-10',
+  'helpdesk-escalation-timing-research': '2026-08-10',
+  'helpdesk-ticket-priority-research': '2026-08-10',
+  'helpdesk-knowledge-owner-research': '2026-08-10',
+  'helpdesk-support-coverage-research': '2026-08-10',
+  'helpdesk-ticket-evidence-research': '2026-08-10',
+  'helpdesk-support-change-research': '2026-08-10',
+};
+const datedNewResearchBatch = newResearchBatch.map((post) => ({ ...post, sourceDate: researchSourceDates[post.slug] }));
 export const researchPosts: ResearchPost[] = [
   { slug: 'helpdesk-ticket-triage-research', title: 'Helpdesk ticket triage: 10 controls for a reliable first pass', excerpt: 'A research-led model for categorising, prioritising, owning, and escalating tier-one support tickets.', published: '2026-08-07', keyStats: [{ value: '10', label: 'operating controls' }, { value: '4', label: 'priority questions' }], body: researchBody('ticket triage', 'The first pass should classify request, urgency, risk, channel, and likely owner', '10 controls create a complete first-pass triage record'), sources: researchSources, related: ['helpdesk-escalation-boundaries-research', 'helpdesk-queue-quality-review-research', 'helpdesk-shift-handoff-research'] },
   { slug: 'helpdesk-escalation-boundaries-research', title: 'Helpdesk escalation boundaries: 10 decisions to keep with owners', excerpt: 'How outsourced helpdesk teams can gather facts and move work forward without making sensitive decisions.', published: '2026-08-07', keyStats: [{ value: '10', label: 'boundary checks' }, { value: '3', label: 'handoff facts' }], body: researchBody('escalation boundaries', 'The agent should stop at identity, security, money, policy, outage, and account-ownership decisions', '10 boundary checks separate safe execution from owner decisions'), sources: researchSources, related: ['helpdesk-ticket-triage-research', 'helpdesk-access-review-research', 'helpdesk-bug-intake-research'] },

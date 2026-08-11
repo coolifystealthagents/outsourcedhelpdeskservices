@@ -30,7 +30,7 @@ export const services = [
   { slug: "support-queue-reporting", title: "Support Queue Reporting", desc: "Filipino helpdesk specialists can handle support queue reporting with documented workflows, approval limits, and owner review." },
 ] as const;
 
-export const blogPosts = [
+const blogPostsSource = [
   { slug: 'help-desk-outsourcing-companies-philippines-vetting', title: 'Help desk outsourcing companies: A Philippines-only buyer guide', excerpt: 'Compare Philippines-only help desk staffing providers by scope, access, escalation, quality review, workforce support, and vendor risk.', minutes: 12 },
   { slug: 'help-desk-ticket-triage-workflow', title: 'How to build a reliable help desk ticket triage workflow', excerpt: 'Create a repeatable triage path with categories, priority rules, ownership, and escalation evidence.', minutes: 8 },
   { slug: 'help-desk-escalation-rules', title: 'Help desk escalation rules that keep tickets moving', excerpt: 'Define triggers, required facts, destination owners, and customer updates before exceptions reach your queue.', minutes: 8 },
@@ -105,6 +105,23 @@ export const blogPosts = [
   { slug: 'help-desk-daily-article-creation-routine', title: 'A daily routine for creating better help desk articles', excerpt: 'Use recurring tickets, failed searches, authoritative sources, review ownership, and a clear publish decision.', minutes: 8 },
   { slug: 'help-desk-service-level-targets', title: 'How to set usable help desk service-level targets', excerpt: 'Define response and resolution measures with scope, pause rules, ownership, exceptions, and honest customer updates.', minutes: 8 },
 ] as const;
+
+const aug10BlogSlugs = new Set([
+  'help-desk-email-triage-rules', 'help-desk-chat-support-boundaries', 'help-desk-account-access-escalation',
+  'help-desk-saas-onboarding-support', 'help-desk-ecommerce-order-support', 'help-desk-knowledge-article-brief',
+  'help-desk-escalation-owner-map', 'help-desk-bug-reproduction-checklist', 'help-desk-quality-scorecard-design',
+  'help-desk-queue-dashboard-routine', 'help-desk-agent-coaching-loop', 'help-desk-approval-request-template',
+  'help-desk-ticket-reopen-review', 'help-desk-customer-language-guide', 'help-desk-support-portal-routing',
+  'help-desk-vendor-service-review', 'help-desk-recovery-communication-plan', 'help-desk-failed-search-review',
+  'help-desk-weekly-review-template', 'help-desk-holiday-coverage-plan', 'help-desk-outsourcing-scope-document',
+  'help-desk-least-privilege-access-plan', 'help-desk-support-article-publishing-checklist',
+  'help-desk-daily-article-creation-routine', 'help-desk-service-level-targets',
+]);
+
+export const blogPosts = [
+  ...blogPostsSource.filter((post) => aug10BlogSlugs.has(post.slug)).map((post) => ({ ...post, published: '2026-08-10' as const })),
+  ...blogPostsSource.filter((post) => !aug10BlogSlugs.has(post.slug)),
+];
 
 const sharedSources = [
   { name: 'NIST Digital Identity Guidelines', url: 'https://pages.nist.gov/800-63-3/' },

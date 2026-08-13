@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 const baseUrl = `https://${site.domain.toLowerCase()}`;
+const formatPublicDate = (date: string) => new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
 
 type StrictSlug = keyof typeof publisherArticles;
 
@@ -147,7 +148,7 @@ function StrictArticle({ article, slug, published }: { article: PublisherArticle
         <JsonLd data={schema} />
         <article className="container strict-article" data-article-marker="philippines-provider-vetting-2026">
           <header className="article-hero">
-            <p className="eyebrow">Philippines help desk buyer guide · <time dateTime={published}>{published}</time></p>
+            <p className="eyebrow">Philippines help desk buyer guide · <time dateTime={published}>{formatPublicDate(published)}</time></p>
             <h1>{article.title}</h1>
             <p className="lead">{article.excerpt}</p>
             <div className="article-meta"><span>{article.minutes} min read</span><span>Evidence checked July 25, 2026</span></div>
@@ -232,7 +233,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const url = `${baseUrl}/blog/${post.slug}`;
   const published = 'published' in post && typeof post.published === 'string' ? post.published : undefined;
-  const displayDate = published === '2026-08-12' ? 'August 12, 2026' : published === '2026-08-10' ? 'August 10, 2026' : published;
+
   const defaultBody = [
     'Start with a defined request, the approved answer, and the owner who handles exceptions. A support specialist should know what can be completed and where the work must stop.',
     'Use the smallest set of permissions and facts needed for the request. Keep identity, money, security, policy, and ownership decisions with the named owner.',
@@ -250,7 +251,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           { "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: "How should this help desk workflow start?", acceptedAnswer: { "@type": "Answer", text: "Start with a narrow set of recurring requests, approved answers, named ownership, and a review sample." } }, { "@type": "Question", name: "What should stay with an owner?", acceptedAnswer: { "@type": "Answer", text: "Keep identity, money, security, policy, and unusual technical decisions with named owners until the controls are proven." } }] }
         ] }} />
         <article className="container guide-article">
-          <p className="eyebrow">Philippines staffing blog · {published ? <time dateTime={published}>{displayDate}</time> : null}</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
+          <p className="eyebrow">Philippines staffing blog · {published ? <time dateTime={published}>{formatPublicDate(published)}</time> : null}</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
           <div className="card"><p className="eyebrow">Direct answer</p><h2>{body[0]}</h2>{body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<h2>Related planning pages</h2><ul><li><a href="/services/level-one-ticket-triage">Level one ticket triage</a></li><li><a href="/services/ticket-escalation-coordination">Ticket escalation coordination</a></li><li><a href="/services/helpdesk-quality-review">Help desk quality review</a></li></ul></div>
         </article>
       </main>

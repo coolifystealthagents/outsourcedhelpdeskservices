@@ -232,7 +232,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const url = `${baseUrl}/blog/${post.slug}`;
   const published = 'published' in post && typeof post.published === 'string' ? post.published : undefined;
-  const displayDate = published === '2026-08-11' ? 'August 11, 2026' : published === '2026-08-10' ? 'August 10, 2026' : published;
+  const displayDate = published === '2026-08-12' ? 'August 12, 2026' : published === '2026-08-10' ? 'August 10, 2026' : published;
   const defaultBody = [
     'Start with a defined request, the approved answer, and the owner who handles exceptions. A support specialist should know what can be completed and where the work must stop.',
     'Use the smallest set of permissions and facts needed for the request. Keep identity, money, security, policy, and ownership decisions with the named owner.',

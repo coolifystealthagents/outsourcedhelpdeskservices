@@ -58,8 +58,8 @@ export default function Home() {
           <img src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/filipino-helpdesk-team.webp" alt="Illustration of Filipino help desk staff working in a connected support workspace" />
           <div className="desk-ticket-rail" aria-label="Example ticket flow">
             <p>Queue status</p>
-            <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt=""/><b>New</b><small>triage and tag</small></div>
-            <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/support-chat.svg" alt=""/><b>In progress</b><small>answer or route</small></div>
+            <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt="Support ticket inbox"/><b>New</b><small>triage and tag</small></div>
+            <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/support-chat.svg" alt="Customer support conversation"/><b>In progress</b><small>answer or route</small></div>
             <div><span className="status-dot done" /><b>Resolved</b><small>note the fix</small></div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
           <header><span>Today’s support path</span><small>Example operating view</small></header>
           <div className="desk-flow-row"><b>01</b><span><strong>Password and access</strong><small>Verify identity before any reset</small></span><em>Manager rule</em></div>
           <div className="desk-flow-row"><b>02</b><span><strong>Product how-to</strong><small>Use approved answer and source link</small></span><em>Support owned</em></div>
-          <div className="desk-flow-row"><b>03</b><span><strong>Billing or refund</strong><small>Gather facts, then send for approval</small></span><em className="icon-status"><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt=""/>Escalate</em></div>
+          <div className="desk-flow-row"><b>03</b><span><strong>Billing or refund</strong><small>Gather facts, then send for approval</small></span><em className="icon-status"><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt="Support escalation path"/>Escalate</em></div>
         </div>
       </section>
 
@@ -108,8 +108,8 @@ export default function Home() {
       </section>
 
       <section className="desk-section gi-proof" aria-label="Help desk communication controls">
-        <img className="gi-proof-art" src="/illustrations/getillustrations/communication-illustrations-pack-svg/ticket-support.webp" alt=""/>
-        <div><p className="desk-kicker"><span/>A clear answer path</p><h2>Move each ticket through the right channel.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt=""/>Ticket inbox</span><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/support-chat.svg" alt=""/>Support chat</span><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt=""/>Escalation</span></div></div>
+        <img className="gi-proof-art" src="/illustrations/getillustrations/communication-illustrations-pack-svg/ticket-support.webp" alt="Help desk specialist reviewing customer tickets"/>
+        <div><p className="desk-kicker"><span/>A clear answer path</p><h2>Move each ticket through the right channel.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt="Support ticket inbox"/>Ticket inbox</span><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/support-chat.svg" alt="Customer support conversation"/>Support chat</span><span><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt="Support escalation path"/>Escalation</span></div></div>
       </section>
 
       <section className="desk-guides">

@@ -654,7 +654,6 @@ const researchSourceDates: Record<string, string> = {
 };
 const datedNewResearchBatch = newResearchBatch.map((post) => ({ ...post, sourceDate: researchSourceDates[post.slug] }));
 export const researchPosts: ResearchPost[] = [
-  ...aug17ResearchBatch,
   ...aug17CreationBatch,
   ...aug14ResearchBatch,
   ...aug13ResearchBatch,

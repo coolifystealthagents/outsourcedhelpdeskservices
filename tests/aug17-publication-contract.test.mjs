@@ -79,6 +79,12 @@ try {
   const homeHtml = await homeResponse.text();
   if (/href=["']\/pricing["']/.test(homeHtml)) failures.push('public home page must not expose a Pricing link or CTA');
 
+  const contactResponse = await fetch(`${baseUrl}/contact`, { redirect: 'manual' });
+  assert.equal(contactResponse.status, 200, 'contact page must render successfully');
+  const contactHtml = await contactResponse.text();
+  if (/\$(?:10|15|18)\s*\/\s*hour/i.test(contactHtml)) failures.push('public contact page must not expose hourly rates');
+  if (/href=["']\/pricing["']/.test(contactHtml)) failures.push('public contact page must not expose a Pricing link or CTA');
+
   if (failures.length) throw new Error(`Editorial contract failures:\n- ${failures.join('\n- ')}`);
   console.log('August 17 structured-date and call-first redirect contract passed.');
 } catch (error) {

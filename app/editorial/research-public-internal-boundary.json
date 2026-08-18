@@ -1,0 +1,351 @@
+{
+  "helpdesk-article-public-internal-boundary-research": {
+    "executiveAnswer": [
+      "A completed public-source desk study found that useful customer-facing guidance and controlled internal guidance solve different evidence problems, and neither surface can be chosen by readability alone. Ten predeclared public documents were coded against four surface tests: an explicit external audience or purpose, an externally usable answer or next route, a restriction on exposing unnecessary or non-public detail, and an accountable internal control, record, or role. Nine of 10 documents named the audience or purpose, eight supplied a usable public output or route, seven limited disclosure, and eight named an internal control. Only three of 10 documents (30%) contained all four fields. The low complete-bundle count does not make the other documents deficient: the five public-service and disclosure documents all supplied a public output, while all five security, privacy, and internal-control documents supplied a protected-detail boundary. The measured split shows why a single source family should not be treated as a complete publication rule.",
+      "The three complete documents were NIST SP 800-53 Revision 5 control AC-22, the Federal Trade Commission Safeguards Rule compliance guide, and the OWASP Error Handling Cheat Sheet. AC-22 directly separates information authorized for public access from non-public information and requires designated posters, training, pre-publication review, periodic review, and removal. The FTC guide combines customer-information safeguards and internal response responsibilities with incident communications inside and outside a covered financial institution and a high-level report that may become public. OWASP distinguishes a generic error response shown to a user from detailed diagnostic information retained in controlled logs. These are bounded examples from different contexts, not universal helpdesk publication mandates.",
+      "The defensible answer is therefore purpose-based. A customer-facing article should contain the confirmed outcome or status, prerequisites the customer can safely assess, actions the customer is permitted to take, information the customer is entitled or needs to receive, and a clear next route when the ordinary path does not fit. Internal guidance may retain the restricted evidence location, diagnostic detail, security-relevant indicators, review criteria, system context, and accountable decision role needed to investigate or authorize the next step. Sensitive data, secrets, non-public system detail, and unsupported decision logic do not become suitable for publication merely because they help an internal reviewer. Conversely, labeling all useful reasoning “internal” is not justified when a customer needs to understand purpose, consequences, rights, expected status, or how to continue. No customer, ticket, workforce, vendor-performance, contract, or proprietary article data was used or inferred."
+    ],
+    "researchQuestion": "Across a fixed sample of public service-design, disclosure, security, privacy, and application-control guidance, how often do documents make four public/internal surface fields explicit—external audience or purpose, externally usable output or route, a non-public or minimum-necessary detail boundary, and an accountable internal control—and what can that evidence support about placing helpdesk guidance in customer-facing articles versus internal notes?",
+    "observationWindow": "The cross-sectional retrieval, text review, coding, calculation, and direct HTTP GET verification were completed on 2026-08-18. The study used the public versions served at that cutoff, with displayed publication or update markers ranging from 2016 through 2026; pages without a displayed date are identified in source metadata. This is a document-observation window, not an observation period for helpdesk operations.",
+    "sampleDefinition": {
+      "population": "A purposive, predeclared corpus of 10 English-language public guidance documents in two equal source families. The public-service and disclosure family comprised three UK Government Digital Service pages on user support, whole-service design, and user-interface writing; one UK Information Commissioner page on privacy information; and one UK National Cyber Security Centre page on incident planning and internal/external communications. The security, privacy, and internal-control family comprised NIST SP 800-53 Revision 5 Update 1, ICO data-minimisation guidance, the current FTC Safeguards Rule compliance guide, and the OWASP Error Handling and Logging Cheat Sheets. The frame was built to compare what public-facing guidance makes usable with what control guidance keeps bounded; it is not a census of public documentation standards or a representative sample of helpdesk articles.",
+      "includedN": 10,
+      "inclusion": "A document had to be publicly issued or maintained on the responsible government, regulator, standards, or nonprofit security organization’s official domain; be retrievable by HTTP GET on 2026-08-18; contain substantive text relevant to at least one declared surface test; be available in English; and fit one declared family. One publication counted once. The NIST landing page and its official PDF were treated as two formats of one publication, with the landing page supplying metadata and the PDF supplying AC-22 control text. The current FTC guide was included because its official text and scope were retrievable.",
+      "exclusion": "Commercial content platforms, vendor knowledge-base examples, consultancy commentary, search snippets, translations, duplicate formats, inaccessible documents, pricing material, and pages that discussed visual styling without a user, disclosure, information-control, or accountability decision were excluded. The exact FTC URL stored in the article’s existing source list returned HTTP 404; it was retained in the source ledger as a failed route but excluded from the measured corpus. The title-matched current FTC compliance guide on ftc.gov returned HTTP 200 and was included. Generic GOV.UK footer warnings were not coded as substantive evidence for a document. No private publication policy, access matrix, article inventory, support note, ticket, customer message, incident record, or simulated performance result entered the study."
+    },
+    "methodology": [
+      "Freeze the two five-document families before calculating results. Count one substantive publication per table row even when a canonical landing page links an official attachment. This fixes the overall denominator at 10 and each family denominator at five. Preserve the failed route separately so an inaccessible link cannot silently become evidence.",
+      "Retrieve every canonical URL by HTTP GET with redirects followed, confirm that the final location remains on the expected official domain, and record the final response. All 10 included canonical pages returned HTTP 200. The official NIST PDF used for control text also returned HTTP 200. The route-listed FTC URL returned HTTP 404; the current official replacement returned HTTP 200. Retrieval status measures inspectability at the cutoff, not applicability or permanence.",
+      "Apply test T1, external audience or purpose. T1 equals 1 only when substantive text explicitly identifies the person, user, customer, public audience, external stakeholder, data subject, or externally relevant purpose to which the guidance applies. A page aimed only at developers or internal logging does not pass merely because a user may appear in an event field.",
+      "Apply test T2, externally usable output or route. T2 equals 1 only when the document states information, status, action, explanation, contact, challenge path, notification, generic response, or next route that can be given to or used by an external person. Merely saying that internal teams should communicate does not qualify unless the external recipient or output is also identified. A public output need not authorize completion; an honest stop, status, or alternate route can qualify.",
+      "Apply test T3, restricted or minimum-necessary detail boundary. T3 equals 1 only when the document explicitly limits personal data, secrets, non-public information, implementation detail, internal structure, log exposure, or other unnecessary content; or explicitly distinguishes public content from detail that should remain controlled. General advice to be concise or clear does not qualify. The GOV.UK site-wide footer warning was excluded, while a substantive instruction not to put personal information in interface URLs qualified.",
+      "Apply test T4, accountable internal control. T4 equals 1 only when the document names a designated role, internal group, review, approval, log, response plan, record, contact, monitoring activity, or accountability process that supports the surface decision. A reference to unseen back-end processes alone does not pass. This test does not require a named individual and does not infer a helpdesk owner that the source never appoints.",
+      "Read each relevant section in context and preserve a concise coding anchor in the complete matrix. Score a document as containing the full two-surface bundle only when T1, T2, T3, and T4 all equal 1. A second consistency pass re-applied the definitions and recomputed column totals. One desk reviewer performed both passes, so no independent agreement statistic is claimed.",
+      "Calculate every percentage as the displayed numerator divided by its declared denominator multiplied by 100. Use the fixed denominator of 10 for overall field coverage and five for family comparisons. Interpret the outputs as explicit field coverage in documents, not as article safety rates, disclosure-event prevalence, or evidence that one surface causes better support outcomes."
+    ],
+    "measurements": [
+      {
+        "label": "Included canonical source pages reachable by direct GET",
+        "numerator": 10,
+        "denominator": 10,
+        "calculation": "10 HTTP-200 canonical pages ÷ 10 included documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Documents explicitly identifying an external audience or purpose (T1)",
+        "numerator": 9,
+        "denominator": 10,
+        "calculation": "9 T1-positive rows ÷ 10 included documents × 100",
+        "result": "90%"
+      },
+      {
+        "label": "Documents explicitly supplying an externally usable output or route (T2)",
+        "numerator": 8,
+        "denominator": 10,
+        "calculation": "8 T2-positive rows ÷ 10 included documents × 100",
+        "result": "80%"
+      },
+      {
+        "label": "Documents explicitly supplying a restricted or minimum-necessary detail boundary (T3)",
+        "numerator": 7,
+        "denominator": 10,
+        "calculation": "7 T3-positive rows ÷ 10 included documents × 100",
+        "result": "70%"
+      },
+      {
+        "label": "Documents explicitly identifying an accountable internal control, record, or role (T4)",
+        "numerator": 8,
+        "denominator": 10,
+        "calculation": "8 T4-positive rows ÷ 10 included documents × 100",
+        "result": "80%"
+      },
+      {
+        "label": "Documents containing the complete four-test two-surface bundle",
+        "numerator": 3,
+        "denominator": 10,
+        "calculation": "3 rows with T1 + T2 + T3 + T4 = 4 ÷ 10 included documents × 100",
+        "result": "30%"
+      },
+      {
+        "label": "Public-service and disclosure documents supplying an externally usable output or route",
+        "numerator": 5,
+        "denominator": 5,
+        "calculation": "5 T2-positive public-service/disclosure rows ÷ 5 documents in that family × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Security, privacy, and internal-control documents supplying a restricted-detail boundary",
+        "numerator": 5,
+        "denominator": 5,
+        "calculation": "5 T3-positive security/privacy/internal-control rows ÷ 5 documents in that family × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Complete bundle in public-service and disclosure guidance",
+        "numerator": 0,
+        "denominator": 5,
+        "calculation": "0 complete public-service/disclosure rows ÷ 5 documents in that family × 100",
+        "result": "0%"
+      },
+      {
+        "label": "Complete bundle in security, privacy, and internal-control guidance",
+        "numerator": 3,
+        "denominator": 5,
+        "calculation": "3 complete security/privacy/internal-control rows ÷ 5 documents in that family × 100",
+        "result": "60%"
+      }
+    ],
+    "table": {
+      "heading": "Document-level public/internal surface coding (N=10; 1 = explicit under the declared rule, 0 = not explicit enough to qualify)",
+      "columns": [
+        "ID and document",
+        "Source family",
+        "T1 external audience/purpose",
+        "T2 public output/route",
+        "T3 restricted-detail boundary",
+        "T4 internal control/role",
+        "Complete",
+        "Coding anchor"
+      ],
+      "rows": [
+        [
+          "S1 GOV.UK: Set up and manage user support",
+          "Public service/disclosure",
+          1,
+          1,
+          0,
+          1,
+          0,
+          "Requires support for service users, handling information requests and directing users to wanted information; groups enquiries by status, user group and the internal team able to act. It does not substantively define which support detail must remain non-public."
+        ],
+        [
+          "S2 GOV.UK: Designing good government services",
+          "Public service/disclosure",
+          1,
+          1,
+          1,
+          0,
+          0,
+          "Connects users to an end-to-end outcome and a next path even when they are outside scope; says internal structures should not be shown unnecessarily and calls for personal-data minimisation. It does not designate a publication reviewer or controlled internal record."
+        ],
+        [
+          "S3 GOV.UK: Writing for user interfaces",
+          "Public service/disclosure",
+          1,
+          1,
+          1,
+          0,
+          0,
+          "Uses the user’s language, clear questions, accessible links, options and error messages; explicitly says not to include personal information in a URL. It gives no designated internal approval, evidence-record, or publication-control role."
+        ],
+        [
+          "S4 ICO: What privacy information should we provide?",
+          "Public service/disclosure",
+          1,
+          1,
+          0,
+          1,
+          0,
+          "Names the information individuals must receive, including identity, purpose, contacts, sharing, retention, rights, complaint path and consequences; identifies controller, representative and DPO contacts. It is disclosure guidance and does not define a non-public diagnostic-detail boundary."
+        ],
+        [
+          "S5 NCSC: Planning your response to cyber incidents",
+          "Public service/disclosure",
+          1,
+          1,
+          0,
+          1,
+          0,
+          "Names employees, customers, shareholders, suppliers and regulators as communication stakeholders, calls for internal and external communication plans, and assigns roles and board accountability. The measured page does not specify which incident details must be withheld or redacted."
+        ],
+        [
+          "S6 NIST SP 800-53 Rev. 5 Update 1, AC-22",
+          "Security/privacy/internal control",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "AC-22 governs publicly accessible content, authorizes designated posters, trains them not to expose non-public information, requires review before posting and periodic review, and requires removal of non-public information."
+        ],
+        [
+          "S7 ICO: Data minimisation",
+          "Security/privacy/internal control",
+          1,
+          0,
+          1,
+          1,
+          0,
+          "Bounds personal data by a specified purpose, requires no more and no less than necessary, and calls for accountable processes, periodic review and deletion. It does not itself prescribe the customer-facing answer or route for a help request."
+        ],
+        [
+          "S8 FTC Safeguards Rule compliance guide",
+          "Security/privacy/internal control",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "For covered financial institutions, protects customer information, requires a Qualified Individual and internal response processes, distinguishes communications inside and outside the company, and specifies a high-level incident report that may become public."
+        ],
+        [
+          "S9 OWASP Error Handling Cheat Sheet",
+          "Security/privacy/internal control",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Separates a generic response returned to a user from detailed exception information recorded for diagnosis; warns that error messages must not reveal implementation details and calls for centralized handling and logging."
+        ],
+        [
+          "S10 OWASP Logging Cheat Sheet",
+          "Security/privacy/internal control",
+          0,
+          0,
+          1,
+          1,
+          0,
+          "Defines internal security and operational logging, warns not to expose logs in web-accessible locations, lists secrets and sensitive data to remove or mask, and requires review and verification. It records user responses but does not prescribe an external answer or route."
+        ]
+      ]
+    },
+    "findings": [
+      "The two source families emphasized opposite halves of the surface decision. All five public-service and disclosure documents supplied an externally usable output or route, but none contained the complete four-test bundle. All five security, privacy, and internal-control documents supplied a restricted-detail boundary, and three contained the complete bundle. The contrast is descriptive of this deliberately balanced corpus, not a ranking of institutional quality. It shows that public clarity guidance may omit publication controls, while control guidance may omit the answer a customer still needs.",
+      "NIST AC-22 was the clearest direct publication-control analogue. Its object is publicly accessible content, not helpdesk articles specifically. It joins authorization to post, training, pre-publication review, periodic review, and removal of non-public information. The transferable structure is stronger than a vague sensitivity label because it identifies the public object, the restricted class, the authorized actor, and review events. It does not define which unnamed organization’s helpdesk role should be designated, so local ownership cannot be inferred from the source.",
+      "The OWASP pair demonstrates why one event can require two differently detailed records. Error Handling says the user-facing response should be generic enough to avoid leaking implementation details while the exception is logged for diagnosis. Logging then specifies richer internal context—when, where, who, what, status, reason, interaction identifiers and extended details—while also excluding or masking session identifiers, access tokens, passwords, sensitive personal data, encryption keys and higher-classification information. Internal does not mean unlimited detail; the internal record remains purpose- and access-bounded.",
+      "The GOV.UK whole-service page prevents overcorrection in the other direction. It says users should not be unnecessarily exposed to internal structures, but also says every user needs a clear outcome, people outside service scope should be directed to what to do next, and users should understand what they need to provide and what to expect. Hiding queue names, back-end systems or deliberative mechanics is compatible with explaining the supported result, required customer action, status, expected reply or decision, and challenge path.",
+      "The ICO pages distinguish disclosure from collection. The privacy-information page lists information that must be made intelligible to individuals, such as purpose, recipients, retention, rights, consequences and contacts. The data-minimisation page limits the personal data held to what is adequate, relevant and necessary for a specified purpose and requires accountable review. A public/internal rule therefore cannot be reduced to ‘personal data is internal’: some information about how personal data is used belongs in an external notice, while unnecessary personal data should not be copied into either a public article or an unrestricted internal note.",
+      "The FTC guide’s complete score is narrow to its context. It applies to financial institutions covered by the Safeguards Rule and describes protected customer information, the Qualified Individual, service-provider oversight, response planning, internal and external communications, and notification-event reporting. Its high-level reporting fields and statement that a report may become public illustrate controlled external disclosure, but they do not establish that every helpdesk incident, organization, or article is subject to the same reporting duty.",
+      "Surface choice is not identical to source authority. Nine documents identified an external audience or purpose, yet only three joined all four tests. A public source can support an internal control, and an internally implemented process can produce information that people are entitled to receive. The relevant question is what purpose, audience, sensitivity, and authority attach to the particular statement—not whether the source itself happens to be on a public website.",
+      "The complete-bundle rate of 30% is a document-content result only. It does not mean that 30% of customer articles are safe, that 70% disclose too much, or that a four-field label predicts reduced incidents or repeat contact. No article use or support outcome was observed. The evidence supports an inspectable classification model and identifies concrete source examples; it cannot estimate operational effect."
+    ],
+    "operationalImplications": [
+      "For a customer-facing article, preserve the minimum complete public path: who the guidance is for, the supported outcome or current confirmed status, prerequisites the reader can safely evaluate, actions the reader is permitted to take, information that must not be submitted through that surface, and the next route when the case is out of scope. A correct stop or escalation can be a usable outcome when it tells the customer what happens next without implying an unapproved decision.",
+      "For an internal note, record only the additional detail needed for a defined operational purpose: verified facts, evidence location, relevant diagnostic output, classification or risk signal, action history, unresolved decision, accountable role, and review checkpoint. Apply access and data-minimisation rules to that record. Do not treat an internal label as permission to store passwords, access tokens, encryption keys, unnecessary personal narratives, or unrestricted copies of sensitive evidence.",
+      "Separate customer explanation from protected decision evidence without allowing them to contradict. The external surface can state the confirmed result, reason category, consequence, next action and contact route. The controlled surface can preserve the detailed diagnostic, security indicator, authorization evidence or deliberative context. Both should point to the same status and owner boundary so the public explanation does not promise more than the internal record supports.",
+      "Use an explicit surface disposition rather than a binary publish/hide guess. The evidence supports at least four distinguishable results: public as written; public after removing non-public detail while retaining a complete next path; internal-only operational detail paired with a separate customer-safe explanation; and unresolved pending an authorized owner’s decision. The public sources define useful tests but do not appoint a local owner, so unknown authority should remain visible rather than inferred.",
+      "Review the boundary when content, systems, law, incident status, user rights, service scope, or responsible roles change. NIST AC-22 supports pre-publication and periodic review; ICO guidance links data handling to purpose; and the NCSC links communications to incident roles. A previously safe customer statement can become incomplete as facts change, while an internal diagnostic can become unnecessarily exposed when copied into a reusable article.",
+      "Keep public and internal measurements separate in any later operational evaluation. Public usefulness would need observable categories such as clear completion, clear stop/route, repeat clarification, or misleading promise. Internal control quality would need categories such as sufficient evidence, excess sensitive data, accepted ownership, and review completion. This desk study supplies no ticket counts or outcome rates and therefore establishes neither a target nor a causal benchmark."
+    ],
+    "limitations": [
+      "This study measures 10 public documents, not helpdesk articles, notes, tickets, readers, customers, incidents, organizations, disclosures, or outcomes. Its 90%, 80%, 70%, 30%, 0%, 60% and family-level results describe explicit field coverage in the fixed corpus only. They are not prevalence estimates, maturity scores, service targets, or predictions of safe reuse.",
+      "The sample was purposive, English-language, and balanced by design at five documents per family. It overrepresents UK public-service and regulatory guidance and US-oriented security guidance. Other jurisdictions, accessibility standards, records laws, sector rules, contractual restrictions, product documentation standards, professional knowledge-management frameworks, and local publication policies could produce different fields and counts.",
+      "The four binary tests compress important differences. A customer status update, privacy notice, generic application error and regulatory incident report all pass T2 even though they are not interchangeable. Data minimisation, hiding internal structures, suppressing implementation detail and controlling log access all pass T3 but protect different things. The row anchors and source context must travel with the totals.",
+      "One reviewer performed extraction, coding, and a second consistency pass. No independent duplicate coding occurred, so no inter-rater agreement statistic is reported. Reasonable reviewers could classify borderline passages differently, especially the FTC guide’s external output or the NCSC page’s lack of an explicit redaction rule. The operational definitions and full matrix expose those decisions for replication.",
+      "NIST AC-22 concerns publicly accessible organizational content, OWASP addresses application security, the FTC page is limited to covered financial institutions, ICO pages explain UK data-protection obligations, and GOV.UK/NCSC pages address public services or cyber governance. Their structural lessons do not establish legal applicability, authorization, retention periods, disclosure duties, or article ownership for an unnamed helpdesk.",
+      "HTTP 200 establishes retrievability at the cutoff, not unchanged text, continued legal effect, accessibility to every reader, endorsement for this use, or future availability. HTTP 404 establishes that the requested FTC route failed at retrieval, not that no historical page existed. The current FTC replacement was selected by official domain, title and subject match, but the failed URL remains recorded rather than silently overwritten.",
+      "The design cannot test whether separating surfaces reduces disclosure, improves escalation, lowers repeat contact, or increases resolution. Such claims would require authorized local records, declared outcome definitions, a stable observation window, missing-data treatment, comparison groups, and controls for changes in request mix, incidents, article wording, access, routing and owner availability. No such data was available or invented."
+    ],
+    "sources": [
+      {
+        "title": "Set up and manage user support",
+        "organization": "UK Government Digital Service",
+        "url": "https://www.gov.uk/service-manual/helping-people-to-use-your-service/set-up-and-manage-user-support",
+        "publishedOrUpdated": "Published 2016-11-24; no later public content update displayed",
+        "accessed": "2026-08-18",
+        "claimNote": "Requires support for users, handling information requests, directing users to information, and grouping enquiries by channel, user group, status and internal team able to act. The generic GOV.UK footer warning was excluded from coding.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Designing good government services: an introduction",
+        "organization": "UK Government Digital Service",
+        "url": "https://www.gov.uk/service-manual/design/introduction-designing-government-services",
+        "publishedOrUpdated": "Published 2016-11-07; updated 2024-10-22",
+        "accessed": "2026-08-18",
+        "claimNote": "Supports the customer-purpose, next-route and restricted-detail codes by requiring clear outcomes, next steps for out-of-scope users, minimal data collection, and avoiding unnecessary exposure to internal structures.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Writing for user interfaces",
+        "organization": "UK Government Digital Service",
+        "url": "https://www.gov.uk/service-manual/design/writing-for-user-interfaces",
+        "publishedOrUpdated": "Published 2017-10-10; updated 2018-04-16",
+        "accessed": "2026-08-18",
+        "claimNote": "Supports user-centered external wording, clear questions, accessible links, options and error messages, and explicitly says personal information such as a name or date of birth should not appear in a URL.",
+        "httpStatus": 200
+      },
+      {
+        "title": "What privacy information should we provide?",
+        "organization": "UK Information Commissioner’s Office",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/the-right-to-be-informed/what-privacy-information-should-we-provide/",
+        "publishedOrUpdated": "Page metadata dated 2026-01-15; guidance stated it was under review following the Data (Use and Access) Act",
+        "accessed": "2026-08-18",
+        "claimNote": "Lists information to provide to individuals, including organizational and DPO contacts, purposes, recipients, retention, rights, complaint routes, consequences, sources and meaningful information about significant automated decisions.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Planning your response to cyber incidents",
+        "organization": "UK National Cyber Security Centre",
+        "url": "https://www.ncsc.gov.uk/collection/board-toolkit/principle-d-incident-planning-response-recovery/planning-your-response-to-cyber-incidents",
+        "publishedOrUpdated": "Published 2023-03-30; updated 2025-04-08",
+        "accessed": "2026-08-18",
+        "claimNote": "Calls for incident roles, board assurance, stakeholder communications and a plan with assigned people delivering corporate messages internally and externally. The measured page did not specify an explicit redaction or sensitive-detail rule.",
+        "httpStatus": 200
+      },
+      {
+        "title": "SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations",
+        "organization": "US National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "publishedOrUpdated": "Published September 2020; Update 1 issued 2020-12-10",
+        "accessed": "2026-08-18",
+        "claimNote": "Canonical publication record for the official PDF. AC-22 Publicly Accessible Content supplied the direct public/non-public surface-control structure used in S6.",
+        "httpStatus": 200
+      },
+      {
+        "title": "NIST Special Publication 800-53 Revision 5 (official PDF)",
+        "organization": "US National Institute of Standards and Technology",
+        "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf",
+        "publishedOrUpdated": "September 2020; updated 2020-12-10",
+        "accessed": "2026-08-18",
+        "claimNote": "Control AC-22 requires designated posting authority, training to prevent non-public disclosure, review before posting, periodic review, and removal of non-public information. This PDF is a format of S6 and did not add another document to N.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Principle (c): Data minimisation",
+        "organization": "UK Information Commissioner’s Office",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/",
+        "publishedOrUpdated": "Page metadata dated 2025-09-09; guidance stated it was under review following the Data (Use and Access) Act",
+        "accessed": "2026-08-18",
+        "claimNote": "Requires personal data to be adequate, relevant and limited to what is necessary for a specified purpose, with accountable processes, periodic review, and deletion of data no longer needed.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Standards for Safeguarding Consumer Information (route-listed URL)",
+        "organization": "US Federal Trade Commission",
+        "url": "https://www.ftc.gov/business-guidance/resources/standards-safeguarding-consumer-information",
+        "publishedOrUpdated": "Unavailable from the requested resource because it returned a not-found page",
+        "accessed": "2026-08-18",
+        "claimNote": "This was the exact URL in the article’s existing source list. Direct GET with redirects followed returned HTTP 404, so it was excluded from substantive coding and retained only as a transparent retrieval failure.",
+        "httpStatus": 404
+      },
+      {
+        "title": "FTC Safeguards Rule: What Your Business Needs to Know",
+        "organization": "US Federal Trade Commission",
+        "url": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
+        "publishedOrUpdated": "Published 2022-04-27; modified 2024-12-23",
+        "accessed": "2026-08-18",
+        "claimNote": "Accessible official replacement used for S8. For covered financial institutions, it addresses protected customer information, the Qualified Individual, internal response processes, internal/external communications, high-level incident reports and possible public release.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Error Handling Cheat Sheet",
+        "organization": "OWASP Foundation",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html",
+        "publishedOrUpdated": "Continuously maintained page; no publication or update date displayed",
+        "accessed": "2026-08-18",
+        "claimNote": "Directly distinguishes a generic user-facing error response from detailed internally logged exceptions and warns against exposing implementation details that enable information leakage.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Logging Cheat Sheet",
+        "organization": "OWASP Foundation",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+        "publishedOrUpdated": "Continuously maintained page; no publication or update date displayed",
+        "accessed": "2026-08-18",
+        "claimNote": "Defines purpose-bound internal event records, warns against web-accessible log exposure, identifies secrets and sensitive fields to remove or mask, and calls for code review, testing and security verification of logging.",
+        "httpStatus": 200
+      }
+    ]
+  }
+}

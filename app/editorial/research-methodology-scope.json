@@ -1,0 +1,219 @@
+{
+  "helpdesk-article-methodology-scope-research": {
+    "executiveAnswer": "A helpdesk finding is readable only within the population, period, selection rule, and counting base that produced it. This completed desk study coded nine current, public methodology documents from three deliberately balanced source families: statistical-production standards, government evaluation or analytical-assurance guidance, and research-reporting checklists. Seven of nine documents (77.8%) explicitly covered all four fields under a conservative binary rule. All three statistical standards and all three reporting checklists contained the complete bundle; only one of three broad evaluation or assurance documents did. The result is a measurement of this fixed document corpus, not a benchmark for helpdesk performance and not evidence about any customer queue. No ticket, customer, employee, vendor, or proprietary data was used or inferred.\n\nThe evidence supports publishing four method fields beside every article-level operational finding: who or what could enter the analysis, when observations qualified, why records entered or left the analysis, and what unit formed the numerator and denominator. Those fields change meaning, not just presentation. For example, “repeat contact was 12%” is uninterpretable until the reader knows whether the population was all contacts or only closed requests, whether the link window was 24 hours or 30 days, whether incident duplicates and abandoned contacts were excluded, and whether the denominator was people, tickets, conversations, or article uses. The public standards also show why comparisons should be stratified rather than generalized: routine answerable requests, correctly escalated protected requests, and repeat-contact or unresolved requests represent different operational outcomes. These three cohorts are an evidence-led application of the source requirements to define groups and eligibility; they are not fabricated queue observations or cohort sizes.",
+    "researchQuestion": "Across a fixed sample of public authoritative methodology standards and reporting guides, how often are four scope fields—population or cohort, observation period, inclusion or selection rule, and unit or denominator—made explicit, and what does that evidence imply for reading helpdesk article findings fairly?",
+    "observationWindow": "The cross-sectional desk review, text extraction, coding, and direct HTTP GET verification were completed on 2026-08-18. The current source editions available at the cutoff were published or revised from 2007 through 2026; each edition date is reported in the source metadata.",
+    "sampleDefinition": {
+      "population": "The current English-language editions, available on 2026-08-18, of nine pre-specified public methodology documents in three source families: statistical production (United Nations NQAF Manual, Statistics Canada Quality Guidelines, and US Census Bureau Statistical Quality Standards); government evaluation or analytical assurance (UK AQuA Book, UK Magenta Book, and UK Code of Practice for Statistics); and research-reporting checklists (STROBE, PRISMA 2020, and CONSORT 2025). The sampling frame was intentionally fixed at three documents per family to compare document function, not to estimate the prevalence of requirements across all guidance on the web.",
+      "includedN": 9,
+      "inclusion": "A document had to be publicly issued or maintained by the responsible government, intergovernmental, statistical-regulatory, or reporting-guideline organization; be the current general edition linked by that organization on the cutoff date; contain substantive methods, quality, evaluation, or reporting guidance; be available in English; and fit exactly one of the three declared families. One document per named initiative or body was counted, even when its landing page linked PDF, HTML, checklist, or annex versions.",
+      "exclusion": "Commercial surveys, vendor benchmarks, consultancy commentary, discipline-specific extensions of a core checklist, superseded editions, translations, implementation case studies, software tools, and duplicate HTML/PDF renderings were excluded. Documents were not selected because they mentioned helpdesks. No ticket records, customer examples, internal service levels, synthetic performance data, or proprietary reports entered the sample. The corpus is purposive and bounded rather than a systematic census of every methodology publication."
+    },
+    "methodology": [
+      "Freeze the nine-document corpus and its three equal source families before calculating results. Use the authoritative landing page as the source record and, where that page linked an official PDF or checklist, use the linked text for coding. This prevented multiple formats of one standard from inflating N.",
+      "Retrieve each canonical landing page with HTTP GET on 2026-08-18, follow redirects, and record the final response. All nine included landing pages returned HTTP 200. PDF links used for text inspection were also GET-accessible where present, but the availability measurement uses one canonical landing page per source.",
+      "Apply four binary criteria. M1 Population/cohort = 1 only if the document calls for defining participants, target population, analysis corpus, groups, or coverage. M2 Observation period = 1 only if it calls for relevant dates, reference period, recruitment/follow-up period, search date, or a comparable time boundary. M3 Inclusion/selection = 1 only if it calls for eligibility, inclusion/exclusion, sampling-frame coverage, source selection, or participant/record selection rules. M4 Unit/denominator = 1 only if it calls for a unit of analysis, sample or study size, participant/record flow, numbers at analysis stages, or another explicit counting base. Mere appearance in a title, example, glossary, or navigation label did not qualify.",
+      "Read each substantive document and record a short textual anchor for every positive code. A second pass checked the matrix against the operational definitions. The study used one desk reviewer, so this was a consistency check rather than independent duplicate coding; no inter-rater agreement statistic is claimed.",
+      "Mark a document complete only when M1, M2, M3, and M4 all equal 1. Sum positives over the fixed denominator of nine for corpus-level rates and over three within each source family. Percentages were calculated as numerator divided by denominator multiplied by 100 and rounded to one decimal place where necessary.",
+      "Interpret the result as document-content coverage. A score of 1 means qualifying guidance was explicit somewhere in the document; it does not measure depth, legal force, ease of implementation, or quality of any resulting analysis. A score of 0 does not mean a document is defective: broad assurance frameworks can serve a different purpose from reporting templates.",
+      "Translate, rather than transfer, the evidence to helpdesk articles. For a queue-derived claim, population means the eligible request group; period means the event and follow-up window; selection means inclusion, exclusion, deduplication, and missing-data treatment; and unit/denominator means whether the calculation counts requests, contacts, customers, searches, article uses, or another declared entity. No source supplies a universal helpdesk target, so none was created."
+    ],
+    "measurements": [
+      {
+        "label": "Included canonical source pages reachable by GET",
+        "numerator": 9,
+        "denominator": 9,
+        "calculation": "9 HTTP-200 canonical landing pages ÷ 9 included documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Documents explicitly covering population or cohort (M1)",
+        "numerator": 7,
+        "denominator": 9,
+        "calculation": "7 qualifying rows ÷ 9 included documents × 100",
+        "result": "77.8%"
+      },
+      {
+        "label": "Documents explicitly covering an observation or reference period (M2)",
+        "numerator": 7,
+        "denominator": 9,
+        "calculation": "7 qualifying rows ÷ 9 included documents × 100",
+        "result": "77.8%"
+      },
+      {
+        "label": "Documents explicitly covering inclusion or selection rules (M3)",
+        "numerator": 7,
+        "denominator": 9,
+        "calculation": "7 qualifying rows ÷ 9 included documents × 100",
+        "result": "77.8%"
+      },
+      {
+        "label": "Documents explicitly covering a unit or denominator (M4)",
+        "numerator": 7,
+        "denominator": 9,
+        "calculation": "7 qualifying rows ÷ 9 included documents × 100",
+        "result": "77.8%"
+      },
+      {
+        "label": "Documents containing the complete four-field bundle",
+        "numerator": 7,
+        "denominator": 9,
+        "calculation": "7 rows with M1 + M2 + M3 + M4 = 4 ÷ 9 included documents × 100",
+        "result": "77.8%"
+      },
+      {
+        "label": "Complete bundle in statistical-production standards",
+        "numerator": 3,
+        "denominator": 3,
+        "calculation": "3 complete statistical-standard rows ÷ 3 statistical-standard rows × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Complete bundle in government evaluation or analytical-assurance guidance",
+        "numerator": 1,
+        "denominator": 3,
+        "calculation": "1 complete evaluation/assurance row ÷ 3 evaluation/assurance rows × 100",
+        "result": "33.3%"
+      },
+      {
+        "label": "Complete bundle in research-reporting checklists",
+        "numerator": 3,
+        "denominator": 3,
+        "calculation": "3 complete reporting-checklist rows ÷ 3 reporting-checklist rows × 100",
+        "result": "100%"
+      }
+    ],
+    "table": {
+      "heading": "Document-level scope coding (1 = explicit under the declared rule; 0 = not explicit enough to qualify)",
+      "columns": [
+        "ID and document",
+        "Source family",
+        "M1 cohort/population",
+        "M2 period",
+        "M3 inclusion/selection",
+        "M4 unit/denominator",
+        "Complete",
+        "Coding anchor"
+      ],
+      "rows": [
+        ["S1 UN NQAF Manual", "Statistical production", 1, 1, 1, 1, 1, "Names target-population coverage, reference periods, source selection and sampling, and statistical units/sample size as quality elements."],
+        ["S2 Statistics Canada Quality Guidelines", "Statistical production", 1, 1, 1, 1, 1, "Directs producers to define the unit of analysis and target population, manages reference periods, and discusses sampling selection criteria and sample size."],
+        ["S3 US Census Bureau Statistical Quality Standards", "Statistical production", 1, 1, 1, 1, 1, "Requires preliminary designs to describe target population and sampling frame, addresses time/reference periods and exclusions, and specifies units, sample design, key estimates and sample size."],
+        ["S4 UK AQuA Book", "Evaluation/assurance", 0, 0, 0, 0, 0, "Requires a clear question, scope, context, boundaries, assumptions and assurance, but it is not a reporting checklist and does not require this study's four operational fields as a bundle."],
+        ["S5 UK Magenta Book", "Evaluation/assurance", 1, 1, 1, 1, 1, "Covers target populations, what happened where/when/to whom, inclusion/exclusion or selection, sampling frames and sample sizes across evaluation designs."],
+        ["S6 UK Code of Practice for Statistics, edition 3.0", "Evaluation/assurance", 0, 0, 0, 0, 0, "Sets high-level standards for transparent methods, quality, comparability, limitations and public use; under the strict rule, glossary or broad-principle references did not substitute for four report fields."],
+        ["S7 STROBE checklist", "Reporting checklist", 1, 1, 1, 1, 1, "Items 5, 6, 10 and 13 require relevant dates, eligibility and participant selection, study size, and counts at each participant stage."],
+        ["S8 PRISMA 2020 checklist", "Reporting checklist", 1, 1, 1, 1, 1, "Items 5–8 require inclusion/exclusion, grouping, source search dates and selection methods; item 16 requires counts through identification and inclusion."],
+        ["S9 CONSORT 2025 checklist", "Reporting checklist", 1, 1, 1, 1, 1, "Requires participant eligibility and trial setting, recruitment/follow-up dates, target sample size, and participant flow by randomized, treated and analysed counts."]
+      ]
+    },
+    "findings": [
+      "The four scope fields traveled together in this corpus. The same seven documents qualified for M1, M2, M3 and M4, and all seven contained the complete bundle. This convergence matters: stating a denominator without an eligibility rule can still mislead, because the reader cannot tell which records were allowed into that denominator; stating a period without a cohort can hide a changed request mix. Scope is therefore a bundle, not four optional footnotes.",
+      "Document function explained the observed split better than institutional authority. The three statistical-production standards and three research-reporting checklists all scored 4/4. In the evaluation/assurance family, only the Magenta Book scored 4/4, while the AQuA Book and Code of Practice scored 0 under the strict reporting-field rule. Both zero-score documents still require strong assurance, transparency, quality, limitations or clear boundaries. Their scores show that a high-level governance framework should not be mistaken for a ready-made operational-results template.",
+      "The reporting checklists demonstrate how method scope connects directly to a result. STROBE joins setting dates and eligibility to study size and participant flow. PRISMA joins inclusion/exclusion and grouping to search dates, selection methods and flow counts. CONSORT joins eligibility and setting to recruitment/follow-up dates, target sample size and participant flow. Although these checklists address health research rather than helpdesks, the transferable evidence is structural: every reported rate remains attached to who could qualify, when qualification occurred, how selection happened, and what was counted.",
+      "The statistical standards supply the closest analogue to routine operational measurement. The UN manual addresses target-population coverage and reference periods; Statistics Canada explicitly connects unit of analysis with target population; and the Census standards require target population, sampling frame, sample design and key estimates in preliminary design. These sources do not authorize any helpdesk benchmark. They establish why a locally observed aggregate describes only the measured frame and period.",
+      "Three comparison cohorts are analytically necessary for article findings: routine requests eligible for an approved frontline answer, protected or exceptional requests correctly escalated, and requests followed by repeat contact or unresolved status. Combining them can reverse interpretation. A high escalation share may indicate poor guidance in the routine cohort but correct boundary observance in the protected cohort. Likewise, repeat contact may concern the same issue, a new issue, customer follow-through or an incident; a declared linking and reason-classification rule is needed before attributing it to an article.",
+      "Direct GET verification found all nine canonical pages available (9/9), which makes the source corpus inspectable as of the cutoff. Availability does not prove that page content is immutable, that every attachment will remain at the same URL, or that a standard applies unchanged to a specific organization. The edition and access dates are therefore part of the evidence record rather than administrative decoration."
+    ],
+    "operationalImplications": [
+      "Place a compact method box beside each helpdesk article finding. It should name the eligible population or cohort, start and end events and dates, inclusion/exclusion and deduplication rules, missing-data handling, and the unit used in numerator and denominator. If one field is unknown, label it unknown; do not silently treat missing values as success, failure, or non-occurrence.",
+      "Report routine, protected/escalated, and repeat/unresolved cohorts separately before showing an overall rate. Define the cohorts by observable request eligibility and final disposition. A correct escalation should not be counted as a failed article-assisted resolution when the article's purpose is to establish a stopping point, and a routine answer should not be credited when a protected decision was performed without authority.",
+      "Name the event window for every outcome. Search success needs a declared search session and channel; repeat contact needs an identity-safe linking key, maximum interval, and same-reason test; resolution needs a closure or confirmed-outcome rule; article use needs an observable citation or selection event. Calendar labels such as 'monthly' are insufficient when follow-up crosses month boundaries.",
+      "Use denominators that match the claim. Article-use accuracy should divide reviewed eligible uses by all reviewed eligible uses, not by all tickets. Escalation appropriateness should divide reviewed escalation-eligible requests by that same eligible group. Findability should distinguish searches, search sessions, requests and people. Publish numerator and denominator as counts alongside the percentage so small-N volatility remains visible.",
+      "Preserve an exclusion ledger at aggregate level. Record counts excluded for incident duplication, abandoned intake, unavailable outcome, test or spam traffic, out-of-scope channel, or failure to meet the follow-up window. The ledger makes selection effects inspectable without exposing message content, identities, credentials or account details.",
+      "Treat comparisons across periods as descriptive unless cohort definitions, channel coverage, article version, routing rules, incident conditions and outcome windows are comparable. If any changed, annotate the break and avoid attributing movement to article wording alone. The source review supports methodological transparency; it does not establish causality from a before-and-after chart."
+    ],
+    "limitations": [
+      "This study measures nine documents, not helpdesk requests, people, searches, articles, organizations or countries. Its 77.8%, 100% and 33.3% results describe explicit field coverage in the fixed corpus only. They are not prevalence estimates for all methodology guidance and not service targets.",
+      "The sample was purposive, English-language and balanced by design at three documents per family. It omits other relevant standards, professional bodies, jurisdictions, qualitative-research guidance, accessibility guidance and discipline-specific checklist extensions. A different frame or family definition could change both counts and the observed family contrast.",
+      "Binary coding compresses depth and context. A single explicit requirement and extensive treatment both score 1, while a broad principle can score 0 under a strict field definition even when it supports good analysis. The AQuA Book and Code of Practice results must therefore be read as 'not a complete field template under this rule,' not as judgments that those documents lack value or rigor.",
+      "One reviewer performed the coding and a second consistency pass. No independent duplicate reviewer was available, so no Cohen's kappa or other inter-rater statistic is reported. The operational definitions, row-level anchors and fixed calculations expose the decisions for replication, but another reviewer could reasonably classify a borderline passage differently.",
+      "The three helpdesk comparison cohorts are a translation of recurring source concepts—population, eligibility, grouping, selection and flow—not an empirical finding that those cohorts have any particular size or outcome. Local teams would need authorized, minimized operational data to estimate them, and this report supplies no such data.",
+      "GET status establishes retrievability on 2026-08-18, not historical stability, completeness of every linked annex, endorsement for a particular helpdesk, or legal applicability. Source organizations can revise pages after the cutoff. The study used the current editions available at retrieval and records publication or revision dates so later readers can identify version drift.",
+      "The design cannot estimate causal effects. Even a perfectly scoped helpdesk before-and-after result may be confounded by incidents, seasonality, channel or queue mix, staffing, product changes, routing changes, article discoverability, customer behavior and changes in owner availability. Scope disclosure makes those threats visible; it does not eliminate them."
+    ],
+    "sources": [
+      {
+        "title": "United Nations National Quality Assurance Frameworks Manual for Official Statistics",
+        "organization": "United Nations Statistics Division",
+        "url": "https://unstats.un.org/unsd/methodology/dataquality/un-nqaf-manual/",
+        "publishedOrUpdated": "Adopted March 2019",
+        "accessed": "2026-08-18",
+        "claimNote": "The manual and its official PDF address target-population coverage, reference periods, source selection, statistical units and sample-size considerations; these passages support the S1 codes.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Statistics Canada Quality Guidelines, Sixth Edition",
+        "organization": "Statistics Canada",
+        "url": "https://www150.statcan.gc.ca/n1/pub/12-539-x/12-539-x2019001-eng.htm",
+        "publishedOrUpdated": "Released 2019-12-04",
+        "accessed": "2026-08-18",
+        "claimNote": "The guidelines explicitly connect unit of analysis and target population and discuss reference periods, sampling-selection criteria and sample size; these passages support the S2 codes.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Statistical Quality Standards",
+        "organization": "US Census Bureau",
+        "url": "https://www.census.gov/about/policies/quality/standards.html",
+        "publishedOrUpdated": "Current standards revised 2026-05-26",
+        "accessed": "2026-08-18",
+        "claimNote": "The official current PDF requires target population and sampling frame in preliminary design and addresses time periods, exclusions, analysis units, sample design and sample size; these passages support the S3 codes.",
+        "httpStatus": 200
+      },
+      {
+        "title": "The AQuA Book: Guidance on producing quality analysis for government",
+        "organization": "UK Government Analysis Function, Government Actuary's Department, and Office for National Statistics",
+        "url": "https://www.gov.uk/guidance/the-aqua-book",
+        "publishedOrUpdated": "Published 2025-07-30",
+        "accessed": "2026-08-18",
+        "claimNote": "The book requires clear analytical questions, scope, context, boundaries, assumptions and proportionate assurance. It supports the interpretation that assurance guidance is valuable but is not automatically a four-field reporting template.",
+        "httpStatus": 200
+      },
+      {
+        "title": "The Magenta Book: Central Government guidance on evaluation",
+        "organization": "HM Treasury and UK Evaluation Task Force",
+        "url": "https://www.gov.uk/government/publications/the-magenta-book",
+        "publishedOrUpdated": "Updated 2026-05-15; current book dated May 2026",
+        "accessed": "2026-08-18",
+        "claimNote": "The current guide covers target populations, what occurred where, when and to whom, inclusion/exclusion and selection, sampling frames, and sample sizes; these passages support the S5 codes.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Code of Practice for Statistics, Edition 3.0",
+        "organization": "UK Statistics Authority",
+        "url": "https://code.statisticsauthority.gov.uk/the-code/",
+        "publishedOrUpdated": "Edition 3.0, Autumn 2025",
+        "accessed": "2026-08-18",
+        "claimNote": "The Code establishes standards for trustworthy, high-quality, valuable and transparent public statistics and analysis. Its broad standards informed the conservative distinction between governance principles and an explicit operational method-field template.",
+        "httpStatus": 200
+      },
+      {
+        "title": "STROBE Statement checklist for cohort, case-control and cross-sectional studies",
+        "organization": "STROBE Initiative",
+        "url": "https://www.strobe-statement.org/checklists/",
+        "publishedOrUpdated": "Statement published 2007; checklist served as current on access date",
+        "accessed": "2026-08-18",
+        "claimNote": "Checklist items 5, 6, 10 and 13 explicitly require relevant dates, eligibility and selection, study size, and participant counts through analysis; these items support the S7 codes.",
+        "httpStatus": 200
+      },
+      {
+        "title": "PRISMA 2020 Checklist",
+        "organization": "PRISMA Executive",
+        "url": "https://www.prisma-statement.org/prisma-2020-checklist",
+        "publishedOrUpdated": "PRISMA 2020 statement published 2021",
+        "accessed": "2026-08-18",
+        "claimNote": "Items 5 through 8 specify eligibility, grouping, information-source search dates and selection; item 16 requires record and report flow counts. These items support the S8 codes.",
+        "httpStatus": 200
+      },
+      {
+        "title": "CONSORT 2025 Statement and expanded checklist",
+        "organization": "CONSORT Group",
+        "url": "https://www.consort-spirit.org/",
+        "publishedOrUpdated": "CONSORT statement updated 2025",
+        "accessed": "2026-08-18",
+        "claimNote": "The official site links the 2025 checklist, which requires eligibility and setting, recruitment/follow-up dates, target sample size and participant flow by randomized, treated and analysed counts; these items support the S9 codes.",
+        "httpStatus": 200
+      }
+    ]
+  }
+}

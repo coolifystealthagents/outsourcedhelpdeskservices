@@ -1,0 +1,303 @@
+{
+  "helpdesk-article-translation-risk-research": {
+    "executiveAnswer": [
+      "A completed bilingual desk study found three decision-relevant differences in 12 deliberately selected English–Spanish instruction pairs from two officially cross-linked Federal Trade Commission consumer pages. The title’s risk question was tested at the level of a bounded instruction, not by asking whether prose sounded fluent. Each pair was coded for preservation of four elements that can change a support outcome: actor, object, or scope; action and modal force; condition, exception, or negation; and destination, contact detail, sequence, or stopping point. Nine of 12 pairs (75.0%) preserved all four elements under the declared rule. Eleven of 12 (91.7%) preserved each individual test, but the one failure in each column occurred across three different pairs, so column-level scores must not be mistaken for complete equivalence.",
+      "The three flagged pairs illustrate different translation-risk mechanisms. In the phishing-sign list, the Spanish text preserved suspicious account activity but omitted the English alternative ‘log-in attempts,’ narrowing one observable warning signal. In the scam-recovery page, the English and Spanish MoneyGram telephone numbers differed. That may be an intentional language-specific destination rather than an error, but it still changes where a reader is routed and therefore requires destination-level verification rather than word-level review. In the reporting passage, English invited a report from someone who experienced or merely spotted a scam and said the FTC ‘can use’ the information; Spanish said to report if the reader was scammed and stated that the FTC ‘uses’ the information. That pair narrowed the reporting condition and changed possibility to an unqualified present-tense assertion.",
+      "Version evidence strengthened the interpretation without proving a cause. Both official page pairs were connected by reciprocal or page-declared English/Spanish alternate links, and all four pages returned HTTP 200 on 2026-08-18. Neither pair shared a modification date. The phishing pages were last modified 11 days apart in October 2024, while the English scam-recovery page was modified on 2026-08-13 and its Spanish counterpart displayed 2025-08-21. The study did not reconstruct edit histories, so it cannot say that asynchronous updates caused any specific difference. It does show that language parity cannot be inferred from an official alternate link, common publisher, fluent wording, or a matching topic title.",
+      "The evidence-led answer is therefore narrow: translation review should compare the decision boundary, not surface similarity. For helpdesk guidance, the critical unit is whether the same requester, under the same condition, is told to take or avoid the same action, in the same order, through a valid destination. Back-translation can assist discovery, but it would not by itself explain whether a changed telephone number is a deliberate localized route. No customer article, ticket, employee record, translation vendor output, service metric, or proprietary language asset was used or inferred, and the measured 75.0% is not an industry translation-quality rate."
+    ],
+    "researchQuestion": "Across a fixed set of officially paired English and Spanish FTC safety and recovery instructions, how often are actor/object scope, action or modal force, condition/exception/negation, and route/contact/order preserved—and which observed differences could alter a helpdesk article’s routing or stopping point?",
+    "observationWindow": "Single-day cross-sectional desk review completed on 2026-08-18. Direct GET requests, official alternate-language relationships, visible text, and page publication or modification metadata were recorded on that date. The four included pages displayed publication dates from 2019 to 2022 and last-modified dates from 2024-10-11 through 2026-08-13. This was a document-comparison window, not an observation period for helpdesk operations, customer behavior, or translation production.",
+    "sampleDefinition": {
+      "population": "The bounded population was 12 predeclared English–Spanish instruction pairs extracted from two FTC consumer-information page pairs: 10 pairs from the official phishing-recognition page and its Spanish alternate, and two pairs from the official scam-recovery page and its Spanish alternate. The unit of analysis was one aligned instruction pair containing a warning, condition, action, destination, sequence, or stop decision that could plausibly be reused or summarized in support guidance. The population was purposively concentrated on consequential passages rather than sampled to represent all text on the four pages or all public translations.",
+      "includedN": 12,
+      "inclusion": "A segment entered the fixed sample only when the English page linked or declared the Spanish page as its alternate; both canonical pages returned HTTP 200; the passages addressed the same identifiable topic; and the English passage contained at least one operationally material actor/object, action, condition/negation, destination/contact, sequence, or stopping element. Repeated headings and purely descriptive narrative were not counted. The 12 pairs were frozen before column totals and completeness were calculated.",
+      "exclusion": "Navigation, image captions, decorative examples, general background prose with no user decision, duplicated headings, unaligned additions, and passages whose corresponding text could not be identified were excluded. The route-listed NIST SP 800-53 Revision 5 Update 1 and NIST SP 800-61 Revision 2 pages returned HTTP 200 but were excluded from the bilingual segment corpus because their canonical pages did not declare an official Spanish alternate and neither page is a translation-quality study. The route-listed CISA phishing page returned HTTP 403 and was retained as a transparent access failure, not used as substantive evidence. No search snippets, machine-generated translation, customer data, internal knowledge base, proprietary glossary, or invented support scenario entered the sample."
+    },
+    "methodology": [
+      "The review first froze the route title, excerpt, and three existing source references. It issued direct HTTP GET requests with redirects followed and a descriptive user agent. NIST SP 800-53 Revision 5 Update 1 and NIST SP 800-61 Revision 2 returned HTTP 200; the CISA phishing topic URL returned HTTP 403. Those route sources were screened for topical and bilingual fit rather than accepted automatically. Because none supplied an inspectable English–Spanish article pair in the canonical page, none entered the 12-pair semantic denominator.",
+      "Two FTC page pairs were then fixed as the public bilingual corpus. The English phishing page declared its Spanish alternate at consumidor.ftc.gov, and the English scam-recovery page did the same. All four canonical pages returned HTTP 200. Visible article text was extracted in document order from headings, paragraphs, and list items. Publication and modification times were taken from each page’s article metadata. The official alternate relationship established that the pages were paired; it did not predetermine that every segment was equivalent.",
+      "Ten consequential phishing segments were selected in source order: suspicious-activity or login-attempt claims; a payment-link malware warning; the rule about legitimate companies not sending a link to update payment information; automatic security-software updates; multi-factor authentication requirements and factor categories; the ‘No’ branch for an unknown sender; the ‘Yes’ branch requiring independently known contact information; the IdentityTheft.gov route after information exposure; the update/scan/remove sequence after harmful software; and the email, text, and FTC reporting destinations. Two scam-recovery segments were selected: MoneyGram reversal/contact instructions and the FTC reporting eligibility/purpose passage.",
+      "Each aligned pair received four binary preservation codes. T1 Actor/object/scope = 1 only when the same relevant person, organization, account, information type, signal, or other object remained in scope; omission of one alternative object counted 0. T2 Action/modal force = 1 only when commands, prohibitions, permissions, possibilities, and requirements had equivalent practical force; changing ‘can’ to an unqualified factual assertion counted 0. T3 Condition/exception/negation = 1 only when triggers, branches, alternatives, negations, and exceptions were retained without material narrowing or widening. T4 Route/contact/order/stop = 1 only when the destination, address, telephone number, sequence, timing term, and stop-or-continue disposition produced the same route.",
+      "A dimension received 1 when all material elements in that dimension were equivalent. If neither side contained an element in a dimension, the pair received 1 only when the translation also introduced none; this treats preserved absence as equivalence rather than claiming the segment was a complete instruction. A pair was complete only when T1, T2, T3, and T4 all equaled 1. A zero was labeled a review flag, not automatically a translation error. That distinction is important for localized telephone numbers, because a different destination may be correct for a language audience even though destination parity fails.",
+      "One reviewer aligned and coded the pairs, then performed a second consistency pass against the four definitions. The comparison used the visible Spanish text directly; it did not create or score a machine back-translation. The displayed ledger preserves enough of each English and Spanish passage to make the judgment inspectable. No inter-rater agreement statistic is claimed because the second pass was not an independent review.",
+      "Numerators were recomputed from the displayed rows. T1 has one zero and 11 ones; T2 has one zero and 11 ones; T3 has one zero and 11 ones; T4 has one zero and 11 ones. Three distinct rows contain at least one zero, leaving nine complete rows. Thus individual-dimension preservation is 11 divided by 12, or 91.7%, while complete four-test preservation is nine divided by 12, or 75.0%. The three flagged rows equal 25.0% of the corpus, and complete plus flagged rows reconcile to 12.",
+      "Page-level metadata was calculated separately from segment-level meaning. Four of four included pages were retrievable. Zero of two language pairs shared the same last-modified calendar date. The metadata result is used only as an update-parity signal: differing dates do not prove semantic drift, and matching dates would not prove equivalence. Findings were limited to this fixed public corpus and were not converted into customer outcomes, prevalence estimates, or causal claims."
+    ],
+    "measurements": [
+      {
+        "label": "Included bilingual canonical pages retrievable by direct GET",
+        "numerator": 4,
+        "denominator": 4,
+        "calculation": "4 HTTP-200 included pages ÷ 4 included pages × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Official English–Spanish page pairs sharing the same last-modified calendar date",
+        "numerator": 0,
+        "denominator": 2,
+        "calculation": "0 same-date pairs ÷ 2 official language pairs × 100",
+        "result": "0%"
+      },
+      {
+        "label": "Instruction pairs preserving actor, object, and scope (T1)",
+        "numerator": 11,
+        "denominator": 12,
+        "calculation": "11 T1-preserved rows ÷ 12 instruction pairs × 100",
+        "result": "91.7%"
+      },
+      {
+        "label": "Instruction pairs preserving action and modal force (T2)",
+        "numerator": 11,
+        "denominator": 12,
+        "calculation": "11 T2-preserved rows ÷ 12 instruction pairs × 100",
+        "result": "91.7%"
+      },
+      {
+        "label": "Instruction pairs preserving conditions, exceptions, and negation (T3)",
+        "numerator": 11,
+        "denominator": 12,
+        "calculation": "11 T3-preserved rows ÷ 12 instruction pairs × 100",
+        "result": "91.7%"
+      },
+      {
+        "label": "Instruction pairs preserving route, contact detail, order, and stopping point (T4)",
+        "numerator": 11,
+        "denominator": 12,
+        "calculation": "11 T4-preserved rows ÷ 12 instruction pairs × 100",
+        "result": "91.7%"
+      },
+      {
+        "label": "Instruction pairs preserving all four tested dimensions",
+        "numerator": 9,
+        "denominator": 12,
+        "calculation": "9 rows with T1 + T2 + T3 + T4 = 4 ÷ 12 instruction pairs × 100",
+        "result": "75.0%"
+      },
+      {
+        "label": "Instruction pairs carrying at least one decision-relevant review flag",
+        "numerator": 3,
+        "denominator": 12,
+        "calculation": "3 rows with at least one zero ÷ 12 instruction pairs × 100",
+        "result": "25.0%"
+      }
+    ],
+    "table": {
+      "heading": "Complete English–Spanish decision-boundary ledger (N=12; 1 = preserved under the declared test, 0 = review flag)",
+      "columns": [
+        "ID and paired passage",
+        "T1 actor/object/scope",
+        "T2 action/modal",
+        "T3 condition/negation",
+        "T4 route/order/stop",
+        "Complete",
+        "Observed disposition"
+      ],
+      "rows": [
+        [
+          "P1 Phishing claims: EN says a message may claim ‘suspicious activity or log-in attempts’; ES says suspicious activity was detected in the account but omits log-in attempts.",
+          0,
+          1,
+          1,
+          1,
+          0,
+          "Review flag: one alternative warning object is absent, narrowing the recognition example even though the false-claim negation remains."
+        ],
+        [
+          "P2 Payment link: EN says a scammer may want the reader to click a payment link, but the link has malware; ES conveys the same requested action and malicious-program warning.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved: same deceptive action, contrast, and harmful-link stop signal."
+        ],
+        [
+          "P3 Legitimate-company boundary: EN says legitimate companies will not email or text a link to update payment information; ES retains company legitimacy, both channels, the prohibition, link, and payment-information object.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved: the negative boundary against using the supplied link remains operationally equivalent."
+        ],
+        [
+          "P4 Security software: EN directs the reader to protect the computer with security software and set automatic updates to address new threats; ES preserves the command, automatic-update setting, purpose, and threat condition.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved: same actor, device, preventive action, automation, and purpose."
+        ],
+        [
+          "P5 Multi-factor authentication: EN says some accounts require two or more credentials and groups them as something known, possessed, or inherent; ES preserves the threshold and all three categories.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved: requirement threshold and factor taxonomy produce the same account-protection instruction."
+        ],
+        [
+          "P6 Unknown-sender branch: EN says that if the answer is No, review phishing signs, report the message, and then delete it; ES preserves the No condition and report-before-delete sequence.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved: same branch, actions, and stopping order."
+        ],
+        [
+          "P7 Known-sender branch: EN says that if the answer is Yes, contact the company using a known-real number or website, not information in the email; ES preserves the Yes condition, independent contact route, and exclusion.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved: same condition and safe alternate route rather than use of the suspect message."
+        ],
+        [
+          "P8 Exposed information: EN routes readers who think a scammer has Social Security, card, or bank-account information to IdentityTheft.gov for information-specific steps; ES names the same data classes and routes to RobodeIdentidad.gov for steps based on lost information.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved through localization: the destination domain changes to the official Spanish service while purpose and next action remain equivalent."
+        ],
+        [
+          "P9 Harmful software: EN says that after a suspected harmful download, update security software, run a scan, and remove identified problems; ES preserves the trigger and update–scan–remove sequence.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved: same suspected event and ordered containment actions."
+        ],
+        [
+          "P10 Phishing reports: EN routes email to reportphishing@apwg.org, text to SPAM (7726), and an FTC report to ReportFraud.ftc.gov; ES retains the first two and localizes the FTC destination to ReporteFraude.ftc.gov.",
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Preserved through localization: channels, addresses/numeral, and reporting purpose remain equivalent."
+        ],
+        [
+          "S1 MoneyGram recovery: both versions say to contact the transfer company, identify fraud, and request reversal/refund; EN lists 1-800-926-9400 while ES lists 1-800-955-7777.",
+          1,
+          1,
+          1,
+          0,
+          0,
+          "Review flag, not an automatic error: the destination differs and may be an intentional language-specific line, so the route requires independent currency and audience verification."
+        ],
+        [
+          "S2 FTC scam reporting: EN says report if the reader experienced or even spotted a scam and that the FTC ‘can use’ the information; ES says report if the reader was scammed and that the FTC ‘uses’ the information. Both route to the FTC fraud-reporting site.",
+          1,
+          0,
+          0,
+          1,
+          0,
+          "Review flag: the Spanish condition omits observer-only reporting and the statement shifts from capability to an unqualified present-tense use claim."
+        ]
+      ]
+    },
+    "findings": [
+      "Complete-pair scoring exposed a risk hidden by column averages. Every individual dimension scored 11/12, or 91.7%, yet only 9/12 pairs preserved the full four-test bundle because the zeros occurred in three different rows. A report that announced ‘more than 90% preservation’ without showing pair-level conjunction would overstate the result. For a support instruction, one changed object, condition, modal, or destination can be sufficient to change recognition, eligibility, or routing even when all surrounding language is fluent.",
+      "The phishing warning-list difference was a scope omission rather than a mistranslated command. Spanish retained suspicious account activity and the statement that the claim was false, but did not retain the English alternative of suspicious log-in attempts in the sampled bullet. A terminology-only check could pass because account, suspicious activity, and scam concepts remain. The actor/object test fails because the set of observable signals is narrower. Applied to support guidance, that kind of omission could make one evidence pattern less findable without changing the apparent tone of the article.",
+      "Localized routes cannot be judged by textual identity. IdentityTheft.gov becoming RobodeIdentidad.gov and ReportFraud.ftc.gov becoming ReporteFraude.ftc.gov preserved function and therefore passed T4. By contrast, the MoneyGram telephone numbers differed and the public pages did not explain within the sampled passage whether one line was language-specific, superseded, or erroneous. The study therefore records a review flag rather than choosing a number. Requiring identical strings would wrongly fail valid localized destinations; accepting every localized-looking destination would conceal a potentially stale or incorrect route.",
+      "The FTC reporting pair contained two changes in one fluent sentence group. English included people who merely spotted a scam, while Spanish conditioned the route on having been scammed. English described what the FTC can do with reports; Spanish stated what it does. The first difference narrows route eligibility; the second strengthens modal force. Neither is revealed by checking nouns such as FTC, scam, information, cases, trends, education, or community, all of which remain present. Boundary comparison therefore adds information beyond a glossary match.",
+      "Version dates were asynchronous in both page pairs. The phishing pages had nearby but nonidentical October 2024 modification timestamps. The scam pages showed a much larger gap: the English page was modified five days before the observation cutoff, while the Spanish page’s displayed modification date was in August 2025. This is an observable parity signal, not evidence that one language is authoritative or that every newer sentence is correct. The lack of public edit-history reconstruction prevents attributing S1 or S2 to a particular update.",
+      "The official alternate-page relationship established provenance but not semantic equivalence. All four included URLs were first-party FTC pages and returned HTTP 200, which makes the corpus inspectable. Those properties do not answer whether each condition, destination, or modal is current. Conversely, the route-listed CISA page’s HTTP 403 did not prove that its content was obsolete; it made the content unverifiable under the declared GET method and therefore unsuitable as substantive evidence for this study.",
+      "The existing route sources were weak evidence for the translation question. NIST SP 800-53 and the now-withdrawn NIST SP 800-61 Revision 2 concern security/privacy controls and incident handling, and neither canonical page declared a Spanish alternate. The CISA reference concerned phishing but failed retrieval. Their authority in adjacent security topics does not create evidence about bilingual equivalence. Screening them out of the semantic denominator preserved topical fit while retaining their access and scope status transparently.",
+      "No operational harm, customer confusion, or helpdesk outcome was measured. The three flags are semantic or destination differences in public pages. The report cannot say whether anyone relied on them, whether a language-specific telephone number was correct for its audience, or whether the reporting difference changed actual submissions. The completed desk result is a reproducible difference ledger and a bounded test of preservation, not an impact estimate."
+    ],
+    "operationalImplications": [
+      "Represent a translated instruction as a decision record with four comparable layers: who and what it covers; what is required, permitted, possible, or prohibited; which trigger, exception, alternative, or negation controls applicability; and where the reader goes, in what order, and where the path stops. A general label such as ‘Spanish reviewed’ does not expose which layer was checked.",
+      "Compare functional destinations rather than demanding literal string identity. A language-specific official fraud-reporting domain can preserve the route, while a different telephone number needs evidence that it is the valid localized destination. Record both values and the source dates. Do not silently replace one with the other or infer that the English string is universally correct.",
+      "Treat version parity as a trigger for passage comparison, not as a pass/fail proxy. When one language page has a later modification marker, identify the affected source passages and compare actors, objects, modals, conditions, negations, destinations, and order. A common publication date cannot substitute for that semantic check, and a date mismatch alone is not proof of error.",
+      "Keep source ambiguity visible. The S1 route difference supports an unresolved destination flag because the public passages do not explain the reason for the two numbers. A helpdesk article should not convert that uncertainty into a confident universal instruction. Resolution belongs with the accountable source or service owner who can verify route currency and audience coverage.",
+      "Use scenario or back-translation review as a diagnostic aid, not as sole evidence of equivalence. The decisive question is whether the same case receives the same eligibility decision, action force, safe route, and stopping point. A smooth back-translation can still omit an alternative signal or normalize ‘can’ and ‘does’ into prose that sounds acceptable.",
+      "Preserve the source-language passage, translated passage, canonical URLs, modification markers, and row-level disposition together. That evidence permits rechecking when either page changes and avoids relying on reviewer memory. It also separates a verified localized route from a translation that merely resembles the source.",
+      "Prioritize warnings, prohibitions, permissions, commitments, exception branches, reporting eligibility, contact values, time limits, and action sequence for boundary review. The measured flags occurred in a warning-object list, a destination value, and a reporting condition/modal—not in specialized terminology alone. This priority is a synthesis from the fixed corpus, not a claim that other prose can never matter."
+    ],
+    "limitations": [
+      "This was a purposive corpus of 12 aligned segments from four FTC pages in one English–Spanish language pair. It is not a random sample of the FTC, public translations, helpdesk articles, industries, languages, translators, or machine-translation systems. The 75.0%, 91.7%, and 25.0% results describe this ledger only and must not be presented as translation accuracy or risk prevalence.",
+      "Ten of 12 segments came from one phishing page pair. The concentration was intentional because the route excerpt concerns routing and stopping points and the page offers many consequential branches, but it makes the result especially sensitive to that page’s editorial structure. A corpus balanced by publisher, language, topic, and instruction type could produce different counts.",
+      "The sample selected consequential passages rather than every sentence. This maximum-relevance design is useful for testing the four dimensions but can increase the visible flag share compared with a full-page census containing descriptive prose. It also excludes unaligned additions unless they appeared inside a selected paired instruction.",
+      "One reviewer aligned Spanish and English passages, assigned codes, and completed a consistency pass. No independent bilingual reviewer adjudicated the pairings, and no inter-rater agreement statistic is claimed. The ledger exposes the relevant wording and rules, but a qualified second reviewer could reasonably disagree about whether a modal or functional route is equivalent.",
+      "The study does not label all review flags as errors. In particular, two different telephone numbers may be correct for different language audiences. The public passages and page metadata did not establish that explanation, so the report stops at ‘destination differs and needs verification.’ It does not recommend either number for present use.",
+      "Page modification metadata shows asynchronous dates, not line-level provenance. The study did not have public revision diffs tying an edit date to P1, S1, or S2, so it cannot conclude that update lag caused the observed differences. A page may receive metadata changes unrelated to the sampled text, and content may change without a conveniently interpretable marker.",
+      "Visible web text was compared, not linked forms, telephone service behavior, screen-reader output, images, videos, downloadable files, or the result of submitting a report. HTTP 200 proves retrievability at the observation cutoff, not that every destination worked, every number was current, or either page will remain unchanged.",
+      "The route-listed NIST and CISA sources do not supply translation-quality findings. NIST SP 800-61 Revision 2 was visibly withdrawn and superseded, NIST SP 800-53 was retrievable, and CISA returned 403 to the study GET. They are disclosed because they were the article’s current sources, but excluding them from semantic coding means the substantive result rests on the FTC corpus.",
+      "No tickets, customers, readers, support specialists, accessibility outcomes, incident reports, fraud reports, or financial recoveries were observed. The report cannot estimate comprehension, safe reuse, route completion, repeat contact, or harm. It is a content-equivalence study and is not translation, legal, cybersecurity, fraud-recovery, or accessibility advice."
+    ],
+    "sources": [
+      {
+        "title": "How To Recognize and Avoid Phishing Scams",
+        "organization": "Federal Trade Commission",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams",
+        "publishedOrUpdated": "Published 2019-05-03; modified 2024-10-11",
+        "accessed": "2026-08-18",
+        "claimNote": "Official English corpus page. Its alternate-language metadata links the measured Spanish page. Ten source-order instruction segments supplied P1–P10, including warning objects, negative boundaries, conditional branches, action sequences, and reporting destinations.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Cómo reconocer y evitar las estafas de phishing",
+        "organization": "Comisión Federal de Comercio",
+        "url": "https://consumidor.ftc.gov/articulos/como-reconocer-y-evitar-las-estafas-de-phishing",
+        "publishedOrUpdated": "Published 2019-05-03; modified 2024-10-22",
+        "accessed": "2026-08-18",
+        "claimNote": "Official Spanish alternate used for P1–P10. It preserved the sampled safe-contact branches, action sequences, and localized FTC destinations, while the sampled suspicious-activity bullet omitted the English alternative referring to log-in attempts.",
+        "httpStatus": 200
+      },
+      {
+        "title": "What To Do if You Were Scammed",
+        "organization": "Federal Trade Commission",
+        "url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed",
+        "publishedOrUpdated": "Published 2022-07-16; modified 2026-08-13",
+        "accessed": "2026-08-18",
+        "claimNote": "Official English corpus page. S1 used its MoneyGram reversal route and listed telephone number; S2 used its reporting invitation for people who experienced or even spotted a scam and its statement that the FTC can use reports.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Qué hacer si lo estafaron",
+        "organization": "Comisión Federal de Comercio",
+        "url": "https://consumidor.ftc.gov/articulos/que-hacer-si-lo-estafaron",
+        "publishedOrUpdated": "Published 2022-07-21; modified 2025-08-21",
+        "accessed": "2026-08-18",
+        "claimNote": "Official Spanish alternate used for S1 and S2. The sampled MoneyGram number differed from English; the reporting passage conditioned the route on having been scammed and stated that the FTC uses the information.",
+        "httpStatus": 200
+      },
+      {
+        "title": "SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations, Update 1",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "publishedOrUpdated": "Published September 2020; updated 2020-12-10; later release planning note displayed",
+        "accessed": "2026-08-18",
+        "claimNote": "Route-listed source returned HTTP 200. It was screened but excluded from the bilingual segment corpus because the canonical page declared no Spanish alternate and did not provide evidence about translation equivalence.",
+        "httpStatus": 200
+      },
+      {
+        "title": "SP 800-61 Rev. 2, Computer Security Incident Handling Guide",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r2/final",
+        "publishedOrUpdated": "Published August 2012; withdrawn 2025-04-03 and superseded by SP 800-61 Revision 3",
+        "accessed": "2026-08-18",
+        "claimNote": "Route-listed source returned HTTP 200 while visibly withdrawn. It declared no Spanish alternate and was excluded from semantic coding; its incident-response authority does not establish bilingual equivalence for the article question.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Phishing",
+        "organization": "Cybersecurity and Infrastructure Security Agency",
+        "url": "https://www.cisa.gov/topics/cyber-threats-and-advisories/phishing",
+        "publishedOrUpdated": "Unavailable to the study GET; publication or update marker not substantively inspected",
+        "accessed": "2026-08-18",
+        "claimNote": "Route-listed source returned HTTP 403 to a direct GET with redirects followed. It was retained as an access failure and excluded from all substantive coding; no translation or phishing claim was inferred from snippets or prior memory.",
+        "httpStatus": 403
+      }
+    ]
+  }
+}

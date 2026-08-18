@@ -1,0 +1,301 @@
+{
+  "helpdesk-article-contradiction-review-research": {
+    "executiveAnswer": [
+      "A completed public-source desk study found that apparently incompatible helpdesk guidance could not be resolved safely by choosing the newer page or blending both instructions. The study applied four predeclared tests to 12 contradiction packets built from the article’s three named source authorities: NIST SP 800-53 Revision 5, the NIST least-privilege glossary, and the Federal Trade Commission’s Safeguards Rule compliance guide. A pair counted as a direct contradiction only when it addressed the same actor or population, the same decision object or action, under the same conditions, and prescribed mutually incompatible outcomes. Four of 12 packets (33.3%) passed all four tests and were direct contradictions. Eight of 12 (66.7%) were only apparent conflicts: four compared different scopes, three stated a rule beside its own condition or exception, and one restated the same least-privilege principle in compatible words.",
+      "The four direct-conflict packets were deliberately constructed stress tests, not contradictory instructions found in a customer knowledge base. Each placed a faithful public-source proposition beside an explicitly labeled opposite instruction: review and approve the same configuration-controlled change versus implement it without review; grant only task-necessary access versus grant all privileges; monitor the same service provider versus waive oversight; and designate supervision of the same information-security program versus leave it unsupervised. The rubric classified all four as direct conflicts. This validates the decision rule on known cases, but the resulting 33.3% is not an estimate of contradiction prevalence in helpdesk articles, public guidance, or any organization.",
+      "The eight apparent conflicts show why scope must be tested before wording is reconciled. NIST audit-record content and retention controls concern defined audit purposes and organization-set periods; the FTC disposal provision concerns customer information held by financial institutions within the Safeguards Rule’s scope and contains explicit exceptions. The FTC statement that a Qualified Individual may work for an employee, affiliate, or service provider answers who may supervise a program, while NIST least privilege answers how much access a user or process should receive. Those propositions can coexist. Likewise, the FTC’s encryption, multi-factor-authentication, and disposal instructions each carry an alternative or exception in the same passage. Removing that condition manufactures a contradiction that the source itself resolves.",
+      "None of the 12 packets (0%) identified the organization-specific person or role authorized to settle wording in a particular helpdesk article. The FTC names a Qualified Individual for a covered financial institution’s information-security program, and NIST assigns controls to an organization, but neither appoints a local article approver for an unnamed company. The evidence-led answer is therefore bounded: preserve both propositions and their locators, identify the exact actor, object, condition, and authority layer, and treat a pair as unresolved only when all four tests align and outcomes remain incompatible. Public authority can define the issue; a locally designated owner must decide local applicability. No customer, ticket, employee, vendor-performance, contract, or proprietary data was used or inferred."
+    ],
+    "researchQuestion": "When two candidate instructions relevant to helpdesk article reuse appear to conflict, how often does a four-test comparison of actor or population, decision object or action, conditions, and prescribed outcome identify a direct contradiction rather than different scope, an explicit exception, or compatible wording—and do the public sources identify the local owner empowered to resolve article wording?",
+    "observationWindow": "Single-day cross-sectional desk review completed on 2026-08-18. Source text, visible edition or modification markers, redirects, and HTTP responses were recorded on that date. The measured editions were NIST SP 800-53 Revision 5, update 1; the NIST least-privilege glossary entries then served; and the FTC compliance guide published 2022-04-27 and modified 2024-12-23. This was a document-coding window, not an observation period for helpdesk operations.",
+    "sampleDefinition": {
+      "population": "The bounded population was 12 predeclared contradiction packets made from propositions at six route-relevant public-source locations: NIST SP 800-53 controls AC-6, AU-3, AU-11, and CM-3; the NIST least-privilege glossary; and FTC Safeguards Rule guide sections covering the Qualified Individual, safeguards, and service-provider monitoring. Four packets were positive-control stress tests pairing a faithful proposition with an explicitly constructed opposite instruction. Eight paired faithful public propositions that can look incompatible when actor, object, purpose, or exception language is omitted. The unit of analysis was one two-proposition packet, not a source, sentence, article, ticket, organization, or customer.",
+      "includedN": 12,
+      "inclusion": "A packet was included only when at least one proposition had a locatable passage in the current official NIST or FTC material named by the article; the topic could affect support guidance about access, controlled changes, records, information safeguards, provider oversight, or ownership; both propositions could be stated as complete instructions; and the pair could be coded on all four tests without private context. All 12 packets were fixed before totals were calculated. The four constructed opposites were retained and labeled even though they were designed to fail source support.",
+      "exclusion": "Search snippets, navigation text, vendor commentary, secondary summaries, inaccessible copies, pricing material, customer examples, and propositions requiring an unstated contract or local policy were excluded. The route-listed FTC URL returned HTTP 404 and was classified as failed, not treated as evidence; the accessible official FTC compliance-guide replacement was used. No live knowledge article, ticket, account, identity, employee record, provider record, service metric, or proprietary policy entered the sample."
+    },
+    "methodology": [
+      "The review first froze the article title, excerpt, and route-listed authorities. It then retrieved each canonical official page by HTTP GET with redirects followed. NIST’s landing page, official PDF, and least-privilege glossary returned HTTP 200. The FTC URL stored in the route returned HTTP 404; a title-matched current FTC compliance guide on ftc.gov returned HTTP 200 and was recorded as the replacement. Failed retrieval was kept in the source ledger but excluded from substantive coding.",
+      "Six source locations were transcribed as bounded propositions. NIST AC-6 permits only authorized access necessary for assigned tasks; AU-3 specifies information in audit records and warns that audit records can create privacy risk; AU-11 assigns an organization-defined retention period tied to policy and stated purposes; and CM-3 requires review, approval or disapproval, documentation, and implementation of approved configuration-controlled changes. The NIST glossary defines least privilege as restricting access to the minimum necessary for assigned tasks. The FTC guide identifies a Qualified Individual, safeguard conditions and alternatives, and service-provider selection, contract, monitoring, and reassessment duties for financial institutions within the Rule’s scope.",
+      "Four positive-control packets were created by pairing a faithful proposition with its logical opposite while holding actor, object, and condition constant. The opposite sentence was marked ‘constructed stress instruction’ in the ledger and was never represented as NIST, FTC, customer, or observed guidance. This gave the classification rule known direct contradictions against which to test its behavior.",
+      "Eight apparent-conflict packets paired faithful propositions without inventing an operational outcome. Four intentionally crossed scope: program-supervisor affiliation versus access quantity, audit-record identity content versus user privileges, audit retention versus customer-information disposal, and provider governance versus system-change approval. Three paired an FTC safeguard with the exception or alternative printed in the same passage. One compared the NIST glossary definition of least privilege with AC-6’s compatible control language.",
+      "Each packet received four binary codes. T1 Actor/population aligned passed only when both propositions governed the same actor or regulated population. T2 Object/action aligned passed only when both governed the same record, access decision, change, provider relationship, or safeguard. T3 Conditions aligned passed only when purpose, feasibility, exception, and timing conditions were the same. T4 Outcomes incompatible was coded independently of T3 and passed when the operative outputs required different behavior for the same object if read without their conditions; a T4 pass alone therefore did not establish a conflict. A direct contradiction required T1 + T2 + T3 + T4; any failed test made the pair apparent under this rubric.",
+      "Apparent pairs received one mutually exclusive disposition: different-scope coexistence when actor or object differed; conditional coexistence when a source-stated exception or alternative changed the conditions; or complementary wording when both propositions required compatible behavior. The review separately coded whether the public passages identified the particular local role authorized to approve wording for an unnamed helpdesk article. A source-level governance role did not count as a local article owner unless the passage actually assigned that article decision.",
+      "Counts used the fixed denominator of 12 packets. Every numerator was obtained by summing the displayed row codes or classifications. Percentages equal numerator divided by denominator multiplied by 100 and are shown to one decimal where needed. A second consistency pass recomputed all columns and confirmed that the four final classifications sum to 12 and that direct plus apparent classifications also sum to 12."
+    ],
+    "measurements": [
+      {
+        "label": "Included source documents retrievable by canonical GET",
+        "numerator": 3,
+        "denominator": 3,
+        "calculation": "3 HTTP-200 included documents ÷ 3 included source documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Packets with the same actor or population (T1)",
+        "numerator": 8,
+        "denominator": 12,
+        "calculation": "8 T1-pass rows ÷ 12 packets × 100",
+        "result": "66.7%"
+      },
+      {
+        "label": "Packets with the same decision object or action (T2)",
+        "numerator": 8,
+        "denominator": 12,
+        "calculation": "8 T2-pass rows ÷ 12 packets × 100",
+        "result": "66.7%"
+      },
+      {
+        "label": "Packets with aligned conditions (T3)",
+        "numerator": 9,
+        "denominator": 12,
+        "calculation": "9 T3-pass rows ÷ 12 packets × 100",
+        "result": "75.0%"
+      },
+      {
+        "label": "Packets prescribing mutually incompatible outcomes (T4)",
+        "numerator": 7,
+        "denominator": 12,
+        "calculation": "7 T4-pass rows ÷ 12 packets × 100",
+        "result": "58.3%"
+      },
+      {
+        "label": "Direct contradictions passing all four tests",
+        "numerator": 4,
+        "denominator": 12,
+        "calculation": "4 rows with T1 + T2 + T3 + T4 = Pass ÷ 12 packets × 100",
+        "result": "33.3%"
+      },
+      {
+        "label": "Apparent conflicts failing at least one test",
+        "numerator": 8,
+        "denominator": 12,
+        "calculation": "8 rows classified different-scope, conditional, or complementary ÷ 12 packets × 100",
+        "result": "66.7%"
+      },
+      {
+        "label": "Different-scope coexistence dispositions",
+        "numerator": 4,
+        "denominator": 12,
+        "calculation": "4 different-scope rows ÷ 12 packets × 100",
+        "result": "33.3%"
+      },
+      {
+        "label": "Conditional coexistence dispositions",
+        "numerator": 3,
+        "denominator": 12,
+        "calculation": "3 conditional rows ÷ 12 packets × 100",
+        "result": "25.0%"
+      },
+      {
+        "label": "Complementary wording dispositions",
+        "numerator": 1,
+        "denominator": 12,
+        "calculation": "1 complementary row ÷ 12 packets × 100",
+        "result": "8.3%"
+      },
+      {
+        "label": "Packets whose public passages identify the local helpdesk-article decision owner",
+        "numerator": 0,
+        "denominator": 12,
+        "calculation": "0 locally designated article owners ÷ 12 packets × 100",
+        "result": "0%"
+      }
+    ],
+    "table": {
+      "heading": "Complete contradiction-packet ledger (N=12; direct requires Pass on T1, T2, T3, and T4)",
+      "columns": [
+        "ID",
+        "Paired propositions and locator",
+        "T1 same actor/population",
+        "T2 same object/action",
+        "T3 same conditions",
+        "T4 incompatible outcomes",
+        "Final classification"
+      ],
+      "rows": [
+        [
+          "D1",
+          "NIST CM-3: review and approve or disapprove a configuration-controlled system change before implementing an approved change; versus constructed stress instruction: implement that same change without review or approval. Locator: SP 800-53 Rev. 5, CM-3(a–d), publication pages 98–99.",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Direct contradiction (positive control)"
+        ],
+        [
+          "D2",
+          "NIST AC-6: allow users or processes only authorized access necessary for assigned organizational tasks; versus constructed stress instruction: give those same users all system privileges regardless of assigned task. Locator: SP 800-53 Rev. 5, AC-6, publication page 38.",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Direct contradiction (positive control)"
+        ],
+        [
+          "D3",
+          "FTC: select capable service providers, state security expectations in contracts, monitor their work, and periodically reassess suitability; versus constructed stress instruction: the same covered institution need not contract for, monitor, or reassess that provider’s safeguards. Locator: FTC guide, section 3(f), ‘Monitor your service providers.’",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Direct contradiction (positive control)"
+        ],
+        [
+          "D4",
+          "FTC: a covered financial institution designates a Qualified Individual to implement and supervise its information-security program; versus constructed stress instruction: that same program requires no designated supervision. Locator: FTC guide, section 3(a), ‘Designate a Qualified Individual.’",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Direct contradiction (positive control)"
+        ],
+        [
+          "S1",
+          "FTC says the Qualified Individual may be an employee or work for an affiliate or service provider; NIST AC-6 limits the access a user or process receives. One concerns who may supervise a program; the other concerns access quantity. Locators: FTC 3(a); NIST AC-6.",
+          "Fail",
+          "Fail",
+          "Pass",
+          "Fail",
+          "Different-scope coexistence"
+        ],
+        [
+          "S2",
+          "NIST AU-3 says audit records establish event details and associated identities, while AC-6 limits user or process access to what assigned tasks require. Record content and access authorization are separate decisions. Locators: SP 800-53 Rev. 5, AU-3 and AC-6.",
+          "Fail",
+          "Fail",
+          "Pass",
+          "Fail",
+          "Different-scope coexistence"
+        ],
+        [
+          "S3",
+          "NIST AU-11 retains audit records for an organization-defined period consistent with retention policy and stated purposes; FTC section 3(d) disposes of customer information after the measured use period subject to exceptions. The populations, record classes, and purposes differ. Locators: SP 800-53 Rev. 5, AU-11; FTC 3(d).",
+          "Fail",
+          "Fail",
+          "Pass",
+          "Fail",
+          "Different-scope coexistence"
+        ],
+        [
+          "S4",
+          "FTC section 3(f) governs service-provider selection, contract safeguards, monitoring, and reassessment; NIST CM-3 governs review and approval of configuration-controlled system changes. Provider governance is not the same decision as approval of a system change. Locators: FTC 3(f); NIST CM-3.",
+          "Fail",
+          "Fail",
+          "Pass",
+          "Fail",
+          "Different-scope coexistence"
+        ],
+        [
+          "C1",
+          "FTC section 3(d) says to encrypt customer information on the system and in transit, then permits effective alternative controls approved by the Qualified Individual when encryption is not feasible. The alternative applies under a different feasibility condition.",
+          "Pass",
+          "Pass",
+          "Fail",
+          "Pass",
+          "Conditional coexistence"
+        ],
+        [
+          "C2",
+          "FTC section 3(d) requires multi-factor authentication for people accessing customer information, with an exception when the Qualified Individual approves in writing another equivalent form of secure access controls. The outcomes differ, but their conditions do not.",
+          "Pass",
+          "Pass",
+          "Fail",
+          "Pass",
+          "Conditional coexistence"
+        ],
+        [
+          "C3",
+          "FTC section 3(d) says to dispose of customer information securely no later than two years after its most recent use to serve the customer, then states exceptions for legitimate business need, legal requirement, or infeasible targeted disposal. The exception is part of the source rule.",
+          "Pass",
+          "Pass",
+          "Fail",
+          "Pass",
+          "Conditional coexistence"
+        ],
+        [
+          "K1",
+          "The NIST glossary says systems should restrict user or process access privileges to the minimum necessary for assigned tasks; NIST AC-6 says to allow only authorized accesses necessary for assigned organizational tasks. The phrases differ but direct the same bounded behavior. Locators: NIST glossary ‘least privilege’; SP 800-53 Rev. 5, AC-6.",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Fail",
+          "Complementary wording"
+        ]
+      ]
+    },
+    "findings": [
+      "The four-test conjunction prevented surface opposition from becoming the decision rule. Seven packets contained wording that could produce incompatible outcomes if conditions were stripped away, but only four also matched actor, object, and conditions. The three other outcome-opposed packets were FTC rule-and-exception pairs. Counting only contrary verbs would therefore have overstated direct contradictions by 75% relative to the measured direct-conflict numerator: seven apparent outcome clashes versus four fully aligned contradictions.",
+      "Actor and object checks did most of the work in the four different-scope packets. The FTC’s Qualified Individual passage addresses program supervision, while NIST least privilege addresses system privileges. NIST AU-3 addresses audit-record content, while AC-6 addresses access authorization. AU-11 and the FTC disposal language differ in regulated population, information class, purpose, and assignment of the retention period. These distinctions are substantive even when all propositions use security or information-governance vocabulary.",
+      "Condition capture resolved three apparent conflicts without choosing a winning source. Encryption versus approved alternative controls, multi-factor authentication versus an approved equivalent secure control, and disposal by a stated period versus enumerated exceptions each appear in the same FTC guide. In all three rows, actor and object aligned and outcomes differed, but conditions did not align. Quoting only the lead instruction would make the source appear to contradict its own qualification.",
+      "The compatible NIST pair showed that lexical variation is not automatically disagreement. The glossary’s ‘minimum necessary’ definition and AC-6’s ‘only authorized accesses ... necessary’ formulation both constrain privileges by assigned work. Treating them as competitors because one says minimum and the other says authorized would create editorial churn without changing the supported boundary.",
+      "The positive controls demonstrate sensitivity, not prevalence. All four deliberately opposed packets passed all four tests, so the rubric recognized known direct contradictions. Because one member of each was constructed rather than observed, the four rows cannot support a claim that one-third of real helpdesk guidance conflicts. Their purpose was to make the classification logic falsifiable and inspectable.",
+      "Public authority did not resolve local article ownership. The FTC assigns information-program responsibilities to a covered institution and its Qualified Individual; NIST uses organization-defined assignments and control responsibilities. Across 0/12 packets did the cited passage name who at an unspecified helpdesk may approve an article, decide a contract-specific instruction, or settle account-specific applicability. A source can be authoritative while the operational decision remains locally unassigned in the public record.",
+      "Link status affected reproducibility but not substantive classification. The exact FTC URL embedded in the route returned HTTP 404, while the current official guide returned HTTP 200. Silently citing the failed URL would leave readers unable to inspect the passages used for five FTC-centered packets. Recording the failed route and official replacement preserved the evidence chain without pretending the inaccessible page had been reviewed."
+    ],
+    "operationalImplications": [
+      "A contradiction record should preserve two complete propositions rather than a blended summary. For each proposition, the useful minimum is issuer, exact locator, actor or regulated population, decision object, conditions or exceptions, prescribed outcome, version or date marker, and retrieval result. This makes it possible to see whether the disagreement survives scope comparison.",
+      "Direct-conflict status should require all four measured tests. If actor or object differs, both instructions can usually remain with explicit scope. If conditions differ, the rule and exception should remain adjacent. If outcomes are compatible, terminology can be normalized without claiming one source overruled another. Only a same-actor, same-object, same-condition, incompatible-outcome pair reaches the unresolved decision boundary under this study’s rule.",
+      "Recency should not substitute for authority or applicability. A newer general explanation does not automatically displace an older but still applicable control, and an official security guide does not itself decide a customer’s contract or article permission. Edition and modification dates are evidence for review; they are not a universal precedence rule.",
+      "Exception language should travel with the instruction it qualifies. In the measured FTC rows, feasibility, written approval, equivalence, legal need, business need, and disposal feasibility changed the result. Removing any of those fields would convert a conditional safeguard into an absolute statement and manufacture conflict downstream.",
+      "A local owner field should remain separate from the external source field. The public materials can support a proposition and identify a governance concept without naming the person empowered to approve wording in a particular organization. Where that role is unknown, the evidence supports an explicit unresolved state rather than inferred permission.",
+      "Failed URLs should be classified transparently. A replacement should match title, issuing organization, and subject on the official domain, and the old URL should remain in the evidence record with its observed status. Retrieval success still does not prove that a source applies to a particular account, contract, jurisdiction, or request."
+    ],
+    "limitations": [
+      "This was a purposive test corpus of 12 proposition pairs from three route-named public authorities, not a random or representative sample of helpdesk articles, security publications, laws, vendors, or organizations. The 33.3% direct and 66.7% apparent results describe this fixed corpus only and must not be used as industry prevalence estimates.",
+      "Four direct contradictions were constructed positive controls. Their opposite instructions were intentionally unsupported and were not observed in a customer article or external publication. This design tests whether the rubric recognizes known conflicts; it necessarily fixes the minimum direct-conflict numerator at four unless the rule fails.",
+      "One reviewer performed extraction, coding, and a consistency pass. No independent duplicate coder assessed borderline actor, object, or condition judgments, so no inter-rater agreement statistic is claimed. The full ledger and binary definitions expose those judgments for replication but do not eliminate reasonable interpretive disagreement.",
+      "The study used selected passages rather than every control, enhancement, definition, footnote, statute, or cross-reference behind the publications. Broader legal or contractual context may narrow a proposition further. This report is a content-governance study, not legal, privacy, security, or compliance advice.",
+      "NIST controls are designed for organizational systems and include organization-defined parameters; FTC guidance explains duties for financial institutions within the Safeguards Rule’s scope. Neither source establishes that every outsourced helpdesk is in scope. The report therefore does not decide whether any named company must adopt a particular control.",
+      "HTTP 200 establishes retrievability at the observation cutoff, not immutable content, continuing legal effect, completeness of attachments, or future availability. HTTP 404 establishes failure of the requested resource at that time, not that no historical version ever existed. Source organizations may revise pages after 2026-08-18.",
+      "The 0/12 local-owner result means the sampled public passages did not appoint an article decision owner for an unspecified organization. It does not mean organizations lack accountable owners. Establishing local authority would require authorized role, policy, or contract records that were deliberately outside this public desk study."
+    ],
+    "sources": [
+      {
+        "title": "SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "publishedOrUpdated": "Published September 2020; update 1 issued 2020-12-10",
+        "accessed": "2026-08-18",
+        "claimNote": "Official landing page verified the route-named publication and linked the measured PDF. The study used AC-6, AU-3, AU-11, and CM-3; these controls have different objects and organization-defined context and do not appoint a local helpdesk-article approver.",
+        "httpStatus": 200
+      },
+      {
+        "title": "NIST Special Publication 800-53 Revision 5 (official PDF)",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf",
+        "publishedOrUpdated": "September 2020; updated 2020-12-10",
+        "accessed": "2026-08-18",
+        "claimNote": "Measured control text came from AC-6 Least Privilege, AU-3 Content of Audit Records, AU-11 Audit Record Retention, and CM-3 Configuration Change Control. The locators support the packet propositions while their surrounding text supplies purpose and privacy qualifications.",
+        "httpStatus": 200
+      },
+      {
+        "title": "least privilege — Glossary",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/glossary/term/least_privilege",
+        "publishedOrUpdated": "Page served definitions attributed to CNSSI 4009-2015, NIST SP 800-12 Rev. 1, NIST SP 800-53 Rev. 5, and NIST SP 800-171 Rev. 3; no separate page-update date was displayed",
+        "accessed": "2026-08-18",
+        "claimNote": "The route-named glossary defines least privilege as restricting user or process access to the minimum necessary for assigned tasks. Its wording is compatible with AC-6 and does not identify a local article owner.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Standards for Safeguarding Consumer Information (route-listed URL)",
+        "organization": "Federal Trade Commission",
+        "url": "https://www.ftc.gov/business-guidance/resources/standards-safeguarding-consumer-information",
+        "publishedOrUpdated": "Unavailable from the requested resource because it returned a not-found response",
+        "accessed": "2026-08-18",
+        "claimNote": "This exact URL was stored in the article’s source list. GET with redirects followed returned HTTP 404, so it was excluded from substantive packet coding and retained only as a transparent retrieval failure.",
+        "httpStatus": 404
+      },
+      {
+        "title": "FTC Safeguards Rule: What Your Business Needs to Know",
+        "organization": "Federal Trade Commission",
+        "url": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
+        "publishedOrUpdated": "Published 2022-04-27; modified 2024-12-23",
+        "accessed": "2026-08-18",
+        "claimNote": "Accessible official replacement used for FTC packets. Sections 3(a), 3(d), and 3(f) provide the Qualified Individual, safeguard and exception, disposal, and service-provider oversight propositions. The guide is scoped to financial institutions covered by the Rule and does not establish a universal owner for helpdesk article wording.",
+        "httpStatus": 200
+      }
+    ]
+  }
+}

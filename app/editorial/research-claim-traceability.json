@@ -1,0 +1,272 @@
+{
+  "helpdesk-article-claim-traceability-research": {
+    "executiveAnswer": [
+      "A completed claim-level desk audit found that source presence alone did not make a candidate helpdesk statement traceable. The study tested 12 deliberately paired claim sentences against six passages in three public, authoritative publications: NIST SP 800-53 Revision 5, the Federal Trade Commission’s Safeguards Rule compliance guide, and the UK Information Commissioner’s data-minimisation guidance. For each passage, one sentence preserved the source’s actor, object, condition, and modality, while a paired stress sentence removed or enlarged one of those boundaries. Six of 12 sentences passed all four predeclared tests: direct textual support, preserved scope, identifiable issuing authority, and an identifiable version or update marker. All 12 could name an authoritative publisher and a dated or versioned source, yet only six retained what the source actually allowed the writer to say. The direct result is 6/12, or 50%, fully traceable candidate claims in this purpose-built boundary test—not a benchmark for real helpdesks.",
+      "The failures were not citation failures in the narrow sense. Every failed sentence could still be placed beside an official URL. They failed because the wording converted a bounded control into a universal helpdesk rule: configuration-change control became approval for every article edit; a rule for covered financial institutions became a rule for every outsourced helpdesk; minimising personal data became collecting none; and a periodic review principle became a fictional 30-day deletion deadline. This demonstrates why a URL, publisher name, or recent date cannot substitute for claim-to-passage alignment. A reviewer must be able to locate the supporting passage and show that the article preserves its subject, regulated population, object, conditions, and strength of obligation.",
+      "The audit also found a separate ownership gap. None of the 12 external-source mappings established the organization-specific person or role authorized to approve a support article or decide a customer-specific exception. NIST identifies controls, the FTC explains obligations for entities within the Safeguards Rule’s scope, and the ICO explains a data-protection principle; none appoints a particular helpdesk’s policy, security, privacy, service, or account owner. Therefore, a reusable material claim needs two links rather than one: an authoritative external or internal source that supports the wording, and a locally designated decision owner who can confirm applicability and resolve conflict. This conclusion is based entirely on public documents and constructed test sentences; no customer, ticket, workforce, or proprietary records were used."
+    ],
+    "researchQuestion": "When candidate helpdesk-article claims are checked against the route’s named authoritative sources, how often can the exact wording be traced to a locatable passage while preserving the source’s scope, authority, and currency—and does that external evidence identify the local owner empowered to approve use?",
+    "observationWindow": "Single-day reproducible desk review conducted on 2026-08-18. The measured source versions were NIST SP 800-53 Revision 5 with updates through 2020-12-10, the FTC compliance guide published 2022-04-27 and modified 2024-12-23, and ICO guidance carrying a 2025-09-09 date marker. HTTP status was checked by GET with redirects followed on 2026-08-18. This is a document-coding window, not a period of observed helpdesk operations.",
+    "sampleDefinition": {
+      "population": "The bounded population was the 12 candidate claim sentences generated from the first substantive occurrence of two predeclared search strings in each of three accessible official sources. The strings were “configuration-controlled changes” and “content of audit records” for NIST; “Qualified Individual” and “monitor your service providers” for the FTC; and “adequate, relevant and limited” and “periodically review the data we hold” for the ICO. Each located passage produced one scope-faithful paraphrase and one paired boundary-stress sentence that removed or enlarged an actor, object, condition, deadline, or modality.",
+      "includedN": 12,
+      "inclusion": "A sentence was included only when its source passage was publicly retrievable by GET, issued by NIST, the FTC, or the ICO, contained one of the six predeclared strings, and could affect reusable helpdesk wording about records, approvals, provider oversight, or personal-data handling. Both the faithful and stress member of every pair were retained before scoring. The unit of analysis was one complete candidate claim sentence, not a citation, passage, article, source, or ticket.",
+      "exclusion": "Navigation text, search snippets, secondary commentary, vendor material, unversioned copies, and statements unrelated to support documentation or governance were excluded. The obsolete FTC URL already present in the route returned HTTP 404 and was documented as inaccessible but excluded from the measured corpus; the current official FTC compliance-guide URL was used instead. No private knowledge base, ticket, customer, employee, contract, or performance record was sampled. No claim was removed because it failed a test."
+    },
+    "methodology": [
+      "Freeze the three route-relevant authorities before coding: NIST SP 800-53 Revision 5, FTC Safeguards Rule guidance, and ICO data-minimisation guidance. Retrieve each official page with an HTTP GET that follows redirects, save the status, and use the linked official NIST PDF for control text. Record the publication, revision, or modification marker visible in page metadata or body text.",
+      "Search the retrieved text case-insensitively for the six predeclared phrases stated in the sample definition. Use the first substantive occurrence that expresses a rule or control, rather than a table of contents, navigation label, or link title. The locators were NIST controls CM-3 and AU-3; FTC sections “Designate a Qualified Individual” and “Monitor your service providers”; and the ICO opening definition/checklist under Principle (c): Data minimisation.",
+      "From each located passage, write a close, bounded paraphrase that retains the source’s actor, object, conditions, and modality. Then create one paired stress sentence by making a single consequential enlargement: substituting every helpdesk for the actual actor, substituting every article for a controlled system change, changing data minimisation to zero collection, or inventing a fixed deadline. These are test propositions, not claims observed in a customer knowledge base.",
+      "Score each sentence independently on four binary tests. Direct support passes only if the located passage entails the sentence without relying on an unstated policy. Scope preservation passes only if the source’s actor, regulated population, object, condition, and modality survive the paraphrase. Authority identification passes when the issuing body is explicit and the URL is on its official domain. Currency identification passes when a version, publication date, or update marker is visible; it does not assert that the source is the newest available guidance.",
+      "Classify a sentence as fully traceable only when all four tests pass. Separately code whether the cited public passage designates the organization-specific operational owner who can approve article wording or decide an account-specific exception. Compute each proportion using the fixed denominator of 12, and retain failures in the displayed claim ledger so another reviewer can reproduce every numerator.",
+      "Quality-check the interpretation by reading surrounding text, not only the matched phrase. In particular, retain the FTC guide’s limitation to financial institutions within the Rule’s scope, NIST’s repeated use of organization-defined assignments and its system-control context, and the ICO’s relationship between minimum necessary data and a specified purpose. Treat source age as metadata, never as proof that a claim applies locally."
+    ],
+    "measurements": [
+      {
+        "label": "Candidate claims with direct passage support",
+        "numerator": 6,
+        "denominator": 12,
+        "calculation": "6 ÷ 12 × 100",
+        "result": "50%"
+      },
+      {
+        "label": "Candidate claims preserving source scope and modality",
+        "numerator": 6,
+        "denominator": 12,
+        "calculation": "6 ÷ 12 × 100",
+        "result": "50%"
+      },
+      {
+        "label": "Candidate claims with an identifiable issuing authority",
+        "numerator": 12,
+        "denominator": 12,
+        "calculation": "12 ÷ 12 × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Candidate claims with an identifiable source version or date marker",
+        "numerator": 12,
+        "denominator": 12,
+        "calculation": "12 ÷ 12 × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Candidate claims passing all four traceability tests",
+        "numerator": 6,
+        "denominator": 12,
+        "calculation": "6 ÷ 12 × 100",
+        "result": "50%"
+      },
+      {
+        "label": "Candidate claims whose public source identifies the local operational decision owner",
+        "numerator": 0,
+        "denominator": 12,
+        "calculation": "0 ÷ 12 × 100",
+        "result": "0%"
+      }
+    ],
+    "table": {
+      "heading": "Claim-level traceability ledger for the complete N=12 test corpus",
+      "columns": [
+        "ID",
+        "Candidate helpdesk-article wording",
+        "Exact source locator",
+        "Direct support",
+        "Scope preserved",
+        "Authority identifiable",
+        "Currency identifiable",
+        "All four"
+      ],
+      "rows": [
+        [
+          "N1",
+          "NIST CM-3 says an organization retains records of configuration-controlled system changes for an organization-defined period.",
+          "NIST SP 800-53 Rev. 5, CM-3(e), page 99",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass"
+        ],
+        [
+          "N2",
+          "NIST requires a manager to approve every helpdesk-article edit.",
+          "Compared with NIST SP 800-53 Rev. 5, CM-3(a–g), pages 98–99",
+          "Fail: neither every article edit nor a manager is stated",
+          "Fail: a system configuration control was universalized",
+          "Pass",
+          "Pass",
+          "Fail"
+        ],
+        [
+          "N3",
+          "NIST AU-3 says audit records should establish what happened, when and where it happened, its source and outcome, and associated identities.",
+          "NIST SP 800-53 Rev. 5, AU-3(a–f), page 67",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass"
+        ],
+        [
+          "N4",
+          "NIST AU-3 requires every customer-support note to contain a customer’s identity.",
+          "Compared with NIST SP 800-53 Rev. 5, AU-3 and discussion, page 67",
+          "Fail: AU-3 governs audit records and does not say every support note",
+          "Fail: record type and privacy discussion were removed",
+          "Pass",
+          "Pass",
+          "Fail"
+        ],
+        [
+          "F1",
+          "A financial institution covered by the FTC Safeguards Rule must designate a Qualified Individual to implement and supervise its information-security program.",
+          "FTC guide, section 3(a), “Designate a Qualified Individual”",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass"
+        ],
+        [
+          "F2",
+          "Every outsourced helpdesk must appoint an FTC-qualified security officer.",
+          "Compared with FTC guide sections 1 and 3(a)",
+          "Fail: the guide does not regulate every outsourced helpdesk or prescribe that title",
+          "Fail: covered-entity scope and flexible qualification wording were removed",
+          "Pass",
+          "Pass",
+          "Fail"
+        ],
+        [
+          "F3",
+          "The FTC guide tells covered financial institutions to select service providers able to maintain safeguards, state security expectations in contracts, monitor the work, and periodically reassess suitability.",
+          "FTC guide, section 3(f), “Monitor your service providers”",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass"
+        ],
+        [
+          "F4",
+          "The FTC requires every helpdesk article to cite the service-provider contract that authorizes it.",
+          "Compared with FTC guide, section 3(f)",
+          "Fail: the passage addresses provider safeguards and contracts, not article citations",
+          "Fail: a governance duty was converted into a universal content rule",
+          "Pass",
+          "Pass",
+          "Fail"
+        ],
+        [
+          "I1",
+          "ICO guidance says personal data should be adequate, relevant, and limited to what is necessary for the purposes for which it is processed.",
+          "ICO Principle (c), quotation of UK GDPR Article 5(1)(c)",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass"
+        ],
+        [
+          "I2",
+          "Data minimisation means a helpdesk must collect no personal data.",
+          "Compared with ICO Principle (c), definition and adequacy discussion",
+          "Fail: the guidance calls for the minimum necessary amount, not zero",
+          "Fail: necessity in relation to a specified purpose was removed",
+          "Pass",
+          "Pass",
+          "Fail"
+        ],
+        [
+          "I3",
+          "The ICO checklist says organizations should periodically review the personal data they hold and delete what they do not need.",
+          "ICO Principle (c), “At a glance” checklist",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass",
+          "Pass"
+        ],
+        [
+          "I4",
+          "The ICO requires all helpdesk tickets to be deleted after 30 days.",
+          "Compared with ICO Principle (c), checklist and purpose discussion",
+          "Fail: no 30-day ticket rule appears in the measured page",
+          "Fail: purpose-based review was replaced with a universal deadline",
+          "Pass",
+          "Pass",
+          "Fail"
+        ]
+      ]
+    },
+    "findings": [
+      "Boundary preservation, not publisher prestige, determined the result. The issuing authority and a currency marker were identifiable for 12/12 claims, but only 6/12 claims had both direct support and faithful scope. The six failed stress sentences remained superficially citable because each named an official body and could be placed near an official URL. Their defects became visible only when the exact sentence was compared with the exact passage.",
+      "The three sources exhibited different high-risk overextension patterns. NIST controls were vulnerable to object substitution: a control over configuration-controlled system changes or audit records was recast as a rule for every article or support note. FTC guidance was vulnerable to population substitution: obligations explained for covered financial institutions were recast as duties of every outsourced helpdesk. ICO guidance was vulnerable to modality and threshold substitution: collecting only what is necessary became collecting nothing, and periodic review became a fixed deadline the source never states.",
+      "A date or version field supported inspection but did not establish present applicability. NIST’s route-linked Revision 5 page identifies updates through 2020-12-10 while also displaying a planning note about a later 5.2.0 release. The FTC and ICO pages display later modification or date metadata, but those markers do not answer whether a particular organization is in scope or whether a local policy has changed. Currency should therefore be recorded as source evidence, not scored as truth by recency alone.",
+      "External authority and operational ownership were separate evidence fields. The public source publisher was identifiable for 12/12 claims, while 0/12 passages named the particular local role authorized to approve a helpdesk article, grant an exception, or decide customer-specific applicability. Even a fully traceable external proposition such as the FTC’s Qualified Individual requirement does not identify who may approve a particular support response in a particular organization.",
+      "The broken route-listed FTC URL was itself a traceability finding. It returned HTTP 404 on 2026-08-18, while a current official FTC compliance-guide URL returned HTTP 200. A claim map that stores only a title or an old URL can lose reproducibility even when the underlying publication still exists. Preserving the source title, official organization, exact locator, access result, and replacement history makes the evidence trail more resilient."
+    ],
+    "operationalImplications": [
+      "Store claim-level locators rather than article-level source lists. For each consequential sentence, retain the source title, issuing organization, URL, section or control, source version/date, a short supporting passage, applicable population, and review result. An article bibliography can show that research occurred, but it cannot reveal which source supports which instruction or whether one paragraph exceeds its evidence.",
+      "Separate five decisions in review: whether the passage directly supports the sentence, whether scope and modality survive paraphrase, whether the issuer is authoritative for that subject, whether the version is identifiable, and who owns local applicability. A single approved checkbox conceals materially different failure modes. The study’s 12/12 authority score alongside its 6/12 full-traceability score demonstrates the risk of collapsing those decisions.",
+      "Make boundary words review-critical. Quantifiers such as every and all, actor substitutions such as helpdesk for covered financial institution, mandatory verbs such as requires, fixed deadlines, and object substitutions such as article for system change should trigger sentence-to-source comparison. These small wording changes created every failure in the paired corpus while leaving the citations apparently respectable.",
+      "Use an explicit unresolved state when the source is authoritative but local applicability or ownership is unknown. Do not infer that an outsourced provider may make an access, privacy, security, finance, or policy decision merely because a public publication describes a control. Route the bounded question to the designated internal owner and preserve that disposition alongside the claim map.",
+      "Check links by GET and preserve replacement history during article review. A successful response is not enough: confirm that the final page is the intended official publication and that the cited section still supports the sentence. If a link fails, mark it inaccessible rather than silently treating the source title as evidence; where an official replacement exists, record both the failed route and the verified replacement."
+    ],
+    "limitations": [
+      "This was a purposive paired boundary test, not a random or representative sample of public guidance or live knowledge articles. Exactly half the corpus was intentionally written as a scope-faithful paraphrase and half as a stress overextension, so the 50% result evaluates whether the rubric exposes known boundary loss. It must not be reported as the prevalence of bad claims in any helpdesk, industry, country, or publication set.",
+      "The study measured 12 constructed English-language sentences from six passages in three authorities. Different search terms, passages, legal regimes, translations, or claim-writing choices could produce different results. The deterministic phrase-and-pair procedure makes this audit repeatable, but it does not make the selected controls exhaustive for knowledge management, privacy, security, or outsourcing.",
+      "Binary coding simplifies nuance. A sentence may be directionally consistent with a publication yet still need qualifications, definitions, linked rules, or legal interpretation. The strict direct-support test marks such a sentence failed when the measured passage alone does not entail it. That conservative rule suits traceability testing but is not a legal conclusion about whether another authority could support the same statement.",
+      "HTTP 200 confirms retrieval, not authenticity beyond the official domain, semantic stability, accessibility to every reader, or continued legal effect. The NIST page’s notice of a later release illustrates that an identifiable version can be older than another available version. Likewise, metadata modification dates can reflect page maintenance rather than a substantive change to every cited passage.",
+      "No local policy, service agreement, contract, role map, or named approver was available or inferred. The 0/12 local-owner result means the sampled public passages do not designate an organization-specific owner; it does not mean participating organizations lack owners. Establishing that fact would require authorized local records outside this public desk study."
+    ],
+    "sources": [
+      {
+        "title": "SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "publishedOrUpdated": "Published September 2020; includes updates as of 2020-12-10; landing page also displayed a 2025-08-27 planning note for release 5.2.0",
+        "accessed": "2026-08-18",
+        "claimNote": "Official landing page verified publication/version metadata and linked the measured PDF. It supports identifying the exact edition; the later-release notice means update 1 should not be described as the newest NIST release.",
+        "httpStatus": 200
+      },
+      {
+        "title": "NIST Special Publication 800-53 Revision 5 (PDF)",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf",
+        "publishedOrUpdated": "September 2020; updated 2020-12-10",
+        "accessed": "2026-08-18",
+        "claimNote": "Measured control text came from CM-3 Configuration Change Control on PDF pages 98–99 and AU-3 Content of Audit Records on PDF page 67. The controls concern organizational systems and audit records; they do not independently mandate approval of every helpdesk article or identity in every support note.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Standards for Safeguarding Consumer Information (route-listed URL)",
+        "organization": "Federal Trade Commission",
+        "url": "https://www.ftc.gov/business-guidance/resources/standards-safeguarding-consumer-information",
+        "publishedOrUpdated": "Unavailable from the requested resource because it returned a not-found page",
+        "accessed": "2026-08-18",
+        "claimNote": "This was the exact FTC URL listed in app/data.ts. GET with redirects followed returned HTTP 404, so it was excluded from the measured claim corpus and retained here to make the access failure explicit.",
+        "httpStatus": 404
+      },
+      {
+        "title": "FTC Safeguards Rule: What Your Business Needs to Know",
+        "organization": "Federal Trade Commission",
+        "url": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
+        "publishedOrUpdated": "Published 2022-04-27; modified 2024-12-23",
+        "accessed": "2026-08-18",
+        "claimNote": "Accessible official replacement used for the FTC pairs. Sections 3(a) and 3(f) support statements about a Qualified Individual and service-provider monitoring for financial institutions within the Safeguards Rule’s scope; they do not establish universal rules for every outsourced helpdesk or article.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Principle (c): Data minimisation",
+        "organization": "Information Commissioner’s Office",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/",
+        "publishedOrUpdated": "Page metadata date 2025-09-09; page stated that guidance was under review following the Data (Use and Access) Act",
+        "accessed": "2026-08-18",
+        "claimNote": "The definition and checklist support purpose-bound minimum-necessary collection and periodic deletion of unneeded data. The page does not require zero personal-data collection or a universal 30-day ticket deletion deadline.",
+        "httpStatus": 200
+      }
+    ]
+  }
+}

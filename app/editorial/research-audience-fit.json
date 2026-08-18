@@ -1,0 +1,225 @@
+{
+  "helpdesk-article-audience-fit-research": {
+    "executiveAnswer": "Audience fit cannot be inferred from factual accuracy alone, and this public-source desk study does not establish that metadata statistically predicts safe article reuse. It does establish what an inspectable fit decision must distinguish. Ten public guidance documents were selected in advance from two equal source families and coded against four explicit fields: the actor or audience, the goal/action/resource, qualifying context or prerequisites, and a non-fit boundary or alternate path. All 10 documents named an actor or audience, all 10 bounded a goal, action, resource, or processing purpose, nine named qualifying context or prerequisites, and eight supplied an explicit non-fit rule. Eight of 10 documents contained all four fields. The complete bundle appeared in three of five user/content/service-design documents and all five authorization/data-boundary documents. These percentages describe only this deliberately bounded document corpus; they are not estimates of article quality, helpdesk behavior, or customer outcomes.\n\nThe source synthesis supports a practical answer to the route’s question. A reusable helpdesk article needs more than a label such as “agents” or “customers.” It should let a reader determine who is acting, what outcome or resource is in scope, which role, eligibility, account, channel, purpose, or authorization facts must be true, and what happens when they are not true. GOV.UK guidance makes the audience relative to a task and warns against treating all users or all needs as identical. NIST and OWASP make authorization relative to a subject, resource, operation, attributes, and request context rather than a broad role name alone. GOV.UK’s service-design guidance supplies the clearest service analogue to a stopping rule: when a need is outside scope, direct the person to a next path rather than leave a dead end. ICO guidance adds a purpose boundary for personal data: collect what is adequate and necessary, and do not retain excess. No ticket, article-use, customer, employee, vendor, or proprietary dataset was used or inferred. Consequently, the completed finding is about the structure and coverage of public guidance, not a claimed causal or predictive effect in a live queue.",
+    "researchQuestion": "Across a fixed sample of public user/content/service-design and authorization/data-boundary guidance, how often are four audience-fit fields explicit—actor or audience, goal/action/resource, qualifying context or prerequisites, and a non-fit boundary or alternate path—and what can those fields legitimately show about matching helpdesk guidance to permission?",
+    "observationWindow": "The cross-sectional retrieval, text review, coding, calculation, and canonical-URL verification were completed on 2026-08-18. The study records the versions publicly served on that date. Included publications were originally published or updated from 2016 through 2025 where a date was displayed; undated pages are identified as such in source metadata. This is a document-observation window, not a period of helpdesk operations.",
+    "sampleDefinition": {
+      "population": "A purposive, predeclared corpus of 10 English-language public documents in two equal source families. The user/content/service-design family comprised five first-party GOV.UK Government Digital Service or GOV.UK Publishing pages that define users, needs, tasks, support groupings, content validity, service scope, or an out-of-scope route. The authorization/data-boundary family comprised the NIST least-privilege glossary entry, NIST SP 800-53 Revision 5 Update 1, NIST SP 800-207 Zero Trust Architecture, the OWASP Authorization Cheat Sheet, and ICO data-minimisation guidance. The frame was chosen to test whether audience language and permission language expose the same four fit fields; it was not intended as a census of the web or a representative sample of knowledge-management publications.",
+      "includedN": 10,
+      "inclusion": "A document had to be publicly reachable by direct HTTP GET on 2026-08-18; be issued or maintained on the responsible organization’s official site; contain substantive, visible guidance about at least one of user/audience definition, tasks or outcomes, roles or access, eligibility or context, resource/action authorization, out-of-scope routing, or purpose limitation; and fit exactly one of the two declared source families. One publication counted once. For NIST publications, the canonical landing page was the source record and the official PDF linked there supplied control text, so landing and PDF formats did not inflate N.",
+      "exclusion": "Commercial surveys, vendor benchmarks, consultancy commentary, search-result pages, duplicate formats, translations, superseded copies, inaccessible pages, and documents that only discussed writing style without audience or task scope were excluded. The route’s existing Atlassian service-level agreement page was inspected and returned HTTP 200, but it was excluded before coding because it addresses service targets and timing rather than the audience-to-permission question. The route’s existing NIST least-privilege, NIST SP 800-53, and ICO references qualified and were retained. No canonical candidate failed GET in the final fixed corpus, so no failed page was treated as evidence. No internal article inventory, access matrix, ticket sample, customer record, or simulated performance observation entered the study."
+    },
+    "methodology": [
+      "Freeze two five-document source families before computing results. Family U contains the five GOV.UK user/content/service documents; family P contains the five authorization/data-boundary documents. Count one substantive publication per row, even where an official landing page links a PDF. This produces a fixed denominator of 10 documents overall and five documents per family.",
+      "Retrieve each canonical source URL with HTTP GET, follow redirects, confirm that the final page remains on the expected official domain, and record the final response status. All 10 included canonical URLs returned HTTP 200 on 2026-08-18. For NIST SP 800-53 and SP 800-207, also retrieve and read the official PDF linked from the canonical landing page; use the landing page for source metadata and availability, and the PDF for the detailed coding anchor.",
+      "Apply four binary tests to substantive document text. A1 Actor/audience equals 1 only when the document explicitly identifies a user, user type, role, entity, subject, organization, or other actor to whom the need or control applies. A2 Goal/action/resource equals 1 only when it explicitly identifies the outcome, task, operation, system resource, authorization, or processing purpose being bounded. A3 Qualifying context/prerequisites equals 1 only when it explicitly distinguishes a trigger, circumstance, user group, role membership, eligibility state, prerequisite, account attribute, request attribute, environmental condition, or purpose test that affects applicability. General advice to understand context does not qualify unless at least one distinguishing condition or field is named.",
+      "Define A4 Non-fit boundary/alternate path conservatively. A4 equals 1 only when the document explicitly says an action, solution, collection, access, or path is invalid, prohibited, unnecessary, outside scope, denied, limited, or assigned to a different group—or explicitly provides what to do when the ordinary path does not apply. A broad statement that teams should research users does not qualify. A minimum-necessary rule, deny-by-default rule, separate-need rule, named acting group, or direction for an out-of-scope user does qualify because it changes the disposition of a non-matching case.",
+      "Read the full relevant section rather than coding navigation labels, summaries, or linked titles alone. Record 1 only when visible text meets the operational definition. For each positive or negative decision, preserve a concise anchor in the displayed matrix. Conduct a second consistency pass against the definitions; because one desk reviewer performed both passes, this is not independent duplicate coding and no inter-rater agreement statistic is claimed.",
+      "Classify a document as complete only when A1, A2, A3, and A4 all equal 1. Sum each column over the fixed N of 10, calculate percentages as numerator divided by denominator multiplied by 100, and calculate family completeness over N=5 per family. Report integer percentages because every numerator divides the declared denominators exactly to the displayed precision.",
+      "Interpret the measurements as explicit document-field coverage, not as predictive validity. The design has no observed reuse outcome and therefore cannot estimate sensitivity, specificity, risk ratios, correlations, or causal effects. Translate the source pattern into helpdesk implications only at the level supported: which facts a fit check should expose and why a correct stop or alternate route can be a valid outcome. Do not invent article-use counts or describe the 80% document-completeness result as an 80% safe-reuse rate."
+    ],
+    "measurements": [
+      {
+        "label": "Included canonical source pages reachable by direct GET",
+        "numerator": 10,
+        "denominator": 10,
+        "calculation": "10 HTTP-200 canonical source pages ÷ 10 included documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Documents explicitly identifying an actor or audience (A1)",
+        "numerator": 10,
+        "denominator": 10,
+        "calculation": "10 qualifying rows ÷ 10 included documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Documents explicitly bounding a goal, action, resource, or purpose (A2)",
+        "numerator": 10,
+        "denominator": 10,
+        "calculation": "10 qualifying rows ÷ 10 included documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Documents explicitly naming qualifying context or prerequisites (A3)",
+        "numerator": 9,
+        "denominator": 10,
+        "calculation": "9 qualifying rows ÷ 10 included documents × 100",
+        "result": "90%"
+      },
+      {
+        "label": "Documents explicitly supplying a non-fit boundary or alternate path (A4)",
+        "numerator": 8,
+        "denominator": 10,
+        "calculation": "8 qualifying rows ÷ 10 included documents × 100",
+        "result": "80%"
+      },
+      {
+        "label": "Documents containing the complete four-field audience-fit bundle",
+        "numerator": 8,
+        "denominator": 10,
+        "calculation": "8 rows with A1 + A2 + A3 + A4 = 4 ÷ 10 included documents × 100",
+        "result": "80%"
+      },
+      {
+        "label": "Complete bundle in user/content/service-design guidance",
+        "numerator": 3,
+        "denominator": 5,
+        "calculation": "3 complete family-U rows ÷ 5 family-U documents × 100",
+        "result": "60%"
+      },
+      {
+        "label": "Complete bundle in authorization/data-boundary guidance",
+        "numerator": 5,
+        "denominator": 5,
+        "calculation": "5 complete family-P rows ÷ 5 family-P documents × 100",
+        "result": "100%"
+      }
+    ],
+    "table": {
+      "heading": "Document-level audience-fit coding matrix (1 = explicit under the declared rule; 0 = not explicit enough to qualify)",
+      "columns": [
+        "ID and source",
+        "Family",
+        "A1 actor/audience",
+        "A2 goal/action/resource",
+        "A3 context/prerequisites",
+        "A4 non-fit boundary/path",
+        "Complete",
+        "Coding anchor"
+      ],
+      "rows": [
+        ["S1 GOV.UK: Understand users and their needs", "User/content/service", 1, 1, 0, 0, 0, "Names users, their full problem and what they are trying to achieve. It advises understanding context and testing assumptions, but does not name a qualifying field or give a disposition for a non-matching user under the strict A3/A4 rules."],
+        ["S2 GOV.UK: Learning about users and their needs", "User/content/service", 1, 1, 1, 0, 0, "Names all kinds of users, including support roles; records user type, trigger and constraining circumstances; and ties needs to outcomes. It rejects assumed solutions but does not itself give an operational deny, stop, or alternate-owner disposition for a non-matching request."],
+        ["S3 GOV.UK: Set up and manage user support", "User/content/service", 1, 1, 1, 1, 1, "Segments enquiries by channel, user group, status, content type and handling; identifies the internal team or group able to act on feedback, creating an explicit alternate-owner boundary rather than treating one support audience as universal."],
+        ["S4 GOV.UK Publishing: Identify user needs", "User/content/service", 1, 1, 1, 1, 1, "Requires a defined user in relation to a task, uses eligibility in acceptance criteria, and says user groups with different needs require separate needs. It also labels solution-justifying content as invalid, supplying a non-fit rule."],
+        ["S5 GOV.UK: Designing good government services", "User/content/service", 1, 1, 1, 1, 1, "Connects a person, task and whole-service outcome; distinguishes eligibility, need for identity checks and information conditions; and explicitly says people outside service scope should be directed to what to do next."],
+        ["S6 NIST glossary: Least Privilege", "Authorization/data boundary", 1, 1, 1, 1, 1, "Defines an entity, the system resources and authorizations needed for its function, and a minimum-only boundary. Assigned function is the qualifying condition; resources beyond what is needed do not fit."],
+        ["S7 NIST SP 800-53 Rev. 5 Update 1", "Authorization/data boundary", 1, 1, 1, 1, 1, "AC-2 identifies authorized users, accounts, groups, roles, privileges, prerequisites and criteria; AC-3 enforces approved access; AC-6 limits users or processes to access necessary for assigned organizational tasks."],
+        ["S8 NIST SP 800-207: Zero Trust Architecture", "Authorization/data boundary", 1, 1, 1, 1, 1, "Makes a per-request decision about a subject and enterprise resource using identity confidence, request validity, device posture, time, location and other context; the policy decision and enforcement points allow or deny access."],
+        ["S9 OWASP Authorization Cheat Sheet", "Authorization/data boundary", 1, 1, 1, 1, 1, "Maps user types to resources and operations, considers role and other attributes including network and time, validates every request, enforces least privilege, and states deny by default."],
+        ["S10 ICO: Data minimisation", "Authorization/data boundary", 1, 1, 1, 1, 1, "Addresses organizations processing personal data, tests adequacy and relevance against a specified purpose, limits collection to what is necessary, and directs periodic deletion of data no longer needed."]
+      ]
+    },
+    "findings": [
+      "The actor and the action traveled together across the entire corpus: A1 and A2 each appeared in 10 of 10 documents. The overlap was substantive rather than lexical. GOV.UK framed an audience in relation to what a person is trying to achieve; the security guidance framed a subject or entity in relation to a resource, operation, or assigned function; and the ICO framed an organization’s processing in relation to a specified purpose. A bare audience label is therefore incomplete. “Agent,” “administrator,” or “customer” does not show which task, resource, or purpose makes guidance applicable.",
+      "Qualifying context was explicit in nine of 10 documents. The sources use different kinds of context: GOV.UK names user type, trigger, circumstances, channel, eligibility and group; NIST names role membership, prerequisites, attributes, identity confidence, device posture, time and location; OWASP combines user, resource, operation and attributes; and ICO asks whether data is necessary for a specified purpose. This supports treating permission as request-specific rather than as a permanent property of a broad audience label. The single A3 zero, the high-level GOV.UK service-standard point, still asks teams to understand full context, but it does not name a qualifying field under the predeclared strict rule.",
+      "The non-fit field produced the principal variation. Eight of 10 documents explicitly limited, rejected, denied, separated, reassigned, or redirected a non-matching case. In user/content/service guidance, the strongest examples were separate user needs for groups whose needs differ, assignment to a team able to act, and a next route when a person is outside service scope. In authorization/data guidance, all five documents supplied a limit: minimum necessary authorization, approved access, per-request allow/deny, deny by default, or no excess personal data. The result supports a boundary field, but it does not show that any particular wording will prevent misuse.",
+      "All five authorization/data-boundary documents contained all four fields, compared with three of five user/content/service-design documents. This contrast should not be read as a quality ranking. The first two GOV.UK pages are intentionally broad discovery guidance rather than authorization specifications. Their 0 codes show that understanding an audience and testing assumptions does not automatically furnish a case disposition. A helpdesk article that can influence access or another protected action needs the missing layer from the authorization family: the resource/action, request conditions, and explicit non-fit result.",
+      "A stopping result is not inherently an unsuccessful use. The GOV.UK service-design source says that someone outside a service’s scope should still receive a clear next path. NIST zero trust makes allow or deny a per-request policy decision, and OWASP recommends denial by default. Applied cautiously, these public principles distinguish article usefulness from action completion: guidance can fit by explaining why an action is unavailable and where the request goes next. The desk study contains no live outcomes, so it does not estimate how often this happens.",
+      "The route’s phrase “fields that predict safe reuse” is stronger than this design can support. Prediction would require a declared article-use population, observed permission facts, a reliable definition of safe and unsafe outcomes, a follow-up window, and comparison or validation data. None is available in the public corpus. The defensible result is narrower: the four fields form an inspectable source-derived fit rubric, and 8/10 selected documents made the complete bundle explicit. That is document coverage, not predictive performance.",
+      "The current route sources were not accepted mechanically. The NIST least-privilege glossary and SP 800-53 publication directly addressed audience-to-permission boundaries and qualified. ICO data minimisation qualified as a purpose and evidence boundary. The Atlassian SLA page was reachable but excluded because response targets and timing do not answer whether a reader or requester has authority for an action. This preserves topic fit and avoids turning source count into a substitute for evidence relevance."
+    ],
+    "operationalImplications": [
+      "Represent article audience as a relationship, not a persona alone. The minimum inspectable statement combines actor, intended task or outcome, affected resource or information, and the conditions that make the path applicable. Where relevant, conditions can include role or group, request type, account or service state, eligibility, channel, identity or authorization result, and the purpose for which evidence is requested. Avoid implying that one broad label grants permission.",
+      "Make the non-fit disposition visible beside the ordinary path. It should distinguish at least: the reader may use the explanation but may not perform the action; a prerequisite is missing; the request concerns a different resource or user group; the case needs a named accountable function; or the path is unavailable and an alternate route applies. The source evidence supports a clear next path, not a dead end or an invitation to improvise.",
+      "Separate informational audience from acting authority. A customer or frontline specialist may be an intended reader while a system, security, policy, account, privacy, or service owner remains the actor authorized to decide. NIST’s subject/resource/action framing and GOV.UK’s group-and-task framing both caution against collapsing readership, need, and authority into one field.",
+      "Test fit at the request level before treating reuse as appropriate. The observable comparison should be between the article’s declared actor, action/resource, prerequisites and boundary and the corresponding non-sensitive request facts. If the match cannot be established, record an unknown or stopped disposition rather than assuming that finding the article proves applicability. This is a proposed application of the source rubric, not a report of measured ticket behavior.",
+      "Count stopped or redirected uses separately from incorrect uses in any later operational study. A stop can be correct when a prerequisite fails or the requested action belongs to another owner. To evaluate outcomes, a future study would need predeclared categories for completed in-scope action, correct explanation-only use, correct stop/route, incorrect action, incorrect denial, and unknown outcome, with numerator and denominator counts for each. This report supplies no such counts.",
+      "Apply purpose limitation to the fit evidence itself. Record enough information to establish the relevant audience, request, permission condition and disposition, but do not copy credentials, secrets, unrelated personal details or full customer histories merely to make the record look complete. ICO guidance also requires adequacy, so minimisation is not deletion of the few facts necessary to decide applicability.",
+      "Review scope statements when roles, authorization models, service eligibility, request routes, or data purposes change. A role label can remain unchanged while its permitted operations change, and a current article can remain factually accurate while its audience-to-action mapping becomes stale. A review should therefore compare the declared fit fields with the current accountable source rather than relying on title, age, page views, or past reuse alone."
+    ],
+    "limitations": [
+      "This study measures 10 public documents, not helpdesk articles, article uses, tickets, customers, workers, organizations, or outcomes. Its 100%, 90%, 80% and family-level percentages describe explicit field coverage in this fixed corpus only. They are not benchmarks and must not be reported as the frequency of safe reuse, unsafe action, correct escalation, or mature authorization practice.",
+      "The sample is purposive, English-language, and deliberately split into two equal families. Five documents come from UK government digital/content guidance; four come from US-centered NIST or OWASP security guidance; and one comes from the UK data-protection regulator. Other jurisdictions, accessibility standards, knowledge-management frameworks, product documentation, contractual controls, and local policies could use different concepts or change the counts.",
+      "Binary coding compresses depth. One explicit qualifying sentence and extensive control treatment both receive a 1. The A4 boundary rule also combines several distinct dispositions—rejecting an invalid need, assigning a capable group, routing an out-of-scope person, denying access, and limiting data—because each prevents automatic application to a non-fit case. Those dispositions are not operationally interchangeable, and a later implementation should preserve their differences.",
+      "One reviewer performed the coding and a second consistency pass. No independent duplicate review occurred, so no inter-rater reliability statistic is claimed. Borderline judgments are possible, particularly for S3 and S4 under A4. The operational definitions, full matrix and coding anchors are provided so another reviewer can reproduce the totals and substitute a different judgment transparently.",
+      "The study cannot test prediction or causality because it has no exposed variable for article metadata and no observed safe-reuse outcome. It cannot show that adding four fields reduces errors, increases resolution, changes escalation, or causes any other result. Such a claim would require authorized local data, stable definitions, a declared observation window, missing-data treatment, and controls for changes in roles, access, products, routing and request mix.",
+      "Public security and data-protection guidance does not appoint an organization-specific decision owner or establish a particular helpdesk’s permissions. NIST uses organization-defined policies, prerequisites, criteria and roles; OWASP provides application-security guidance; and ICO explains a legal principle. Their inclusion supports a bounded fit model, not legal advice or authorization for an account-specific action.",
+      "HTTP 200 confirms retrievability on 2026-08-18, not permanent availability, unchanged wording, applicability to every organization, or completeness of every linked resource. The NIST SP 800-53 landing page also displayed a later release planning note while the route-linked Update 1 PDF remained available. Edition details and access dates are therefore evidence metadata, not proof that a document is the only or newest authority for a local decision.",
+      "The route’s Atlassian SLA source was excluded for topical mismatch, not because it lacked value or availability. A different research question about response-time definitions could properly include it. This exclusion illustrates that canonical access and publisher reputation are necessary for reproducibility but do not make a source relevant to audience fit."
+    ],
+    "sources": [
+      {
+        "title": "Understand users and their needs",
+        "organization": "UK Government Digital Service",
+        "url": "https://www.gov.uk/service-manual/service-standard/point-1-understand-user-needs",
+        "publishedOrUpdated": "Published 2019-05-08; updated 2022-05-30",
+        "accessed": "2026-08-18",
+        "claimNote": "Names users, their full context, problem and intended achievement; it supports the actor and goal codes but did not meet the stricter named-prerequisite or non-fit-disposition tests.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Learning about users and their needs",
+        "organization": "UK Government Digital Service",
+        "url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+        "publishedOrUpdated": "Published 2016-04-04; updated 2017-03-23",
+        "accessed": "2026-08-18",
+        "claimNote": "Says to understand all kinds of users, including support roles, and gives fields for user type, desired action, trigger and constraining circumstances. It distinguishes needs from assumed solutions but does not provide an operational alternate path for a non-matching request.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Set up and manage user support",
+        "organization": "UK Government Digital Service",
+        "url": "https://www.gov.uk/service-manual/helping-people-to-use-your-service/set-up-and-manage-user-support",
+        "publishedOrUpdated": "Published 2016-11-24",
+        "accessed": "2026-08-18",
+        "claimNote": "Segments support evidence by channel, team, user group, status, content type and handling, and explicitly names the internal team or group able to act on feedback.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Identify user needs",
+        "organization": "GOV.UK Publishing Service",
+        "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/plan-manage-content/identify-user-needs/",
+        "publishedOrUpdated": "No publication or update date displayed on the page",
+        "accessed": "2026-08-18",
+        "claimNote": "Requires defining a user relative to a task, distinguishes groups with different needs, includes eligibility in acceptance criteria, and rejects content that merely justifies a presumed solution.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Designing good government services: an introduction",
+        "organization": "UK Government Digital Service",
+        "url": "https://www.gov.uk/service-manual/design/introduction-designing-government-services",
+        "publishedOrUpdated": "Published 2016-11-07; updated 2024-10-22",
+        "accessed": "2026-08-18",
+        "claimNote": "Connects users to whole tasks, eligibility, necessary identity and information conditions, and explicitly says a person whose need is outside service scope should be directed to what to do next.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Least Privilege",
+        "organization": "US National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/glossary/term/least_privilege",
+        "publishedOrUpdated": "No publication or update date displayed on the glossary page",
+        "accessed": "2026-08-18",
+        "claimNote": "Defines least privilege as granting an entity only the minimum system resources and authorizations needed to perform its function, directly linking actor, resource, assigned function and limit.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Security and Privacy Controls for Information Systems and Organizations, NIST SP 800-53 Rev. 5 Update 1",
+        "organization": "US National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "publishedOrUpdated": "Published September 2020; includes updates as of 2020-12-10; landing page displayed a 2025-08-27 planning note for Release 5.2.0",
+        "accessed": "2026-08-18",
+        "claimNote": "The official linked PDF supplied the coding text: AC-2 names account types, authorized users, role membership, privileges, prerequisites and criteria; AC-3 enforces approved authorization; and AC-6 limits access to what assigned tasks require.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Zero Trust Architecture, NIST SP 800-207",
+        "organization": "US National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+        "publishedOrUpdated": "Published August 2020",
+        "accessed": "2026-08-18",
+        "claimNote": "The official linked PDF defines least-privilege per-request access decisions and describes policy decisions using subject identity, requested resource, request validity, device posture, time, location and other context, with enforcement that allows or denies access.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Authorization Cheat Sheet",
+        "organization": "OWASP Foundation",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+        "publishedOrUpdated": "No publication or update date displayed on the page",
+        "accessed": "2026-08-18",
+        "claimNote": "Directs readers to map user types to resources and operations, consider role and other attributes, validate permissions on every request, enforce least privilege, and deny by default.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Principle (c): Data minimisation",
+        "organization": "UK Information Commissioner’s Office",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/",
+        "publishedOrUpdated": "Page metadata date 2025-09-09; page stated that guidance was under review following the Data (Use and Access) Act",
+        "accessed": "2026-08-18",
+        "claimNote": "Requires personal data to be adequate, relevant and limited to what is necessary for a specified purpose and advises periodic review and deletion of data no longer needed.",
+        "httpStatus": 200
+      }
+    ]
+  }
+}

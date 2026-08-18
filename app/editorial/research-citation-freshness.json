@@ -1,0 +1,287 @@
+{
+  "helpdesk-article-citation-freshness-research": {
+    "executiveAnswer": "Source age is an inspection signal, not a verdict that a helpdesk citation is wrong. This completed public-source desk study began with the article’s three existing source pages—NIST SP 800-53 Revision 5 Update 1, CISA’s phishing topic page, and the ICO’s data-minimisation guidance—and added five predeclared comparison pages that expose revision, replacement, or review status. Seven of eight candidate URLs were retrievable by direct GET on 2026-08-18 and entered the content analysis; the CISA page returned HTTP 403 and was excluded from substantive coding rather than treated as current or stale. All seven included pages exposed a publication, update, or version marker. Six of seven (85.7%) carried an active signal that an existing citation deserved claim-level review: a later NIST release notice, a withdrawn status, or an ICO notice that guidance was under review after statutory change. Only two of seven pages (28.6%) were explicitly withdrawn. The practical distinction is consequential: a withdrawn publication supports replacement and remapping, while an under-review banner or later patch supports checking the exact cited proposition, not automatically deleting every statement based on the page.\n\nThe strongest freshness evidence was structured lifecycle information, not elapsed time. Four of seven included pages identified a specific predecessor, successor, or set of changed controls. NIST’s original SP 800-53 Revision 5 landing page and SP 800-61 Revision 2 page explicitly name their replacements; the SP 800-53 Update 1 page lists the controls and discussions touched by Release 5.2.0; and SP 800-61 Revision 3 identifies Revision 2 as the edition it supersedes. The three ICO pages all say they are under review because of the Data (Use and Access) Act and link readers toward planned guidance updates, but the banner does not say that every proposition on each page has changed. That difference determines the defensible disposition: replace citations to an explicitly withdrawn edition, compare a named patch against the exact claim, and send legally or operationally consequential wording under a broad review notice to the appropriate subject owner for confirmation.\n\nNone of the seven included public pages names the organization-specific person authorized to approve a helpdesk article, decide account applicability, or accept a policy exception. None supplies a universal number of days after which a citation expires. The completed study therefore supports a two-part freshness record: source lifecycle status plus claim relevance. A date can prioritize inspection, but the review must still locate the supported passage, identify whether the source’s scope or action changed, and record one of four outcomes—confirmed against the served edition, revised to match the current source, retired because support disappeared, or escalated because applicability cannot be decided from public evidence. No customer, ticket, article-use, workforce, or proprietary outcome data was used, and the percentages describe only this fixed public-document corpus.",
+    "researchQuestion": "Across a fixed set of public pages connected to the article’s existing NIST, CISA, and ICO citations, which observable freshness signals distinguish a source that should be inspected, a citation that should be replaced, and guidance that cannot be judged by age alone?",
+    "observationWindow": "Cross-sectional desk review completed on 2026-08-18. Canonical URLs were requested by HTTP GET with redirects followed on that date. The study coded the content and metadata served at that cutoff; publication and lifecycle events shown by the pages range from August 2012 to September 2025. This is a source-record observation window, not an observation of helpdesk tickets or customer outcomes.",
+    "sampleDefinition": {
+      "population": "The candidate frame contained eight predeclared canonical public pages. Three were the article’s existing bibliography entries: NIST SP 800-53 Revision 5 Update 1, CISA’s phishing topic page, and the ICO’s data-minimisation guidance. Five comparison pages were selected before coding to make lifecycle states inspectable: the original NIST SP 800-53 Revision 5 page; NIST SP 800-61 Revisions 2 and 3 as a predecessor-successor pair; ICO storage-limitation guidance; and the ICO guide to data security. The frame therefore contains eight URLs, while the substantive document corpus contains the seven pages that met the retrieval rule.",
+      "includedN": 7,
+      "inclusion": "A candidate was included in substantive coding only if it was an English-language first-party page on the official NIST CSRC, CISA, or ICO domain; was directly connected to security, privacy, incident response, phishing, data minimisation, retention, or data-security claims that may appear in helpdesk guidance; and returned HTTP 200 to a direct GET on 2026-08-18. A page could qualify whether its status was current, superseded, withdrawn, or under review, because lifecycle status was the object of study. The unit of analysis was one canonical source page, not one claim, publication file, control, ticket, or organization.",
+      "exclusion": "The CISA phishing topic page returned HTTP 403 to the study GET and was excluded from all seven-page content numerators and denominators. It remains in the candidate/access ledger and source metadata so the failure is transparent; no freshness conclusion was inferred from its title, search snippets, or prior citation. Vendor commentary, cached copies, search results, secondary summaries, duplicate PDF/HTML formats, guessed successor URLs, and pages outside the fixed candidate frame were excluded. No customer knowledge base, local policy, contract, ticket, employee record, article analytics, or proprietary dataset was inspected or simulated."
+    },
+    "methodology": [
+      "Freeze the eight-URL candidate frame before coding. Preserve the three existing bibliography entries, then add comparison pages that expose two useful lifecycle contrasts: an original NIST publication versus its updated landing page, and a withdrawn NIST incident-response edition versus its named replacement. Add two adjacent ICO guidance pages carrying the same statutory-review context to test whether a notice is page-specific or collection-wide. This is purposive maximum-contrast selection, not a random sample of the web.",
+      "Issue an HTTP GET to every canonical URL on 2026-08-18 with redirects enabled and a descriptive user agent. Record the terminal response status and final URL. Apply no browser-rendering workaround, mirror, or search-snippet substitution when a request fails. Seven candidates returned 200. CISA returned 403 and therefore remained an access finding only; its page content was not coded.",
+      "For each included page, inspect visible body text and page metadata for a publication, update, or version marker. Code D1 = 1 when a date or formal revision identifier makes the served source distinguishable from an undated generic page. NIST’s ‘Date Published,’ revision labels, withdrawal dates, and planning-note dates qualify. For ICO pages, the DC.Date metadata and any visible ‘Latest updates’ entry qualify. The code identifies a source record; it does not prove substantive recency.",
+      "Code D2 active citation-review trigger = 1 when the page currently displays at least one of these predeclared signals: withdrawn or superseded status; a notice that a later release changed named controls or discussions; or an explicit warning that the guidance is under review because of a named legal change. A page that merely says it supersedes an older edition is not a trigger against a citation to the newer page itself. Under this rule, SP 800-61 Revision 3 is the comparison baseline rather than a triggered source.",
+      "Code D3 concrete lifecycle relation = 1 only when the page names a predecessor, successor, or changed item set precise enough to direct a comparison. NIST’s named edition relationships and the SP 800-53 Release 5.2.0 control list qualify. A broad statement that guidance is under review and may change does not qualify because it does not identify which proposition changed. Code D4 withdrawn = 1 only when the issuer explicitly labels that page withdrawn; ‘under review,’ ‘updated,’ ‘supersedes,’ and ‘a later release exists’ are not synonyms for withdrawal.",
+      "Code D5 statutory-review notice = 1 only when the page explicitly says guidance is under review because of the Data (Use and Access) Act. Code D6 local owner = 1 only if the public page designates the organization-specific role empowered to approve a particular helpdesk article or account exception. Code D7 universal expiration threshold = 1 only if the source states a calendar age after which all helpdesk citations become invalid. The strict wording prevents a general publication date or retention discussion from being converted into an invented article-expiry rule.",
+      "Assign one evidence-led disposition to each included record. ‘Replace and remap’ applies to an explicitly withdrawn page with a named successor. ‘Compare affected claims’ applies where a later release identifies changed controls or discussions but does not invalidate every possible citation. ‘Owner confirmation while review is pending’ applies to broad statutory-review notices that do not identify which claim changed. ‘Current comparison baseline’ applies to the newer member of a predecessor-successor pair when its own page carries no active trigger under D2.",
+      "Calculate proportions from the fixed candidate denominator of eight only for retrievability. Calculate every content-coverage proportion from the seven included pages. The row ledger displays all eight candidates, labels the excluded CISA record, and provides the evidence needed to reproduce every numerator. Interpret the results as coverage and lifecycle classifications in this bounded corpus, not as failure rates for public authorities or operational helpdesks."
+    ],
+    "measurements": [
+      {
+        "label": "Candidate canonical pages retrievable by direct GET",
+        "numerator": 7,
+        "denominator": 8,
+        "calculation": "7 HTTP-200 candidate URLs ÷ 8 candidate URLs × 100",
+        "result": "87.5%"
+      },
+      {
+        "label": "Included pages with an identifiable publication, update, or version marker (D1)",
+        "numerator": 7,
+        "denominator": 7,
+        "calculation": "7 D1-positive included rows ÷ 7 included rows × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Included pages carrying an active citation-review trigger (D2)",
+        "numerator": 6,
+        "denominator": 7,
+        "calculation": "6 D2-positive included rows ÷ 7 included rows × 100",
+        "result": "85.7%"
+      },
+      {
+        "label": "Included pages naming a concrete predecessor, successor, or changed item set (D3)",
+        "numerator": 4,
+        "denominator": 7,
+        "calculation": "4 D3-positive included rows ÷ 7 included rows × 100",
+        "result": "57.1%"
+      },
+      {
+        "label": "Included pages explicitly marked withdrawn (D4)",
+        "numerator": 2,
+        "denominator": 7,
+        "calculation": "2 D4-positive included rows ÷ 7 included rows × 100",
+        "result": "28.6%"
+      },
+      {
+        "label": "Included pages carrying the named statutory-review notice (D5)",
+        "numerator": 3,
+        "denominator": 7,
+        "calculation": "3 D5-positive included rows ÷ 7 included rows × 100",
+        "result": "42.9%"
+      },
+      {
+        "label": "Included pages identifying the local helpdesk article decision owner (D6)",
+        "numerator": 0,
+        "denominator": 7,
+        "calculation": "0 D6-positive included rows ÷ 7 included rows × 100",
+        "result": "0%"
+      },
+      {
+        "label": "Included pages specifying a universal calendar expiration threshold for helpdesk citations (D7)",
+        "numerator": 0,
+        "denominator": 7,
+        "calculation": "0 D7-positive included rows ÷ 7 included rows × 100",
+        "result": "0%"
+      }
+    ],
+    "table": {
+      "heading": "Citation-freshness ledger for the complete eight-URL candidate frame (seven included; one access exclusion)",
+      "columns": [
+        "ID and canonical page",
+        "GET / inclusion",
+        "Date or version (D1)",
+        "Active trigger (D2)",
+        "Concrete relation (D3)",
+        "Withdrawn (D4)",
+        "Statutory review (D5)",
+        "Local owner / universal age cutoff (D6 / D7)",
+        "Evidence-led disposition"
+      ],
+      "rows": [
+        [
+          "N53-U1 — NIST SP 800-53 Rev. 5 Update 1",
+          "200 / Included",
+          "1 — September 2020; updates through 2020-12-10",
+          "1 — 2025-08-27 planning note announces Release 5.2.0",
+          "1 — names new and revised controls and updated discussions/relationships",
+          "0",
+          "0",
+          "0 / 0",
+          "Compare only claims mapped to affected controls or discussion; do not infer that every control became invalid"
+        ],
+        [
+          "N53-R5 — original NIST SP 800-53 Rev. 5 landing page",
+          "200 / Included",
+          "1 — September 2020; withdrawal dated 2020-12-10",
+          "1 — explicitly withdrawn and superseded",
+          "1 — names the updated Rev. 5 replacement and errata update",
+          "1",
+          "0",
+          "0 / 0",
+          "Replace the withdrawn citation and remap the exact control or passage to the served update/current release"
+        ],
+        [
+          "N61-R2 — NIST SP 800-61 Rev. 2",
+          "200 / Included",
+          "1 — August 2012; withdrawal dated 2025-04-03",
+          "1 — explicitly withdrawn and superseded",
+          "1 — names SP 800-61 Rev. 3 as successor",
+          "1",
+          "0",
+          "0 / 0",
+          "Replace and remap; Revision 3 changes the publication’s framing as well as its edition identifier"
+        ],
+        [
+          "N61-R3 — NIST SP 800-61 Rev. 3",
+          "200 / Included",
+          "1 — April 2025; formal Revision 3 identifier",
+          "0 — its predecessor relation is not a trigger against a citation to this newer page",
+          "1 — explicitly supersedes SP 800-61 Rev. 2",
+          "0",
+          "0",
+          "0 / 0",
+          "Use as the current comparison baseline for remapping Revision 2 citations; still verify the exact proposition"
+        ],
+        [
+          "ICO-DM — Principle (c): Data minimisation",
+          "200 / Included",
+          "1 — DC.Date 2025-09-09",
+          "1 — guidance under review after the Data (Use and Access) Act",
+          "0 — banner does not identify which data-minimisation proposition changed",
+          "0",
+          "1",
+          "0 / 0",
+          "Review consequential wording with the relevant privacy/legal owner; do not call the entire page withdrawn"
+        ],
+        [
+          "ICO-SL — Principle (e): Storage limitation",
+          "200 / Included",
+          "1 — DC.Date 2025-07-24",
+          "1 — guidance under review after the Data (Use and Access) Act",
+          "0 — banner does not identify a changed retention proposition or replacement page",
+          "0",
+          "1",
+          "0 / 0",
+          "Confirm purpose-specific retention wording; do not manufacture a helpdesk citation-expiry period"
+        ],
+        [
+          "ICO-SEC — A guide to data security",
+          "200 / Included",
+          "1 — DC.Date 2025-09-09; visible latest-update note dated 2023-05-19",
+          "1 — guidance under review after the Data (Use and Access) Act",
+          "0 — banner is broad; the visible 2023 note says the content reorganization left content unchanged",
+          "0",
+          "1",
+          "0 / 0",
+          "Separate editorial restructuring from substantive change and seek owner confirmation for affected claims"
+        ],
+        [
+          "CISA-PH — Phishing topic page",
+          "403 / Excluded from content coding",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "Mark inaccessible for this observation; do not infer freshness from the title or an earlier citation"
+        ]
+      ]
+    },
+    "findings": [
+      "Retrievability and freshness were different questions. Seven of eight canonical candidates returned HTTP 200, while the CISA phishing page returned 403. The failed request does not prove that the CISA publication is obsolete, incorrect, or unavailable to every browser. It does mean this study could not inspect the canonical content reproducibly under its declared GET method. Treating a remembered title or a search snippet as current evidence would hide that limitation, so the CISA record was excluded from all content coding and retained only in the access ledger.",
+      "A visible date was common but not decisive. Every included page had a date or formal version marker, yet those markers led to different states. NIST SP 800-61 Revision 2 is old and explicitly withdrawn; the newer Revision 3 is the named successor. NIST SP 800-53 Update 1 carries an older base publication date alongside a 2025 planning note for Release 5.2.0. The ICO pages carry 2025 metadata dates while warning that guidance is under review. The same field—date—therefore cannot distinguish withdrawn, patched, current, or pending-review guidance without surrounding lifecycle text.",
+      "Explicit withdrawal was the clearest replacement trigger and occurred in two of seven included pages. The original SP 800-53 Revision 5 page was withdrawn on 2020-12-10 and points to the updated Revision 5 record. SP 800-61 Revision 2 was withdrawn on 2025-04-03 and points to Revision 3. In both cases, leaving the old URL in a helpdesk article can preserve access to historical material while concealing that the issuer directs readers elsewhere. Replacement must still be claim-level: the reviewer should locate the corresponding control, recommendation, or scope in the successor rather than assuming identical wording.",
+      "A named patch can be narrower than a publication-wide rewrite. The SP 800-53 Update 1 planning note identifies controls, control enhancements, discussions, and related-control links affected by Release 5.2.0. That list supports targeted inspection. A helpdesk statement mapped to one of those items deserves comparison with the released material; a statement mapped to an unaffected control is not disproved merely because the release date is later. This is why ‘newer source exists’ and ‘this claim changed’ must be separate fields.",
+      "The ICO review banner was a strong trigger but a weak disposition. Three of seven included pages say guidance is under review after changes made by the Data (Use and Access) Act. That is sufficient to stop representing the page as unquestionably settled current guidance for a consequential decision. It is not sufficient to say that every definition, principle, retention instruction, or security statement on those pages has changed. The appropriate result is owner confirmation or a qualified unresolved status until the relevant proposition can be checked against updated official material.",
+      "Editorial change and substantive change should not be collapsed. The ICO data-security page displays a 2023 update explaining that the Guide to the UK GDPR was broken into smaller guides while content stayed the same. That note describes a presentation change, whereas the separate statutory-review banner warns of possible future or pending substantive change. A freshness record that stores only ‘updated 2023’ would miss the distinction and could trigger unnecessary rewriting or false confidence.",
+      "Public authorities did not supply local article governance. Zero of seven included pages named the organization-specific helpdesk article approver, account policy owner, or exception owner, and zero supplied a universal citation expiration interval. NIST and ICO establish publication status and subject guidance; they do not decide whether a particular support team may perform a customer-specific action. Source status can trigger review, but local authority must decide applicability where policy, law, contract, permissions, or account conditions matter.",
+      "No ticket or article outcome rate can be inferred from this study. The observable outcomes are document-review dispositions: replace and remap, compare affected claims, retain as a current comparison baseline, or seek owner confirmation while review is pending. Whether any prior article use produced correct resolution, repeat contact, escalation, or customer harm would require a separately scoped, privacy-minimised operational study. No such data was available or invented here."
+    ],
+    "operationalImplications": [
+      "Record source lifecycle separately from claim validity. A citation record should preserve the canonical URL, issuing organization, exact edition or page date, retrieval result, source status, named successor or change notice, claim-level locator, and last disposition. ‘Fresh’ should not be a single green/red field because accessible, current-looking, under-review, patched, and withdrawn are materially different states.",
+      "Use event-based triggers before calendar-only reminders. Explicit withdrawal, named supersession, a patch affecting the cited control, a statutory-review banner, a changed reporting destination, or a changed action mechanism all justify review. Calendar age can prioritize sources that lack lifecycle metadata, but this corpus provides no evidence for a universal 30-, 90-, or 365-day expiration rule.",
+      "Map each consequential sentence to a passage or control before reviewing freshness. The SP 800-53 5.2.0 notice demonstrates why publication-wide treatment is too coarse: it names particular additions and revisions. A reviewer who knows the exact control can decide whether the article is implicated; a bibliography-only record forces every change to become either a blanket rewrite or an unexamined risk.",
+      "Apply explicit dispositions. For a withdrawn source, replace the citation and verify the successor’s wording and scope. For a targeted patch, compare affected mapped claims and record confirmed or revised. For a broad under-review notice, mark consequential claims pending owner confirmation rather than silently approving or deleting them. For an access failure, mark the source inaccessible at the observation date and avoid treating cached wording as verified current evidence.",
+      "Keep an accountable subject owner alongside the external source record. Privacy wording should reach the designated privacy or legal owner; incident-response and security actions should reach the designated security owner; product recovery or reporting routes should reach the owner of that workflow. The external publication can establish evidence and change status, but it cannot appoint the organization-specific person who accepts the operational decision.",
+      "Distinguish content-preserving maintenance from substantive change. A moved page, reformatted guide, corrected link, or collection split may require a locator update without changing the supported statement. Conversely, a stable URL can serve revised content or display a new legal-review banner. Review both semantic change and citation durability; neither URL stability nor a new date proves the other.",
+      "Preserve uncertainty as a valid result. When a page says it may change but does not identify the affected proposition, the defensible status is pending confirmation, not current by default and not withdrawn by assumption. Recording that unresolved state prevents a support article from turning public-source ambiguity into an unauthorized customer-facing rule."
+    ],
+    "limitations": [
+      "The corpus is purposive, small, English-language, and concentrated in two accessible public authorities. It contains seven coded pages and one access exclusion, not a representative sample of all security, privacy, helpdesk, legal, product, or vendor documentation. The high 85.7% trigger rate is partly a consequence of selecting comparison pages that expose lifecycle contrasts and must not be reported as the prevalence of stale citations on the web.",
+      "The CISA source could not be substantively coded because the canonical GET returned 403. A normal interactive browser, a different network, or a later request may receive another result. This study makes no claim about the page’s current text or publication status and does not substitute a mirror. As a result, the current article’s phishing source is represented as an unresolved access failure, not evaluated evidence.",
+      "One desk reviewer applied binary rules and a second consistency pass; there was no independent duplicate coder and no inter-rater statistic. Terms such as ‘active trigger’ and ‘concrete lifecycle relation’ involve judgment. The declared definitions and complete row ledger make those judgments challengeable and reproducible, but another reviewer could reasonably classify a borderline notice differently.",
+      "HTTP 200 establishes retrieval, not legal effect, completeness, authenticity beyond the official domain, future stability, or applicability to a particular organization. Metadata dates may reflect page maintenance rather than substantive revision. Conversely, a stable date may accompany a new banner or linked release. Exact passages and relevant surrounding notices must be read together.",
+      "The study codes page-level lifecycle evidence, not line-by-line semantic differences between every old and new publication file. It does not calculate a textual diff of NIST editions, interpret the legal consequences of the Data (Use and Access) Act, or determine which local policies must change. Those questions require subject expertise and, for local applicability, authorized internal records.",
+      "No operational outcomes were measured. The report cannot estimate whether stale citations caused incorrect answers, repeat contact, escalations, security events, privacy harm, or any change in service performance. Its measurements concern source availability and lifecycle signals only. A separate outcome study would need defined article-use events, request cohorts, follow-up windows, privacy controls, and explicit denominators.",
+      "The observation is cross-sectional as of 2026-08-18. Source organizations can alter status banners, metadata, URLs, successor relationships, and publication files after the cutoff. The access date and served status are therefore integral to the finding; later reviewers should repeat the GET and claim-level comparison rather than treating this ledger as permanently current."
+    ],
+    "sources": [
+      {
+        "title": "SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations (Update 1 landing page)",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "publishedOrUpdated": "Published September 2020; includes updates as of 2020-12-10; planning note dated 2025-08-27",
+        "accessed": "2026-08-18",
+        "claimNote": "Returned HTTP 200. The planning note announces Release 5.2.0 and lists new or revised controls, updated control discussions, and updated related controls. It supports a targeted claim review, not a finding that every Revision 5 statement is invalid.",
+        "httpStatus": 200
+      },
+      {
+        "title": "SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations (original landing page)",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/final",
+        "publishedOrUpdated": "Published September 2020; withdrawn 2020-12-10 and superseded by the updated Revision 5 record",
+        "accessed": "2026-08-18",
+        "claimNote": "Returned HTTP 200 while visibly marked withdrawn. The page points to its superseding record and an errata update, supporting replacement and claim remapping rather than continued presentation as the active edition.",
+        "httpStatus": 200
+      },
+      {
+        "title": "SP 800-61 Rev. 2, Computer Security Incident Handling Guide",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r2/final",
+        "publishedOrUpdated": "Published August 2012; withdrawn 2025-04-03 and superseded by SP 800-61 Revision 3",
+        "accessed": "2026-08-18",
+        "claimNote": "Returned HTTP 200 while visibly marked withdrawn. The named successor creates a reproducible replacement trigger for citations that still rely on Revision 2.",
+        "httpStatus": 200
+      },
+      {
+        "title": "SP 800-61 Rev. 3, Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile",
+        "organization": "National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "publishedOrUpdated": "Published April 2025; supersedes SP 800-61 Revision 2",
+        "accessed": "2026-08-18",
+        "claimNote": "Returned HTTP 200. This is the named successor used to verify the lifecycle relation on the withdrawn Revision 2 page; its newer date does not remove the need to map an exact claim into the new framing.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Principle (c): Data minimisation",
+        "organization": "Information Commissioner’s Office",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/",
+        "publishedOrUpdated": "DC.Date metadata 2025-09-09; page states guidance is under review following the Data (Use and Access) Act",
+        "accessed": "2026-08-18",
+        "claimNote": "Returned HTTP 200. The review banner is a current inspection trigger, while the page does not identify which data-minimisation proposition changed or declare all existing guidance withdrawn.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Principle (e): Storage limitation",
+        "organization": "Information Commissioner’s Office",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/storage-limitation/",
+        "publishedOrUpdated": "DC.Date metadata 2025-07-24; page states guidance is under review following the Data (Use and Access) Act",
+        "accessed": "2026-08-18",
+        "claimNote": "Returned HTTP 200. The page supports purpose-specific retention review and carries a statutory-review notice; it does not supply a universal age limit for helpdesk articles or their citations.",
+        "httpStatus": 200
+      },
+      {
+        "title": "A guide to data security",
+        "organization": "Information Commissioner’s Office",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/security/a-guide-to-data-security/",
+        "publishedOrUpdated": "DC.Date metadata 2025-09-09; visible latest-update note dated 2023-05-19; page states guidance is under review following the Data (Use and Access) Act",
+        "accessed": "2026-08-18",
+        "claimNote": "Returned HTTP 200. A visible 2023 note says the guide was split into smaller guides without changing content, while the separate statutory banner says guidance is under review. Together they support distinguishing editorial maintenance from possible substantive change.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Phishing",
+        "organization": "Cybersecurity and Infrastructure Security Agency",
+        "url": "https://www.cisa.gov/topics/cyber-threats-and-advisories/phishing",
+        "publishedOrUpdated": "Not inspectable in this study because the canonical GET returned HTTP 403",
+        "accessed": "2026-08-18",
+        "claimNote": "This existing bibliography source was tested by direct GET and excluded from substantive coding after HTTP 403. The failure is an access classification only; no claim is made about page currency or content.",
+        "httpStatus": 403
+      }
+    ]
+  }
+}

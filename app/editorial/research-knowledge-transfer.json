@@ -1,0 +1,260 @@
+{
+  "helpdesk-article-knowledge-transfer-research": {
+    "executiveAnswer": "A link to an article is not, by itself, a complete transfer of decision context. This bounded public-document study began with the route’s three existing sources, replaced the explicitly withdrawn NIST SP 800-61 Revision 2 with its named Revision 3 successor, and added two directly relevant official documents already used in completed reports. Five included documents were then coded for five continuity fields: the objective or scope, state or evidence, actions or disposition, an accountable recipient or role, and a time or communication checkpoint. All five documents made objective/scope, actions/disposition, and a temporal or communication field explicit; four of five made state/evidence explicit; and three of five named an accountable recipient or role. Three of five documents contained the complete five-field bundle. Four of five also imposed an explicit information-protection or minimum-necessary boundary. These percentages describe this deliberately selected document corpus only. They do not measure transferred requests, article effectiveness, reconstruction time, repeat contact, or any customer outcome. No ticket, customer, employee, vendor, contract, or proprietary record was used or invented.\n\nThe document text supports a narrower and more useful answer to the route’s question. Decision context survives a handoff when the receiving party can identify what is being addressed, what is known and how trustworthy or current it is, what has already happened or must happen next, who is responsible or authorized to continue, and when or how status will be communicated or reviewed. NIST SP 800-61 Revision 3 joins roles, evidence, recorded investigative actions, incident magnitude, information flows, status communications, and safeguards for incident records. The route-cited NIST SP 800-53 Revision 5 Update 1 text joins event content, status, outcome, incident tracking, reporting periods, assigned recipients, and privacy-risk controls; its landing page also announces the later Release 5.2.0, so the exact edition remains visible rather than being described as universally current. GOV.UK’s user-support guidance supplies the closest routine-service analogue by grouping enquiries by type, user group, status, handling, channel, and the team able to act. OWASP supplies detailed event continuity but does not, under the strict rule used here, designate the accountable receiving role. ICO supplies the counterweight to indiscriminate copying: information must be adequate for a stated purpose but limited to what is necessary.\n\nThe resulting five-field structure is an inspectable transfer rubric, not a universal form and not proof that adding fields improves outcomes. It also does not imply that all evidence should be copied into an article or ticket. A concise transfer can point to protected evidence at its approved source, state what was verified, preserve uncertainty, and identify the decision still required. The receiving role matters because the other four fields can describe a case without establishing who may act. Conversely, a named queue or person without objective, evidence, action, and checkpoint context is only an assignment label. The defensible operational principle is therefore purpose-limited continuity: preserve the smallest sufficient set of facts and references that lets the designated receiver make the next authorized decision without reconstructing already established context.",
+    "researchQuestion": "Across a fixed sample of selected public incident-response, security-control, service-support, logging, and data-minimisation guidance, how often are five knowledge-transfer fields explicit—objective or scope, state or evidence, actions or disposition, accountable recipient or role, and time or communication checkpoint—and what can those documents legitimately support about preserving decision context when helpdesk guidance moves between owners?",
+    "observationWindow": "The cross-sectional retrieval, source-status check, text review, coding, calculation, and canonical-URL verification were completed on 2026-08-18. The included versions were published, updated, or continuously maintained from 2016 through 2025. The withdrawn predecessor was retained only in the source ledger. This is a document-observation window, not a period of helpdesk operations or article use.",
+    "sampleDefinition": {
+      "population": "A purposive, predeclared candidate frame of six English-language public documents. The route’s existing source set supplied NIST SP 800-61 Revision 2, NIST SP 800-53 Revision 5 Update 1, and ICO data-minimisation guidance. Revision 2 was retained as a lifecycle record but excluded from substantive coding because NIST explicitly marks it withdrawn and names Revision 3 as its successor; Revision 3 entered the corpus instead. The route-cited SP 800-53 edition remained included as the observed source text, with its landing page’s later Release 5.2.0 notice disclosed rather than silently treated as absent. Two directly relevant documents already referenced in completed reports—the GOV.UK page on setting up and managing user support and the OWASP Logging Cheat Sheet—were added to test whether service and event-record guidance expose the same continuity fields as incident and control guidance. The resulting substantive corpus contains five included documents. It is not a census of knowledge-management standards or a representative sample of helpdesk articles.",
+      "includedN": 5,
+      "inclusion": "A document had to be publicly available on the responsible government, regulator, standards, or nonprofit security organization’s official domain; return HTTP 200 to direct GET on 2026-08-18; contain substantive visible text relevant to at least one declared continuity or information-boundary field; be available in English; and not be explicitly withdrawn without substitution by its named successor. A route-cited edition carrying a later targeted release notice could remain as the observed text only if the edition and notice were both disclosed. One publication counted once even when its canonical landing page linked an official PDF. NIST landing pages supplied version and status metadata; their linked official PDFs supplied detailed control or recommendation text.",
+      "exclusion": "NIST SP 800-61 Revision 2 was excluded from the five-document coding denominator because its official page says it was withdrawn on 2025-04-03 and superseded by Revision 3. It remains in the source ledger so the route’s original citation is not silently replaced. Duplicate formats, withdrawn or superseded editions, vendor product documentation, commercial benchmarks, consultancy commentary, search snippets, translations, inaccessible pages, and documents chosen only because they used the word ‘handoff’ were excluded. No internal article inventory, transfer log, queue sample, customer record, chat transcript, response-time observation, synthetic ticket, or proprietary performance measure entered the study."
+    },
+    "methodology": [
+      "Freeze the six-document candidate frame before calculating results. Treat NIST SP 800-61 Revisions 2 and 3 as a predecessor-successor lineage: retain both canonical landing pages in the access and status ledger, but code only the current Revision 3. Count the NIST landing page and linked official PDF as one publication rather than inflating N with formats. This produces six candidate URLs and five included substantive documents.",
+      "Retrieve each canonical URL by HTTP GET on 2026-08-18 with redirects followed, confirm that the final location remains on the expected official domain, and record terminal status. All six candidate landing pages returned HTTP 200. For NIST SP 800-61 Revision 3 and NIST SP 800-53 Revision 5, also retrieve and read the official PDFs linked from their canonical pages. HTTP success establishes retrievability at the cutoff, not permanence or local applicability.",
+      "Apply K1 objective or scope. K1 equals 1 only when substantive text identifies the incident, enquiry, event, requested or intended action, affected object, stated purpose, or comparable unit of work whose context must remain intelligible. A generic recommendation to keep records does not qualify unless the record’s purpose or object is named.",
+      "Apply K2 state or evidence. K2 equals 1 only when the document explicitly calls for a current status, result, reason, magnitude, impact, confidence, factual basis, provenance, evidence, or other information that distinguishes what is known from a bare description. A general call to collect data does not qualify without a named state, result, or evidence property.",
+      "Apply K3 actions or disposition. K3 equals 1 only when text explicitly preserves actions performed, response activity, event outcome, handling history, a required next action, review, deletion, restoration, or another disposition. A role description without an action does not qualify. The criterion can be satisfied by a prior action, current action, or defined next action because each prevents the receiver from treating the record as untouched.",
+      "Apply K4 accountable recipient or role conservatively. K4 equals 1 only when the document names a role, team, group, designated internal or external stakeholder, organization-defined recipient, or authority responsible for acting on, receiving, coordinating, or safeguarding the information. Merely recording the identity associated with an event, addressing the reader as ‘you,’ or including a generic ‘responsibility’ classification does not establish an accountable receiver.",
+      "Apply K5 time or communication checkpoint. K5 equals 1 only when the document explicitly calls for an event, receipt, reporting, response, update, or review time; a reply expectation; a communication route; or status/progress communication to a designated party. This field represents temporal and communication continuity, not a universal service target. No response interval from one document was converted into a helpdesk benchmark.",
+      "Code P1 information-protection or minimum-necessary boundary separately from the five-field completeness score. P1 equals 1 only when the document explicitly limits information to what a purpose needs, excludes or masks sensitive fields, restricts access, protects confidentiality or integrity, or requires controlled sharing. Keeping P1 separate avoids treating maximum copying as complete transfer. A document is five-field complete only when K1 through K5 all equal 1.",
+      "Read the relevant substantive sections in context and preserve a concise document-level anchor for every row. Conduct a second consistency pass against the operational definitions and recompute column totals. One desk reviewer performed both passes, so this is not independent duplicate coding and no inter-rater agreement statistic is claimed.",
+      "Calculate each content percentage from the fixed denominator of five included documents and candidate retrievability from six candidate URLs. Report integer percentages because all displayed content numerators divide five exactly. Interpret the results as explicit field coverage in this corpus, not as transfer success, predictive validity, article quality, or causal evidence."
+    ],
+    "measurements": [
+      {
+        "label": "Candidate canonical source pages reachable by direct GET",
+        "numerator": 6,
+        "denominator": 6,
+        "calculation": "6 HTTP-200 canonical pages ÷ 6 candidate source pages × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Included documents explicitly identifying an objective or scope (K1)",
+        "numerator": 5,
+        "denominator": 5,
+        "calculation": "5 K1-positive rows ÷ 5 included documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Included documents explicitly identifying state or evidence (K2)",
+        "numerator": 4,
+        "denominator": 5,
+        "calculation": "4 K2-positive rows ÷ 5 included documents × 100",
+        "result": "80%"
+      },
+      {
+        "label": "Included documents explicitly identifying actions or disposition (K3)",
+        "numerator": 5,
+        "denominator": 5,
+        "calculation": "5 K3-positive rows ÷ 5 included documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Included documents explicitly identifying an accountable recipient or role (K4)",
+        "numerator": 3,
+        "denominator": 5,
+        "calculation": "3 K4-positive rows ÷ 5 included documents × 100",
+        "result": "60%"
+      },
+      {
+        "label": "Included documents explicitly identifying a time or communication checkpoint (K5)",
+        "numerator": 5,
+        "denominator": 5,
+        "calculation": "5 K5-positive rows ÷ 5 included documents × 100",
+        "result": "100%"
+      },
+      {
+        "label": "Included documents containing the complete five-field continuity bundle",
+        "numerator": 3,
+        "denominator": 5,
+        "calculation": "3 rows with K1 + K2 + K3 + K4 + K5 = 5 ÷ 5 included documents × 100",
+        "result": "60%"
+      },
+      {
+        "label": "Included documents explicitly imposing an information-protection or minimum-necessary boundary (P1)",
+        "numerator": 4,
+        "denominator": 5,
+        "calculation": "4 P1-positive rows ÷ 5 included documents × 100",
+        "result": "80%"
+      }
+    ],
+    "table": {
+      "heading": "Document-level knowledge-transfer coding matrix (five included documents coded; withdrawn predecessor shown only as a lifecycle exclusion; 1 = explicit under the declared rule)",
+      "columns": [
+        "ID and document",
+        "Status / inclusion",
+        "K1 objective/scope",
+        "K2 state/evidence",
+        "K3 action/disposition",
+        "K4 accountable recipient/role",
+        "K5 time/communication",
+        "Five-field complete",
+        "P1 protected/minimum necessary",
+        "Coding anchor"
+      ],
+      "rows": [
+        [
+          "S1 NIST SP 800-61 Rev. 3",
+          "Current successor / Included",
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          "Names incident scope and magnitude; assigns leadership, handlers and other parties; records facts and investigative actions with integrity and provenance; preserves evidence; defines information flows and authority in provider relationships; communicates status and recovery progress; and restricts sensitive incident records to authorized personnel."
+        ],
+        [
+          "S2 NIST SP 800-53 Rev. 5 Update 1",
+          "Route source with later Release 5.2.0 notice / Included as observed edition",
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          "AU-3 records what, when, where, source, outcome and associated identity; IR-4 covers handling actions; IR-5 tracks incident status and pertinent information; IR-6 reports within an organization-defined period to specified recipients; IR-8 defines structure, sharing and distribution; AU-3 also requires consideration of privacy risk in audit content."
+        ],
+        [
+          "S3 ICO: Data minimisation",
+          "Route source / Included",
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          "Makes the stated purpose the scope, requires adequate but not excessive personal data, and directs periodic review and deletion of data no longer needed. It does not prescribe a transferred case-status/evidence field or designate the receiving helpdesk role under the strict K2/K4 rules."
+        ],
+        [
+          "S4 GOV.UK: Set up and manage user support",
+          "Official comparison / Included",
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          "Groups enquiries by type, user group, status, content ownership and handling; identifies channel and the internal team or group able to act; and names receipt/solve dates, whether more action or a reply is expected, and response/handling time. The page does not state a substantive sensitive-detail or minimum-necessary rule."
+        ],
+        [
+          "S5 OWASP Logging Cheat Sheet",
+          "Official comparison / Included",
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          "Records intended action, object, result status, reason, confidence, response, timestamps and an interaction identifier that prevents later reconstruction. It excludes or masks secrets and sensitive data. Event identity and a generic responsibility classification do not designate the accountable receiving role under K4."
+        ],
+        [
+          "X1 NIST SP 800-61 Rev. 2",
+          "HTTP 200; withdrawn 2025-04-03 and superseded by Revision 3 / Excluded",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "Not coded",
+          "The route’s original source remains accessible, but NIST explicitly directs readers to Revision 3. It contributes to the six-URL availability denominator and source ledger, not the five-document content denominator."
+        ]
+      ]
+    },
+    "findings": [
+      "Objective/scope, action/disposition, and time/communication were explicit in all five included documents. The terms differ by document function. NIST SP 800-61 uses incident scope, response actions and progress communications; SP 800-53 uses event type, handling, outcomes and reporting periods; GOV.UK uses enquiry type, handling and reply expectations; OWASP uses intended action, event result and timestamps; and ICO uses specified processing purpose, review and deletion. The convergence supports preserving those three kinds of context, but it does not make the documents interchangeable or turn incident controls into a routine helpdesk procedure.",
+      "State or evidence appeared in four of five documents. NIST SP 800-61 is strongest on evidence integrity, provenance, sequence, magnitude and confidence in what occurred. SP 800-53 IR-5 explicitly names incident status and pertinent information, while AU-3 captures outcome. GOV.UK names whether an enquiry needs more action or a reply, and OWASP names result status, reason and analytical confidence. ICO was coded 0 because adequacy and relevance govern how much personal data is held; they do not themselves require a transferred operational case status or evidentiary state.",
+      "The accountable-recipient field produced the lowest coverage: three of five documents, or 60%. NIST SP 800-61 explicitly distinguishes leadership, incident handlers, legal, public affairs, technology professionals and third-party providers, and it says provider contracts should clarify information flows, coordination and authority. SP 800-53 repeatedly uses specified or organization-defined recipients and requires an incident-response structure and distribution. GOV.UK names the internal team or group able to act on feedback. ICO’s generic organizational obligations and OWASP’s event identity or responsibility labels did not meet the stricter designated-receiver test.",
+      "Three documents contained the complete five-field bundle: NIST SP 800-61 Revision 3, NIST SP 800-53 Revision 5 Update 1, and GOV.UK’s user-support guidance. This is not a quality ranking. ICO’s purpose is data minimisation, so it supplies a critical boundary rather than a case-handoff template. OWASP’s purpose is application logging, so it supplies highly reconstructable event content without assigning the organization-specific person or team who must accept a support decision. The two incomplete rows expose why a transfer may need both a structured record and a separately governed ownership field.",
+      "Four of five documents imposed an explicit protection or minimum-necessary boundary. NIST SP 800-61 says incident records can contain sensitive information and should be safeguarded for authorized access. SP 800-53 notes that audit records may reveal personal information and calls for privacy-risk mitigation. ICO requires enough personal data for a specified purpose but no more. OWASP identifies data to exclude, remove, mask, hash or encrypt. GOV.UK’s measured support page did not supply such a substantive rule, so its complete continuity score must not be read as permission to copy unrestricted case content.",
+      "OWASP’s interaction identifier provides a direct anti-reconstruction example. It links relevant events for one interaction rather than forcing later correlation of separate entries. That supports stable references between a transferred summary and its evidence, not duplication of the full evidence into every surface. NIST SP 800-61 similarly combines provenance with access safeguards. Together with ICO minimisation, the documents favor a traceable summary plus controlled evidence location over an indiscriminate transcript.",
+      "GOV.UK provides the closest service-support evidence for customer continuity. Its grouping fields include request type, user group, enquiry status, content owned elsewhere, how the enquiry was handled, the channel, and the team able to act. It also distinguishes whether more action or a reply is expected. Those fields show why article identification alone is incomplete: an article may explain a topic, while the transfer record still needs the request-specific state, responsible group and outstanding communication obligation.",
+      "The route’s NIST SP 800-61 Revision 2 citation required a lifecycle correction before content synthesis. Its canonical page returned HTTP 200 but was visibly withdrawn and superseded. Revision 3 substantially reframes incident response around CSF 2.0 and current cybersecurity risk management, while retaining strong evidence for roles, records, actions and communications. Accessibility of the old page therefore did not justify treating it as the current authority.",
+      "Nothing in the five documents establishes that five fields predict successful transfer, reduce handling time, prevent repeat contact, or improve customer satisfaction. Those questions require an authorized operational sample with a defined transfer event, accepted-receiver event, follow-up window, missing-data rule and outcome classification. The defensible result here is document-field coverage and a source-derived rubric for future inspection."
+    ],
+    "operationalImplications": [
+      "Use the five fields as a compact decision-context check rather than a demand for a long narrative. State the request or objective and its scope; the current status, verified facts and material uncertainty; prior actions, outcomes and the exact next decision; the role or team expected to accept that decision; and the customer or operational checkpoint, including when or how the next update occurs. A field may point to an approved source instead of reproducing its content.",
+      "Keep article scope separate from request state. The article can define the reusable rule, prerequisites, supported action and stopping point. The transfer record should state how the particular request matched or failed those conditions, which evidence was verified, whether the article was applied or used only to explain a stop, and what remains unresolved. This application follows the source structure; it is not an observed ticket practice in this study.",
+      "Require accountable acceptance for consequential continuations. A queue label or associated username does not necessarily identify who has authority to decide. Record the designated receiving role, the decision requested, and any restriction on what that role or provider may do. Where authority is unknown, preserve that uncertainty and route it for confirmation rather than inferring permission from possession of the article or record.",
+      "Preserve customer communication as part of continuity. A transfer should not erase whether a reply is expected, what status has already been communicated, or the next confirmed checkpoint. Keep promises tied to the role able to fulfill them, and distinguish a progress update from an unverified outcome. The sources support explicit timing and communication fields but do not supply one universal response interval.",
+      "Apply minimum-necessary treatment to every field. Record enough to support the next authorized decision, while excluding credentials, tokens, unnecessary personal details, unrestricted diagnostic dumps and unrelated history. When detailed evidence is sensitive, record its controlled location, provenance, relevant finding and access boundary. Do not convert ‘complete context’ into ‘copy everything.’",
+      "Use stable references for related events and evidence. OWASP’s interaction-identifier concept and NIST’s provenance treatment support linking the summary to the relevant source events so a receiver can inspect authorized evidence without reconstructing relationships manually. A reference should remain intelligible across team or channel changes and should not expose protected content to a broader audience.",
+      "Distinguish at least three transfer outcomes in any later measurement: accepted with sufficient context, returned or paused for a named missing field, and correctly stopped because authority or evidence was unavailable. Report those separately from incorrect routing or unauthorized action. A correct stop can preserve decision quality, while a transfer that moves quickly but loses a customer commitment can still be incomplete.",
+      "Review source lifecycle as part of continuity. When a cited publication is withdrawn, a control is revised, a support team changes, or an information purpose changes, remap the affected statement and receiving role. The SP 800-61 predecessor-successor finding shows that an accessible link can still point to a superseded authority; continuity requires current meaning, not only URL persistence."
+    ],
+    "limitations": [
+      "This study measures five included public documents and one withdrawn source record, not helpdesk articles, handoffs, tickets, queues, customers, specialists, providers, organizations, incidents or outcomes. Its 100%, 80% and 60% results are field-coverage proportions for the fixed five-document corpus only. They are not benchmarks for transfer quality or estimates of operational prevalence.",
+      "The corpus is purposive, small, English-language and concentrated in UK and US-oriented guidance. Two included publications are NIST standards or recommendations, one is UK government service guidance, one is UK regulator guidance, and one is nonprofit application-security guidance. Other knowledge-management standards, jurisdictions, contractual regimes, accessibility requirements, labor practices, service platforms and local policies may expose different fields.",
+      "The five-field model combines concepts that remain operationally distinct. Status, evidence, confidence and provenance all enter K2; prior action, outcome and next disposition all enter K3; and event time, response expectation, reporting period and progress communication all enter K5. A later implementation should preserve those distinctions rather than treating one timestamp or status label as complete context.",
+      "Binary coding compresses depth. A document with one qualifying sentence and a document with extensive control treatment both receive 1. The complete score therefore indicates explicit coverage somewhere in the document, not equal rigor, ease of implementation, legal force or suitability as a transfer template. The row anchors must travel with the totals.",
+      "One reviewer retrieved, extracted, coded and rechecked the documents. There was no independent duplicate reviewer and no inter-rater reliability statistic. Borderline decisions are possible, especially the ICO K3/K5 positives, the GOV.UK K3 positive, and the OWASP K4 zero. The operational definitions and full matrix make those decisions visible for replication or recoding.",
+      "NIST SP 800-61 addresses cybersecurity incident response, SP 800-53 provides organization-selectable security and privacy controls, OWASP addresses application logging, ICO explains a data-protection principle, and GOV.UK addresses government service support. Structural observations about context cannot establish the organization-specific authority, legal duty, retention period, tool design or customer communication required for a particular helpdesk.",
+      "The ICO page states that its guidance is under review following the Data (Use and Access) Act. This report uses its visible adequacy, relevance and necessity text as a documented source observation and does not claim that every proposition is permanently settled or universally applicable. Consequential local use requires review by the appropriate privacy or legal owner.",
+      "HTTP 200 establishes retrievability on 2026-08-18, not future availability, unchanged wording, legal effect or applicability. The SP 800-61 Revision 2 page demonstrates the distinction directly: it remained retrievable while explicitly withdrawn. Edition, lifecycle status, canonical URL and access date are therefore integral evidence fields.",
+      "The design cannot test prediction or causality. It has no observed transfer exposure, no receiving-owner action, no reconstruction-time measure, no comparison group and no follow-up outcome. A future operational study would need predeclared units, privacy-minimised records, transfer and acceptance timestamps, role and authority definitions, missing-data treatment, customer-impact categories, and controls for request mix, incident conditions, staffing, channel and system changes."
+    ],
+    "sources": [
+      {
+        "title": "SP 800-61 Rev. 3, Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile",
+        "organization": "US National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "publishedOrUpdated": "Published April 2025; supersedes SP 800-61 Revision 2",
+        "accessed": "2026-08-18",
+        "claimNote": "Canonical landing page and official linked PDF used for S1. Sections 2.2 and 2.3 and the CSF 2.0 profile text identify roles, provider information flows and authority; RS.AN-06 and RS.AN-07 address recorded actions, integrity, provenance and evidence; RS.CO and RC.CO address designated stakeholders and status or recovery communications.",
+        "httpStatus": 200
+      },
+      {
+        "title": "SP 800-53 Rev. 5, Security and Privacy Controls for Information Systems and Organizations, Update 1",
+        "organization": "US National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "publishedOrUpdated": "Published September 2020; includes updates as of 2020-12-10; landing page carries a 2025 Release 5.2.0 planning note",
+        "accessed": "2026-08-18",
+        "claimNote": "Canonical landing page and official linked PDF used for S2. AU-3 supplies event-content fields and privacy-risk context; IR-4 supplies handling activity; IR-5 supplies status and pertinent information; IR-6 supplies reporting timing and recipients; and IR-8 supplies response structure, sharing and distribution.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Principle (c): Data minimisation",
+        "organization": "UK Information Commissioner’s Office",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/",
+        "publishedOrUpdated": "Page metadata dated 2025-09-09; guidance states it is under review following the Data (Use and Access) Act",
+        "accessed": "2026-08-18",
+        "claimNote": "Route source used for S3. The page requires personal data to be adequate, relevant and limited to what is necessary for a specified purpose, calls for periodic review and deletion, and explains that too little information can also be inadequate. It does not designate a receiving helpdesk owner.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Set up and manage user support",
+        "organization": "UK Government Digital Service",
+        "url": "https://www.gov.uk/service-manual/helping-people-to-use-your-service/set-up-and-manage-user-support",
+        "publishedOrUpdated": "Published 2016-11-24; no later public content update displayed",
+        "accessed": "2026-08-18",
+        "claimNote": "Official comparison used for S4. The page groups enquiries by channel, team able to act, request type, user group, status, content ownership and handling, and names receipt or solve dates, reply expectations and response or handling time.",
+        "httpStatus": 200
+      },
+      {
+        "title": "Logging Cheat Sheet",
+        "organization": "OWASP Foundation",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+        "publishedOrUpdated": "Continuously maintained page; no publication or update date displayed",
+        "accessed": "2026-08-18",
+        "claimNote": "Official comparison used for S5. Event attributes include when, where, who and what; intended action, object, result, reason, confidence and responses; and an interaction identifier linking relevant events. The page separately identifies sensitive data and secrets to exclude, mask, hash or encrypt.",
+        "httpStatus": 200
+      },
+      {
+        "title": "SP 800-61 Rev. 2, Computer Security Incident Handling Guide",
+        "organization": "US National Institute of Standards and Technology",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r2/final",
+        "publishedOrUpdated": "Published August 2012; withdrawn 2025-04-03 and superseded by SP 800-61 Revision 3",
+        "accessed": "2026-08-18",
+        "claimNote": "This is the route’s original incident-response source. Its canonical page returned HTTP 200 but explicitly identified Revision 3 as the successor, so it was excluded from substantive coding and retained as a transparent lifecycle record and candidate-access observation.",
+        "httpStatus": 200
+      }
+    ]
+  }
+}

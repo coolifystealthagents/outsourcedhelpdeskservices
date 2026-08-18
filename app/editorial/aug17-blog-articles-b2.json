@@ -1,0 +1,383 @@
+{
+  "help-desk-queue-transfer-reason": {
+    "directAnswer": [
+      "A help-desk queue transfer reason should explain why the current queue cannot own the next action and why the destination can. Use a controlled reason such as wrong initial route, specialist skill required, protected decision required, service incident coordination, customer-language coverage, scheduled ownership change, or capacity fallback. Pair the reason with an accepted next action, evidence summary, customer checkpoint, and named sending owner.",
+      "In an outsourced help desk, a transfer is not complete when a ticket changes queues. It is complete only when the receiving role accepts the work or a documented fallback takes effect. The reason must never be used to hide age, avoid an awkward customer reply, or pass an unresolved request between the provider and client without accountable ownership."
+    ],
+    "fields": [
+      ["Transfer reason", "A controlled label describing the operational condition that requires a different queue; it should not be a free-form blame statement."],
+      ["Destination capability", "The skill, authority, language, system access, or service ownership available in the receiving queue and needed for the next action."],
+      ["Accepted next action", "A precise action the receiver confirms it can perform, including the object, required evidence, and expected result."],
+      ["Sending owner", "The person who remains accountable for routing and customer communication until acceptance or fallback is recorded."],
+      ["Transfer checkpoint", "A time or observable event when an unaccepted transfer is reviewed, with an explicit fallback route."],
+      ["Customer promise delta", "Any change to the next update, communication owner, channel, or expected process caused by the transfer."
+      ]
+    ],
+    "table": {
+      "heading": "Queue transfer reason decision matrix",
+      "columns": ["Reason", "Use when", "Required artifact", "Do not use when"],
+      "rows": [
+        ["Wrong initial route", "Intake rules clearly identify another owning queue", "Matched route rule and customer goal", "The current queue simply has a long backlog"],
+        ["Specialist skill required", "The next diagnostic or service action requires a documented competency", "Completed frontline checks, evidence, and one requested action", "A generalist has not attempted permitted basic intake"],
+        ["Protected decision required", "Access, identity, security, finance, policy, or account ownership must decide", "Minimal decision brief and decision owner", "Support only needs a routine answer already covered by guidance"],
+        ["Incident coordination", "Observable facts match the current incident inclusion rule", "Impact, time, scope evidence, and incident reference", "Only the error wording looks similar"],
+        ["Scheduled ownership change", "A published coverage boundary or agreed service handoff has arrived", "Open promise summary and receiving acceptance", "A specialist is ending a shift without a valid handoff"],
+        ["Capacity fallback", "A preapproved threshold activates a tested alternate queue", "Trigger, eligible ticket class, expiry, and fallback owner", "The transfer would give work to an unqualified queue"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Choose a reason based on the next action",
+        "body": [
+          "Start by writing the customer's goal and the single next action. Then ask whether the current queue lacks a required capability or authority. This sequence prevents transfer reasons from becoming descriptions of emotion or history, such as difficult customer, needs attention, or not ours. Those labels do not help a receiver act and can introduce bias. A valid reason is testable: another reviewer can inspect the route rule, requested decision, skill map, incident criteria, or schedule boundary and reach the same result.",
+          "Use one primary reason and optional structured context rather than several competing labels. If a login problem needs an identity decision after routine checks, protected decision required is more useful than login, technical, urgent, and client review. Record urgency separately through impact and checkpoint fields. Where the outsourcing provider and client share responsibility, define which reasons cross that boundary. The provider may own customer intake and routine troubleshooting, while the client retains account ownership changes and security investigation. The reason should point to that boundary without exposing restricted internal detail."
+        ]
+      },
+      {
+        "heading": "Require acceptance instead of treating movement as ownership",
+        "body": [
+          "A queue change can happen automatically while no person has reviewed the record. Require an acceptance event that states receiver, next action, and checkpoint. Until that event, the sending owner monitors the ticket and communicates with the customer. If the receiving queue rejects the transfer, it must select a return reason such as missing required evidence, route rule mismatch, unavailable authority, or duplicate active work. The ticket should return with the exact missing condition, not a generic rejected note.",
+          "Set checkpoints by consequence. A routine product question may be reviewed at the next operating interval, while a suspected account takeover follows the immediate protected route. At the checkpoint, the sender confirms acceptance, activates a named fallback, or retains the ticket and resets the customer expectation. Do not let automation repeatedly bounce a ticket. After one disputed transfer, route it to a designated queue lead who decides ownership while one support person remains responsible for the reply."
+        ]
+      },
+      {
+        "heading": "Measure transfer quality rather than transfer volume alone",
+        "body": [
+          "Review a sample by reason, source queue, destination, and outcome. Useful measures include acceptance on first attempt, time to acceptance, return rate, missing-artifact rate, customer checkpoints missed during movement, repeat transfers, and resolution after transfer. Interpret them together. A low transfer rate can mean strong frontline capability, or it can mean specialists are holding work that requires a protected owner. A high rate can reflect bad intake, but it can also follow a temporary incident with correct routing.",
+          "Read the transfer notes behind the counts. If specialist skill required is often returned because environment details are absent, improve the conditional handoff checklist. If wrong initial route clusters around one portal option, clarify that intake choice. If protected decisions remain unaccepted, repair the client-owner coverage map instead of teaching provider agents to cross an authority boundary. Preserve transfer history so operational review can distinguish a route defect from a one-time exception."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: a workspace ownership request",
+      "body": [
+        "A customer asks the outsourced help desk to replace a departed workspace owner. The general queue confirms the requested outcome, safe workspace reference, requester's approved role result, and the applicable ownership-recovery route. It does not collect identity documents in email or attempt the change. The primary reason is protected decision required, not technical escalation, because the missing capability is organizational authority rather than troubleshooting skill.",
+        "The handoff artifact reads: Customer goal—replace owner for workspace ending 73. Verified—request came through the authenticated portal; standard administrator result is visible; former owner is reported unavailable. Unknown—whether the requester qualifies for recovery. Requested action—account owner to accept and decide recovery eligibility. Customer update—general queue will reply by 16:00 UTC. The account queue accepts at 14:40 and becomes the decision owner, while the provider remains communication owner under the operating agreement.",
+        "If the account queue returns the ticket saying needs more information without naming a permitted missing fact, the sending specialist does not ask the customer for broad personal evidence. The transfer goes to the designated ownership lead for a route decision. The customer receives a factual checkpoint, not an internal account of queue disagreement. This preserves authority, minimizes repeated effort, and prevents movement from becoming abandonment."
+      ]
+    },
+    "checklist": [
+      "State the customer goal and one next action before selecting a reason.",
+      "Choose one controlled reason tied to capability, authority, route, or schedule.",
+      "Identify the destination capability that the current queue does not have.",
+      "Include only the evidence required for the receiver's action or decision.",
+      "Name a sending owner, acceptance event, checkpoint, and tested fallback.",
+      "Keep the customer update owned until the receiving queue accepts it.",
+      "Record any changed promise, channel, owner, or operating interval.",
+      "Review returns, repeat transfers, missed checkpoints, and final outcomes by reason."
+    ],
+    "cautions": [
+      "Do not use a transfer reason to disguise backlog, end-of-shift abandonment, performance avoidance, or conflict between provider and client teams. Capacity and ownership disputes need their own visible controls.",
+      "Do not place sensitive investigation details in a broadly visible transfer note. State the protected outcome and reference restricted evidence through the approved record."
+    ]
+  },
+  "help-desk-article-customer-scenario-test": {
+    "directAnswer": [
+      "Test a help-desk article with realistic customer scenarios before relying on it in outsourced support. Each scenario should specify the customer goal, product state, role, channel, known facts, missing facts, risk signals, and expected safe outcome. Include a normal match, an important missing prerequisite, a deceptive near-match, a protected-action boundary, an accessibility or language variation, and a case that must escalate.",
+      "A scenario passes only when a trained specialist can select the right article, ask for no unnecessary data, follow the steps consistently, stop at the correct boundary, explain the result clearly, and leave an auditable ticket note. Correct wording alone is not enough if the procedure produces the wrong route or encourages unsupported promises."
+    ],
+    "fields": [
+      ["Scenario goal", "The outcome the fictional customer seeks, stated separately from the symptom and the presumed solution."],
+      ["Starting facts", "The minimum role, service, version, account state, channel, and impact information available when the test begins."],
+      ["Hidden condition", "A fact revealed only if the specialist asks an appropriate question or performs an approved check."],
+      ["Expected path", "The article selection, prerequisite checks, safe actions, stop point, route, and customer explanation a passing response should contain."],
+      ["Critical error", "An outcome that fails the scenario regardless of other strengths, such as requesting a password, bypassing approval, or exposing another customer."],
+      ["Observation record", "A consistent score sheet capturing decisions, questions, evidence used, deviations, elapsed effort, and reviewer notes."
+      ]
+    ],
+    "table": {
+      "heading": "Minimum customer-scenario test set",
+      "columns": ["Scenario", "Variation to include", "Expected behavior", "Failure signal"],
+      "rows": [
+        ["Clear match", "All prerequisites true and routine impact", "Use the article with minimal intake and verify outcome", "Adds unrelated checks or escalates without reason"],
+        ["Missing prerequisite", "Version or account state is unknown", "Ask one permitted deciding question, then choose path", "Assumes the common state"],
+        ["Deceptive near-match", "Same visible symptom but different product, role, or cause", "Reject the article and route correctly", "Follows steps because keywords match"],
+        ["Protected boundary", "Requested action affects identity, access, money, ownership, or security", "Stop and seek the named decision route", "Treats technical capability as authorization"],
+        ["Communication variation", "Customer uses plain language, translation, assistive technology, or a constrained channel", "Preserve the decision while adapting explanation", "Requires jargon or a channel unavailable to the customer"],
+        ["Changed conditions", "New impact or incident signal appears midway", "Leave the routine path and retriage", "Completes obsolete steps despite new risk"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Build scenarios from decisions, not idealized scripts",
+        "body": [
+          "Begin with the decisions the article is meant to support: whether it applies, which fact must be verified, what action is permitted, when to stop, and how to confirm success. Write scenarios that force each decision at least once. Do not give every fact in the opening prompt. Real customer requests omit versions, use informal names, combine two goals, or propose a solution that does not fit. A good test reveals whether the article helps a specialist clarify the goal without turning intake into an interrogation.",
+          "Use de-identified patterns from prior tickets when available, but change names, identifiers, dates, and incidental details. Synthetic cases should remain plausible for the public outsourced-help-desk setting: an administrator cannot find a notification control, a buyer asks about a duplicate confirmation, or a user reports an export error. Avoid copying personal information into test materials. Each case should have an answer key that distinguishes customer report, support-verifiable fact, and intentionally unknown fact."
+        ]
+      },
+      {
+        "heading": "Observe the full service outcome",
+        "body": [
+          "Ask a tester to work the scenario as if handling a live ticket. Observe search terms, article selection, prerequisite questions, use of evidence, sequence of actions, customer explanation, and final ticket note. The reviewer should not coach during the attempt. Score both correctness and efficiency: a response can arrive at the right answer while asking for unnecessary account history, repeating a risky step, or requiring knowledge that the article never states.",
+          "Define critical failures before testing. Examples include requesting credentials, revealing a stored identity value, changing access without approval, asserting an unconfirmed incident cause, omitting a customer checkpoint after escalation, or closing without verifying the requested outcome. Critical failures should trigger immediate article review even if most testers pass. For noncritical variation, compare whether the article permits more than one safe route or whether its wording is genuinely ambiguous."
+        ]
+      },
+      {
+        "heading": "Use disagreement to locate the operating defect",
+        "body": [
+          "Run each high-consequence scenario with at least two qualified reviewers or specialists who were not involved in writing the guidance. If they choose different paths, locate the earliest divergence. It may be an undefined product term, a prerequisite placed after the steps, an incomplete role map, a hidden dependency on client knowledge, or two articles that claim the same symptom. Fix the source of the decision rather than merely adding a warning paragraph at the end.",
+          "Retest the failed case and a neighboring case after revision. A narrower rule that fixes one scenario can accidentally reject valid routine requests. Maintain a compact regression set organized by consequential decision, not by every possible customer sentence. The outsourcing provider and client owner should agree who accepts each result: provider operations can validate usability and ticket documentation, while the client service, security, or policy owner validates protected boundaries and authoritative facts."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: testing an invoice-notification article",
+      "body": [
+        "The article says account administrators can change invoice notification recipients in the billing portal. Scenario A supplies an authenticated administrator, a supported direct account, and the goal of adding a shared accounts-payable address. A passing specialist confirms the goal, checks the visible role and account type, gives the documented steps, warns not to enter payment credentials into the ticket, and asks the customer to confirm that the recipient appears in settings.",
+        "Scenario B uses the same opening sentence, but the hidden condition is that the account is managed by a reseller. The expected result is to stop before the portal steps and use the reseller-management route. Scenario C has a standard user who says the administrator gave verbal permission. The specialist must distinguish product access from organizational authority and direct the authorized administrator path rather than accepting the claim as approval.",
+        "Scenario D begins as a routine notification change, then the customer says invoices are reaching an unknown external address. The expected path changes to the approved account or security route; the specialist should not continue editing settings and erase evidence. During the test, one specialist follows routine steps because the risk exclusion appears only after step six. That is an article defect, not merely a coaching opportunity. The exclusion is moved to the prerequisite block, and all four scenarios are rerun to confirm that routine customers still receive usable help."
+      ]
+    },
+    "checklist": [
+      "Define the article's applicability decision, safe action, stop point, and outcome check.",
+      "Create clear-match, missing-fact, near-match, protected, and changed-condition cases.",
+      "Include realistic customer language without copying live personal information.",
+      "State hidden facts, expected path, permitted evidence, and critical errors.",
+      "Observe search, questions, steps, explanation, routing, and ticket record.",
+      "Use independent testers and locate the earliest point of disagreement.",
+      "Assign provider and client reviewers according to their authority boundaries.",
+      "Retest the corrected case plus neighboring valid and invalid cases."
+    ],
+    "cautions": [
+      "Do not treat a memorized response as proof that the article works. Testers should demonstrate applicability checks and reasoning using only the guidance and approved operating context.",
+      "Do not use real credentials, live customer accounts, sensitive documents, or irreversible actions in scenario testing. Use controlled environments and synthetic artifacts appropriate to the decision."
+    ]
+  },
+  "help-desk-ticket-sensitive-data-minimization": {
+    "directAnswer": [
+      "Minimize sensitive data in a help-desk ticket by collecting only the facts needed for the next permitted support action, placing each fact in the least exposed approved location, and retaining it only for the defined operational or legal period. Before asking for data, name the decision it will change. If the team can identify the account, reproduce the issue, verify entitlement, or route the case with a safer reference, do not request the more sensitive value.",
+      "An outsourced help desk needs explicit client-approved rules for secrets, identity evidence, payment information, health or employee data, security artifacts, and customer records. Frontline staff should know what must never enter an ordinary ticket, which protected channel to use when evidence is genuinely required, how to redact incidental exposure, and who handles deletion or breach review."
+    ],
+    "fields": [
+      ["Purpose", "The specific support action or decision for which a data element is necessary; general helpfulness is not a sufficient purpose."],
+      ["Minimum fact", "The least detailed permitted value that distinguishes the relevant account, event, configuration, or outcome."],
+      ["Sensitivity class", "The client-approved category that determines collection, access, storage, transmission, and retention controls."],
+      ["Approved location", "The system or restricted field authorized for the data, which may be different from the ordinary ticket transcript."],
+      ["Safe reference", "A non-secret case, account, transaction, event, or attachment reference used instead of copying the underlying sensitive material."],
+      ["Disposition", "The rule and accountable owner for redaction, restricted transfer, retention, deletion, and review of accidental submission."
+      ]
+    ],
+    "table": {
+      "heading": "Data-minimization decision table",
+      "columns": ["Customer may offer", "Minimum support alternative", "Handling rule", "Never request in ordinary ticket"],
+      "rows": [
+        ["Account details", "Approved non-sensitive account or workspace reference", "Verify through the authorized system and record outcome", "Password, recovery code, secret answer, or full authentication token"],
+        ["Payment evidence", "Order reference, transaction status, date, and limited permitted descriptor", "Route payment decisions to the designated owner", "Full card number, security code, bank credentials, or unredacted statement"],
+        ["Identity evidence", "Approved verification result and safe case reference", "Use the protected recovery process where required", "Ad hoc identity document sent through general email"],
+        ["Error screenshot", "Crop to relevant interface state and preserve timestamp or error reference", "Redact unrelated names, messages, and account content", "Entire desktop or inbox when the issue concerns one control"],
+        ["Diagnostic record", "Relevant event range, service, version, and approved correlation ID", "Keep restricted originals in the authorized repository", "Broad logs containing unrelated users, tokens, or message bodies"],
+        ["Employee or customer list", "Count, role category, or affected-record references", "Limit access to the case owners who need it", "Bulk personal data merely to illustrate impact"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Apply a purpose test before collection",
+        "body": [
+          "For every requested element, complete the sentence: We need this fact to decide or perform ____. Then ask whether a less sensitive value would produce the same next action. A workspace reference may locate a configuration without exposing the owner's email. An order number may let the commerce owner find a transaction without a bank statement. A correlation ID and narrow time range may support investigation without an entire log archive. If the blank cannot be completed precisely, do not collect the data.",
+          "Make intake conditional. A public form should not ask every requester for identity or payment evidence because a small minority of cases might require it. First classify the goal and route. Only the protected owner should initiate higher-sensitivity collection through the approved channel, and only after confirming necessity. The provider's scripts should explain what not to send in common contexts, especially passwords, one-time codes, private keys, full payment credentials, and unrelated personal records."
+        ]
+      },
+      {
+        "heading": "Control placement, access, and copying",
+        "body": [
+          "Minimization does not end after collection. Store ordinary facts in structured fields where access and retention are predictable. Keep restricted evidence in its approved location and place only a purpose-labeled reference in the general ticket. When transferring between the outsourced provider and client owner, send the minimum decision brief. Do not copy an attachment into chat, email, and several queue notes simply to make it convenient.",
+          "Screenshots and logs require contextual review. Crop or redact only when policy allows and preserve provenance so the artifact remains understandable. A safe note might say: redacted capture shows error E41 after Submit at 10:22 UTC; original restricted under evidence reference R-184. It should not embed customer conversations visible elsewhere on the screen. Limit broad queue access, and periodically review whether roles can see categories they do not handle."
+        ]
+      },
+      {
+        "heading": "Prepare for accidental sensitive submissions",
+        "body": [
+          "Customers may send data that support never requested. Give specialists a response procedure: stop further sharing, do not quote or forward the value, apply the approved restriction or redaction control, notify the designated privacy or security owner when the category requires it, and tell the customer through approved wording what action was taken. Never promise deletion before the responsible owner confirms that copies, attachments, notifications, and retention obligations have been evaluated.",
+          "Record the event without repeating the secret. Use a category, location, discovery time, exposure scope if known, containment action, and owner reference. For example: possible authentication secret received in attachment; access restricted at 11:06 UTC; security owner case S-219. Review recurring accidents by intake source and request type. If customers repeatedly attach full statements for refund questions, revise the form and confirmation message to request only the order reference."
+        ]
+      },
+      {
+        "heading": "Verify retention and downstream use",
+        "body": [
+          "Define retention by data category and record purpose, subject to the client's legal and contractual obligations. A closed ticket is not automatically a reason to keep every attachment indefinitely, and deletion from the visible transcript may not remove notifications or exports. The accountable system owner should document the actual disposition path. Support specialists need a route for correction or deletion requests, but should not make legal determinations themselves.",
+          "Sample tickets for unnecessary collection, duplicated evidence, overbroad access, expired restricted links, and sensitive values in free text. Measure the defect and correct the workflow that caused it. A low count of reported incidents does not prove minimization is working if reviewers never inspect attachments or macros. The goal is enough reliable context to serve the customer safely, not the smallest ticket at the expense of unresolved work."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: investigating a failed account export",
+      "body": [
+        "A customer says an account export fails and offers to send a full customer database plus an administrator password. The specialist immediately says not to send credentials or source records. The next decision is whether the documented export function is failing in a supported environment, so the minimum facts are workspace reference, export type, application version, observed time, visible error code, and whether a permitted small test export also fails.",
+        "The customer sends a screenshot containing the relevant error but also names and email addresses from a background window. Following the approved process, the specialist restricts the original, creates a permitted cropped copy showing only the export panel and error, and references the restricted artifact rather than redistributing it. The ticket records that no password was received and that incidental personal data was contained under reference P-52.",
+        "The technical owner asks for diagnostic evidence. Instead of requesting all logs, support supplies the correlation ID, twelve-minute event window, service region, version, and reproduction result. The owner retrieves authorized service-side records and confirms a defect route. The customer ticket keeps the operational result and next checkpoint, not the internal logs. At closure, the restricted evidence follows its category-specific disposition rule, and the general ticket remains useful without retaining the customer database or unrelated identities."
+      ]
+    },
+    "checklist": [
+      "Name the decision or action each requested data element will change.",
+      "Choose a safe reference, category, count, or outcome before detailed content.",
+      "Use conditional collection rather than high-sensitivity fields on every intake.",
+      "State clearly which secrets and documents must not enter ordinary channels.",
+      "Keep restricted originals in approved locations and avoid duplicate copies.",
+      "Record verification outcomes rather than underlying secret or identity values.",
+      "Contain accidental submissions without quoting, forwarding, or promising premature deletion.",
+      "Review access, retention, attachments, free text, and repeated collection defects."
+    ],
+    "cautions": [
+      "Do not ask a customer to send a password, one-time code, private key, full payment credential, or unrestricted identity document so support can move faster. Urgency does not make an ordinary ticket a protected channel.",
+      "Do not delete or alter evidence outside the approved disposition process. Security, privacy, legal, and service owners may need to assess containment and retention while minimizing further exposure."
+    ]
+  },
+  "help-desk-outsourcing-scope-change-review": {
+    "directAnswer": [
+      "Review an outsourced help-desk scope change as an operating-control decision, not a casual addition to the queue. Define the proposed request class, customer outcome, channels, hours, forecast volume, required skills, system access, knowledge, authority boundaries, escalation owners, data handling, service measures, quality checks, continuity needs, and effective date. Compare each item with the current responsibility map and name every gap.",
+      "Approve only when the provider can accept the work safely and the client retains clear ownership of protected decisions. Use a time-bounded pilot when demand or handling is uncertain, with eligible cases, success measures, stop conditions, and rollback routing stated in advance. A client email asking the desk to also handle a new task is input to review, not sufficient operational authorization."
+    ],
+    "fields": [
+      ["Scope unit", "A precisely defined request class or customer outcome, including explicit inclusions, exclusions, channels, regions, and operating intervals."],
+      ["Responsibility map", "The provider, client, vendor, and customer roles that perform, approve, communicate, and verify each consequential step."],
+      ["Readiness evidence", "Proof that trained staff, applicable guidance, access, routing, escalation coverage, and quality review are available."],
+      ["Authority boundary", "The decisions the outsourced team may make, the actions it may execute after approval, and the actions that remain prohibited."],
+      ["Pilot guardrail", "A limit on case type, volume, duration, access, or consequence paired with a stop and rollback condition."],
+      ["Effective-state record", "The approved scope version, owner, start event, review date, affected queues, and communication needed by operating teams."
+      ]
+    ],
+    "table": {
+      "heading": "Scope-change review gates",
+      "columns": ["Gate", "Evidence to review", "Approval condition", "Stop signal"],
+      "rows": [
+        ["Service definition", "Examples, exclusions, customer goal, channels, and hours", "Two reviewers classify edge cases consistently", "Request class relies on vague wording such as related issues"],
+        ["Capability", "Demand range, handling distribution, skill map, coverage, and continuity", "Qualified usable capacity exists without abandoning current obligations", "Pilot causes missed checkpoints or unsafe concurrency"],
+        ["Authority and access", "Action map, approvals, least-privilege roles, and access expiry", "Every consequential action has an owner and permitted executor", "Provider must infer approval or use shared credentials"],
+        ["Knowledge and route", "Current articles, scenario tests, intake fields, destinations, and fallbacks", "Routine, near-match, and exception cases reach the right owner", "Transfers bounce or guidance conflicts"],
+        ["Data and assurance", "Sensitivity classes, approved systems, retention, review sample, and incident route", "Minimum-data handling and quality evidence are defined", "Sensitive data appears in an unapproved queue"],
+        ["Transition", "Effective date, open-work treatment, customer wording, rollback, and review owner", "Old and new obligations remain distinguishable", "No owner can restore the prior route"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Translate the request into an unambiguous scope unit",
+        "body": [
+          "A statement such as have the provider handle billing questions is too broad. Separate invoice-copy requests, payment-status explanations, refund decisions, tax-document requests, payment-detail changes, and suspected fraud. Each has different evidence, authority, sensitivity, and owner. Define the proposed unit by the customer outcome and observable conditions, then list exclusions and near-matches. Include examples that a frontline specialist can classify without private client context.",
+          "Document channels, languages, regions, products, customer segments, and operating intervals. A process suitable for authenticated portal requests may not be safe through public email. A task available in one region may have a different policy owner elsewhere. Record whether the provider communicates, investigates, executes, approves, or merely routes. Those verbs prevent an agreement to support a task from being misread as authority to make the underlying decision."
+        ]
+      },
+      {
+        "heading": "Assess the whole completion path",
+        "body": [
+          "Map a representative ticket from arrival to verified outcome. Identify intake facts, article, tools, access role, customer reply, approval, escalation destination, acceptance checkpoint, evidence location, closure condition, and after-hours fallback. Check current workload and skill-hours by request type rather than relying on scheduled headcount. New work may be easy for frontline staff yet fail because the client's finance, security, or service owner has no receiving capacity.",
+          "Use least privilege. Access should correspond to approved actions, have named recipients, and be removed when the pilot or assignment ends. Never solve readiness with shared credentials or broad administrator roles. Run customer-scenario tests for a normal case, missing prerequisite, deceptive near-match, protected exception, and service interruption. The provider validates usability; the accountable client owner validates policy, authority, security, and customer-safe claims."
+        ]
+      },
+      {
+        "heading": "Pilot uncertainty without creating hidden permanent work",
+        "body": [
+          "When volume, complexity, or customer behavior is uncertain, state a pilot boundary: eligible request types, participating queue, operating interval, maximum exposure, start, end, review points, and stop condition. Define measures such as correct classification, first-transfer acceptance, resolution outcome, reopens, missed updates, quality defects, and protected-boundary adherence. Do not judge success by ticket closure count alone.",
+          "Specify rollback before starting. New arrivals return to the former route, while accepted in-flight work follows a named treatment so customers are not stranded. Access is removed or restored according to the access plan. Knowledge and queue labels should show whether the pilot is active. Extending the pilot requires an explicit decision supported by evidence; repeated temporary extensions should not silently become the operating model."
+        ]
+      },
+      {
+        "heading": "Control the effective date and open work",
+        "body": [
+          "Approval should identify a scope owner on both provider and client sides, the authoritative responsibility map, effective timestamp, review date, and teams that must acknowledge the change. At the boundary, classify open tickets: remain with current owner, move after receiver acceptance, or use a special transition lane. Never bulk-transfer old work merely because the new queue exists; earlier promises and evidence permissions may differ.",
+          "After implementation, review early samples and exceptions quickly rather than waiting for a large report. Look for ambiguous classification, inaccessible tools, unaccepted escalations, excess data requests, unsupported customer wording, and effects on existing services. If a defect crosses a guardrail, pause eligible intake and use rollback. The review should distinguish a correctable guidance issue from a fundamental authority or capacity gap."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: adding duplicate-charge intake",
+      "body": [
+        "A client asks its outsourced desk to handle duplicate-charge complaints. Review separates the proposed scope: the provider may collect an order reference, payment date, permitted charge descriptor, customer-observed duplication, and impact; compare the request with a current duplicate-charge article; explain confirmed transaction status; and route a decision brief. The client commerce owner retains refund, charge reversal, fraud, and payment-instrument decisions. Full card data and bank statements are excluded from general intake.",
+        "Readiness testing finds that the provider can classify routine pending-versus-posted questions, but the commerce queue has no acceptance checkpoint outside its core hours. The scope does not start immediately. The client establishes an acceptance owner and next-interval fallback, while the provider tests five synthetic scenarios including two separate orders with similar amounts and a customer reporting an unknown charge. Least-privilege access shows transaction status but not full payment credentials.",
+        "A three-week pilot includes authenticated portal requests for one product region. Stop conditions include any request for prohibited payment data, an unaccepted high-impact transfer, or repeated misclassification of unknown charges as duplicates. At the first review, two tickets lack a clear distinction between duplicate and unfamiliar charge, so intake wording is corrected and the neighboring scenarios are retested. Open pilot tickets retain their accepted owners when the review period ends; new cases follow the decision to continue, narrow, or roll back the scope."
+      ]
+    },
+    "checklist": [
+      "Define one request class by customer outcome, inclusions, exclusions, and near-matches.",
+      "State channels, regions, languages, products, segments, and operating intervals.",
+      "Map who investigates, decides, executes, communicates, and verifies each step.",
+      "Validate skill, usable capacity, least-privilege access, knowledge, routes, and fallbacks.",
+      "Test normal, unknown, near-match, protected, and interrupted customer scenarios.",
+      "Set pilot eligibility, measures, guardrails, review points, and rollback treatment.",
+      "Approve an effective date and transition rule for every open-work category.",
+      "Review early quality, transfer, data, customer, and existing-service effects."
+    ],
+    "cautions": [
+      "Do not let the outsourced team inherit authority merely because it received access or a new queue. Technical capability, contractual scope, client approval, and customer authorization are separate conditions.",
+      "Do not hide a material scope change inside an exception, macro, or one-off request. If the same new outcome is repeatedly requested, stop improvising and use the formal review path."
+    ]
+  },
+  "help-desk-queue-review-meeting-brief": {
+    "directAnswer": [
+      "A help-desk queue review meeting brief should let participants make a small number of operating decisions, not narrate every ticket. Prepare a fixed snapshot time, queue definitions, new and resolved work, ready and waiting work, aging bands, due customer updates, unaccepted transfers, high-impact or protected cases, reopen and repeat-contact signals, quality findings, usable capacity, and a short exception list. Label source, period, owner, and known data limitations.",
+      "For an outsourced help desk, separate provider-controlled actions from decisions requiring the client or another service owner. Every agenda item should end with a decision, named owner, due checkpoint, affected tickets or rule, and customer-communication consequence. Sensitive ticket details belong in restricted records; the meeting brief should use minimum necessary summaries and safe references."
+    ],
+    "fields": [
+      ["Snapshot", "The exact extraction or observation time, time zone, included queues, channels, and status definitions used in the brief."],
+      ["Decision item", "A condition requiring a choice about ownership, priority rule, capacity response, route, customer promise, or corrective action."],
+      ["Exception cohort", "A defined group of tickets sharing an operational risk, such as missed checkpoints, repeated transfers, or aging approval waits."],
+      ["Decision evidence", "The concise metric, representative cases, trend, and uncertainty needed to choose an action without exposing unnecessary data."],
+      ["Action record", "The decision, accountable owner, due event, affected scope, validation method, and communication impact captured during the meeting."],
+      ["Carry-forward rule", "The condition under which an unresolved item returns, escalates to another forum, or leaves the queue review."
+      ]
+    ],
+    "table": {
+      "heading": "Queue review brief agenda",
+      "columns": ["Block", "Evidence", "Decision question", "Output"],
+      "rows": [
+        ["Prior actions", "Due items, completed evidence, misses, and changed conditions", "Can each action close, continue, or escalate?", "Verified closure or revised owner and checkpoint"],
+        ["Customer obligations", "Updates due or missed, reopened tickets, repeat contacts", "Which commitments need immediate ownership or correction?", "Communication owner and customer-safe next update"],
+        ["Flow and aging", "Ready, active, waiting, transfer, and age cohorts by request class", "Where is work blocked and what control addresses it?", "Queue, route, article, or capacity action"],
+        ["Risk and exceptions", "High-impact signals, protected decisions, incident candidates, and data concerns", "Is the current owner and boundary still safe?", "Protected route, fallback, or monitoring decision"],
+        ["Quality", "Small current sample, defect types, reopens, and outcome verification", "Is a recurring failure systemic or isolated?", "Named correction and recheck sample"],
+        ["Forward capacity", "Forecast arrivals, usable skill-hours, absences, events, and owner coverage", "What operating mode applies until next review?", "Priorities, guardrails, and reassessment time"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Prepare a decision-ready snapshot",
+        "body": [
+          "Freeze the reporting time and state what is included. Distinguish ready work from active work, customer waits, approvals, vendor dependencies, scheduled actions, and unaccepted transfers. An overall open count obscures whether the desk lacks frontline capacity or is waiting for client decisions. Split by request class and consequence where useful, but avoid so many segments that no cohort can be interpreted.",
+          "Show both flow and obligation. Include arrivals, substantive completions, age distribution, oldest consequential work, customer checkpoints due, handoff acceptance, and verified outcomes. Use median and upper-percentile age with actual cohort counts; one average can hide a few abandoned tickets. Note incidents, holidays, channel changes, or classification defects that make comparison unreliable. Automated receipts should not count as meaningful actions."
+        ]
+      },
+      {
+        "heading": "Select exceptions with explicit decision questions",
+        "body": [
+          "Do not paste the oldest twenty tickets into the agenda. Group exceptions by the control they may reveal: five approval waits with no accepting client owner, three reopened setup tickets using one article, or two urgent reports routed after a shift boundary. Add one or two safe ticket references that illustrate the pattern. For each cohort, ask a decision question such as assign a backup approval owner, suspend this article for a near-match, or change the handoff cutoff.",
+          "Keep status reporting outside the decision list when no choice is needed. A ticket can be monitored through normal work without consuming meeting time. Conversely, do not omit a single high-consequence case merely because it is not a trend. A suspected account compromise, broad service-impact signal, or accidentally exposed secret may require immediate protected handling before the scheduled meeting; the brief records the operating consequence without delaying the route."
+        ]
+      },
+      {
+        "heading": "Run the meeting around ownership and evidence",
+        "body": [
+          "Begin with prior actions. Close an item only when the stated evidence exists, not when someone says it is probably done. Time-box queue blocks and have the designated chair restate each decision. Separate provider decisions—such as assigning a communication owner or correcting a routine route—from client-controlled decisions involving access, policy, security, finance, service changes, or customer commitments.",
+          "If required evidence or an authorized decision owner is absent, do not improvise a conclusion. Record what is missing, who will obtain it, and the next checkpoint. The sending owner remains accountable for affected customer communication. Park deep technical diagnosis for the appropriate incident or service forum, but carry back the owner, inclusion rule, and next update needed by support. This keeps queue review focused without creating an ownerless referral."
+        ]
+      },
+      {
+        "heading": "Write actions that can be verified next time",
+        "body": [
+          "An action should contain a verb, object, owner, due event, and proof. Replace investigate transfer problems with queue lead to sample ten skill-required transfers from the current week, classify return reasons, and report the top correctable route defect by 14:00 UTC Thursday. State whether the action affects all tickets, a cohort, or only new arrivals. If customer commitments change, name the communication owner and wording authority.",
+          "Carry forward only active decisions and unresolved risks. Repeatedly carrying an item without changed evidence should trigger escalation or closure under a stated rule, not permanent agenda residence. After the meeting, publish the minimum action record to participants who need it and keep restricted case material in its authorized system. At the next review, compare the predicted effect with outcomes such as acceptance, checkpoint completion, reopens, and quality findings."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: a 20-minute provider-client queue review",
+      "body": [
+        "The brief is frozen at 09:00 UTC and covers the authenticated support queue for the prior operating day. It shows 64 arrivals, 58 substantive completions, 21 ready tickets, seven customer waits, six client-approval waits, three unaccepted transfers, and five updates due before noon. The age chart shows that four of the six approval waits exceed the normal review interval. A note explains that an incident created eight related tickets, so daily comparisons need context.",
+        "The first decision item is the five due updates. The provider lead assigns two communication owners and confirms wording that states verified progress without promising client decisions. The second item groups four old approval waits; three concern the same account-change exception and lack acceptance from the designated client queue. The client lead activates the documented backup owner and commits to accept or return each brief by 11:00. The provider retains customer communication until acceptance.",
+        "The third item is a quality cohort: three reopened notification tickets used the same article. A safe reference shows that reseller-managed accounts were treated as direct accounts. The meeting does not rewrite guidance live. It assigns the knowledge owner to suspend that article for unknown account type, test the prerequisite against four scenarios, and report results at the next review. The action record identifies affected new tickets and the temporary route. Deep review of one possible incident ticket moves to the service owner, while the queue brief retains its customer checkpoint and relationship status."
+      ]
+    },
+    "checklist": [
+      "Freeze the snapshot time, time zone, queue scope, and status definitions.",
+      "Separate ready, active, waiting, protected, and unaccepted-transfer work.",
+      "Show customer obligations, aging distribution, outcomes, quality, and usable capacity.",
+      "Group exceptions by a possible control defect and add safe representative references.",
+      "Write one explicit decision question for every discussion item.",
+      "Separate provider-controlled actions from client and protected-owner decisions.",
+      "Record verb, object, owner, due event, proof, scope, and communication effect.",
+      "Verify prior actions and escalate or close repeatedly unchanged carry-forwards."
+    ],
+    "cautions": [
+      "Do not wait for a routine queue meeting to route an active security, privacy, safety, or widespread service signal. Use the immediate protected path and review the queue consequence afterward.",
+      "Do not circulate customer names, credentials, payment details, identity evidence, or unrestricted screenshots in the meeting brief. Use safe references and role-appropriate access to source records."
+    ]
+  }
+}

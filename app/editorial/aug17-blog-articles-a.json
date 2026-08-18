@@ -1,0 +1,695 @@
+{
+  "help-desk-ticket-owner-absence-plan": {
+    "directAnswer": [
+      "An absence plan is a temporary ownership contract, not a list of people who can see the queue. Before the regular owner leaves, identify every open promise, protected decision, aging dependency, and scheduled customer update; then assign a backup who explicitly accepts each next action. For an unexpected absence, one recovery lead should inventory the queue before tickets are distributed so two specialists do not act on the same case.",
+      "The plan should distinguish work a help-desk specialist may continue from work that must pause for an account, security, finance, policy, or technical owner. Customers still need an honest checkpoint when a decision cannot move. The backup owns that communication even if the backup cannot make the underlying decision."
+    ],
+    "fields": [
+      ["Temporary owner", "The named person responsible for watching the ticket and its next event during the absence; a team name alone is not ownership."],
+      ["Accepted next action", "A specific verb and object, such as review the attached error trace or ask the customer for the affected workspace ID."],
+      ["Promise checkpoint", "The date, time zone, or observable event that triggers the next customer update, regardless of whether final resolution is ready."],
+      ["Protected decision", "An action the backup may prepare but not approve, including ownership, access, money, security, policy, or unusual technical change."],
+      ["Return condition", "The event that transfers responsibility back to the regular owner, with a note showing what changed during the absence."],
+      ["Backup-of-backup", "The role that receives urgent work if the first substitute is also unavailable; it should be tested rather than assumed."
+      ]
+    ],
+    "table": {
+      "heading": "Absence triage matrix",
+      "columns": ["Ticket condition", "Temporary action", "Who decides", "Customer message"],
+      "rows": [
+        ["Routine request with approved article", "Continue documented steps and record the result", "Temporary owner", "State the completed step and any remaining checkpoint"],
+        ["Customer waiting for promised update", "Send confirmed facts and reset the checkpoint", "Temporary owner", "Acknowledge the handoff without blaming the absent person"],
+        ["Access or identity exception", "Preserve permitted evidence and pause the change", "Account or security owner", "Explain the protected review path without revealing mismatch details"],
+        ["Possible widespread service issue", "Capture impact, timing, and affected function; use incident route", "Incident owner", "Describe only confirmed scope and the next update event"],
+        ["No clear owner or route", "Place in reviewed fallback lane, not a personal inbox", "Recovery lead", "Confirm receipt and give a realistic review checkpoint"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Build the inventory before assigning work",
+        "body": [
+          "Export or review open tickets by next action, not merely by age. Include tickets waiting on customers, approvals, vendors, scheduled events, and internal investigation. For each record, capture customer goal, current impact, verified facts, last meaningful action, current owner, next action, next checkpoint, and any access limitation. Age still matters, but a recent security signal or missed promise may need attention before an older low-impact how-to question.",
+          "Mark tickets that cannot be safely understood from the durable record. Those require reconstruction by the recovery lead before reassignment. Copying a long transcript is not a substitute for stating the decision needed. Keep unnecessary personal details out of the inventory; link to restricted evidence instead of duplicating it into a broad handoff sheet."
+        ]
+      },
+      {
+        "heading": "Use explicit acceptance and a controlled return",
+        "body": [
+          "A reassignment event proves only that a field changed. Require the substitute to accept the next action, or record why it was returned. Until acceptance, the recovery lead remains accountable for the customer update. This rule prevents an automated queue move from silently transferring a promise to someone who lacks the skill, access, or availability to perform it.",
+          "When the regular owner returns, provide a delta note: tickets resolved, decisions still pending, customer commitments changed, evidence added, and actions that need confirmation. Do not dump every ticket back automatically. Work already accepted should stay with the substitute unless a deliberate return reduces risk or preserves a prior relationship."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: a two-day unplanned absence",
+      "body": [
+        "At 09:00 Monday, a queue owner is unexpectedly unavailable. The recovery lead finds 18 open tickets: nine routine questions, four waiting for customer details, two promised updates due that day, one refund exception, one suspected account takeover, and one vendor investigation. The lead assigns routine work in groups of three, keeps waiting tickets with a single watcher, sends the two due updates first, and routes the protected cases to their existing decision owners.",
+        "The refund ticket is not handed to a general backup with a note saying handle this. Its record says: requested decision—approve or decline the documented exception; amount and order reference—stored in the approved fields; decision owner—commerce manager; customer checkpoint—15:00 Monday; communication owner—backup specialist until accepted. On Wednesday, the returning owner receives the decision status and changed checkpoint, not an unexplained pile of reassigned work."
+      ]
+    },
+    "checklist": [
+      "Name one recovery lead and one tested backup before distributing tickets.",
+      "Inventory promises, protected decisions, waiting dependencies, and scheduled work.",
+      "Prioritize by impact, risk, and missed checkpoint as well as ticket age.",
+      "Record an accepted next action for every temporary assignment.",
+      "Keep customer communication owned when the underlying decision must wait.",
+      "Use approved records and links instead of copying sensitive evidence.",
+      "Define the return condition and prepare a concise delta note.",
+      "After recovery, review bounce-backs, reopens, and missed updates for plan defects."
+    ],
+    "cautions": [
+      "Do not give a substitute broader permissions merely because the regular owner is absent. Temporary urgency does not erase least-privilege or approval boundaries.",
+      "Do not close, bulk-reassign, or lower priority simply to make the queue appear controlled. The absence plan is successful when ownership and customer expectations remain truthful."
+    ]
+  },
+  "help-desk-ticket-escalation-evidence-checklist": {
+    "directAnswer": [
+      "A useful escalation lets the receiving owner start the next investigation or decision without repeating basic intake. It identifies the customer goal, observable impact, environment, timeline, reproduction evidence, actions already attempted, current risk, and one explicit decision request. Unknown facts stay labeled unknown; frontline support should not convert a plausible cause into a diagnosis.",
+      "The checklist must be conditional. A bug handoff needs reproducibility and version details, an access case needs the approved verification result, and a suspected incident needs safe handling and a rapid route. Requiring every field on every escalation creates noise and encourages specialists to collect data the recipient does not need."
+    ],
+    "fields": [
+      ["Customer goal", "The outcome the requester needs, written separately from the symptom or the queue's proposed fix."],
+      ["Observed impact", "Who or what function is affected, whether work is blocked, and whether a verified workaround exists."],
+      ["Evidence provenance", "Who supplied an artifact, when it was captured, what it represents, and where the approved original is stored."],
+      ["Attempted action", "A permitted check actually performed, its timestamp, and its observable result—not a copied troubleshooting list."],
+      ["Uncertainty label", "A direct statement of what support could not verify, including conflicting observations or inaccessible evidence."],
+      ["Decision request", "One precise request to the receiving owner: confirm scope, approve an action, assess risk, or provide customer-safe wording."
+      ]
+    ],
+    "table": {
+      "heading": "Evidence requirements by escalation type",
+      "columns": ["Escalation", "Required evidence", "Avoid collecting", "Requested decision"],
+      "rows": [
+        ["Reproducible product defect", "Version, steps, expected result, observed result, time, affected function", "Unrelated account history or speculative cause", "Confirm defect ownership and next diagnostic step"],
+        ["Identity or access mismatch", "Approved verification outcome, requested action, account reference, prior authorized event", "Passwords, recovery codes, or the exact stored value that failed", "Approve, deny, or direct the protected recovery path"],
+        ["Possible service incident", "First observed time, affected functions, user scope, correlation evidence, workaround status", "Unconfirmed root cause presented as fact", "Confirm incident link, scope, and communication checkpoint"],
+        ["Policy or refund exception", "Normal rule, requested exception, relevant transaction reference, customer impact", "Broad personal profile or unsupported promises", "Make and record the exception decision"],
+        ["Vendor dependency", "Service, case reference, timestamps, evidence sent, response due, customer commitment", "Duplicate attachments already available in the vendor record", "Accept ownership of follow-up or choose another route"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Separate report, verification, and interpretation",
+        "body": [
+          "Use three labels in the ticket note. Customer report preserves the requester's words. Support verified records only facts the specialist observed through an approved method. Working interpretation is an explicitly tentative explanation used to choose the next owner. This separation matters when an error screenshot suggests an outage but only one account is known to be affected.",
+          "Reference attachments by purpose: screenshot shows the error after Save at 14:22 UTC, rather than see attached. Redact unrelated names and messages before sharing when policy permits, and keep the original in its approved restricted location. Never ask a customer to recreate a risky action solely to obtain cleaner evidence."
+        ]
+      },
+      {
+        "heading": "Design the checklist around the recipient's decision",
+        "body": [
+          "Start at the end: what can the receiving owner decide that frontline support cannot? Work backward to the minimum facts needed for that decision. If the request is to confirm incident scope, several reports with timestamps and functions matter; billing profile detail does not. If the request is to approve an exception, the normal rule and exact proposed deviation matter more than a technical transcript.",
+          "Review returned escalations monthly by missing evidence, wrong destination, unclear decision, and out-of-scope request. Fix a recurring gap in the intake form, routing example, or knowledge article. Do not respond by adding every possible field to one universal template, because specialists will bury the decisive evidence in repetitive text."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: escalation from a failed export",
+      "body": [
+        "Weak handoff: Customer cannot export; probably a permissions bug; screenshots attached; please investigate. The recipient cannot tell which export, whether permission was checked, what the customer expected, or what decision is requested. The diagnosis may also bias the investigation before facts are established.",
+        "Actionable handoff: Goal—download the August order summary as CSV. Impact—one operations analyst is blocked; browser view still works. Environment—workspace ending 41, reporting page, application version shown in footer. Verified—approved role check shows Export enabled; issue reproduced at 10:14 and 10:21 UTC in two supported browsers; blank file returned; no secrets in attached redacted capture. Unknown—whether other workspaces are affected. Requested decision—product owner to confirm defect route and next customer-safe checkpoint."
+      ]
+    },
+    "checklist": [
+      "Write the customer goal and observed symptom as separate facts.",
+      "Identify affected users or functions and any verified workaround.",
+      "Record relevant environment, source timestamps, and evidence provenance.",
+      "List only actions actually attempted and their observable results.",
+      "Label unknown, conflicting, or unavailable evidence without guessing.",
+      "Remove secrets and unrelated personal data before a broad handoff.",
+      "Name the receiving role and ask for one concrete decision.",
+      "Keep a customer communication owner and a realistic checkpoint."
+    ],
+    "cautions": [
+      "More evidence is not automatically better. Excess logs, entire email chains, and uncontrolled screenshots can widen exposure while making the decisive fact harder to find.",
+      "An escalation checklist does not authorize frontline staff to perform protected diagnostics or actions. Evidence gathering must remain within the organization's approved access and safety rules."
+    ]
+  },
+  "help-desk-ticket-duplicate-detection": {
+    "directAnswer": [
+      "Treat two tickets as duplicate candidates only when they describe the same underlying request, affected object, time window, and desired outcome. Similar wording is a search signal, not proof. Before merging, a reviewer should compare requester or affected account, service, symptom, impact, chronology, current owner, linked incident, privacy boundary, and customer promises.",
+      "Prefer linking over destructive merging when separate customers, evidence permissions, or communication obligations exist. Choose one canonical work record, preserve a visible relationship from every source record, and state which ticket owns investigation versus customer follow-up."
+    ],
+    "fields": [
+      ["Duplicate candidate", "A record similar enough to review, but not yet confirmed as the same request."],
+      ["Canonical ticket", "The record that owns the shared next action; it is selected for completeness and ownership, not simply because it is oldest."],
+      ["Linked companion", "A separate record that keeps its customer impact and communication while referencing shared technical work."],
+      ["Affected object", "The account, order, device, workspace, service, or event to which the request actually applies."],
+      ["Collision window", "A documented period in which repeated submissions are likely to concern the same event; it varies by request type."],
+      ["Merge reversal", "The approved way to restore records if later evidence shows that two requests were incorrectly combined."
+      ]
+    ],
+    "table": {
+      "heading": "Duplicate decision rubric",
+      "columns": ["Evidence pattern", "Disposition", "Reason", "Preserve"],
+      "rows": [
+        ["Same requester, object, symptom, and goal within minutes", "Merge if policy permits", "Likely repeated submission", "Original channel, timestamps, attachments, and promises"],
+        ["Different customers, same confirmed incident", "Link, do not merge", "Technical investigation is shared but impact and communication differ", "Each customer's impact, consent, and checkpoint"],
+        ["Same account and wording, different transaction IDs", "Keep separate pending review", "One answer may not resolve both objects", "Distinct evidence and outcomes"],
+        ["Forwarded email duplicates an existing portal ticket", "Merge after identity and scope match", "Two channels contain one request", "Email provenance and portal ownership"],
+        ["Similar error text but different service or time", "Reject duplicate", "Text similarity cannot establish cause", "Separate triage and route"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Score identity of work, not similarity of words",
+        "body": [
+          "A practical review uses four decisive dimensions: same affected object, same requested outcome, overlapping event, and compatible ownership. Requester and symptom support the decision but are not sufficient. One administrator may submit separate access requests for several users; several customers may report one incident. A text matcher can surface candidates, while a trained reviewer confirms the operational relationship.",
+          "Set request-specific collision windows. Two identical password-reset submissions five minutes apart may be duplicates, while the same request a week later may be a genuine recurrence. Document why the window fits expected completion and customer behavior. Never let an automated confidence score silently merge records that contain security, identity, payment, or sensitive evidence."
+        ]
+      },
+      {
+        "heading": "Choose what becomes shared and what remains individual",
+        "body": [
+          "The canonical record owns the common investigation, approved action, and technical status. A companion record retains its original request, impact, customer communication, verification result, and closure evidence. This split prevents a broad incident record from erasing a customer's unique loss or a customer-specific record from exposing details to unrelated requesters.",
+          "After combining records, recalculate ownership and promises. Notify the customer only if the change affects where replies appear or what checkpoint applies. Closing a source ticket with duplicate is insufficient if no link, canonical owner, or next update remains visible. Maintain an unmerge path so a later mismatch can be corrected without recreating history from memory."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: three checkout reports",
+      "body": [
+        "Ticket A reports that order 8021 failed at payment confirmation at 12:04 UTC. Ticket B, from the same customer, was emailed two minutes later with the same order and screenshot. Ticket C, from another customer, reports a different order failing at 12:06 with the same visible message. Monitoring later confirms a checkout incident beginning at 12:00.",
+        "A and B can be merged after confirming the email and portal request share the same goal and no unique promise is lost. C should remain separate and link to the incident because its customer, order evidence, and follow-up are distinct. All three may share the technical incident timeline, but each customer ticket must keep its impact, permitted identifiers, update checkpoint, and confirmation of outcome."
+      ]
+    },
+    "checklist": [
+      "Compare affected object and requested outcome before text similarity.",
+      "Check time window, channel provenance, service, and current owner.",
+      "Look for unique impact, attachment, promise, approval, or privacy restriction.",
+      "Select a canonical record for completeness and ownership, not age alone.",
+      "Link separate customer records to shared incidents instead of merging them.",
+      "Preserve source timestamps, communications, and evidence references.",
+      "Reassign next action and customer checkpoints after consolidation.",
+      "Sample false merges and missed duplicates, then adjust the candidate rule."
+    ],
+    "cautions": [
+      "Do not optimize ticket counts by collapsing ambiguous records. A smaller queue can hide unresolved customers, distinct approvals, or evidence needed for later review.",
+      "Do not copy one customer's details into another customer's ticket when linking shared work. Relationship metadata should preserve separation and approved access."
+    ]
+  },
+  "help-desk-ticket-waiting-state-design": {
+    "directAnswer": [
+      "A waiting state should make four facts visible: who must act, what exact condition is missing, who watches the dependency, and when the ticket will be reviewed again. Replace a universal pending label with a small status dictionary such as waiting for customer, waiting for approval, waiting for service owner, and scheduled action. Each state needs entry and exit rules.",
+      "Waiting is not ownerless. The watcher remains accountable for reminders, changed impact, missed checkpoints, and customer updates. A ticket should leave the state when the named event occurs, the checkpoint expires, or new risk requires a different route."
+    ],
+    "fields": [
+      ["Waiting party", "The customer, approver, vendor, service owner, or scheduled process expected to create the next event."],
+      ["Missing condition", "A concrete fact, decision, result, or date required before the documented next action can begin."],
+      ["Watcher", "The help-desk owner who monitors the dependency and communicates; this person may differ from the waiting party."],
+      ["Checkpoint", "A time- or event-based moment when the watcher reviews the ticket even if the dependency has not changed."],
+      ["Exit event", "Observable evidence that moves the ticket back to active work, another route, or verified closure."],
+      ["Aging clock", "The elapsed-time measure relevant to the state; customer, approval, and vendor waits should not be interpreted identically."
+      ]
+    ],
+    "table": {
+      "heading": "Status dictionary with entry and exit rules",
+      "columns": ["State", "Enter when", "Watcher action", "Exit when"],
+      "rows": [
+        ["Waiting for customer", "One necessary, permitted fact has been requested", "Send a clear reminder at the stated checkpoint", "Fact arrives, no-response rule applies, or risk changes"],
+        ["Waiting for approval", "A complete decision brief has an accountable approver", "Track acceptance and update customer without implying approval", "Decision is recorded, brief is returned, or validity window lapses"],
+        ["Waiting for service owner", "Technical scope or action needs owner confirmation", "Route new evidence and maintain communication", "Owner responds or incident path supersedes ticket"],
+        ["Scheduled action", "A future maintenance or customer event controls timing", "Confirm time zone and precondition before event", "Action completes, is canceled, or schedule changes"],
+        ["Waiting for vendor", "External case is accepted with a reference and due checkpoint", "Watch vendor case and translate confirmed facts", "Vendor responds, due time passes, or fallback route triggers"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Write status rules that a second owner can apply",
+        "body": [
+          "For every state, document who may set it, required fields, customer-facing wording, pause behavior for internal measures, review cadence, and exit choices. A specialist should not need private knowledge to tell whether a ticket belongs there. Keep the list short enough to use consistently; add reason details as structured fields rather than creating dozens of overlapping statuses.",
+          "Do not use waiting to postpone triage. The ticket must already have a known next action and owner. Waiting for support is not a valid dependency when the queue simply lacks capacity; that is active backlog and should remain visible in capacity reporting. Similarly, waiting for approval requires an actual brief and destination, not a hope that someone will notice a mention."
+        ]
+      },
+      {
+        "heading": "Design reminders and no-response exits fairly",
+        "body": [
+          "A customer reminder should restate the one missing fact, why it matters, what not to send, and what happens at the next checkpoint. Silence is not proof that the underlying problem disappeared. Sensitive, high-impact, or owner-dependent work may require escalation or a durable open obligation even when ordinary low-risk requests can close under a documented no-response rule.",
+          "Report age by state and dependency. A long vendor wait suggests different corrective action from a long customer wait or unavailable approver. Review the 90th-percentile age and missed checkpoint count alongside examples; an average can conceal a small group of forgotten tickets. Use outcomes to adjust rules, not to blame the waiting party."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: required workspace ID",
+      "body": [
+        "A customer asks why a dashboard is missing but does not identify the workspace. The specialist cannot safely compare settings without that fact. The ticket enters waiting for customer with missing condition: workspace display name or approved non-sensitive ID; watcher: Agent L; checkpoint: 16:00 customer local time next business day; exit: permitted ID arrives or the no-response reminder cycle completes.",
+        "The message says what is needed, where to find it, and not to send credentials. When the customer replies with the ID and also reports that five colleagues are affected, the ticket exits waiting immediately. The new scope triggers active triage instead of remaining parked until the old checkpoint. This shows why both event-based exits and risk-change exits belong in the design."
+      ]
+    },
+    "checklist": [
+      "Name the waiting party and one concrete missing condition.",
+      "Keep a watcher responsible for communication and changed risk.",
+      "Set a checkpoint in a clear time zone or against an observable event.",
+      "Document required fields, allowed setter, and customer-facing wording.",
+      "Define exits for response, expiry, return, cancellation, and higher risk.",
+      "Keep capacity backlog out of dependency waiting states.",
+      "Apply the no-response rule according to impact and decision ownership.",
+      "Review aging and missed checkpoints separately for each waiting reason."
+    ],
+    "cautions": [
+      "Do not pause an internal clock merely to improve a report. Pause behavior should follow the written measure definition and remain auditable.",
+      "Do not let a waiting status conceal an unaccepted transfer. A destination queue and an expected reply are different from accountable ownership."
+    ]
+  },
+  "help-desk-support-coverage-gap-review": {
+    "directAnswer": [
+      "Review a coverage gap by matching ticket arrival and consequence with the capabilities available in each interval. Count substantive first actions, missed customer checkpoints, high-risk arrivals, unaccepted handoffs, and unavailable decision owners—not just ticket volume. A quiet hour can still be a serious gap if the only request needs an incident or identity owner who is unreachable.",
+      "Before extending hours, determine whether the constraint is frontline capacity, skill, access, knowledge, approval availability, or customer expectation. More agents cannot repair an absent approver or an unreliable alert. Pilot the smallest change that addresses the observed condition, then compare equivalent periods."
+    ],
+    "fields": [
+      ["Coverage interval", "A time block with consistent staffing, skills, channels, and escalation availability; use the operating time zone explicitly."],
+      ["Qualifying action", "A response that advances ownership or the customer's next step, not merely an automated receipt."],
+      ["Decision coverage", "Availability of the owners who can handle incident, identity, access, money, policy, or technical exceptions."],
+      ["Handoff exposure", "Open promises and active work that cross from one interval into another without accepted ownership."],
+      ["Gap consequence", "The measurable effect: missed checkpoint, avoidable wait, unsafe improvisation, repeat contact, or unresolved risk."],
+      ["Comparison period", "A similar demand window used to judge a change while noting incidents, launches, holidays, and request-mix differences."
+      ]
+    ],
+    "table": {
+      "heading": "Coverage-gap diagnosis table",
+      "columns": ["Observed pattern", "Likely constraint", "First intervention", "Do not assume"],
+      "rows": [
+        ["Many routine arrivals wait before opening hour", "Frontline schedule or intake batching", "Move a limited shift or add a tested opening overlap", "Every arrival requires continuous coverage"],
+        ["Few tickets but urgent cases wait for decisions", "Escalation-owner availability", "Create a tested on-call or next-window boundary", "Adding generalist hours solves protected decisions"],
+        ["End-of-shift tickets bounce next day", "Handoff acceptance", "Add a transfer cutoff, acceptance event, and backup", "Volume caused the delay"],
+        ["After-hours customers repeatedly ask for status", "Expectation design", "State monitored events and next review honestly", "An automated receipt is a meaningful response"],
+        ["One request type dominates late work", "Knowledge, skill, or routing gap", "Fix article, route, or trained lane before widening schedule", "All late demand is interchangeable"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Build a demand-and-capability heatmap",
+        "body": [
+          "For four to six representative weeks, group arrivals by hour and weekday, then split them by request type, impact, channel, and required owner. Add median and 90th-percentile time to first qualifying action, missed checkpoints, and transfers crossing the interval. Mark incidents, holidays, and unusual campaigns so an exceptional week does not become a permanent staffing assumption.",
+          "Overlay usable capacity rather than scheduled headcount. Deduct planned leave, meetings, quality review, handoffs, and time spent on unresolved escalations. Mark the hours in which security, service, or account owners can actually receive decisions. This often reveals that nominal coverage exists while the safe completion path does not."
+        ]
+      },
+      {
+        "heading": "Test a narrow remedy and define a stopping rule",
+        "body": [
+          "Choose the intervention that matches the diagnosis: shift overlap for opening backlog, an accepted handoff for boundary failures, an on-call rule for high-impact signals, an article for a repeated routine request, or more honest customer wording when the queue is intentionally closed. State what success means and which risks would end the pilot.",
+          "Compare at least two equivalent periods using the same definitions. Look for improved qualifying actions and checkpoints without worse quality, excess transfers, or unsafe work. If demand moved because customers learned the new hours, record that change rather than claiming the same queue simply became faster. Coverage is an operating choice with tradeoffs, not a universal promise."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: the apparent 06:00 gap",
+      "body": [
+        "A queue shows 34 tickets arriving between 06:00 and 08:00 each week, with a median first reply after 09:00. Review finds 26 are low-risk receipt questions answerable from one approved article, six are portal duplicates, and two are possible service-impact reports. The existing early specialist can handle routine answers but has no incident owner until 09:00.",
+        "The team first fixes duplicate routing, adds a 07:00–09:00 specialist overlap for the routine lane, and creates an explicit urgent-signal route to the existing on-call owner. The after-hours message says which signals are monitored and gives routine requests a 09:30 checkpoint. The next review compares substantive actions, urgent-route acceptance, quality samples, and repeat contacts—not simply total replies before 09:00."
+      ]
+    },
+    "checklist": [
+      "Use a stated time zone and representative observation window.",
+      "Split arrivals by type, impact, channel, and required decision owner.",
+      "Count substantive actions, missed checkpoints, and handoff failures.",
+      "Compare usable capacity with scheduled headcount and skill coverage.",
+      "Mark incidents, holidays, and unusual demand before interpreting gaps.",
+      "Match the intervention to capacity, knowledge, route, owner, or expectation.",
+      "Set pilot success, quality guardrails, and a rollback condition.",
+      "Recheck matched periods and explain changes in request mix."
+    ],
+    "cautions": [
+      "Do not advertise continuous monitoring unless the alert, owner, backup, and customer communication path are all operating and tested.",
+      "Do not use an overall average response time to justify a schedule. It can hide a small high-consequence cohort or be distorted by automated acknowledgements."
+    ]
+  },
+  "help-desk-approval-validity-window": {
+    "directAnswer": [
+      "Every help-desk approval should expire at a stated time or after a stated event. Record the exact action, affected object, conditions, approver identity, approval evidence, start, expiry, permitted executor, and revalidation path. If the ticket, account state, amount, risk, or requested action changes materially, treat the old decision as out of scope even before its clock expires.",
+      "The support specialist may confirm that current approval exists and execute only the approved lane. The specialist should pause and request revalidation when scope or time no longer matches; an old message saying approved is not standing permission for future related work."
+    ],
+    "fields": [
+      ["Approved action", "A precise state change or exception, not a broad phrase such as handle account or do what is needed."],
+      ["Affected object", "The account, order, user, system, or case to which the decision applies."],
+      ["Validity start", "The timestamp or event after which the executor may act; it prevents premature execution."],
+      ["Expiry", "The timestamp or business event after which the decision must not be used without review."],
+      ["Invalidating change", "A changed fact—scope, requester, amount, risk, object, or action—that requires a fresh decision."],
+      ["Revalidation owner", "The role authorized to renew, amend, or decline the approval; frontline support cannot self-extend it."
+      ]
+    ],
+    "table": {
+      "heading": "Choose a window that matches the decision",
+      "columns": ["Approval type", "Possible validity rule", "Revalidate when", "Execution evidence"],
+      "rows": [
+        ["One-time account field correction", "Until one successful action or end of named shift", "Target field, account, or requester changes", "Before-and-after field reference and approver event"],
+        ["Refund exception", "For the named order and amount until stated date", "Amount, reason, order, or policy basis changes", "Transaction reference and outcome without excess payment data"],
+        ["Temporary access", "From approved start until automatic end time", "Role, user, system, duration, or risk changes", "Access event, expiry confirmation, and owner"],
+        ["Scheduled support action", "For the named maintenance window", "Window is missed or prerequisite is not met", "Timestamp, precondition check, action result"],
+        ["Customer reply commitment", "Until facts or decision underlying wording changes", "Incident scope, owner, or expected event changes", "Approved wording version and actual message"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Put the decision where the executor can evaluate it",
+        "body": [
+          "Use structured ticket fields or a linked approved record rather than relying on scattered chat. The executor should be able to compare current time, object, action, conditions, and approver without searching private conversations. Reference the decision safely; do not copy signatures, secrets, financial data, or unrelated discussion into an ordinary note.",
+          "Display approaching expiry before the final action begins. A reminder should lead to an owner and decision, not silently renew authority. If the work cannot finish in the window, record what was completed and what remains, then pause. Partial completion does not expand the original scope or reset the clock."
+        ]
+      },
+      {
+        "heading": "Define event-based invalidation as well as time",
+        "body": [
+          "Time alone is weak when the underlying condition can change. A 24-hour approval for an access update should also become invalid if the target user, role, or system differs. A refund decision should stop applying if the amount or order changes. List the few material facts an executor must compare rather than asking frontline staff to reinterpret policy.",
+          "Audit near-boundary work: actions within an hour of expiry, renewals, changed-scope requests, and work resumed after waiting. Check whether the executor had visible evidence, acted within scope, recorded the outcome, and stopped access or authority at the end. Recurring revalidation may show that the original window is unrealistic or that requests arrive incomplete."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: temporary reporting access",
+      "body": [
+        "An owner approves read-only reporting access for analyst A in workspace K from 08:00 to 18:00 UTC on August 21 to validate month-end totals. The record names the role, system, purpose, permitted executor, expiry, and automatic removal owner. It states that a different analyst, workspace, permission set, or date requires revalidation.",
+        "At 16:30, the requester asks to include export administration because a report is unavailable. Although the original approval remains within time, the action changed materially. Support records the missing function and routes a new decision instead of treating read-only approval as permission to expand access. At 18:00, removal evidence is attached by reference and the ticket stays open only for the separate export question."
+      ]
+    },
+    "checklist": [
+      "State one approved action and one affected object precisely.",
+      "Name the approver, executor, validity start, and expiry event.",
+      "List conditions and material changes that invalidate the decision.",
+      "Place evidence in an approved, visible, and minimally exposed record.",
+      "Warn before expiry without using the warning as automatic renewal.",
+      "Pause unfinished work and record partial results at the boundary.",
+      "Confirm temporary permission or exception is removed when required.",
+      "Sample near-expiry, renewed, and changed-scope cases for compliance."
+    ],
+    "cautions": [
+      "Do not choose one default duration for every approval. Consequence, reversibility, state volatility, and owner availability should determine the window.",
+      "Do not interpret customer urgency, an earlier similar decision, or approver silence as renewal. Revalidation must come from the accountable decision path."
+    ]
+  },
+  "help-desk-customer-identity-mismatch-route": {
+    "directAnswer": [
+      "When approved identity signals do not match, stop the requested protected action and route the case through the organization's account-recovery or security process. Tell the requester that verification could not be completed through the current path, but do not disclose which stored value differed, expose account details, or ask for increasingly sensitive evidence in an ordinary ticket.",
+      "Record the requested action, approved check used, pass or mismatch outcome, time, safe account reference, prior attempts, and receiving owner. The mismatch is a routing signal, not proof of fraud or customer error. Keep the language neutral and give legitimate requesters a usable next step."
+    ],
+    "fields": [
+      ["Protected action", "An account, access, ownership, data, or financial action that requires the approved identity path."],
+      ["Verification outcome", "Pass, mismatch, unavailable, or inconclusive; record the result rather than underlying secret values."],
+      ["Safe reference", "A permitted account or case identifier that lets the protected owner locate the request without exposing private details."],
+      ["Attempt count", "The number of completed approved attempts in the relevant period; it supports abuse controls without storing answers."],
+      ["Recovery route", "The separate, owner-approved process for unresolved verification, with channel and eligibility stated safely."],
+      ["Disclosure boundary", "What support may say about the mismatch so the reply does not help an attacker enumerate stored account data."
+      ]
+    ],
+    "table": {
+      "heading": "Mismatch routing decision table",
+      "columns": ["Observed condition", "Frontline action", "Destination", "Customer-safe wording"],
+      "rows": [
+        ["One approved check mismatches", "Pause protected action and record outcome", "Recovery owner under normal route", "We could not complete verification through this support path"],
+        ["Required channel or factor unavailable", "Do not substitute ad hoc questions", "Recovery or accessibility route", "A separate approved option is needed; here is the next channel"],
+        ["Repeated attempts or suspicious behavior", "Stop further probing and preserve minimal event data", "Security owner", "We cannot continue this request in the current channel"],
+        ["Customer disputes account information", "Do not reveal the stored value", "Account owner", "The account owner will review the record and next step"],
+        ["Mismatch after a recent ownership change", "Link the authorized change event by reference", "Account and security owners as defined", "The recent change requires review before this action can proceed"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Design a stopping point that resists information leakage",
+        "body": [
+          "The article should identify which actions require verification, the approved methods, allowed attempt behavior, and exact escalation trigger. It should never include the correct answer, internal risk score, stored contact fragment, or a sequence of hints that lets a requester discover which element failed. Support needs only the outcome needed to route the case.",
+          "Avoid free-form document collection. If recovery legitimately requires documents or a live review, direct the customer to the approved protected channel and owner. Do not ask them to attach identity documents, passwords, codes, card details, or unrelated records to an ordinary support email. Accessibility alternatives should be designed and approved in advance, not improvised after a mismatch."
+        ]
+      },
+      {
+        "heading": "Protect legitimate customers from an ownerless dead end",
+        "body": [
+          "A secure stop still needs ownership, expected next action, and a checkpoint. State whether the customer must initiate the recovery route or whether a protected owner will contact them. Prevent parallel attempts from creating conflicting cases by linking requests through a safe case reference. The frontline specialist owns communication until the protected route accepts it.",
+          "Review mismatch outcomes for false stops, repeat customer effort, channel barriers, and unsupported disclosure. Compare by verification path and request type without exposing sensitive values. A high mismatch count may indicate confusing intake, stale account records, or abusive activity; the count alone cannot establish which explanation is true."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: administrator email does not match",
+      "body": [
+        "A requester asks support to change the workspace owner. The approved verification flow returns mismatch for the submitted administrator context. The specialist does not say which email is on file, confirm whether the named person has an account, or ask for a password reset code. The ticket records the ownership-change request, time, safe workspace reference, mismatch outcome, and one previous attempt.",
+        "The reply says the change cannot be completed through general support because verification was not completed, then provides the approved recovery path and a case reference. The account owner receives a brief that asks one decision: determine whether the requester may enter the ownership recovery process. Until accepted, the specialist keeps a next-update checkpoint but does not promise that ownership will change."
+      ]
+    },
+    "checklist": [
+      "Identify the protected action before performing any identity check.",
+      "Use only approved methods and record the outcome, not secret answers.",
+      "Pause on mismatch, unavailable evidence, or an exhausted attempt rule.",
+      "Avoid revealing stored values, account existence, or internal risk logic.",
+      "Send sensitive evidence only through the approved protected channel.",
+      "Name the recovery or security owner and an acceptance checkpoint.",
+      "Keep customer wording neutral; mismatch does not prove malicious intent.",
+      "Review false stops, repeated attempts, and accessibility barriers safely."
+    ],
+    "cautions": [
+      "Do not turn a public article into a map of challenge questions, risk thresholds, or account-enumeration behavior. Exact controls belong in restricted guidance.",
+      "Do not let a desire to reduce customer effort weaken the protected action boundary. Improve the recovery route, not the evidence standard, when legitimate users repeatedly struggle."
+    ]
+  },
+  "help-desk-queue-capacity-signal": {
+    "directAnswer": [
+      "Use a small capacity panel rather than one ticket count. At minimum track ready work, active work in progress, due customer updates, unaccepted transfers, high-impact or protected work, and available skill-hours for the next operating interval. Compare demand with usable capacity after meetings, leave, quality review, handoffs, and escalation work are deducted.",
+      "Every signal needs a threshold, owner, and predetermined response. A threshold should be calibrated from the queue's own handling distribution and quality limits; it is not a universal benchmark. Combine a leading signal such as work in progress with outcome checks such as missed checkpoints, reopens, and review findings."
+    ],
+    "fields": [
+      ["Ready work", "Tickets with enough permitted information and authority for the next action; waiting dependencies are counted separately."],
+      ["Active work in progress", "Tickets a specialist has accepted and begun, including follow-up and documentation obligations."],
+      ["Update debt", "Customer checkpoints due in the interval but not yet completed, even when technical work belongs elsewhere."],
+      ["Skill-hours", "Available focused time from people qualified and authorized for the request lane, not total scheduled hours."],
+      ["Acceptance gap", "Transfers or escalations sent but not accepted by a receiving owner."],
+      ["Capacity trigger", "A documented condition that causes a specific response, review owner, and time for reassessment."
+      ]
+    ],
+    "table": {
+      "heading": "Example signal panel and contextual triggers",
+      "columns": ["Signal", "Illustrative local trigger", "Response", "Guardrail"],
+      "rows": [
+        ["Active work per qualified specialist", "Above the tested safe range for two review points", "Stop pulling routine work; finish or hand off accepted actions", "Urgent and protected signals remain visible"],
+        ["Due updates in next two hours", "More commitments than available communication slots", "Assign an update owner and reset unsupported promises", "Do not send empty status messages"],
+        ["Oldest ready high-impact ticket", "Approaches the queue's documented action target", "Queue lead reviews skill, owner, and next action", "Age does not override security boundaries"],
+        ["Unaccepted transfers", "Any high-impact transfer or repeated routine pattern", "Sending owner confirms destination or activates fallback", "Transfer is not counted complete when merely moved"],
+        ["Quality warning", "Repeat defects appear in a small current sample", "Reduce intake, correct guidance, and recheck", "Do not raise capacity by skipping review"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Calculate usable capacity by work lane",
+        "body": [
+          "Estimate the next interval using recent handling-time distributions for comparable requests. Convert qualified scheduled time into skill-hours, then reserve time for handoffs, customer communication, quality checks, and known meetings. Do not combine password coordination, order questions, complex bug evidence, and incident triage into one average; the mix and authority boundaries are different.",
+          "A simple planning equation is usable skill-hours minus accepted work estimate minus due support obligations. Keep the inputs visible and report a range when handling time varies widely. This is a decision aid, not a promise of exact completion. Recalculate when an incident, absence, tool failure, or influx changes the work mix materially."
+        ]
+      },
+      {
+        "heading": "Tie thresholds to actions before the queue is stressed",
+        "body": [
+          "Use three locally tested bands. Normal permits regular pull. Constrained limits new work to defined priorities and assigns update debt. Recovery brings in a backup, narrows intake, or activates a fallback owner. State who declares and clears each band, how frequently it is reassessed, and which actions remain prohibited regardless of load.",
+          "Validate the panel against downstream outcomes. If the indicator rises without missed updates, reopens, aging, or quality changes, its threshold may be too sensitive. If quality falls before it moves, the panel is missing a leading constraint such as skill mismatch or hidden vendor work. Retain raw counts and definitions so the team can explain why a decision was made."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: a constrained afternoon queue",
+      "body": [
+        "At 13:00, the queue has 22 ready routine tickets, six active tickets, four customer updates due by 15:00, two unaccepted escalations, and 10 usable skill-hours through close. Recent comparable work suggests 7–11 routine hours plus three hours for current actions and updates. The range already exceeds available time before the two escalations are considered.",
+        "The queue lead declares constrained mode: specialists finish active work, one person owns the four updates, routine new work stays ordered by the normal rule, and the sending owners call the fallback for the two escalations. They do not reclassify tickets as waiting or close incomplete work. At 15:00, the lead recalculates with actual completions and checks whether quality review or tomorrow's handoff needs protection."
+      ]
+    },
+    "checklist": [
+      "Separate ready, active, waiting, protected, and transferred work.",
+      "Calculate qualified skill-hours after non-ticket obligations and absence.",
+      "Include due customer updates and quality work as real capacity demand.",
+      "Use handling ranges for comparable request lanes, not one average.",
+      "Give every trigger an owner, response, guardrail, and reassessment time.",
+      "Keep urgent and protected work visible during constrained operation.",
+      "Avoid changing status or priority merely to improve the panel.",
+      "Validate leading signals against aging, quality, reopens, and checkpoints."
+    ],
+    "cautions": [
+      "The illustrative triggers above require local calibration. Request mix, tooling, specialist experience, and risk rules determine what a safe range looks like.",
+      "Do not use capacity pressure to transfer work to people without the required skill or authority. A faster assignment can create slower resolution and unsafe decisions."
+    ]
+  },
+  "help-desk-customer-reply-approval-boundary": {
+    "directAnswer": [
+      "Divide customer replies by what the wording does. Specialists can usually acknowledge receipt, restate verified facts, ask approved intake questions, explain documented routine steps, and set a communication checkpoint. Owner review is needed when wording commits money, grants an exception, changes access or ownership, states incident cause or scope, promises a completion outcome, interprets policy, or discloses sensitive investigation detail.",
+      "Approval should focus on the consequential claim, not every polite sentence. Give the reviewer the proposed wording, verified evidence, customer impact, unresolved uncertainty, and one requested decision. Store approved language with its scope and expiry so it does not become a timeless macro."
+    ],
+    "fields": [
+      ["Routine statement", "Wording supported by a current approved source and applicable to the requester's context."],
+      ["Progress update", "Confirmed facts, current action, owner, and next communication checkpoint without a guaranteed final result."],
+      ["Commitment", "A promise of action, outcome, exception, compensation, timing, or scope that another owner must control."],
+      ["Sensitive disclosure", "Security, identity, personal, vendor, or investigative detail that may be accurate but unsafe to send broadly."],
+      ["Approval scope", "The audience, ticket condition, claim, channel, and validity period covered by the review."],
+      ["Material change", "New evidence that makes earlier approved wording incomplete, inaccurate, overbroad, or misleading."
+      ]
+    ],
+    "table": {
+      "heading": "Reply approval decision table",
+      "columns": ["Proposed statement", "Default lane", "Evidence needed", "Reason"],
+      "rows": [
+        ["We received your report and will update you by 15:00 UTC", "Specialist if checkpoint is controllable", "Ticket receipt and assigned communication owner", "Commits only to another update"],
+        ["The service outage caused your export failure", "Incident-owner review", "Confirmed scope and customer-safe incident facts", "States cause and relationship"],
+        ["Follow these current settings steps", "Specialist within article scope", "Applicable product, version, access, and approved article", "Routine documented action"],
+        ["We will refund the charge tomorrow", "Financial owner review", "Decision record, scope, amount, and execution owner", "Commits money and time"],
+        ["Your verification failed because the stored email is different", "Do not send; use protected wording", "Approved mismatch outcome only", "Discloses account information and helps enumeration"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Write a claim map for common replies",
+        "body": [
+          "List the claims a reply can make—receipt, verified observation, documented instruction, current ownership, expected update, diagnosis, exception, or guaranteed result. Map each to an authoritative source and role. This makes the boundary inspectable and lets specialists move quickly on low-risk communication without guessing which phrase will trigger review.",
+          "Place the stop rule next to the relevant claim. An article can authorize a specialist to say a feature is available without authorizing an account-specific change. A known-issue note may support a symptom description without proving that a customer's case belongs to the incident. Scope must be checked at send time rather than inferred from a familiar macro title."
+        ]
+      },
+      {
+        "heading": "Make review fast without making it superficial",
+        "body": [
+          "Use a short approval brief: intended recipient, customer goal and impact, confirmed facts, proposed consequential sentence, uncertainty, source, requested decision, and reply deadline. Highlight the sentence under review. The owner can approve, revise, decline, or request one missing fact; a vague looks good response should not authorize additional claims.",
+          "If facts change after approval, re-evaluate the affected claim. Do not continue using wording that states a smaller incident, a specific completion time, or a permitted exception after the underlying condition changes. Track recurring returned wording by reason. Repeated edits usually indicate a missing source statement, poor macro boundary, or unclear owner—not a need to submit all replies forever."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: reply during an unconfirmed incident",
+      "body": [
+        "The customer reports that three staff members cannot save changes. Support verifies the same visible error and sees a possible incident notice, but the incident owner has not confirmed scope. The specialist may write: We reproduced the save error for the affected workspace and sent the evidence to the service owner. We will update you by 14:30 UTC, even if investigation is still continuing.",
+        "The specialist should not write: Our database outage caused this and will be fixed within an hour. Those claims assert cause and completion outside verified evidence. If the incident owner later approves: We confirmed a service issue affecting saves in this region; the next update is at 15:00 UTC, the ticket should store that approval's scope. A different region or symptom still needs a fresh match."
+      ]
+    },
+    "checklist": [
+      "Identify every factual claim, instruction, commitment, and disclosure.",
+      "Match routine wording to a current source and applicable ticket scope.",
+      "Keep progress checkpoints separate from promises of final resolution.",
+      "Route money, access, identity, policy, cause, and exception claims.",
+      "Give the reviewer proposed wording and the evidence that supports it.",
+      "Record approval audience, condition, owner, and validity boundary.",
+      "Re-review a material claim when facts or customer context change.",
+      "Use returned replies to fix the source map or macro boundary."
+    ],
+    "cautions": [
+      "Approval is not a substitute for data minimization. A senior reviewer cannot make unnecessary personal or investigative detail appropriate for a customer reply.",
+      "Do not make replies so cautious that they become empty. Even when a decision is pending, state confirmed facts, current ownership, and the next communication checkpoint."
+    ]
+  },
+  "help-desk-ticket-incident-scope-check": {
+    "directAnswer": [
+      "Before linking a help-desk ticket to an incident, compare affected service or function, symptom, first-observed time, geography or account segment, version or environment, known workaround behavior, and the incident owner's current inclusion criteria. A matching error phrase alone is insufficient. Record whether the relationship is confirmed, probable and under review, or rejected.",
+      "The individual ticket must retain its customer's impact, evidence, promise, and communication owner even after linking. The incident record owns shared investigation and confirmed broad facts; it should not replace customer-specific verification or closure."
+    ],
+    "fields": [
+      ["Incident inclusion rule", "The current observable conditions a ticket must meet to be treated as part of the shared event."],
+      ["Correlation evidence", "Facts connecting the ticket to the event, such as timing, function, region, version, or a confirmed event identifier."],
+      ["Relationship confidence", "Confirmed, probable, possible, or rejected, with the person or evidence that supports the label."],
+      ["Individual impact", "The customer's blocked task, affected users, business consequence, and verified workaround status."],
+      ["Shared fact", "A statement approved by the incident owner for reuse across linked customer communication."],
+      ["Unlink trigger", "Evidence that requires separate triage, such as different behavior, unaffected environment, or persistence after recovery."
+      ]
+    ],
+    "table": {
+      "heading": "Incident scope matching matrix",
+      "columns": ["Dimension", "Matches incident", "Needs review", "Likely separate"],
+      "rows": [
+        ["Affected function", "Same operation named in inclusion rule", "Adjacent feature with shared dependency", "Different service or user task"],
+        ["Time", "Begins within confirmed event window", "Customer provides approximate time", "Clearly predates event or begins after verified recovery"],
+        ["Environment", "Included region, version, or account segment", "Environment data unavailable", "Known unaffected environment"],
+        ["Symptom", "Observable behavior matches approved description", "Only broad error wording matches", "Different result or failure stage"],
+        ["Workaround", "Confirmed incident workaround behaves as expected", "Not safe or possible to test", "Workaround succeeds or fails in a contradictory way"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Use a versioned inclusion rule",
+        "body": [
+          "Incident scope changes as evidence arrives. Store the rule with an effective time and owner: for example, save requests in region East returning error E17 from 12:00 UTC. A later expansion to all regions should not make an earlier support claim appear verified retroactively. Specialists need the current rule and a place to route non-matching evidence.",
+          "When evidence is incomplete, choose under review rather than force a binary decision. Preserve the next check and customer checkpoint. Do not ask customers to perform unsafe retries or expose sensitive logs solely to prove correlation. A service owner may confirm the relationship from internal telemetry while support maintains the permitted customer record."
+        ]
+      },
+      {
+        "heading": "Keep shared investigation and individual service distinct",
+        "body": [
+          "Linking should reduce repeated technical work. It should not close the ticket, erase unique impact, or turn an incident restoration into proof that the customer's requested outcome is complete. After the incident owner announces recovery, verify the individual function through the lightest appropriate method and route persistent symptoms separately.",
+          "Review false links and missed links after closure. False links are tickets attached without sufficient evidence; missed links required duplicate investigation despite matching scope. Examine whether the defect was intake wording, stale inclusion criteria, missing environment data, or slow incident-owner communication. Update the scope rule and examples rather than training specialists to trust broad keywords."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: similar export errors with different scope",
+      "body": [
+        "An incident is confirmed for PDF exports in version 6.4 in the Europe region beginning 11:20 UTC. Ticket A reports PDF export error E52 in Europe on 6.4 at 11:33; it matches and can be linked as confirmed. Ticket B reports CSV export error E52 in Europe but has no version; it is under review because the function and environment do not fully match.",
+        "Ticket C reports PDF failure in North America on 6.3 that began the previous day. It should remain separate despite sharing the error text. For A, the shared incident record owns investigation, while the ticket keeps the customer's monthly-report impact and 13:00 update. After recovery, A still requires an outcome check; C continues independent triage, and B needs the permitted version fact."
+      ]
+    },
+    "checklist": [
+      "Read the incident owner's current, time-stamped inclusion rule.",
+      "Compare function, symptom, time, environment, and workaround behavior.",
+      "Record correlation evidence and confidence instead of keyword matching.",
+      "Use under review when a decisive permitted fact is missing.",
+      "Keep customer impact, evidence, and checkpoint in the individual ticket.",
+      "Reuse only customer-safe facts approved for the incident scope.",
+      "Unlink or retriage contradictions and symptoms persisting after recovery.",
+      "Review false links and missed links to improve the scope rule."
+    ],
+    "cautions": [
+      "Do not tell a customer that a known outage caused the issue until the relationship and wording are confirmed by the responsible incident path.",
+      "Do not expose one customer's information through a shared incident record. Shared technical facts and individual customer evidence need different access boundaries."
+    ]
+  },
+  "help-desk-knowledge-article-prerequisite-check": {
+    "directAnswer": [
+      "Before using a knowledge article, confirm the conditions that make its instructions applicable: customer goal, product or service, version, account state, requester role, required access, prior safe step, excluded conditions, and current source version. Ask only for facts that change the next action. If a required condition is missing or conflicts, stop and route rather than choosing the closest-looking procedure.",
+      "Place prerequisites before the first consequential step, not in a note at the end. Each prerequisite should say how support may verify it, what evidence belongs in the ticket, and what alternate path applies when it is false or unknown."
+    ],
+    "fields": [
+      ["Audience", "The customer or specialist role for whom the article's actions and explanations are intended."],
+      ["Supported state", "The product, version, account, configuration, or workflow condition in which the steps are known to apply."],
+      ["Required authority", "The permission or approval needed to perform the action; product access and organizational authorization are separate."],
+      ["Safe verification", "The permitted observable fact that confirms a prerequisite without asking for credentials or excessive data."],
+      ["Exclusion", "A recognizable condition that sends the ticket to another article, owner, or protected route."],
+      ["Stop point", "The exact place where a specialist must stop if scope is uncertain or the action would exceed authority."
+      ]
+    ],
+    "table": {
+      "heading": "Prerequisite gate for a settings article",
+      "columns": ["Check", "Pass evidence", "If false", "If unknown"],
+      "rows": [
+        ["Requested outcome matches article", "Customer wants to enable the documented notification", "Find the correct outcome path", "Clarify the goal with one plain-language question"],
+        ["Supported product and version", "Version shown in approved non-sensitive interface", "Use version-specific guidance or route", "Do not infer from screenshot style"],
+        ["Requester has appropriate role", "Approved role result is visible", "Explain owner route", "Use approved role-check process"],
+        ["Feature is in supported account state", "Status field meets article definition", "Route to account owner or alternate article", "Preserve unknown and stop before change"],
+        ["No incident or security exclusion", "No matching active signal and behavior is routine", "Use incident or security route", "Escalate uncertain risk rather than testing aggressively"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Write prerequisites as decisions, not background",
+        "body": [
+          "Every prerequisite should change what happens next. Delete facts included merely because they are easy to collect. Order the remaining gates from low exposure and broad routing to higher-consequence checks. Product and goal may come first; protected identity or authorization checks should use approved systems and only when the requested action requires them.",
+          "Use explicit pass, fail, and unknown outcomes. Unknown is not a pass and should not trigger improvised data collection. State the alternate owner or article for each fail condition. A specialist under queue pressure should be able to stop safely without interpreting a long narrative or assuming a familiar customer has standing permission."
+        ]
+      },
+      {
+        "heading": "Test prerequisites against near-match tickets",
+        "body": [
+          "Review tickets where specialists selected the article but the outcome failed, reopened, or escalated. Identify the first prerequisite that did not match. Common defects include hidden version limits, requester role omitted from the article, an account state described with internal language, and exceptions placed after the risky step.",
+          "Build scenario tests for pass, fail, and unknown. Include a deceptive near-match: same symptom but different permission or product state. Have two qualified reviewers choose the path independently. Disagreement reveals ambiguity in the article, intake, or role map. Update the source and change date; do not patch only a copied macro that depends on the article."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: enabling invoice notifications",
+      "body": [
+        "An article explains how an account administrator enables invoice notifications. A requester asks, Please send invoices to our new address. Before giving steps, support confirms the goal is notification routing, the account uses the supported billing portal, and the requester's approved role result is administrator. The article also excludes accounts managed through a reseller.",
+        "If the requester is a standard user, support does not send steps that will fail or imply permission. It explains that an administrator must make the change and gives the approved route. If reseller status is unknown, the specialist asks for the permitted account-management indicator, not payment data. If a billing-identity mismatch appears, the article stops and points to the protected account owner."
+      ]
+    },
+    "checklist": [
+      "Match the customer's requested outcome before matching the symptom.",
+      "Confirm product, version, account state, and current source applicability.",
+      "Separate tool capability from the requester's authority to use it.",
+      "Ask only for prerequisite facts that change the next safe action.",
+      "Define pass, fail, and unknown paths for every consequential gate.",
+      "Put exclusions and stop points before the risky instruction.",
+      "Test at least one routine, missing-fact, and deceptive near-match case.",
+      "Review reopens and escalations for the earliest failed prerequisite."
+    ],
+    "cautions": [
+      "Do not use prerequisite checks as a reason to collect passwords, recovery codes, payment details, full identity documents, or unrelated customer history.",
+      "Do not broaden an article because specialists often encounter near-matches. Different authority or risk states may require deliberately separate guidance."
+    ]
+  }
+}

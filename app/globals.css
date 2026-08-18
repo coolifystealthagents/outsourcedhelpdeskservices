@@ -43,3 +43,6 @@
 @media(max-width:700px){.gi-proof{grid-template-columns:1fr}.gi-proof-art{max-height:210px}.gi-icon-row{grid-template-columns:1fr}.gi-icon-row img{width:36px;height:36px}}
 /* Licensed communication icons replace queue/status markers. */
 .desk-ticket-rail>div{grid-template-columns:30px 1fr;column-gap:12px}.desk-ticket-rail .status-icon{width:30px;height:30px;object-fit:contain}.desk-flow-row .icon-status{display:flex;align-items:center;gap:.35rem}.desk-flow-row .icon-status img{width:27px;height:27px;object-fit:contain}@media(max-width:700px){.desk-ticket-rail>div{grid-template-columns:26px 1fr;column-gap:10px}.desk-ticket-rail .status-icon{width:26px;height:26px}.desk-flow-row .icon-status img{width:24px;height:24px}}
+
+/* Structured August 17 blog guides */
+.article-field-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0 0}.article-field-list>div{padding:18px;border:1px solid #d8e8e2;border-radius:14px;background:#f8fcfa}.article-field-list dt{font-weight:900;color:#17324d}.article-field-list dd{margin:8px 0 0;line-height:1.6;color:#405765}.checklist-module ul{display:grid;gap:12px;padding-left:24px}.caution-module{border-left:6px solid #f59e0b;background:#fffaf0}@media(max-width:700px){.article-field-list{grid-template-columns:1fr}}

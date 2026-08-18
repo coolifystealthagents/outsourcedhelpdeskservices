@@ -2,7 +2,8 @@
   "name": "outsourcedhelpdeskservices",
   "private": true,
   "scripts": {
-    "test": "node tests/homepage-image-labels.test.mjs",
+    "test": "node tests/homepage-image-labels.test.mjs && npm run validate:aug17-blog",
+    "validate:aug17-blog": "node scripts/validate_aug17_blog.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",

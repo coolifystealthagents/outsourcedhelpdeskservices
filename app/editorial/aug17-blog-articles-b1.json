@@ -1,0 +1,398 @@
+{
+  "help-desk-queue-routing-fallback": {
+    "directAnswer": [
+      "A queue-routing fallback is the controlled path used when the normal assignment rule cannot produce a qualified, available, and accountable owner. It should detect defined failure conditions, place the ticket in a visible reviewed lane, preserve its original priority and context, name a temporary communication owner, and trigger a timed recovery action. A fallback is not an unmonitored catch-all queue.",
+      "For a public outsourced help desk, design fallback rules around the client-approved service catalog, skill and access boundaries, operating hours, and escalation contacts. The provider should never improvise a protected action because a client owner is unavailable. It should acknowledge what is known, keep the customer checkpoint, and invoke the documented backup or return path."
+    ],
+    "fields": [
+      ["Fallback trigger", "A machine- or reviewer-observable condition such as no eligible skill match, unavailable client queue, rejected transfer, missing required routing fact, or expired acceptance timer."],
+      ["Fallback lane", "A visible queue with a defined watcher and review cadence; it is separated from routine unassigned work so routing defects cannot age silently."],
+      ["Temporary communication owner", "The named specialist responsible for receipt, clarification, and honest checkpoints while decision or technical ownership is unresolved."],
+      ["Original route evidence", "The intake values, rule version, attempted destination, timestamp, and rejection reason needed to diagnose why normal routing failed."],
+      ["Recovery action", "The next permitted step: correct one field, contact a backup owner, restore a connector, return an out-of-scope request, or activate an urgent route."],
+      ["Exit evidence", "Proof that a qualified destination accepted the ticket, the requester supplied a decisive fact, or the request was safely returned with a usable explanation."]
+    ],
+    "table": {
+      "heading": "Fallback decisions for common routing failures",
+      "columns": ["Failure condition", "Immediate disposition", "Accountable role", "Exit rule"],
+      "rows": [
+        ["Required category is missing", "Hold in intake-review lane and ask one outcome-based question", "Fallback watcher", "A permitted answer maps to one supported route"],
+        ["No provider specialist has the required skill or access", "Retain communication and route to the client-approved owner", "Provider queue lead until acceptance", "Client owner accepts or invokes named backup"],
+        ["Primary destination rejects the transfer", "Restore visible ownership and record a structured rejection reason", "Sending queue lead", "Corrected transfer is explicitly accepted"],
+        ["Routing integration is unavailable", "Use the controlled continuity queue and record intended destination", "Continuity lead", "Service is restored and each ticket is reconciled once"],
+        ["High-impact signal has no reachable owner", "Use the documented urgent fallback without broadening permissions", "Duty lead", "Authorized incident or security owner accepts"],
+        ["Request is outside the agreed service catalog", "Do not force it into the nearest operational queue", "Scope-review owner", "Approved destination is identified or customer receives a clear return path"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Define failure before the queue is under pressure",
+        "body": [
+          "List every point where routing can fail: incomplete intake, ambiguous customer language, an inactive destination, no eligible specialist, rejected transfer, absent client approver, integration outage, and a request outside the supported catalog. Give each condition a detectable signal and a maximum time before human review. A ticket that merely remains unassigned is not a sufficient signal because it does not distinguish low capacity from a broken rule. For example, an access request can be assigned to a generalist while still lacking an authorized identity owner; assignment alone would hide the real failure.",
+          "Keep business priority separate from routing status. Moving a ticket to fallback must not lower urgency, restart age, erase the promised update, or mark it as waiting on the customer unless a customer fact is genuinely missing. Store the route rule or decision reason that applied at intake. When a client changes its support catalog, the help desk can then distinguish an old rule from poor specialist judgment instead of treating every misroute as an isolated mistake.",
+          "Set narrow permissions for the fallback role. The watcher may clarify the goal, preserve evidence, identify an approved destination, and communicate a checkpoint. The watcher may not approve refunds, alter account ownership, diagnose a security event, or perform unfamiliar technical changes simply to clear the lane. The fallback makes uncertainty visible while protecting the boundary between outsourced frontline service and client-controlled decisions."
+        ]
+      },
+      {
+        "heading": "Operate the lane as a recovery process",
+        "body": [
+          "Review fallback at short, stated intervals using impact, due promise, protected-action risk, and age. For each ticket, choose one recovery verb: clarify, correct, retry, escalate, return, or contain. A queue lead should see both the temporary communication owner and the proposed receiving owner. Automated retries need a limit; repeatedly sending the same malformed request to the same destination only creates noise and can duplicate customer communication.",
+          "Require acceptance from the destination. A status change or notification proves that a transfer was attempted, not that someone can act. If the acceptance timer expires, ownership returns to the fallback lead and the next named backup is invoked. For client-owned queues, define what the provider tells the customer during that interval: confirmed facts, the decision being sought, and the next update time, without implying that the provider controls the client decision.",
+          "Reconcile continuity records after a routing-system outage. Compare every locally held ticket with the restored queue using channel reference, customer, affected object, and request time. Create one canonical record, preserve source timestamps, and link rather than merge when privacy or separate customer promises require it. Measure fallback entries by trigger, time to accepted route, repeat bounce, missed checkpoint, and customer recontact. A rising category often points to stale service mapping or confusing intake, not a need for a larger catch-all team."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: a payroll export request with no eligible route",
+      "body": [
+        "At 08:12 UTC, a customer reports that the payroll export produces an empty file and payroll submission is due that afternoon. Intake classifies it as reporting, but the normal reporting queue supports analytics exports, not payroll data. The rule finds no eligible provider specialist because payroll access and diagnosis remain with the client's application owner. The ticket enters the reviewed fallback lane without changing its high-impact label or 09:00 customer checkpoint.",
+        "The fallback watcher records the goal, affected payroll period, visible result, first-observed time, supported browser check already completed, and the failed route reason. The watcher does not request employee records or attempt privileged payroll changes. At 08:20, the watcher sends the client application owner a decision brief asking it to accept technical investigation, while telling the customer that the appropriate system owner is reviewing the export evidence and that another update will be sent by 09:00 even if resolution is not complete.",
+        "The primary client contact does not accept by the 15-minute timer, so the queue lead invokes the named backup. The backup accepts at 08:39 and asks for a safe export event identifier. Acceptance is recorded before the provider changes technical ownership. The provider specialist remains the communication owner. Afterward, the routing review adds payroll export as an explicit catalog branch to the client-owner route; it does not grant the reporting team broader payroll access."
+      ]
+    },
+    "checklist": [
+      "Name observable triggers for ambiguity, unavailable destinations, rejected transfers, and missing capability.",
+      "Keep fallback work visible with a watcher, review cadence, and acceptance timer.",
+      "Preserve original priority, age, customer promises, intake evidence, and attempted route.",
+      "Separate temporary customer communication from technical or decision authority.",
+      "Limit automated retries and prevent duplicate records or duplicate replies.",
+      "Require a qualified destination to accept before ownership is considered transferred.",
+      "Define continuity reconciliation for routing or integration outages.",
+      "Review entry reasons, bounce-backs, missed checkpoints, and repeat contacts for rule defects."
+    ],
+    "cautions": [
+      "Do not use a general fallback as permanent storage for unsupported requests. A reviewed return with a clear approved path is more truthful than indefinite internal circulation.",
+      "Do not broaden an outsourced specialist's access or authority to compensate for an unavailable client owner. Urgency changes the communication cadence, not the permission boundary."
+    ]
+  },
+  "help-desk-ticket-customer-promise-audit": {
+    "directAnswer": [
+      "A customer-promise audit identifies statements that commit the help desk or its client to an action, outcome, update, exception, or time, then tests whether each promise had an owner, authority, evidence, checkpoint, and recorded result. Audit the complete conversation across approved channels, not only formal due-date fields, because commitments often appear in ordinary reply text such as I will confirm this today.",
+      "The purpose is to restore truthful service and improve controls, not punish specialists for using reassuring language. Classify each promise as fulfilled, still open and controlled, reset with explanation, exceeded authority, or unverifiable. Immediately assign open commitments and contact affected customers when silence or inaccurate certainty creates current harm."
+    ],
+    "fields": [
+      ["Promise statement", "The exact customer-facing words that create a reasonable expectation, captured with channel, sender, and timestamp."],
+      ["Promise class", "An update, action, completion outcome, exception, financial commitment, access change, or dependency statement; each class has different authority."],
+      ["Control owner", "The person able to make the promise occur, distinguished from the specialist who sends customer communication."],
+      ["Due condition", "A time with time zone or an observable event, such as after the service owner reviews the trace; vague words like soon are flagged."],
+      ["Authority evidence", "The article, standing rule, or specific owner approval that allowed the consequential commitment when it was made."],
+      ["Disposition", "Fulfilled with evidence, open with a controlled checkpoint, reset, unauthorized, contradicted, or unverifiable."]
+    ],
+    "table": {
+      "heading": "Promise audit classification",
+      "columns": ["Customer statement", "Promise type", "Evidence to inspect", "Audit response"],
+      "rows": [
+        ["I will update you by 16:00 UTC", "Communication checkpoint", "Named communication owner and sent message", "Fulfill or reset before the checkpoint"],
+        ["The export will be fixed today", "Outcome and timing", "Technical owner confirmation and applicable scope", "Flag unsupported certainty; provide verified status"],
+        ["We can make an exception for this order", "Policy exception", "Recorded decision, order scope, and validity", "Route to authorized owner if absent"],
+        ["Your access will be restored after verification", "Protected action", "Approved verification result and access owner acceptance", "Separate eligibility from guaranteed outcome"],
+        ["The vendor will reply within two hours", "Third-party dependency", "Vendor commitment and provider communication plan", "Do not present an uncontrolled dependency as a guarantee"],
+        ["This issue is resolved", "Completion claim", "Customer-goal verification and remaining-impact check", "Reopen communication if closure evidence is weak"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Build a promise ledger from the customer's view",
+        "body": [
+          "Select a defined period and include open, closed, reopened, escalated, and transferred tickets from the outsourced queue. Search for due times and commitment verbs—will, can, guarantee, resolved, approved, fixed, call, send, and confirm—but have a reviewer read context. The phrase we will review does not promise approval; we will refund does. Include approved email, chat, portal, and callback notes so a promise does not disappear because the ticket system lacked a matching structured field.",
+          "For each commitment, record the exact sentence and the reasonable customer expectation, not the team's intended meaning after the fact. Link it to the customer goal, affected object, maker, control owner, authority, due condition, changes, and result. Preserve the original wording while minimizing unrelated personal data. If the commitment depends on a client engineer, account owner, or vendor, identify that dependency and whether it was accepted when the promise was sent.",
+          "Sample deliberately rather than taking only random tickets. Include high-impact cases, transfers between provider and client, tickets closed after no response, near-expiry approvals, repeat contacts, poor satisfaction signals, and a baseline of ordinary work. This reveals both consequential failures and everyday language drift. One fulfilled promise can still be defective if the specialist lacked authority and the result occurred only through luck."
+        ]
+      },
+      {
+        "heading": "Judge control quality as well as on-time completion",
+        "body": [
+          "Score five questions: Was the promise clear? Was it within the sender's authority? Did a capable owner accept the controlled action? Was the customer updated before the due condition when facts changed? Is there evidence of fulfillment from the customer's perspective? Separate a controllable update promise from an uncontrollable resolution prediction. A specialist can own sending a meaningful update at 15:00, but cannot guarantee that a client's engineering team will repair an unknown defect by then.",
+          "When an audit finds an active missed promise, recovery outranks reporting. Assign a communication owner, establish verified status, acknowledge the missed commitment without blaming a person or client team, and give the next controllable checkpoint. Consequential commitments involving access, money, identity, security, or policy go to the proper decision owner. Do not quietly edit the old note or close the ticket to remove it from the overdue list.",
+          "Aggregate causes by promise class, missing owner, missing approval, ambiguous time zone, transfer loss, dependency overstatement, unsupported macro, and weak resolution evidence. Track fulfilled-on-time rate together with unauthorized-promise count, resets before due time, customer recontacts, and commitments discovered only in free text. Correct the relevant reply boundary, handoff field, article, or client escalation agreement. A blanket ban on future-tense language would merely make responses vague and less useful."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: three commitments in one delayed account case",
+      "body": [
+        "A customer asks on Tuesday to restore an administrator role. The provider specialist writes, I will confirm the verification result by 14:00 UTC. After routing to the client's account owner, another reply says, Your administrator access will be restored today. On Wednesday the ticket is closed with, This has been resolved, after an internal status changes, but the customer later reports that the role is still absent.",
+        "The audit separates three promises. The 14:00 update was controllable by the communication owner, but no message was sent, so it is missed. The same-day restoration was an unauthorized outcome promise because the account owner had not approved the action. The resolution claim is unverified because no permitted role check or customer confirmation supports it. The audit does not average these into one late ticket; each statement has a different control failure.",
+        "Recovery assigns a provider communication owner and sends a factual acknowledgement: the earlier update was missed, access restoration has not yet been verified, the account owner is reviewing the approved evidence, and the next update is 11:00 UTC. The account owner later approves a defined role change, the provider records the execution reference, and the customer confirms the needed administration page is available. Corrective work adds a required approval reference before restoration wording and a due-update view that remains with the sender through client transfer."
+      ]
+    },
+    "checklist": [
+      "Define the audit period, channels, ticket cohorts, and promise classes.",
+      "Capture exact customer-facing wording with sender, timestamp, and expected meaning.",
+      "Distinguish communication checkpoints from guaranteed actions or outcomes.",
+      "Match each consequential promise to authority evidence and an accepting control owner.",
+      "Check fulfillment from observable customer impact, not status fields alone.",
+      "Recover active missed or unsafe promises before completing aggregate analysis.",
+      "Preserve history and explain resets instead of rewriting prior commitments.",
+      "Correct recurring reply, handoff, approval, and closure-control defects."
+    ],
+    "cautions": [
+      "Do not treat every future-tense sentence as misconduct. Helpful support requires clear commitments to controllable next actions and communication checkpoints.",
+      "Do not rank outsourced specialists solely by promises met. They may inherit unsupported commitments or depend on client owners; audit ownership, authority, acceptance, and recovery behavior together."
+    ]
+  },
+  "help-desk-ticket-resolution-verification": {
+    "directAnswer": [
+      "Resolution verification proves that the customer's stated goal or blocked function now works, that the result applies to the affected scope, and that no required follow-up remains. A technical change, internal success status, or absence of a new reply is evidence of activity, not automatically evidence of resolution. Choose the lightest safe verification method appropriate to the request and record what was observed.",
+      "An outsourced help desk should define closure evidence with each client for common request types. Provider specialists can verify routine observable outcomes within approved access, while client owners retain protected technical, identity, financial, and policy decisions. If direct verification is unavailable, use a transparent pending-confirmation or documented-closure path rather than claiming a result that was not checked."
+    ],
+    "fields": [
+      ["Resolution criterion", "An observable condition derived from the customer's goal, such as the named user can open the report, rather than the vague state fixed."],
+      ["Verification method", "Customer confirmation, safe specialist observation, system event, controlled functional test, reconciliation result, or approved proxy evidence."],
+      ["Scope tested", "The user, account, service, transaction, time period, version, or workflow covered by the check, preventing a partial result from becoming a broad claim."],
+      ["Verifier", "The customer, provider specialist, client owner, or system record that supplied the evidence, with timestamp and provenance."],
+      ["Residual condition", "Any remaining limitation, workaround, delayed effect, monitoring need, related request, or risk that should survive closure."],
+      ["Closure disposition", "Verified resolved, partially resolved, awaiting confirmation, no longer needed, duplicate with verified canonical outcome, or unresolved and rerouted."]
+    ],
+    "table": {
+      "heading": "Verification methods by request outcome",
+      "columns": ["Request", "Suitable evidence", "Insufficient alone", "Decision rule"],
+      "rows": [
+        ["How-to question", "Customer reaches the intended screen or accurately confirms the instruction answered the goal", "Article link sent", "Close when the question and applicable prerequisites are addressed"],
+        ["Access restoration", "Approved role result plus customer or permitted functional confirmation", "Change command completed", "Protected owner evidence and affected-user outcome must agree"],
+        ["Failed export", "New export for the affected scope opens with expected records", "Background job shows success", "Verify format, period, and customer task, not merely job completion"],
+        ["Billing correction", "Authorized transaction or account record reflects the exact approved correction", "Approval obtained", "Execution and scope evidence are both required"],
+        ["Incident-linked symptom", "Service recovery plus individual function check or valid customer confirmation", "Incident marked recovered", "Persistent individual impact leaves the ticket active"],
+        ["Intermittent behavior", "Defined observation window without recurrence and agreed test conditions", "One successful retry", "State the limited confidence and reopen route"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Write the resolution criterion during triage",
+        "body": [
+          "Translate the request into a testable customer outcome before troubleshooting. Customer cannot export is incomplete; customer needs the August order CSV for workspace ending 41, and the current export returns a blank file identifies object, period, format, and symptom. The resolution criterion becomes: a permitted export for that workspace and period produces an openable CSV containing the expected record range. This prevents a successful PDF test or a different workspace from being accepted as proof.",
+          "Select evidence proportionate to consequence. A low-risk navigation question may be verified when the customer confirms the page is visible. An account-role change needs the authorized action record and a safe result check. A refund requires the approved transaction outcome, not a screenshot copied into a broad ticket. Never ask a customer to expose credentials, personal records, or payment details merely to make closure evidence stronger.",
+          "Define who can verify and when. Some changes propagate after a known interval; some intermittent defects need an observation window; some customer workflows can only be tested by the customer. Set a checkpoint and explain what confirmation is needed. Keep the communication owner active during that period rather than marking resolved immediately and requiring the customer to reopen a case to report that the change did not work."
+        ]
+      },
+      {
+        "heading": "Separate completion, verification, and closure",
+        "body": [
+          "Record three events distinctly. Completion means the planned action ran. Verification means evidence matches the resolution criterion. Closure means the support obligation has an appropriate final disposition and the customer has been told what was confirmed, what remains, and how to return if the result changes. Combining the events into one resolved button encourages specialists to infer customer outcome from an internal action.",
+          "For partial results, preserve the unresolved portion. If five users regain access but one still cannot sign in, close neither the broad goal nor the remaining user by averaging the outcome. Split related work only when doing so makes ownership clearer and every record retains its connection, evidence, and customer promise. If an incident is recovered but one customer's export remains empty, unlink or reroute the individual symptom instead of repeatedly announcing broad recovery.",
+          "Review a sample of closed tickets by request type. Compare closure reason with goal, criterion, evidence, residual conditions, repeat contact, and reopen behavior. Look for proxy evidence used beyond its scope, closure immediately after outbound messages, customer silence treated as success, and internal events that contradict later reports. Improve the closure template and article-specific evidence rule. A lower closure count may be healthy if it reveals previously hidden pending confirmation."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: a corrected export that still misses records",
+      "body": [
+        "A customer reports that a weekly order export is blank for August 10–16 and needs it for a warehouse reconciliation. The provider reproduces the blank file within approved access and routes evidence to the client's reporting owner. The owner repairs a job configuration and sends a successful-completion event. That event proves the job ran, but it does not prove the customer's records or file are correct.",
+        "The ticket's criterion states that the CSV for workspace ending 41, August 10–16, opens and includes orders visible in the approved summary. The provider performs a permitted export and finds that the file now opens but ends on August 15. It records a partial result and keeps the ticket active. The client owner identifies a time-zone boundary defect and completes a second correction. A new export contains the expected final-day record count, without copying order details into the ticket.",
+        "The provider tells the customer exactly what was checked and asks them to confirm that the file supports the warehouse reconciliation. The customer confirms the needed week is complete. Closure records the safe export event references, scope, customer confirmation time, and no residual workaround. Had the customer not replied, the documented no-response path would have said that internal checks passed for the stated scope but customer confirmation was not received; it would not rewrite that absence as confirmed resolution."
+      ]
+    },
+    "checklist": [
+      "Translate the customer's goal into one observable, scoped resolution criterion.",
+      "Choose a permitted verification method proportionate to consequence and uncertainty.",
+      "Record verifier, timestamp, evidence provenance, affected object, and tested scope.",
+      "Keep technical completion separate from outcome verification and ticket closure.",
+      "Preserve partial failures, related work, delayed effects, and residual limitations.",
+      "Use customer silence only under a documented disposition, never as proof of success.",
+      "State confirmed scope and a usable return path in the final message.",
+      "Sample closures, reopens, and repeat contacts to improve evidence rules."
+    ],
+    "cautions": [
+      "Do not perform a risky production test or request sensitive customer evidence solely to satisfy a closure checklist. Use an approved proxy and label its limits.",
+      "Do not let closure speed become the dominant measure. It can reward unsupported resolution claims, premature no-response closure, and loss of individual symptoms under broad incidents."
+    ]
+  },
+  "help-desk-support-article-search-terms": {
+    "directAnswer": [
+      "Support-article search terms should connect the words customers and frontline specialists actually use with the article's precise supported outcome. Build them from privacy-reviewed search queries, ticket language, visible interface labels, error text, product synonyms, and common misspellings. Then map each term to an article only when its prerequisites and result genuinely match; keyword overlap is not enough.",
+      "For an outsourced help desk, maintain client-specific vocabulary without exposing one client's internal names to another. Give every term an intent, source, scope, destination article, exclusion, and review date. Test search success by whether users select the right article and complete the next step, not merely by whether an article appears in results."
+    ],
+    "fields": [
+      ["Observed query", "A minimized phrase entered by a customer or specialist, normalized without retaining names, account identifiers, secrets, or unnecessary free text."],
+      ["Search intent", "The goal behind the words, such as download invoice, restore sign-in, change notification recipient, or understand a visible error."],
+      ["Preferred term", "The current product or service wording used in titles, headings, metadata, and approved support replies."],
+      ["Variant", "A safe synonym, legacy label, abbreviation, misspelling, symptom phrase, or customer-language alternative that should retrieve the same intent."],
+      ["Exclusion", "A near-match that must route elsewhere because product, role, version, authority, risk, or desired outcome differs."],
+      ["Search outcome", "Correct article opened, alternate route selected, query refined, no result, abandoned session, or article opened but ticket still created."]
+    ],
+    "table": {
+      "heading": "Term-to-intent mapping examples",
+      "columns": ["Observed language", "Likely intent", "Article treatment", "Important exclusion"],
+      "rows": [
+        ["receipt, bill copy, invoice PDF", "Download an existing invoice", "Use variants in title metadata and first heading", "Correcting invoice identity or amount needs a separate route"],
+        ["locked out, cannot log in, sign-in blocked", "Recover ordinary sign-in", "Map to approved recovery overview", "Suspected takeover or ownership mismatch uses protected guidance"],
+        ["empty download, blank CSV, export has no rows", "Troubleshoot an empty export", "Include symptom and interface term", "Missing records in a non-empty file is a different outcome"],
+        ["alerts, emails, notifications", "Change routine notification settings", "Use synonym cluster with role prerequisite", "Billing or security notices may not be user-configurable"],
+        ["E52 when saving", "Understand a visible save error", "Index exact safe error text and affected action", "Same code on export or another version may require another article"],
+        ["admin change, new owner", "Change account authority", "Return a protected route overview", "Do not surface procedural bypass terms or verification details"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Collect language without collecting customer secrets",
+        "body": [
+          "Use aggregate no-result queries, reformulations, ticket subject patterns, approved chat labels, specialist search notes, and interface terminology. Before analysis, remove names, email addresses, workspace IDs, order references, pasted tokens, and message fragments that are unnecessary to understand intent. Restrict raw-query access and publish only normalized term clusters. Public search boxes often receive sensitive material; the fact that a customer typed it does not make it suitable article metadata.",
+          "Label the source and confidence of each variant. A phrase appearing in twenty no-result searches is stronger findability evidence than one reviewer's preferred synonym, but frequency still does not prove intent. Read a sample of surrounding, minimized context to distinguish reset password from change another user's password. Include vocabulary used by new customers, screen-reader users, regional spelling variants, and specialists supporting the client, while keeping technical jargon as a bridge rather than the only language.",
+          "Create separate dictionaries for client-specific branded features and a controlled shared dictionary for truly generic support concepts. An outsourced provider may serve several products with a page called Workspace or Console; terms must resolve within the authenticated client's knowledge boundary. Avoid adding confidential project names, security-control labels, unpublished incident codes, or internal queue names merely because specialists search for them."
+        ]
+      },
+      {
+        "heading": "Design and test a term map around outcomes",
+        "body": [
+          "For each article, state one primary intent, eligible audience, product or version scope, prerequisites, and exclusions. Add variants to the title, summary, headings, metadata, and cross-links in natural language rather than repeating a keyword block. Put the customer word beside the official label: email alerts, called Notifications in the portal. Exact visible error text can be useful when it is safe and specific, but a generic word such as failed should not make every troubleshooting article compete.",
+          "Run scenario tests with top queries, no-result queries, misspellings, and deceptive near-matches. Review the first results and ask whether a user can distinguish them without opening several articles. A query for change invoice address should not rank downloading an invoice above updating billing identity merely because both repeat invoice. Use article summaries to state the outcome and stop condition clearly, then add an alternate route for exclusions.",
+          "Measure no-result rate, successful refinement, correct-result selection, short-return behavior, ticket creation after article view, and sampled outcome completion. A high click rate can be misleading when the title attracts users but the prerequisites do not fit. Review term clusters after product label changes, article revisions, launches, and recurring ticket themes. Retire legacy terms gradually when customers still use them, but label old wording so it does not imply support for an obsolete workflow."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: customers searching for a blank report",
+      "body": [
+        "A client article is titled Troubleshoot CSV export generation, yet customers search blank report, empty spreadsheet, download has headers only, and export no rows. Search analytics show frequent no-result sessions for blank report, while ticket review confirms that most customers want an order export for a specific date range. A smaller group uses the same words for a dashboard that displays no data, which has different prerequisites and ownership.",
+        "The term map assigns empty CSV, blank export, headers only, and spreadsheet no rows to the export article. Its summary says that it covers a downloaded CSV containing no expected rows and asks users to confirm product, date range, and export type. Blank dashboard becomes an exclusion with a visible link to dashboard-data guidance. The article does not index customer file names or copied row content found in raw searches.",
+        "Testing uses six phrases, including the misspelling exprot blank and the near-match report missing one day. The export article ranks first for empty-file intent, while the missing-records article ranks first for a partial range. Four weeks later, reviewers compare correct selections, immediate query reformulations, and tickets opened after reading. They find that headers only users complete the article more often, while blank report remains ambiguous, so the search interface asks whether the problem is in a downloaded file or an on-screen dashboard instead of forcing one result."
+      ]
+    },
+    "checklist": [
+      "Collect minimized query and ticket language from several approved sources.",
+      "Remove identifiers, secrets, personal data, and unnecessary raw context before clustering.",
+      "Assign each term to a customer outcome, supported scope, and source confidence.",
+      "Include interface labels, synonyms, legacy wording, regional variants, and common misspellings.",
+      "Document near-match exclusions for role, version, authority, product, and risk.",
+      "Test top results with routine, no-result, and deceptive near-match scenarios.",
+      "Measure correct outcome and follow-on contact, not search impressions or clicks alone.",
+      "Review mappings after label changes and keep client vocabularies appropriately separated."
+    ],
+    "cautions": [
+      "Do not publish raw customer queries as keywords. Search text may contain account identifiers, health or payment details, credentials, or allegations unrelated to article findability.",
+      "Do not make sensitive recovery or security procedures easier to enumerate through detailed public terms. Index a safe route and customer outcome, while keeping control logic in restricted guidance."
+    ]
+  },
+  "help-desk-queue-escalation-ownership": {
+    "directAnswer": [
+      "Escalation ownership should separate four responsibilities: the sending specialist owns a complete handoff, the receiving decision or technical owner owns the requested action after explicit acceptance, a communication owner keeps the customer informed, and a queue lead owns recovery when acceptance fails. Moving a ticket, adding a mention, or sending an email is an attempted transfer, not accepted ownership.",
+      "In an outsourced help desk, document provider-to-client boundaries for every escalation class, including operating hours, acceptance timer, backup, permitted evidence, and customer-safe wording. The provider remains accountable for the promised checkpoint until the client owner accepts or the defined fallback takes over, but it must not perform client-controlled actions simply because acceptance is delayed."
+    ],
+    "fields": [
+      ["Sending owner", "The specialist who verifies minimum evidence, states one decision request, selects the approved route, and monitors attempted transfer until acceptance."],
+      ["Receiving owner", "The named role qualified and authorized to make the decision or conduct the investigation; a department name without an active watcher is insufficient."],
+      ["Acceptance event", "A recorded acknowledgement that the recipient has reviewed scope, can act, and owns a stated next action and checkpoint."],
+      ["Communication owner", "The person who translates confirmed progress to the customer; this responsibility may remain with the outsourced provider after technical ownership moves."],
+      ["Acceptance timer", "The context-specific interval after which the sending owner invokes a backup, urgent route, or return path rather than waiting silently."],
+      ["Return reason", "A structured explanation such as missing decisive evidence, wrong service, out-of-scope decision, duplicate active escalation, or unavailable authority."]
+    ],
+    "table": {
+      "heading": "Ownership states across an escalation",
+      "columns": ["State", "Action owner", "Customer owner", "Required next event"],
+      "rows": [
+        ["Preparing", "Sending specialist", "Sending specialist", "Complete minimum evidence and one decision request"],
+        ["Sent, not accepted", "Sending specialist and queue lead remain accountable", "Sending specialist", "Recipient accepts or timer invokes fallback"],
+        ["Accepted for investigation", "Receiving technical owner", "Named provider or client communicator", "Investigation action plus customer checkpoint"],
+        ["Returned with reason", "Sending specialist regains action ownership", "Existing communication owner", "Correct evidence or select approved alternate route"],
+        ["Protected decision pending", "Authorized client decision owner", "Provider specialist unless agreement states otherwise", "Approve, decline, or request one missing fact"],
+        ["Resolved action awaiting confirmation", "Owner of verification criterion", "Communication owner", "Verify customer outcome before closure"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Make acceptance a real operational event",
+        "body": [
+          "Define what the recipient accepts: customer goal, observed impact, verified facts, evidence references, uncertainty, attempted actions, requested decision, urgency basis, and next customer checkpoint. The recipient should accept with a next action or return the escalation with a structured reason. A generic seen reaction or automatic queue assignment does not show capability, access, or capacity. For high-impact and protected work, acceptance should identify the person or active duty role, not only a broad client group.",
+          "Set timers by consequence and coverage, not one universal interval. A suspected service incident during monitored hours may require immediate acknowledgement and a rapid backup. A low-impact policy interpretation sent near the client's documented close can use the next operating window if the customer wording is honest. State the time zone and distinguish acceptance timing from a promise of final resolution. The sending owner must see timers approaching expiry rather than discovering them in a weekly aging report.",
+          "Keep authority narrow while ownership is unsettled. The provider can preserve logs, confirm impact, ask approved intake questions, prevent duplicate escalation, and send checkpoints. It cannot approve a client exception, reveal investigative detail, change privileged access, or run unsafe diagnostics to make progress appear faster. An ownership model is sound only if it helps specialists wait safely as well as transfer quickly."
+        ]
+      },
+      {
+        "heading": "Control returns, parallel work, and customer communication",
+        "body": [
+          "A recipient may return work for one valid, coded reason with a specific correction. Missing evidence should name the decisive fact and why it changes the next action; it should not request a universal template full of irrelevant data. Wrong destination should identify the supported alternate route when known. The sender corrects and resubmits under the same ticket relationship so the customer does not repeat the story and two teams do not begin conflicting actions.",
+          "When several owners contribute, name one integrator. Engineering may investigate a defect, security may assess disclosure, and an account owner may approve wording, but one technical or decision lead should coordinate dependencies. Separately name who updates the customer. The communication owner uses confirmed facts and does not infer cause from internal activity. If responsibility shifts at a follow-the-sun boundary, the incoming owner explicitly accepts open actions and promises before the outgoing owner is released.",
+          "Review ownership performance using unaccepted escalations, time to acceptance, return reasons, repeated bounces, duplicate investigations, missed customer checkpoints, and work performed before authority existed. Examine provider and client contributions together. A large count of client returns can indicate weak provider evidence, but it can also reveal stale routing or an overly broad client rejection practice. Improve the escalation agreement and examples rather than masking delay by closing the provider ticket at handoff."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: suspected permissions defect across provider and client teams",
+      "body": [
+        "A customer administrator reports that two analysts lost report access after a role update. The provider confirms the approved role names, affected function, first-observed time, and that ordinary sign-in still works. It does not change roles or request passwords. The sending specialist prepares one request to the client's application owner: determine whether the current role mapping is defective and identify the safe next action. The record includes a 13:30 UTC customer checkpoint.",
+        "At 12:40, the escalation enters sent, not accepted. Technical ownership has not changed, so the provider queue lead watches a 20-minute acceptance timer and the specialist remains communication owner. At 13:00, the primary client queue has not responded; the lead invokes the named application backup. The backup accepts at 13:07 with next action: compare the two role-mapping events against the current configuration by 13:25. That acceptance, not the original transfer, moves investigation ownership.",
+        "The client owner finds a mapping defect but needs the account owner to approve restoration for the two analysts. The application owner remains integrator and requests the protected decision; the provider tells the customer only that the relevant configuration was identified and that authorized restoration is under review. After approval and execution, the provider verifies the analysts can open the required report and closes with scoped evidence. The review records one failed primary acceptance, not a provider resolution delay or three separate escalations."
+      ]
+    },
+    "checklist": [
+      "Name sending, receiving, communication, and fallback owners for each escalation class.",
+      "Send customer goal, impact, verified evidence, uncertainty, and one decision request.",
+      "Treat transfer as pending until a qualified recipient accepts a next action.",
+      "Set consequence- and coverage-aware acceptance timers with explicit time zones.",
+      "Keep customer checkpoints controlled while technical or decision ownership changes.",
+      "Use structured return reasons and preserve one linked history through resubmission.",
+      "Assign an integrator when several client or provider owners contribute.",
+      "Review bounce, acceptance, duplicate work, authority breaches, and missed updates together."
+    ],
+    "cautions": [
+      "Do not define the customer communication owner as whoever notices the ticket. It must be an explicit responsibility that survives queue moves, rejected transfers, and client dependencies.",
+      "Do not use escalation to shift accountability for incomplete frontline work, and do not let recipients demand irrelevant evidence as a condition of acceptance. Minimum evidence should serve the requested decision."
+    ]
+  },
+  "help-desk-ticket-customer-effort-review": {
+    "directAnswer": [
+      "A customer-effort review reconstructs what the customer had to understand, provide, repeat, attempt, wait for, and monitor in order to achieve one support outcome. Review the full journey across channels and provider-client handoffs, then distinguish necessary effort created by safety or customer choice from avoidable effort caused by unclear intake, repeated questions, misrouting, inaccessible instructions, weak ownership, or premature closure.",
+      "Use both operational artifacts and customer evidence. Count contacts, transfers, repeated facts, steps attempted, authentication restarts, channel changes, wait checkpoints, and reopened work, then read a sample to understand why they occurred. The aim is not zero effort: protected account actions may require deliberate verification. The aim is the least burdensome safe path with honest expectations."
+    ],
+    "fields": [
+      ["Customer goal", "The result the customer sought, held constant across contacts even when queue categories or proposed solutions changed."],
+      ["Effort event", "A customer action such as finding a channel, explaining context, supplying a permitted fact, trying a step, changing channel, chasing status, or confirming outcome."],
+      ["Repeat burden", "Information or action requested again even though valid, accessible evidence already existed, with the reason for repetition."],
+      ["Necessary boundary", "Effort required for identity, consent, authorization, safety, or a genuinely new condition, explained without exposing control details."],
+      ["Ownership gap", "A period in which the customer had to coordinate teams, discover status, or restart the request because no accountable owner did so."],
+      ["Effort outcome", "Goal achieved, partially achieved, abandoned, solved elsewhere, unresolved, or achieved with avoidable recontact."]
+    ],
+    "table": {
+      "heading": "Classifying customer effort",
+      "columns": ["Observed effort", "Default classification", "Review question", "Possible remedy"],
+      "rows": [
+        ["Customer repeats workspace and symptom after transfer", "Potentially avoidable", "Was permitted context visible and trusted by the recipient?", "Use an accepted handoff brief"],
+        ["Customer completes approved identity recovery", "Potentially necessary", "Was the protected action and accessible option explained clearly?", "Simplify navigation without weakening evidence"],
+        ["Customer tries five generic troubleshooting steps", "Likely avoidable", "Did each step test a relevant hypothesis and record a result?", "Use a scoped decision tree and stop rule"],
+        ["Customer asks twice for a status update", "Ownership or expectation gap", "Was a meaningful checkpoint promised and met?", "Assign communication ownership"],
+        ["Customer moves from public chat to protected channel", "Necessary channel shift", "Was the reason and continuity reference provided?", "Preserve context while keeping sensitive evidence protected"],
+        ["Customer reopens after resolved notice", "Likely verification gap", "Was the stated goal tested at the correct scope?", "Require outcome evidence before closure"]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Reconstruct the journey in the customer's sequence",
+        "body": [
+          "Choose a cohort by customer goal, not only ticket category. One attempt to restore access may generate chat, email, an account-owner case, and a reopened portal ticket. Link approved records using safe references, then build a timeline of customer actions, provider actions, client-owner actions, waits, promises, and outcomes. Do not count an automated acknowledgement as progress or treat simultaneous duplicate messages as separate intentional contacts without context.",
+          "Mark every ask made of the customer: explain the goal, locate an identifier, repeat an error, capture a screen, try a setting, verify authority, use another channel, wait, or confirm completion. For each ask, record whether it was necessary, whether the reason was explained, whether the response was preserved, and whether it changed the next decision. A short ticket can still demand high effort when a customer silently tries many undocumented steps; interviews or a brief post-resolution question can reveal effort absent from system events.",
+          "Include accessibility and language barriers. An instruction may be technically correct yet burdensome if it relies only on visual position, unexplained internal terms, unavailable phone contact, or a channel the customer cannot use. Evaluate alternatives under the client's approved policy. Do not infer that a customer is uncooperative because a process conflicts with time zone, assistive technology, organizational role, or a protected-data concern."
+        ]
+      },
+      {
+        "heading": "Remove avoidable burden without removing safeguards",
+        "body": [
+          "Classify root causes as discovery, comprehension, information, action, transfer, wait, or verification effort. Then identify the earliest event that could have prevented later burden. A clearer article may prevent a wrong channel; one outcome-based intake question may prevent three transfers; a durable evidence brief may prevent repetition; an owned checkpoint may prevent status chasing; scoped verification may prevent reopening. Prefer correcting that earliest control over adding another apology after the journey becomes difficult.",
+          "Challenge every repeated request, but preserve legitimate revalidation. A new administrator request cannot inherit another person's identity result, and a changed refund amount may require fresh approval. Explain that a material condition changed and request only the missing evidence. Conversely, a client specialist should not demand the customer's whole story when the provider already supplied authorized context, timestamps, and artifacts. Trust boundaries should define which fields can travel and which protected checks must remain separate.",
+          "Use a balanced review panel: contacts per outcome, transfers, repeated asks, channel changes, missed checkpoints, active days, customer minutes where estimable, abandonment, repeat contact, and verified resolution. Segment by goal and necessary protection level. Pair measurements with ticket examples and customer comments so fewer contacts are not achieved by making channels harder to find or closing silent customers sooner. Pilot one journey change and ensure quality, privacy, accessibility, and resolution evidence do not worsen."
+        ]
+      }
+    ],
+    "example": {
+      "heading": "Worked example: reducing effort in an invoice-recipient change",
+      "body": [
+        "A customer wants future invoice notifications sent to a new finance mailbox. They begin in chat, where they provide the account display name and goal. Chat routes them to email without a continuity reference. Email asks for the account name again, sends an article for downloading past invoices, and closes after no reply. The customer opens a portal ticket, repeats the story, learns that only an administrator can change notification recipients, and contacts an administrator. After the setting changes, no one checks whether the new mailbox receives the next notice.",
+        "The journey contains three contacts, two repeated explanations, one wrong article, one unexplained channel change, an ownership gap, and no resolution verification. Administrator authority is a necessary boundary; asking the customer to rediscover that requirement after several contacts is not. The review identifies the earliest preventable event: chat intake matched the word invoice instead of the outcome change future recipient and did not test the requester-role prerequisite.",
+        "The revised path asks whether the customer wants a past invoice, a correction, or future notification routing. For routing, it explains the administrator requirement, preserves the account reference and goal through an accepted handoff, and provides an accessible administrator instruction. The provider keeps a communication checkpoint while the customer obtains administrator action. Verification confirms the configured destination safely and, at the next approved event, confirms delivery status without exposing mailbox contents. The team compares repeat asks and verified outcomes, not merely whether chat contacts became shorter."
+      ]
+    },
+    "checklist": [
+      "Select journeys by stable customer goal and link approved records across channels.",
+      "Build a timeline of customer asks, actions, waits, transfers, promises, and outcomes.",
+      "Mark repeated information and whether a material change justified revalidation.",
+      "Separate safety, consent, identity, and authority effort from process defects.",
+      "Review accessibility, language, time-zone, and protected-channel barriers.",
+      "Find the earliest discovery, intake, handoff, ownership, or verification defect.",
+      "Balance effort measures with privacy, quality, abandonment, and verified resolution.",
+      "Pilot remedies by request type and inspect examples for displaced burden."
+    ],
+    "cautions": [
+      "Do not reduce measured effort by hiding support channels, suppressing follow-up, combining distinct requests, or closing tickets before the customer goal is verified.",
+      "Do not remove identity, consent, security, or authorization checks merely because they add steps. Improve explanation, accessibility, continuity, and evidence reuse within the approved boundary."
+    ]
+  }
+}

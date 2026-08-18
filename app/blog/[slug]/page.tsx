@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Header, Footer, JsonLd } from "../../components";
 import { blogPosts, site } from "../../data";
 import { publisherArticles, type PublisherArticle } from "../../publisherArticles";
+import { AUG17_BLOG_PUBLICATION_DATE, aug17BlogArticles, isAug17BlogSlug, type Aug17BlogArticle } from "../../aug17BlogArticles";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -27,6 +28,101 @@ type StrictSlug = keyof typeof publisherArticles;
 
 function isStrictSlug(slug: string): slug is StrictSlug {
   return slug in publisherArticles;
+}
+
+function Aug17Article({ article, slug, title, excerpt }: { article: Aug17BlogArticle; slug: string; title: string; excerpt: string }) {
+  const url = `${baseUrl}/blog/${slug}`;
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: title,
+        description: excerpt,
+        datePublished: AUG17_BLOG_PUBLICATION_DATE,
+        dateModified: AUG17_BLOG_PUBLICATION_DATE,
+        url,
+        mainEntityOfPage: url,
+        author: { "@type": "Organization", name: site.brand, url: baseUrl },
+        publisher: { "@type": "Organization", name: site.brand, url: baseUrl },
+        articleSection: article.sections.map((section) => section.heading),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
+          { "@type": "ListItem", position: 3, name: title, item: url },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <>
+      <Header hidePricing />
+      <main className="section">
+        <JsonLd data={schema} />
+        <article className="container guide-article" data-editorial-batch="2026-08-17-blog">
+          <p className="eyebrow">Philippines staffing blog · <time dateTime={AUG17_BLOG_PUBLICATION_DATE}>{formatPublicDate(AUG17_BLOG_PUBLICATION_DATE)}</time></p>
+          <h1>{title}</h1>
+          <p className="lead">{excerpt}</p>
+
+          <section className="article-module answer-module" aria-labelledby="direct-answer-heading">
+            <p className="module-kicker">Direct answer</p>
+            <h2 id="direct-answer-heading">The operating answer</h2>
+            {article.directAnswer.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+          </section>
+
+          <section className="article-module field-definition-module" aria-labelledby="field-definitions-heading">
+            <p className="module-kicker">Field definitions</p>
+            <h2 id="field-definitions-heading">Terms to define in the workflow</h2>
+            <dl className="article-field-list">
+              {article.fields.map(([term, definition], index) => <div key={`${term}-${index}`}><dt>{term}</dt><dd>{definition}</dd></div>)}
+            </dl>
+          </section>
+
+          <section className="article-module table-module" aria-labelledby="decision-table-heading">
+            <p className="module-kicker">Decision table</p>
+            <h2 id="decision-table-heading">{article.table.heading}</h2>
+            <div className="table-scroll" tabIndex={0} aria-label={`Horizontally scrollable ${article.table.heading}`}>
+              <table>
+                <thead><tr>{article.table.columns.map((column, index) => <th scope="col" key={`${column}-${index}`}>{column}</th>)}</tr></thead>
+                <tbody>{article.table.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, cellIndex) => cellIndex === 0 ? <th scope="row" key={cellIndex}>{cell}</th> : <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody>
+              </table>
+            </div>
+            <p className="scroll-cue">Swipe or scroll sideways to read every column.</p>
+          </section>
+
+          {article.sections.map((section, sectionIndex) => (
+            <section className="article-section" key={`${section.heading}-${sectionIndex}`}>
+              <h2>{section.heading}</h2>
+              {section.body.map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}
+            </section>
+          ))}
+
+          <section className="article-module worked-example-module" aria-labelledby="worked-example-heading">
+            <p className="module-kicker">Worked example</p>
+            <h2 id="worked-example-heading">{article.example.heading}</h2>
+            {article.example.body.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+          </section>
+
+          <section className="article-module checklist-module" aria-labelledby="checklist-heading">
+            <p className="module-kicker">Implementation checklist</p>
+            <h2 id="checklist-heading">Review before the workflow goes live</h2>
+            <ul>{article.checklist.map((item, index) => <li key={index}>{item}</li>)}</ul>
+          </section>
+
+          <section className="article-module caution-module" aria-labelledby="cautions-heading">
+            <p className="module-kicker">Cautions</p>
+            <h2 id="cautions-heading">Boundaries to keep visible</h2>
+            {article.cautions.map((caution, index) => <p key={index}>{caution}</p>)}
+          </section>
+        </article>
+      </main>
+      <Footer hidePricing />
+    </>
+  );
 }
 
 function WorkforceChart({ article }: { article: PublisherArticle }) {
@@ -229,11 +325,12 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) notFound();
+  if (isAug17BlogSlug(slug)) return <Aug17Article article={aug17BlogArticles[slug]} slug={slug} title={post.title} excerpt={post.excerpt} />;
   if (isStrictSlug(slug)) return <StrictArticle article={publisherArticles[slug]} slug={slug} published={'published' in post && typeof post.published === 'string' ? post.published : '2026-08-10'} />;
 
   const url = `${baseUrl}/blog/${post.slug}`;
   const published: string | undefined = 'published' in post && typeof post.published === 'string' ? post.published : undefined;
-  const displayDate = published === '2026-08-13' ? 'August 13, 2026' : published === '2026-08-12' ? 'August 12, 2026' : published === '2026-08-11' ? 'August 11, 2026' : published === '2026-08-10' ? 'August 10, 2026' : published;
+
   const defaultBody = [
     'Start with a defined request, the approved answer, and the owner who handles exceptions. A support specialist should know what can be completed and where the work must stop.',
     'Use the smallest set of permissions and facts needed for the request. Keep identity, money, security, policy, and ownership decisions with the named owner.',

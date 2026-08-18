@@ -3,6 +3,7 @@ import batchB1 from './editorial/aug17-blog-articles-b1.json';
 import batchB2 from './editorial/aug17-blog-articles-b2.json';
 
 export const AUG17_BLOG_PUBLICATION_DATE = '2026-08-17' as const;
+export const AUG17_BLOG_MODIFIED_DATE = '2026-08-18' as const;
 
 export type Aug17BlogArticle = {
   directAnswer: string[];

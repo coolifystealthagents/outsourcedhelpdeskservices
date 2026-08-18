@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Header, Footer, JsonLd } from "../../components";
 import { blogPosts, site } from "../../data";
 import { publisherArticles, type PublisherArticle } from "../../publisherArticles";
-import { AUG17_BLOG_PUBLICATION_DATE, aug17BlogArticles, isAug17BlogSlug, type Aug17BlogArticle } from "../../aug17BlogArticles";
+import { AUG17_BLOG_MODIFIED_DATE, AUG17_BLOG_PUBLICATION_DATE, aug17BlogArticles, isAug17BlogSlug, type Aug17BlogArticle } from "../../aug17BlogArticles";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -40,7 +40,7 @@ function Aug17Article({ article, slug, title, excerpt }: { article: Aug17BlogArt
         headline: title,
         description: excerpt,
         datePublished: AUG17_BLOG_PUBLICATION_DATE,
-        dateModified: AUG17_BLOG_PUBLICATION_DATE,
+        dateModified: AUG17_BLOG_MODIFIED_DATE,
         url,
         mainEntityOfPage: url,
         author: { "@type": "Organization", name: site.brand, url: baseUrl },

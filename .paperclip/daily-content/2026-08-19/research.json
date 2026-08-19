@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "contract": "fleet-authoring-contract-v3",
+  "targetDate": "2026-08-19",
+  "family": "research",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "branch": "main",
+  "entries": [
+    {"route":"/research/helpdesk-article-reading-time-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-ticket-next-action-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-knowledge-article-version-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-escalation-return-loop-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-customer-update-checkpoint-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-help-center-query-language-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-helpdesk-queue-interruption-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-ticket-evidence-provenance-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-outsource-helpdesk-role-boundary-research","sourcePaths":["app/data.ts"]},
+    {"route":"/research/helpdesk-knowledge-article-retire-replace-research","sourcePaths":["app/data.ts"]}
+  ]
+}

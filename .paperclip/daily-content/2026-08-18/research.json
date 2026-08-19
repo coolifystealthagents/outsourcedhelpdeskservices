@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "contract": "august-18-research-release-repair",
+  "contract": "august-18-research-source-repair-2",
   "campaignDate": "2026-08-18",
   "family": "research",
   "repository": "coolifystealthagents/outsourcedhelpdeskservices",
   "branch": "main",
   "entries": [
-    {"route":"/research/helpdesk-article-demand-evidence-gap-research","sourcePaths":["app/editorial/research-demand-evidence-gap.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-claim-traceability-research","sourcePaths":["app/editorial/research-claim-traceability.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-methodology-scope-research","sourcePaths":["app/editorial/research-methodology-scope.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-citation-freshness-research","sourcePaths":["app/editorial/research-citation-freshness.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-contradiction-review-research","sourcePaths":["app/editorial/research-contradiction-review.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-audience-fit-research","sourcePaths":["app/editorial/research-audience-fit.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-translation-risk-research","sourcePaths":["app/editorial/research-translation-risk.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-knowledge-transfer-research","sourcePaths":["app/editorial/research-knowledge-transfer.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-public-internal-boundary-research","sourcePaths":["app/editorial/research-public-internal-boundary.json","app/data.ts"]},
-    {"route":"/research/helpdesk-article-maintenance-burden-research","sourcePaths":["app/editorial/research-maintenance-burden.json","app/data.ts"]}
+    {"route":"/research/helpdesk-article-scope-drift-research","sourcePaths":["app/editorial/aug18-scope-drift.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/helpdesk-article-owner-availability-research","sourcePaths":["app/editorial/aug18-owner-availability.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/helpdesk-queue-evidence-research","sourcePaths":["app/editorial/aug18-queue-evidence.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/helpdesk-article-conflict-boundary-research","sourcePaths":["app/editorial/aug18-article-conflict.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/helpdesk-handoff-acceptance-evidence-research","sourcePaths":["app/editorial/aug18-handoff-acceptance.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/update-promise-evidence-research","sourcePaths":["app/editorial/aug18-update-promises.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/helpdesk-search-intent-boundary-research","sourcePaths":["app/editorial/aug18-search-intent.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/helpdesk-privacy-redaction-evidence-research","sourcePaths":["app/editorial/aug18-privacy-redaction.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/helpdesk-exception-routing-evidence-research","sourcePaths":["app/editorial/aug18-exception-routing.json","app/aug18ResearchRepair.ts"]},
+    {"route":"/research/helpdesk-review-sampling-bias-research","sourcePaths":["app/editorial/aug18-review-sampling.json","app/aug18ResearchRepair.ts"]}
   ]
 }

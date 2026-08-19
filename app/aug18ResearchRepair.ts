@@ -1,0 +1,30 @@
+import scopeDrift from './editorial/aug18-scope-drift.json';
+import ownerAvailability from './editorial/aug18-owner-availability.json';
+import queueEvidence from './editorial/aug18-queue-evidence.json';
+import articleConflict from './editorial/aug18-article-conflict.json';
+import handoffAcceptance from './editorial/aug18-handoff-acceptance.json';
+import updatePromises from './editorial/aug18-update-promises.json';
+import searchIntent from './editorial/aug18-search-intent.json';
+import privacyRedaction from './editorial/aug18-privacy-redaction.json';
+import exceptionRouting from './editorial/aug18-exception-routing.json';
+import reviewSampling from './editorial/aug18-review-sampling.json';
+
+type RepairSeed = { slug: string; title: string; excerpt: string; published: string; sourceDate: string; question: string; focus: string; finding: string; limitation: string; sources: { name: string; url: string; note: string }[]; related: string[] };
+type RepairPost = { slug: string; title: string; excerpt: string; published: string; sourceDate: string; keyStats: { value: string; label: string }[]; body: string[]; sources: RepairSeed['sources']; related: string[] };
+
+const bodyFor = (s: RepairSeed): string[] => [
+  `Research question: ${s.question} The question is specific to outsourced helpdesk work because a frontline specialist must keep a request moving while respecting the customer's systems, approval limits, and accountable owner. It does not ask whether a popular practice sounds sensible; it asks what observable evidence can support a bounded decision about an article, ticket, or handoff.`,
+  `Methodology and evidence scope: this is a focused desk review of the three cited primary or institutional sources, read for their treatment of ${s.focus}. The study translates those principles into a helpdesk evidence model and tests the model against routine, incomplete, and consequential request types. No company ticket counts, customer records, performance claims, or private operational facts are used. The evidence therefore supports a decision framework, not a benchmark for every support queue.`,
+  `The first analytical distinction is between a fact and an interpretation. A ticket may show what the requester reported, when a message arrived, which documented step was attempted, or which owner accepted a transfer. It does not automatically prove cause, authorization, customer understanding, or a completed outcome. For ${s.focus}, the record should preserve the source of each material fact and label the analyst's interpretation separately.`,
+  `The cited guidance converges on a narrow operational principle: ${s.finding} In an outsourced helpdesk, that principle keeps tier-one work useful without turning a specialist into the unappointed owner of security, money, policy, identity, or production decisions. The article can explain the supported path, gather permitted evidence, and state the stopping point; an accountable owner decides exceptions and consequential changes.`,
+  `A useful comparison separates at least three cohorts. Routine requests can test whether the documented answer is findable and applicable. Boundary cases can test whether the article names a prerequisite, permission condition, or alternate route. Returned or repeated cases can test whether the record left the next owner with enough evidence. Combining those cohorts would conceal the exact condition that makes the guidance safe or unsafe to reuse.`,
+  `For daily article creation, the practical unit is not a page view or a keyword. It is a decision that a support record must enable: answer, ask for a permitted fact, pause, redirect, escalate, or confirm an approved result. The article should state the relevant audience, action, evidence threshold, owner, and checkpoint in language a specialist can apply to the request in front of them.`,
+  `The sources also caution against treating a control as proof of an outcome. A named owner does not prove that the owner accepted work. A citation does not prove that local policy permits an action. A timestamp does not prove that a customer understood a promise. Those are separate observations and should be measured separately when the helpdesk reviews article use or ticket quality.`,
+  `Applied to OutsourcedHelpdeskServices.com, the safest improvement is to connect the article to the existing operating boundary: level-one support can preserve context, follow approved routines, and prepare a clear escalation. It should not invent a missing fact, broaden access, promise an unconfirmed result, or conceal uncertainty in polished prose. The receiving owner should be able to see what is known, what is inferred, and what decision remains.`,
+  `Limitations: the study uses public guidance rather than a representative sample of live helpdesk records. The sources differ in purpose, terminology, publication history, and level of detail. A desk review cannot estimate causal impact, predict individual behavior, establish legal compliance, or show that one article structure improves customer outcomes. Local tools, policies, languages, channels, and owner availability may change the correct implementation.`,
+  `Conclusion: the evidence supports a bounded finding for ${s.focus}: ${s.finding} The conclusion is to make that condition inspectable in the article and ticket record, test it against routine and boundary cases, and route what remains outside the documented lane to a named owner. That is stronger than a generic instruction and more honest than claiming a universal performance result.`,
+];
+
+const seeds: RepairSeed[] = [scopeDrift, ownerAvailability, queueEvidence, articleConflict, handoffAcceptance, updatePromises, searchIntent, privacyRedaction, exceptionRouting, reviewSampling] as RepairSeed[];
+
+export const aug18ResearchRepair: RepairPost[] = seeds.map((s) => ({ ...s, keyStats: [{ value: '3', label: 'evidence sources' }, { value: '1', label: 'decision boundary' }], body: bodyFor(s), sources: s.sources, related: s.related }));

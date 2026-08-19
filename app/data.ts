@@ -1,4 +1,5 @@
 import { aug18BlogRepair } from './aug18BlogRepair';
+import { aug18ResearchRepair } from './aug18ResearchRepair';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -802,4 +803,5 @@ export const researchPosts: ResearchPost[] = [
   ...selectedResearchBatch,
   ...datedNewResearchBatch,
   ...aug19ResearchBatch,
+  ...aug18ResearchRepair,
 ].sort((a, b) => b.published.localeCompare(a.published));

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "contract": "august-18-research-release-repair",
+  "campaignDate": "2026-08-18",
+  "family": "research",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "branch": "main",
+  "entries": [
+    {"route":"/research/helpdesk-article-demand-evidence-gap-research","sourcePaths":["app/editorial/research-demand-evidence-gap.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-claim-traceability-research","sourcePaths":["app/editorial/research-claim-traceability.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-methodology-scope-research","sourcePaths":["app/editorial/research-methodology-scope.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-citation-freshness-research","sourcePaths":["app/editorial/research-citation-freshness.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-contradiction-review-research","sourcePaths":["app/editorial/research-contradiction-review.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-audience-fit-research","sourcePaths":["app/editorial/research-audience-fit.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-translation-risk-research","sourcePaths":["app/editorial/research-translation-risk.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-knowledge-transfer-research","sourcePaths":["app/editorial/research-knowledge-transfer.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-public-internal-boundary-research","sourcePaths":["app/editorial/research-public-internal-boundary.json","app/data.ts"]},
+    {"route":"/research/helpdesk-article-maintenance-burden-research","sourcePaths":["app/editorial/research-maintenance-burden.json","app/data.ts"]}
+  ]
+}

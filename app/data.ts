@@ -1,4 +1,4 @@
-import { dailyBlogAug19 } from './dailyBlogAug19';
+import { aug18BlogRepair } from './aug18BlogRepair';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -263,7 +263,7 @@ const blogPostsSource = [
 ] as const;
 
 export const blogPosts = [
-  ...dailyBlogAug19,
+  ...aug18BlogRepair,
   ...blogPostsSource.filter((post) => 'published' in post),
   ...blogPostsSource.filter((post) => !('published' in post)),
 ];

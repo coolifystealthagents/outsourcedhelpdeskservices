@@ -1,28 +1,53 @@
 {
-  "campaignDate": "2026-08-19",
-  "family": "blog",
-  "entries": [
-    {"route":"/blog/help-desk-article-refresh-trigger-map","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-shift-start-queue-scan","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-ticket-next-action-field","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-low-volume-quality-check","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-knowledge-article-owner-change","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-request-type-retirement","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-queue-owner-daily-decisions","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-customer-recontact-reason-coding","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-escalation-return-reason","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-article-example-data-minimization","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-ticket-state-transition-rules","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-support-handoff-time-zone-note","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-urgent-request-verification","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-ticket-attachment-index","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-knowledge-article-expiry-review","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-queue-transfer-acceptance","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-customer-question-rewrite","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-article-related-link-review","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-ticket-owner-backup-test","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-support-macro-retirement","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-ticket-scope-change-note","sourcePaths":["app/dailyBlogAug19.ts"]},
-    {"route":"/blog/help-desk-customer-update-checkpoint","sourcePaths":["app/dailyBlogAug19.ts"]}
+  "date": "2026-08-19",
+  "articles": [
+    {
+      "route": "/blog/helpdesk-operations-intake-source-register",
+      "source": "content/blog/helpdesk-operations-intake-source-register.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-approval-evidence-matrix",
+      "source": "content/blog/helpdesk-operations-approval-evidence-matrix.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-exception-queue-triage",
+      "source": "content/blog/helpdesk-operations-exception-queue-triage.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-quality-review-cadence",
+      "source": "content/blog/helpdesk-operations-quality-review-cadence.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-handoff-acceptance-log",
+      "source": "content/blog/helpdesk-operations-handoff-acceptance-log.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-access-recertification-review",
+      "source": "content/blog/helpdesk-operations-access-recertification-review.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-weekly-decision-brief",
+      "source": "content/blog/helpdesk-operations-weekly-decision-brief.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-source-of-truth-map",
+      "source": "content/blog/helpdesk-operations-source-of-truth-map.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-change-control-record",
+      "source": "content/blog/helpdesk-operations-change-control-record.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-work-queue-ownership",
+      "source": "content/blog/helpdesk-operations-work-queue-ownership.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-escalation-path-design",
+      "source": "content/blog/helpdesk-operations-escalation-path-design.md"
+    },
+    {
+      "route": "/blog/helpdesk-operations-launch-readiness-review",
+      "source": "content/blog/helpdesk-operations-launch-readiness-review.md"
+    }
   ]
 }

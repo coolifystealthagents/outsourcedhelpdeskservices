@@ -1,0 +1,104 @@
+{
+  "helpdesk-operations-intake-source-register": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Intake Source Register",
+    "description": "Helpdesk Operations: Intake Source Register: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-intake-source-register.webp"
+  },
+  "helpdesk-operations-approval-evidence-matrix": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Approval Evidence Matrix",
+    "description": "Helpdesk Operations: Approval Evidence Matrix: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-approval-evidence-matrix.webp"
+  },
+  "helpdesk-operations-exception-queue-triage": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Exception Queue Triage",
+    "description": "Helpdesk Operations: Exception Queue Triage: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-exception-queue-triage.webp"
+  },
+  "helpdesk-operations-quality-review-cadence": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Quality Review Cadence",
+    "description": "Helpdesk Operations: Quality Review Cadence: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-quality-review-cadence.webp"
+  },
+  "helpdesk-operations-handoff-acceptance-log": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Handoff Acceptance Log",
+    "description": "Helpdesk Operations: Handoff Acceptance Log: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-handoff-acceptance-log.webp"
+  },
+  "helpdesk-operations-access-recertification-review": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Access Recertification Review",
+    "description": "Helpdesk Operations: Access Recertification Review: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-access-recertification-review.webp"
+  },
+  "helpdesk-operations-weekly-decision-brief": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Weekly Decision Brief",
+    "description": "Helpdesk Operations: Weekly Decision Brief: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-weekly-decision-brief.webp"
+  },
+  "helpdesk-operations-source-of-truth-map": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Source of Truth Map",
+    "description": "Helpdesk Operations: Source of Truth Map: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-source-of-truth-map.webp"
+  },
+  "helpdesk-operations-change-control-record": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Change Control Record",
+    "description": "Helpdesk Operations: Change Control Record: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-change-control-record.webp"
+  },
+  "helpdesk-operations-work-queue-ownership": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Work Queue Ownership",
+    "description": "Helpdesk Operations: Work Queue Ownership: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-work-queue-ownership.webp"
+  },
+  "helpdesk-operations-escalation-path-design": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Escalation Path Design",
+    "description": "Helpdesk Operations: Escalation Path Design: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-escalation-path-design.webp"
+  },
+  "helpdesk-operations-launch-readiness-review": {
+    "family": "blog",
+    "title": "Helpdesk Operations: Launch Readiness Review",
+    "description": "Helpdesk Operations: Launch Readiness Review: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-launch-readiness-review.webp"
+  },
+  "helpdesk-operations-source-quality-evidence-research": {
+    "family": "research",
+    "title": "Research Brief: Helpdesk Operations Source Quality Evidence",
+    "description": "Research Brief: Helpdesk Operations Source Quality Evidence: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-source-quality-evidence-research.webp"
+  },
+  "helpdesk-operations-exception-aging-patterns-research": {
+    "family": "research",
+    "title": "Research Brief: Helpdesk Operations Exception Aging Patterns",
+    "description": "Research Brief: Helpdesk Operations Exception Aging Patterns: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-exception-aging-patterns-research.webp"
+  },
+  "helpdesk-operations-review-consistency-research": {
+    "family": "research",
+    "title": "Research Brief: Helpdesk Operations Review Consistency",
+    "description": "Research Brief: Helpdesk Operations Review Consistency: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-review-consistency-research.webp"
+  },
+  "helpdesk-operations-access-governance-research": {
+    "family": "research",
+    "title": "Research Brief: Helpdesk Operations Access Governance",
+    "description": "Research Brief: Helpdesk Operations Access Governance: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-access-governance-research.webp"
+  },
+  "helpdesk-operations-handoff-reliability-research": {
+    "family": "research",
+    "title": "Research Brief: Helpdesk Operations Handoff Reliability",
+    "description": "Research Brief: Helpdesk Operations Handoff Reliability: evidence-led guidance for Outsourced Helpdesk Services.",
+    "hero": "/aug19-heroes/helpdesk-operations-handoff-reliability-research.webp"
+  }
+}

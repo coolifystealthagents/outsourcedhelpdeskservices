@@ -1,7 +1,11 @@
 import { aug18BlogRepair } from './aug18BlogRepair';
 import { aug18ResearchRepair } from './aug18ResearchRepair';
 import { aug20BlogArticles } from './aug20BlogArticles';
-import { aug20ResearchArticles } from './aug20ResearchArticles';
+import { researchQueueSignalStudy } from './researchQueueSignalStudy';
+import { researchScopeFitStudy } from './researchScopeFitStudy';
+import { researchHandoffDecisionStudy } from './researchHandoffDecisionStudy';
+import { researchSearchRouteStudy } from './researchSearchRouteStudy';
+import { researchMaintenanceDependencyStudy } from './researchMaintenanceDependencyStudy';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -807,5 +811,9 @@ export const researchPosts: ResearchPost[] = [
   ...datedNewResearchBatch,
   ...aug19ResearchBatch,
   ...aug18ResearchRepair,
-  ...aug20ResearchArticles,
+  researchQueueSignalStudy,
+  researchScopeFitStudy,
+  researchHandoffDecisionStudy,
+  researchSearchRouteStudy,
+  researchMaintenanceDependencyStudy,
 ].sort((a, b) => b.published.localeCompare(a.published));

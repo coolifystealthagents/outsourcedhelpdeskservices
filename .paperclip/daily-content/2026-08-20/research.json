@@ -1,7 +1,7 @@
 [
-  {"route":"/research/helpdesk-queue-evidence-research","sourcePaths":["app/aug20ResearchArticles.ts"]},
-  {"route":"/research/helpdesk-article-scope-research","sourcePaths":["app/aug20ResearchArticles.ts"]},
-  {"route":"/research/helpdesk-handoff-acceptance-research","sourcePaths":["app/aug20ResearchArticles.ts"]},
-  {"route":"/research/helpdesk-search-intent-research","sourcePaths":["app/aug20ResearchArticles.ts"]},
-  {"route":"/research/helpdesk-article-maintenance-research","sourcePaths":["app/aug20ResearchArticles.ts"]}
+  {"route":"/research/outsourced-helpdesk-queue-signal-study","sourcePaths":["app/researchQueueSignalStudy.ts"]},
+  {"route":"/research/outsourced-helpdesk-scope-fit-study","sourcePaths":["app/researchScopeFitStudy.ts"]},
+  {"route":"/research/outsourced-helpdesk-handoff-decision-study","sourcePaths":["app/researchHandoffDecisionStudy.ts"]},
+  {"route":"/research/outsourced-helpdesk-search-route-study","sourcePaths":["app/researchSearchRouteStudy.ts"]},
+  {"route":"/research/outsourced-helpdesk-article-dependency-study","sourcePaths":["app/researchMaintenanceDependencyStudy.ts"]}
 ]

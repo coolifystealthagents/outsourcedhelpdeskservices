@@ -1,0 +1,18 @@
+{
+  "campaignDate": "2026-08-20",
+  "family": "blog",
+  "entries": [
+    {"route":"/blog/help-desk-article-search-intent-mapping","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-ticket-impact-language","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-queue-backup-ownership","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-approval-evidence-packet","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-customer-update-checkpoint","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-ticket-attachment-minimization","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-knowledge-article-stop-condition","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-queue-reason-code-design","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-article-review-sample","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-handoff-return-reason","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-escalation-acceptance-event","sourcePaths":["app/aug20BlogArticles.ts"]},
+    {"route":"/blog/help-desk-daily-article-queue","sourcePaths":["app/aug20BlogArticles.ts"]}
+  ]
+}

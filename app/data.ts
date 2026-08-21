@@ -1,5 +1,6 @@
 import { aug18BlogRepair } from './aug18BlogRepair';
 import { aug18ResearchRepair } from './aug18ResearchRepair';
+import { aug20BlogArticles } from './aug20BlogArticles';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -264,6 +265,7 @@ const blogPostsSource = [
 ] as const;
 
 export const blogPosts = [
+  ...aug20BlogArticles,
   ...aug18BlogRepair,
   ...blogPostsSource.filter((post) => 'published' in post),
   ...blogPostsSource.filter((post) => !('published' in post)),

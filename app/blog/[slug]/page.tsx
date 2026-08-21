@@ -348,7 +348,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           { "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: "How should this help desk workflow start?", acceptedAnswer: { "@type": "Answer", text: "Start with a narrow set of recurring requests, approved answers, named ownership, and a review sample." } }, { "@type": "Question", name: "What should stay with an owner?", acceptedAnswer: { "@type": "Answer", text: "Keep identity, money, security, policy, and unusual technical decisions with named owners until the controls are proven." } }] }
         ] }} />
         <article className="container guide-article">
-          <p className="eyebrow">Philippines staffing blog · {published ? <time dateTime={published}>{formatPublicDate(published)}</time> : null}</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>
+          <p className="eyebrow">Philippines staffing blog · {published ? <time dateTime={published}>{formatPublicDate(published)}</time> : null}</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>{'heroImage' in post ? <img src={post.heroImage} alt="Help desk operations illustration" width="1200" height="675" loading="eager" /> : null}
           <div className="card"><p className="eyebrow">Direct answer</p><h2>{body[0]}</h2>{body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<h2>Related planning pages</h2><ul><li><a href="/services/level-one-ticket-triage">Level one ticket triage</a></li><li><a href="/services/ticket-escalation-coordination">Ticket escalation coordination</a></li><li><a href="/services/helpdesk-quality-review">Help desk quality review</a></li></ul></div>
         </article>
       </main>

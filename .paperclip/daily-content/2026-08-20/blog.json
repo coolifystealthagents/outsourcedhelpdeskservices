@@ -2,17 +2,17 @@
   "campaignDate": "2026-08-20",
   "family": "blog",
   "entries": [
-    {"route":"/blog/help-desk-article-search-intent-mapping","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-ticket-impact-language","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-queue-backup-ownership","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-approval-evidence-packet","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-customer-update-checkpoint","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-ticket-attachment-minimization","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-knowledge-article-stop-condition","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-queue-reason-code-design","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-article-review-sample","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-handoff-return-reason","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-escalation-acceptance-event","sourcePaths":["app/aug20BlogArticles.ts"]},
-    {"route":"/blog/help-desk-daily-article-queue","sourcePaths":["app/aug20BlogArticles.ts"]}
+    {"route":"/blog/help-desk-article-search-intent-mapping","sourcePaths":["app/editorial/aug20-article-search-intent-mapping.ts"]},
+    {"route":"/blog/help-desk-ticket-impact-language","sourcePaths":["app/editorial/aug20-ticket-impact-language.ts"]},
+    {"route":"/blog/help-desk-queue-absence-coverage-map","sourcePaths":["app/editorial/aug20-queue-absence-coverage-map.ts"]},
+    {"route":"/blog/help-desk-approval-evidence-packet","sourcePaths":["app/editorial/aug20-approval-evidence-packet.ts"]},
+    {"route":"/blog/help-desk-customer-update-evidence-check","sourcePaths":["app/editorial/aug20-customer-update-evidence-check.ts"]},
+    {"route":"/blog/help-desk-ticket-attachment-minimization","sourcePaths":["app/editorial/aug20-ticket-attachment-minimization.ts"]},
+    {"route":"/blog/help-desk-knowledge-article-stop-condition","sourcePaths":["app/editorial/aug20-knowledge-article-stop-condition.ts"]},
+    {"route":"/blog/help-desk-queue-reason-code-design","sourcePaths":["app/editorial/aug20-queue-reason-code-design.ts"]},
+    {"route":"/blog/help-desk-article-review-sample","sourcePaths":["app/editorial/aug20-article-review-sample.ts"]},
+    {"route":"/blog/help-desk-handoff-return-reason","sourcePaths":["app/editorial/aug20-handoff-return-reason.ts"]},
+    {"route":"/blog/help-desk-escalation-acceptance-event","sourcePaths":["app/editorial/aug20-escalation-acceptance-event.ts"]},
+    {"route":"/blog/help-desk-daily-article-queue","sourcePaths":["app/editorial/aug20-daily-article-queue.ts"]}
   ]
 }

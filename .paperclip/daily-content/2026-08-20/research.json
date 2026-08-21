@@ -1,0 +1,7 @@
+[
+  {"route":"/research/helpdesk-queue-evidence-research","sourcePaths":["app/aug20ResearchArticles.ts"]},
+  {"route":"/research/helpdesk-article-scope-research","sourcePaths":["app/aug20ResearchArticles.ts"]},
+  {"route":"/research/helpdesk-handoff-acceptance-research","sourcePaths":["app/aug20ResearchArticles.ts"]},
+  {"route":"/research/helpdesk-search-intent-research","sourcePaths":["app/aug20ResearchArticles.ts"]},
+  {"route":"/research/helpdesk-article-maintenance-research","sourcePaths":["app/aug20ResearchArticles.ts"]}
+]

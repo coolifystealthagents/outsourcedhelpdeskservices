@@ -1,0 +1,7 @@
+[
+  {"route":"/research/helpdesk-queue-evidence-research","prompt":"Editorial illustration of a helpdesk analyst comparing ticket evidence cards, distinguishing customer report, observed fact, and decision owner; wide landscape; deep navy, teal, amber; no text or logos."},
+  {"route":"/research/helpdesk-article-scope-research","prompt":"Editorial illustration of a support knowledge article represented as layered boundary panels around a helpdesk ticket, showing audience, permission, and stopping point; wide landscape; no text or logos."},
+  {"route":"/research/helpdesk-handoff-acceptance-research","prompt":"Editorial illustration of a helpdesk handoff moving between two support workstations, with accepted transfer marker, preserved context cards, and customer checkpoint; wide landscape; no text or logos."},
+  {"route":"/research/helpdesk-search-intent-research","prompt":"Editorial illustration of a helpdesk specialist tracing customer search language through possible support routes, with one evidence-backed path highlighted; wide landscape; no text or logos."},
+  {"route":"/research/helpdesk-article-maintenance-research","prompt":"Editorial illustration of a helpdesk knowledge article under careful maintenance, with source links, review owner, change signals, and a small repair replacing a large rewrite; wide landscape; no text or logos."}
+]

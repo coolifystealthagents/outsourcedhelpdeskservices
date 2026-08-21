@@ -1,6 +1,7 @@
 import { aug18BlogRepair } from './aug18BlogRepair';
 import { aug18ResearchRepair } from './aug18ResearchRepair';
 import { aug20BlogArticles } from './aug20BlogArticles';
+import { aug20ResearchArticles } from './aug20ResearchArticles';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -521,7 +522,7 @@ export const helpdeskFitNote = 'The right setup depends on your ticket types, ho
 
 
 type ResearchSource = { name: string; url: string; note: string };
-type ResearchPost = { slug: string; title: string; excerpt: string; published: string; sourceDate?: string; keyStats: Array<{ value: string; label: string }>; body: string[]; sources: ResearchSource[]; related: string[]; serviceHandoff?: { heading: string; body: string[]; href: string; label: string } };
+type ResearchPost = { slug: string; title: string; excerpt: string; published: string; sourceDate?: string; hero?: string; keyStats: Array<{ value: string; label: string }>; body: string[]; sources: ResearchSource[]; related: string[]; serviceHandoff?: { heading: string; body: string[]; href: string; label: string } };
 const researchSources: ResearchSource[] = [
   { name: 'NIST SP 800-53 Rev. 5 security and privacy controls', url: 'https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final', note: 'Access control, audit, training, incident response, and integrity controls.' },
   { name: 'NIST least-privilege glossary entry', url: 'https://csrc.nist.gov/glossary/term/least_privilege', note: 'Minimum access needed for a task.' },
@@ -806,4 +807,5 @@ export const researchPosts: ResearchPost[] = [
   ...datedNewResearchBatch,
   ...aug19ResearchBatch,
   ...aug18ResearchRepair,
+  ...aug20ResearchArticles,
 ].sort((a, b) => b.published.localeCompare(a.published));

@@ -1,6 +1,7 @@
 import { aug18BlogRepair } from './aug18BlogRepair';
 import { aug18ResearchRepair } from './aug18ResearchRepair';
 import { aug20BlogArticles } from './aug20BlogArticles';
+import { aug21BlogArticles } from './aug21BlogArticles';
 import { researchQueueSignalStudy } from './researchQueueSignalStudy';
 import { researchScopeFitStudy } from './researchScopeFitStudy';
 import { researchHandoffDecisionStudy } from './researchHandoffDecisionStudy';
@@ -270,6 +271,7 @@ const blogPostsSource = [
 ] as const;
 
 export const blogPosts = [
+  ...aug21BlogArticles,
   ...aug20BlogArticles,
   ...aug18BlogRepair,
   ...blogPostsSource.filter((post) => 'published' in post),

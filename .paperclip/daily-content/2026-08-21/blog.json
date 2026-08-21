@@ -1,0 +1,19 @@
+{
+  "campaignDate": "2026-08-21",
+  "family": "blog",
+  "sourcePaths": ["app/aug21BlogArticles.ts"],
+  "entries": [
+    {"route":"/blog/help-desk-intake-question-order","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-ticket-context-window","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-recontact-reason-analysis","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-queue-reasonable-clarification","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-queue-reassignment-audit","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-article-example-boundaries","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-waiting-checkpoint-design","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-approved-answer-source-check","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-ticket-owner-naming-rule","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-ticket-state-transition-evidence","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-customer-update-checkpoint-language","sourcePaths":["app/aug21BlogArticles.ts"]},
+    {"route":"/blog/help-desk-article-retirement-trigger","sourcePaths":["app/aug21BlogArticles.ts"]}
+  ]
+}

@@ -7,6 +7,7 @@ import { researchScopeFitStudy } from './researchScopeFitStudy';
 import { researchHandoffDecisionStudy } from './researchHandoffDecisionStudy';
 import { researchSearchRouteStudy } from './researchSearchRouteStudy';
 import { researchMaintenanceDependencyStudy } from './researchMaintenanceDependencyStudy';
+import { aug21ResearchBatch } from './aug21ResearchBatch';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -783,6 +784,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...aug21ResearchBatch,
   ...aug17ValidatedResearchBatch,
   ...aug14ResearchBatch,
   ...aug13ResearchBatch,

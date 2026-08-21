@@ -1,0 +1,7 @@
+[
+  {"route":"/research/outsourced-helpdesk-article-review-trigger-study","sourcePaths":["app/aug21ResearchBatch.ts"]},
+  {"route":"/research/outsourced-helpdesk-search-failure-boundary-study","sourcePaths":["app/aug21ResearchBatch.ts"]},
+  {"route":"/research/outsourced-helpdesk-queue-age-article-decision-study","sourcePaths":["app/aug21ResearchBatch.ts"]},
+  {"route":"/research/outsourced-helpdesk-attachment-evidence-sufficiency-study","sourcePaths":["app/aug21ResearchBatch.ts"]},
+  {"route":"/research/outsourced-helpdesk-owner-absence-article-scope-study","sourcePaths":["app/aug21ResearchBatch.ts"]}
+]

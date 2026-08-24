@@ -1,0 +1,19 @@
+{
+  "campaignDate": "2026-08-23",
+  "family": "blog",
+  "imageStatus": "fallback-text-complete",
+  "entries": [
+    { "route": "/blog/help-desk-reopen-reason-taxonomy", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-customer-goal-normalization", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-escalation-question-shaping", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-queue-state-transition-evidence", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-search-no-result-triage", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-customer-update-state-language", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-article-source-freshness-check", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-ticket-evidence-minimum", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-handoff-acceptance-timebox", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-article-example-boundary-review", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-repeat-contact-root-cause", "sourcePaths": ["app/aug23BlogArticles.ts"] },
+    { "route": "/blog/help-desk-daily-article-stop-review", "sourcePaths": ["app/aug23BlogArticles.ts"] }
+  ]
+}

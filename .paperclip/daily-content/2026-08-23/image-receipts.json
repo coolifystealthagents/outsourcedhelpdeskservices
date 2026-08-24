@@ -1,0 +1,6 @@
+{
+  "status": "blocked-by-provider-unavailability",
+  "provider": "Gemini",
+  "reason": "Gemini image generation is not available in the repository execution environment.",
+  "fallback": "Text and route work completed; no stock or uncertain image substitutions were introduced; existing route imagery was preserved."
+}

@@ -3,6 +3,7 @@ import { Header, Footer, JsonLd } from "../../components";
 import { blogPosts, site } from "../../data";
 import { publisherArticles, type PublisherArticle } from "../../publisherArticles";
 import { AUG17_BLOG_MODIFIED_DATE, AUG17_BLOG_PUBLICATION_DATE, aug17BlogArticles, isAug17BlogSlug, type Aug17BlogArticle } from "../../aug17BlogArticles";
+import { isAug23BlogSlug } from "../../aug23BlogArticles";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -326,6 +327,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) notFound();
   if (isAug17BlogSlug(slug)) return <Aug17Article article={aug17BlogArticles[slug]} slug={slug} title={post.title} excerpt={post.excerpt} />;
+  if (isAug23BlogSlug(slug)) return <DefaultArticle article={post} slug={slug} />;
   if (isStrictSlug(slug)) return <StrictArticle article={publisherArticles[slug]} slug={slug} published={'published' in post && typeof post.published === 'string' ? post.published : '2026-08-10'} />;
 
   const url = `${baseUrl}/blog/${post.slug}`;
@@ -355,4 +357,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <Footer hidePricing />
     </>
   );
+}
+
+function DefaultArticle({ article, slug }: { article: typeof blogPosts[number]; slug: string }) {
+  const url = `${baseUrl}/blog/${slug}`;
+  const published = 'published' in article && typeof article.published === 'string' ? article.published : undefined;
+  const body = 'body' in article && Array.isArray(article.body) ? article.body : [];
+  return <><Header hidePricing /><main className="section"><JsonLd data={{ "@context": "https://schema.org", "@type": "BlogPosting", headline: article.title, description: article.excerpt, datePublished: published, dateModified: published, url, mainEntityOfPage: url, author: { "@type": "Organization", name: site.brand, url: baseUrl }, publisher: { "@type": "Organization", name: site.brand, url: baseUrl } }} /><article className="container guide-article" data-editorial-batch="2026-08-23-blog"><p className="eyebrow">Philippines staffing blog · <time dateTime={published}>{published ? formatPublicDate(published) : ''}</time></p><h1>{article.title}</h1><p className="lead">{article.excerpt}</p>{body.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</article></main><Footer hidePricing /></>;
 }

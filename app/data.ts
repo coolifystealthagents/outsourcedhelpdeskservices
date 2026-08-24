@@ -8,6 +8,7 @@ import { researchHandoffDecisionStudy } from './researchHandoffDecisionStudy';
 import { researchSearchRouteStudy } from './researchSearchRouteStudy';
 import { researchMaintenanceDependencyStudy } from './researchMaintenanceDependencyStudy';
 import { aug21ResearchBatch } from './aug21ResearchBatch';
+import { aug23BlogArticles } from './aug23BlogArticles';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -272,6 +273,7 @@ const blogPostsSource = [
 ] as const;
 
 export const blogPosts = [
+  ...aug23BlogArticles,
   ...aug21BlogArticles,
   ...aug20BlogArticles,
   ...aug18BlogRepair,

@@ -178,7 +178,7 @@ assert.ok(route.includes('rel="noreferrer"'), 'external Research sources must re
 assert.ok(route.includes('failed?source.title:<a'), 'failed source URLs must never render as links');
 assert.ok(route.includes('this failed URL does not substantiate a finding'), 'paired historical failures need an explicit evidence disclaimer');
 assert.ok(route.includes('scope="row"') && route.includes('aria-labelledby="research-results-heading"'), 'evidence tables need row headers and an accessible programmatic name');
-assert.ok(route.includes('<img src={`/research-thumbnails/${p.slug}.svg`} width="1200" height="630" alt="" loading="eager"/>'), 'existing Research hero image treatment changed');
+assert.ok(route.includes('p.hero??`/research-thumbnails/${p.slug}.svg`') && route.includes('width="1200" height="630" alt="" loading="eager"'), 'Research hero image treatment changed');
 for (const moduleName of renderedModules) assert.ok(route.includes(`data-research-module="${moduleName}"`), `production route does not render ${moduleName}`);
 
 const indexRoute = read('app/research/page.tsx');

@@ -1,0 +1,7 @@
+[
+  {"route":"/research/outsourced-helpdesk-article-evidence-threshold-study","sourcePaths":["app/aug23ResearchBatch.ts"]},
+  {"route":"/research/outsourced-helpdesk-search-result-safety-study","sourcePaths":["app/aug23ResearchBatch.ts"]},
+  {"route":"/research/outsourced-helpdesk-article-change-impact-study","sourcePaths":["app/aug23ResearchBatch.ts"]},
+  {"route":"/research/outsourced-helpdesk-escalation-evidence-sufficiency-study","sourcePaths":["app/aug23ResearchBatch.ts"]},
+  {"route":"/research/outsourced-helpdesk-article-review-sample-study","sourcePaths":["app/aug23ResearchBatch.ts"]}
+]

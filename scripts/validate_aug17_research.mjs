@@ -170,8 +170,8 @@ for (const [, slug] of expected) {
 const route = read('app/research/[slug]/page.tsx');
 assert.ok(route.includes('isAug17ResearchSlug(slug)') && route.includes('aug17ResearchReports[slug]'), 'structured reports are not reachable from the production Research route');
 assert.ok(route.includes('report?AUG17_RESEARCH_PUBLICATION_DATE'), 'August 17 date is not selected deterministically');
-assert.ok(route.includes('datePublished:publicDate') && route.includes('dateModified:report?AUG17_RESEARCH_MODIFIED_DATE:publicDate'), 'truthful JSON-LD publication and modification dates are not rendered');
-assert.ok(route.includes('<time dateTime={publicDate}>'), 'visible semantic date is not rendered');
+assert.ok(route.includes('datePublished:publicationDate') && route.includes('dateModified:modifiedDate') && route.includes('const publicationDate=report?AUG17_RESEARCH_PUBLICATION_DATE:p.published;') && route.includes('const modifiedDate=report?AUG17_RESEARCH_MODIFIED_DATE:(p.sourceDate??p.published);'), 'truthful JSON-LD publication and modification dates are not rendered');
+assert.ok(route.includes('<time dateTime={publicationDate}>') && route.includes('Updated <time dateTime={modifiedDate}>'), 'visible semantic publication and modification dates are not rendered');
 assert.ok(route.includes('<Header hidePricing/>') && route.includes('<Footer hidePricing/>'), 'Research report Header and Footer must use hidePricing');
 assert.ok(route.includes('{!report&&<CTA/>}'), 'CTA must be excluded from August 17 reports without changing legacy Research rendering');
 assert.ok(route.includes('rel="noreferrer"'), 'external Research sources must render with rel=noreferrer');

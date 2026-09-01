@@ -6,6 +6,8 @@
     "validate:aug17-blog": "node scripts/validate_aug17_blog.mjs",
     "validate:aug17-research": "node scripts/validate_aug17_research.mjs",
     "validate:aug31-release": "node scripts/validate_aug31_release.mjs",
+    "validate:sep01-release": "node scripts/validate_sep01_release.mjs",
+    "validate:sep01-routes": "node scripts/validate_sep01_routes.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",

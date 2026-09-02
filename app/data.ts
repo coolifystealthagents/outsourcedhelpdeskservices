@@ -12,6 +12,7 @@ import { aug23BlogArticles } from './aug23BlogArticles';
 import { aug23ResearchBatch } from './aug23ResearchBatch';
 import { aug31BlogArticles, aug31ResearchArticles } from './aug31Content';
 import { sep01BlogArticles, sep01ResearchArticles } from './sep01Content';
+import { sep02BlogArticles, sep02ResearchArticles } from './sep02Content';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -277,6 +278,7 @@ const blogPostsSource = [
 ] as const;
 
 export const blogPosts = [
+  ...sep02BlogArticles,
   ...sep01BlogArticles,
   ...aug23BlogArticles,
   ...aug21BlogArticles,
@@ -791,6 +793,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...sep02ResearchArticles,
   ...sep01ResearchArticles,
   ...aug31ResearchArticles,
   ...aug23ResearchBatch,

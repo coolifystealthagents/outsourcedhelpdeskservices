@@ -13,6 +13,7 @@ import { aug23ResearchBatch } from './aug23ResearchBatch';
 import { aug31BlogArticles, aug31ResearchArticles } from './aug31Content';
 import { sep01BlogArticles, sep01ResearchArticles } from './sep01Content';
 import { sep02BlogArticles, sep02ResearchArticles } from './sep02Content';
+import { aug23BlogFleetV8 } from './aug23BlogFleetV8';
 
 export const site = {
   domain: 'OutsourcedHelpdeskServices.com',
@@ -280,6 +281,7 @@ const blogPostsSource = [
 export const blogPosts = [
   ...sep02BlogArticles,
   ...sep01BlogArticles,
+  ...aug23BlogFleetV8,
   ...aug23BlogArticles,
   ...aug21BlogArticles,
   ...aug20BlogArticles,

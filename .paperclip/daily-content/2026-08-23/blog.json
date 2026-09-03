@@ -1,0 +1,14 @@
+[
+  {"route":"/blog/help-desk-shadow-ownership-review","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-handoff-language-translation","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-macro-exception-expiry","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-attachment-custody-chain","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-after-hours-ambiguity-triage","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-onboarding-permission-rehearsal","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-unanswered-request-review-loop","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-queue-label-drift-audit","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-vendor-dependency-message","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-bug-evidence-reproducibility","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-knowledge-article-rollback","sourcePath":"app/aug23BlogFleetV8.ts"},
+  {"route":"/blog/help-desk-quality-calibration-disagreement","sourcePath":"app/aug23BlogFleetV8.ts"}
+]

@@ -1,0 +1,20 @@
+{
+  "provider": "Gemini",
+  "status": "unavailable",
+  "fallback": "text-complete",
+  "reason": "No Gemini image-generation capability was available in the execution environment. No stock or substitute images were created or assigned.",
+  "routes": [
+    "/blog/help-desk-shadow-ownership-review",
+    "/blog/help-desk-handoff-language-translation",
+    "/blog/help-desk-macro-exception-expiry",
+    "/blog/help-desk-attachment-custody-chain",
+    "/blog/help-desk-after-hours-ambiguity-triage",
+    "/blog/help-desk-onboarding-permission-rehearsal",
+    "/blog/help-desk-unanswered-request-review-loop",
+    "/blog/help-desk-queue-label-drift-audit",
+    "/blog/help-desk-vendor-dependency-message",
+    "/blog/help-desk-bug-evidence-reproducibility",
+    "/blog/help-desk-knowledge-article-rollback",
+    "/blog/help-desk-quality-calibration-disagreement"
+  ]
+}

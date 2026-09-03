@@ -13,6 +13,7 @@ import { aug23ResearchBatch } from './aug23ResearchBatch';
 import { aug31BlogArticles, aug31ResearchArticles } from './aug31Content';
 import { sep01BlogArticles, sep01ResearchArticles } from './sep01Content';
 import { sep02BlogArticles, sep02ResearchArticles } from './sep02Content';
+import { sep03ResearchArticles } from './sep03Research';
 import { aug23BlogFleetV8 } from './aug23BlogFleetV8';
 
 export const site = {
@@ -795,6 +796,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...sep03ResearchArticles,
   ...sep02ResearchArticles,
   ...sep01ResearchArticles,
   ...aug31ResearchArticles,

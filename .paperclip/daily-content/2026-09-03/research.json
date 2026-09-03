@@ -1,0 +1,13 @@
+{
+  "campaignDate": "2026-09-03",
+  "family": "research",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "branch": "main",
+  "entries": [
+    {"route":"/research/outsourced-helpdesk-abandoned-request-bias-study","sourcePaths":["app/sep03Research.ts"]},
+    {"route":"/research/outsourced-helpdesk-cross-channel-identity-continuity-study","sourcePaths":["app/sep03Research.ts"]},
+    {"route":"/research/outsourced-helpdesk-automation-override-provenance-study","sourcePaths":["app/sep03Research.ts"]},
+    {"route":"/research/outsourced-helpdesk-article-counterfactual-evaluation-study","sourcePaths":["app/sep03Research.ts"]},
+    {"route":"/research/outsourced-helpdesk-peak-hour-escalation-bottleneck-study","sourcePaths":["app/sep03Research.ts"]}
+  ]
+}

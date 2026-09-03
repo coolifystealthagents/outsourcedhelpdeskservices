@@ -5,6 +5,7 @@
     "test": "node tests/homepage-image-labels.test.mjs && node tests/aug17-publication-contract.test.mjs && npm run validate:aug17-blog && npm run validate:aug17-research",
     "validate:aug17-blog": "node scripts/validate_aug17_blog.mjs",
     "validate:aug17-research": "node scripts/validate_aug17_research.mjs",
+    "validate:aug23-research": "node scripts/validate_aug23_research.mjs",
     "validate:aug31-release": "node scripts/validate_aug31_release.mjs",
     "validate:sep01-release": "node scripts/validate_sep01_release.mjs",
     "validate:sep01-routes": "node scripts/validate_sep01_routes.mjs",

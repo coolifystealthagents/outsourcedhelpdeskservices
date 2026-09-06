@@ -23,12 +23,12 @@ Each proposed destination already exists. Add the link in the relevant body para
 
 | Supporting page | Exact reader transition | Proposed existing destination | Priority | Status |
 | --- | --- | --- | --- | --- |
-| `/blog/help-desk-ticket-triage-workflow` | After the article explains categories, priority, and owners, a reader may need to define the first live tier 1 lane. | `/services/level-one-ticket-triage` | First | Pending page-level audit |
-| `/blog/help-desk-password-reset-boundaries` | A reader who reaches the identity stopping point may need the service scope for recovery coordination. | `/services/password-reset-coordination` | Second | Pending page-level audit |
-| `/blog/help-desk-knowledge-base-maintenance` | A reader who finds an outdated answer may need the service page for controlled article upkeep. | `/services/knowledge-base-maintenance` | Third | Pending page-level audit |
-| `/blog/help-desk-escalation-rules` | A reader who has the facts but no clear receiving route may need the escalation-coordination scope. | `/services/ticket-escalation-coordination` | Fourth | Pending page-level audit |
-| `/blog/help-desk-quality-review-checklist` | A reader choosing a review sample may need the service boundary for quality work. | `/services/helpdesk-quality-review` | Fifth | Pending page-level audit |
-| `/blog/help-desk-service-level-targets` | A reader setting response targets may need a queue-reporting scope that separates reporting from promises. | `/services/support-queue-reporting` | Sixth | Pending page-level audit |
+| `/blog/help-desk-ticket-triage-workflow` | After the article explains categories, priority, and owners, a reader may need to define the first live tier 1 lane. | `/services/level-one-ticket-triage` | First | Delivered in route-local main; one exact href verified on 2026-09-06. Do not duplicate. |
+| `/blog/help-desk-password-reset-boundaries` | A reader who reaches the identity stopping point may need the service scope for recovery coordination. | `/services/password-reset-coordination` | Second | Verified absent in route-local main on 2026-09-06. |
+| `/blog/help-desk-knowledge-base-maintenance` | A reader who finds an outdated answer may need the service page for controlled article upkeep. | `/services/knowledge-base-maintenance` | Third | Verified absent in route-local main on 2026-09-06. |
+| `/blog/help-desk-escalation-rules` | A reader who has the facts but no clear receiving route may need the escalation-coordination scope. | `/services/ticket-escalation-coordination` | Fourth | Delivered in route-local main; one exact href verified on 2026-09-06. Do not duplicate. |
+| `/blog/help-desk-quality-review-checklist` | A reader choosing a review sample may need the service boundary for quality work. | `/services/helpdesk-quality-review` | Fifth | Delivered in route-local main; one exact href verified on 2026-09-06. Do not duplicate. |
+| `/blog/help-desk-service-level-targets` | A reader setting response targets may need a queue-reporting scope that separates reporting from promises. | `/services/support-queue-reporting` | Sixth | Verified absent in route-local main on 2026-09-06. |
 
 ## Existing implementation notes
 
@@ -38,6 +38,6 @@ The article template uses the organization as both `BlogPosting.author` and `pub
 
 The sitemap route derives service, blog, and research URLs from `app/data.ts`. A future public edit must preserve that data-driven coverage, build the route, and verify the source-specific marker on the canonical host and `www` after deployment.
 
-## First bounded release
+## Next bounded release
 
-Audit `/blog/help-desk-ticket-triage-workflow` in its generated form. If the article does not already contain a body-level link to `/services/level-one-ticket-triage`, add one short sentence at the point where the article moves from routing rules to the first live tier 1 lane; do not change unrelated pages or shared template links.
+Audit `/blog/help-desk-password-reset-boundaries` in its generated form. If the article still lacks a body-level link to `/services/password-reset-coordination`, add one short sentence at the identity stopping point; do not change unrelated pages or shared template links.

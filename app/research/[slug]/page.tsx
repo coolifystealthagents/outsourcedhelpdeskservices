@@ -15,7 +15,7 @@ const paragraphs=(value:string|string[])=>(Array.isArray(value)?value:[value]).f
 
 export function generateStaticParams(){return researchPosts.map(p=>({slug:p.slug}))}
 
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=researchPosts.find(x=>x.slug===slug);return p?{title:`${p.title} | ${site.brand}`,description:p.excerpt,alternates:{canonical:`https://${site.domain.toLowerCase()}/research/${p.slug}`}}:{}}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=researchPosts.find(x=>x.slug===slug);if(!p)return {};const canonical=`https://${site.domain.toLowerCase()}/research/${p.slug}`;const image=p.hero??`/research-thumbnails/${p.slug}.svg`;return {title:`${p.title} | ${site.brand}`,description:p.excerpt,alternates:{canonical},openGraph:{title:p.title,description:p.excerpt,url:canonical,type:'article',images:[{url:image,width:1200,height:630,alt:p.title}]}}}
 
 function NarrativeList({items}:{items:string[]}){
   return <ol className="research-narrative-list">{items.map((item,index)=><li key={index}>{item}</li>)}</ol>;

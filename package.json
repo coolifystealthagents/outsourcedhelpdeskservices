@@ -12,6 +12,7 @@
     "validate:sep02-release": "node scripts/validate_sep02_release.mjs",
     "validate:sep02-routes": "node scripts/validate_sep02_routes.mjs",
     "validate:sep03-research": "node scripts/validate_sep03_research.mjs",
+    "validate:sep08-release": "node scripts/validate_sep08_release.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 3000",

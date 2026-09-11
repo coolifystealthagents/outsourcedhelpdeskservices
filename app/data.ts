@@ -18,6 +18,7 @@ import { sep07BlogArticles, sep07ResearchArticles } from './sep07Content';
 import { sep08BlogArticles, sep08ResearchArticles } from './sep08Content';
 import { sep09BlogArticles, sep09ResearchArticles } from './sep09Content';
 import { sep10BlogArticles, sep10ResearchArticles } from './sep10Content';
+import { sep11BlogArticles, sep11ResearchArticles } from './sep11Content';
 import { sep03ResearchArticles } from './sep03Research';
 import { aug23BlogFleetV8 } from './aug23BlogFleetV8';
 
@@ -54,6 +55,7 @@ export const services = [
 ] as const;
 
 const blogPostsSource = [
+  ...sep11BlogArticles,
   ...aug31BlogArticles,
   { slug: 'help-desk-ticket-owner-absence-plan', title: 'Plan help desk ownership for an absent queue owner', excerpt: 'Keep open work, customer updates, approvals, and protected decisions moving when the usual help desk owner is unavailable.', minutes: 8, published: '2026-08-17', body: ['An absence plan should identify open work, risk signals, waiting customers, promised checkpoints, and decisions that only the regular owner can make. Assign a current reviewer before distributing tickets across the queue.', 'Separate routine continuation from protected decisions. Specialists can acknowledge requests, preserve context, and follow approved steps, but should not infer an approval or close a case because the named owner is away.', 'Carry each customer goal, impact, next action, and communication checkpoint into the temporary ownership record. A replacement owner needs more than a queue assignment to accept responsibility.', 'Review the recovered tickets for bounce-backs, missed updates, and unresolved approvals. Use the pattern to improve backups, handoff fields, and the boundary for work that must wait for a specific owner.'] },
   { slug: 'help-desk-ticket-escalation-evidence-checklist', title: 'Build an evidence checklist for help desk escalations', excerpt: 'Give the receiving owner enough verified context to act without turning a frontline handoff into an unsafe diagnosis.', minutes: 8, published: '2026-08-17', body: ['An escalation packet should answer what happened, who is affected, what has been tried, and which decision the receiving owner must make. Start with the smallest facts that change the route or next action.', 'Separate the customer report from support findings. Include the relevant time, system, error, impact, permitted identifiers, and evidence location, while marking unknowns instead of filling gaps with assumptions.', 'Keep protected decisions with the accountable owner. A frontline specialist can preserve the signal and explain the checkpoint, but should not approve access, money, security exceptions, or technical changes outside the documented lane.', 'Review returned escalations by missing fact and unclear boundary. Update the intake question, article, or handoff field that would have prevented the repeat rather than asking every specialist to remember a longer list.'] },
@@ -806,6 +808,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...sep11ResearchArticles,
   ...sep10ResearchArticles,
   ...sep09ResearchArticles,
   ...sep08ResearchArticles,

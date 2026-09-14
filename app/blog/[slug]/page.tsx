@@ -245,7 +245,7 @@ function StrictArticle({ article, slug, published }: { article: PublisherArticle
         <JsonLd data={schema} />
         <article className="container strict-article" data-article-marker="philippines-provider-vetting-2026">
           <header className="article-hero">
-            <p className="eyebrow">Philippines help desk buyer guide · <time dateTime={published}>{published === '2026-09-11' ? 'Published: ' + formatPublicDate(published) : formatPublicDate(published)}</time></p>
+            <p className="eyebrow">Philippines help desk buyer guide · <time dateTime={published}>{['2026-09-11', '2026-09-14'].includes(published) ? 'Published: ' + formatPublicDate(published) : formatPublicDate(published)}</time></p>
             <h1>{article.title}</h1>
             <p className="lead">{article.excerpt}</p>
             <div className="article-meta"><span>{article.minutes} min read</span><span>Evidence checked July 25, 2026</span></div>

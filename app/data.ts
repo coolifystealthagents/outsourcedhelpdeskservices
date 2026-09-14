@@ -19,6 +19,7 @@ import { sep08BlogArticles, sep08ResearchArticles } from './sep08Content';
 import { sep09BlogArticles, sep09ResearchArticles } from './sep09Content';
 import { sep10BlogArticles, sep10ResearchArticles } from './sep10Content';
 import { sep11BlogArticles, sep11ResearchArticles } from './sep11Content';
+import { sep14BlogArticles, sep14ResearchArticles } from './sep14Content';
 import { sep03ResearchArticles } from './sep03Research';
 import { aug23BlogFleetV8 } from './aug23BlogFleetV8';
 
@@ -55,6 +56,7 @@ export const services = [
 ] as const;
 
 const blogPostsSource = [
+  ...sep14BlogArticles,
   ...sep11BlogArticles,
   ...aug31BlogArticles,
   { slug: 'help-desk-ticket-owner-absence-plan', title: 'Plan help desk ownership for an absent queue owner', excerpt: 'Keep open work, customer updates, approvals, and protected decisions moving when the usual help desk owner is unavailable.', minutes: 8, published: '2026-08-17', body: ['An absence plan should identify open work, risk signals, waiting customers, promised checkpoints, and decisions that only the regular owner can make. Assign a current reviewer before distributing tickets across the queue.', 'Separate routine continuation from protected decisions. Specialists can acknowledge requests, preserve context, and follow approved steps, but should not infer an approval or close a case because the named owner is away.', 'Carry each customer goal, impact, next action, and communication checkpoint into the temporary ownership record. A replacement owner needs more than a queue assignment to accept responsibility.', 'Review the recovered tickets for bounce-backs, missed updates, and unresolved approvals. Use the pattern to improve backups, handoff fields, and the boundary for work that must wait for a specific owner.'] },
@@ -808,6 +810,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...sep14ResearchArticles,
   ...sep11ResearchArticles,
   ...sep10ResearchArticles,
   ...sep09ResearchArticles,

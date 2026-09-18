@@ -1,0 +1,15 @@
+{
+  "publicationDate": "2026-09-18",
+  "family": "research",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "branch": "main",
+  "entries": [
+    {"route":"/research/philippines-helpdesk-staffing-location-evidence-study","sourcePaths":["app/sep18Research.ts"]},
+    {"route":"/research/outsourced-helpdesk-proposal-normalization-study","sourcePaths":["app/sep18Research.ts"]},
+    {"route":"/research/outsourced-helpdesk-launch-acceptance-evidence-study","sourcePaths":["app/sep18Research.ts"]},
+    {"route":"/research/client-owner-capacity-for-outsourced-helpdesk-study","sourcePaths":["app/sep18Research.ts"]},
+    {"route":"/research/outsourced-helpdesk-service-boundary-scenario-study","sourcePaths":["app/sep18Research.ts"]}
+  ],
+  "deploymentEvidence": null,
+  "verifiedAt": null
+}

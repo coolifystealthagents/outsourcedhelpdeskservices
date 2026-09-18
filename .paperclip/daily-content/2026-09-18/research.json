@@ -4,12 +4,12 @@
   "repository": "coolifystealthagents/outsourcedhelpdeskservices",
   "branch": "main",
   "entries": [
-    {"route":"/research/philippines-helpdesk-staffing-location-evidence-study","sourcePaths":["app/sep18Research.ts"]},
-    {"route":"/research/outsourced-helpdesk-proposal-normalization-study","sourcePaths":["app/sep18Research.ts"]},
-    {"route":"/research/outsourced-helpdesk-launch-acceptance-evidence-study","sourcePaths":["app/sep18Research.ts"]},
-    {"route":"/research/client-owner-capacity-for-outsourced-helpdesk-study","sourcePaths":["app/sep18Research.ts"]},
-    {"route":"/research/outsourced-helpdesk-service-boundary-scenario-study","sourcePaths":["app/sep18Research.ts"]}
+    {"topic":"Philippines staffing location evidence","slug":"philippines-helpdesk-staffing-location-evidence-study","route":"/research/philippines-helpdesk-staffing-location-evidence-study","sourcePaths":["app/sep18Research.ts"],"contentHash":"7260167f0add224f8a467e4875ec5ac9d95869bd47ed6b02ff09df44fe335ea1","publicationDate":"2026-09-18","contentCommit":"f6142705028e238f67befa81e3df2b24e3aa407d","liveUrl":"https://outsourcedhelpdeskservices.com/research/philippines-helpdesk-staffing-location-evidence-study","verifiedAt":null},
+    {"topic":"Proposal normalization","slug":"outsourced-helpdesk-proposal-normalization-study","route":"/research/outsourced-helpdesk-proposal-normalization-study","sourcePaths":["app/sep18Research.ts"],"contentHash":"655ca1fea7dc665a5642267bc448ef6bcc49a5acfe414d2664ff5f964e09a4bb","publicationDate":"2026-09-18","contentCommit":"f6142705028e238f67befa81e3df2b24e3aa407d","liveUrl":"https://outsourcedhelpdeskservices.com/research/outsourced-helpdesk-proposal-normalization-study","verifiedAt":null},
+    {"topic":"Launch acceptance evidence","slug":"outsourced-helpdesk-launch-acceptance-evidence-study","route":"/research/outsourced-helpdesk-launch-acceptance-evidence-study","sourcePaths":["app/sep18Research.ts"],"contentHash":"ef9a8d9da495903f72cb53dc3ffe0e137af0568e65d5de77171500c8888e9816","publicationDate":"2026-09-18","contentCommit":"f6142705028e238f67befa81e3df2b24e3aa407d","liveUrl":"https://outsourcedhelpdeskservices.com/research/outsourced-helpdesk-launch-acceptance-evidence-study","verifiedAt":null},
+    {"topic":"Client decision-owner capacity","slug":"client-owner-capacity-for-outsourced-helpdesk-study","route":"/research/client-owner-capacity-for-outsourced-helpdesk-study","sourcePaths":["app/sep18Research.ts"],"contentHash":"c9f22f077741fbee1013d00dad1dc33925a315088fb8927b03d238b9f4e6642e","publicationDate":"2026-09-18","contentCommit":"f6142705028e238f67befa81e3df2b24e3aa407d","liveUrl":"https://outsourcedhelpdeskservices.com/research/client-owner-capacity-for-outsourced-helpdesk-study","verifiedAt":null},
+    {"topic":"Service boundary scenario testing","slug":"outsourced-helpdesk-service-boundary-scenario-study","route":"/research/outsourced-helpdesk-service-boundary-scenario-study","sourcePaths":["app/sep18Research.ts"],"contentHash":"e2000f687af8a78262001eb4ebc81bed8bf78fec4fbe96cffd423eadaff5747b","publicationDate":"2026-09-18","contentCommit":"f6142705028e238f67befa81e3df2b24e3aa407d","liveUrl":"https://outsourcedhelpdeskservices.com/research/outsourced-helpdesk-service-boundary-scenario-study","verifiedAt":null}
   ],
-  "deploymentEvidence": null,
+  "deploymentEvidence": {"provider":"Coolify3","applicationUuid":"r4h89rsa3zpni1j0fj8fngaz","resourceUuid":"l13ylpiz5n7x3du8pnr1cdlx","status":"pending"},
   "verifiedAt": null
 }

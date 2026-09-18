@@ -340,6 +340,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     'Review a small sample of completed work and fix the source instruction when the same confusion appears again.'
   ];
   const body = 'body' in post && Array.isArray(post.body) ? post.body : defaultBody;
+  const publicSources = 'sources' in post && Array.isArray(post.sources) ? post.sources as readonly { name: string; url: string }[] : [];
+  const articleCta = 'cta' in post && post.cta && typeof post.cta === 'object' ? post.cta as { href: string; label: string } : null;
   return (
     <>
       <Header hidePricing />
@@ -351,7 +353,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         ] }} />
         <article className="container guide-article">
           <p className="eyebrow">Philippines staffing blog · {published ? <time dateTime={published}>{['2026-09-11', '2026-09-14'].includes(published) ? 'Published: ' + formatPublicDate(published) : formatPublicDate(published)}</time> : null}</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>{'heroImage' in post ? <img src={post.heroImage} alt="Help desk operations illustration" width="1200" height="675" loading="eager" /> : null}
-          <div className="card"><p className="eyebrow">Direct answer</p><h2>{body[0]}</h2>{body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<h2>Related planning pages</h2><ul><li><a href="/services/level-one-ticket-triage">Level one ticket triage</a></li><li><a href="/services/ticket-escalation-coordination">Ticket escalation coordination</a></li><li><a href="/services/helpdesk-quality-review">Help desk quality review</a></li></ul></div>
+          <div className="card"><p className="eyebrow">Direct answer</p><h2>{body[0]}</h2>{body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{publicSources.length ? <><h2>Authoritative sources</h2><ul>{publicSources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a></li>)}</ul></> : null}<h2>Related planning pages</h2><ul>{articleCta ? <li><a href={articleCta.href}>Explore {articleCta.label}</a></li> : null}<li><a href="/services/level-one-ticket-triage">Level one ticket triage</a></li><li><a href="/services/ticket-escalation-coordination">Ticket escalation coordination</a></li><li><a href="/services/helpdesk-quality-review">Help desk quality review</a></li></ul></div>
         </article>
       </main>
       <Footer hidePricing />

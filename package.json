@@ -14,6 +14,7 @@
     "validate:sep03-research": "node scripts/validate_sep03_research.mjs",
     "validate:sep18-research": "node scripts/validate_sep18_research.mjs",
     "validate:sep18-blog": "node scripts/validate_sep18_blog.mjs",
+    "validate:sep22-research": "node scripts/validate_sep22_research.mjs",
     "validate:sep08-release": "node scripts/validate_sep08_release.mjs",
     "dev": "next dev",
     "build": "next build",

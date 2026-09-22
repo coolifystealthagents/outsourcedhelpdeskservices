@@ -1,7 +1,7 @@
 const published = '2026-09-18' as const;
 const heroImage = '/helpdesk-team.jpg' as const;
 
-const sources = [
+export const buyerGuideSources = [
   { name: 'NIST Cybersecurity Framework 2.0', url: 'https://www.nist.gov/cyberframework' },
   { name: 'NIST SP 1305: Cybersecurity Supply Chain Risk Management', url: 'https://csrc.nist.gov/pubs/sp/1305/final' },
   { name: 'NIST Digital Identity Guidelines', url: 'https://pages.nist.gov/800-63-4/' },
@@ -9,7 +9,7 @@ const sources = [
   { name: 'ICO data minimisation guidance', url: 'https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/' }
 ] as const;
 
-type Seed = {
+export type BuyerGuideSeed = {
   slug: string;
   title: string;
   excerpt: string;
@@ -24,7 +24,7 @@ type Seed = {
   serviceLabel: string;
 };
 
-const seeds: readonly Seed[] = [
+const seeds: readonly BuyerGuideSeed[] = [
   {
     slug: 'outsourced-help-desk-readiness-assessment',
     title: 'Outsourced Help Desk Readiness Assessment: What to Fix Before You Hire',
@@ -195,7 +195,7 @@ const seeds: readonly Seed[] = [
   }
 ] as const;
 
-function buildBody(seed: Seed) {
+export function buildBuyerGuideBody(seed: BuyerGuideSeed) {
   return [
     `The practical answer is to make the decision visible before comparing vendors or assigning tickets. This guide is for ${seed.reader}. The central question is ${seed.decision}. Start with evidence from the queue rather than a generic list of features. Define the customer need, the work an agent may perform, the decision that remains with your company, and the proof required before a ticket can close. That creates a fair basis for evaluation and prevents a provider from having to guess how your business works. It also gives your internal team a concrete way to approve, reject, or narrow the proposed lane.`,
     `Build the baseline from ${seed.inputs}. Use a fixed observation window and state what was excluded. Averages alone are weak planning evidence because a queue can contain routine questions, protected decisions, and rare high-impact events. Group work by intent, channel, required permission, customer impact, and destination owner. Read a small sample from each important group. The goal is not to produce a perfect forecast. It is to expose the differences that change staffing, training, access, and escalation. Mark unknowns honestly and assign an owner to resolve each one before it becomes a contractual assumption.`,
@@ -219,8 +219,7 @@ export const sep18BlogArticles = seeds.map((seed) => ({
   published,
   minutes: 11,
   heroImage,
-  body: buildBody(seed),
-  sources: [...sources],
+  body: buildBuyerGuideBody(seed),
+  sources: [...buyerGuideSources],
   cta: { href: seed.serviceHref, label: seed.serviceLabel }
 }));
-

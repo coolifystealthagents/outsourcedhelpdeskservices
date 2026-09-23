@@ -20,8 +20,8 @@ assert(data.includes('...aug23ResearchBatch,'), 'research batch is not included 
 assert(data.includes(".sort((a, b) => b.published.localeCompare(a.published))"), 'same-day ordering is not deterministic');
 assert(sitemap.includes('...researchPosts.map(p=>`/research/${p.slug}`)'), 'research routes are absent from sitemap generation');
 assert(routePage.includes('datePublished:publicationDate'), 'Article schema does not bind datePublished');
-assert(routePage.includes('<time dateTime={publicationDate}>{formatPublicDate(publicationDate)}</time>'), 'visible publication date is not rendered');
-assert(routePage.includes('alternates:{canonical:`https://${site.domain.toLowerCase()}/research/${p.slug}`}'), 'same-site canonical metadata is absent');
+assert(routePage.includes('<time dateTime={publicationDate}') && routePage.includes('formatPublicDate(publicationDate)'), 'visible publication date is not rendered');
+assert(routePage.includes('const canonical=`https://${site.domain.toLowerCase()}/research/${p.slug}`') && routePage.includes('alternates:{canonical}'), 'same-site canonical metadata is absent');
 
 for (const entry of manifest) {
   const slug = entry.route.replace('/research/', '');

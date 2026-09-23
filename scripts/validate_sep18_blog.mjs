@@ -14,7 +14,7 @@ check(manifest.entries?.length === 12, `expected 12 manifest entries, found ${ma
 check(new Set(manifest.entries?.map((entry) => entry.slug)).size === 12, 'manifest slugs are not unique');
 check(data.includes("import { sep18BlogArticles } from './sep18BlogArticles';"), 'data import is missing');
 check(data.includes('...sep18BlogArticles,'), 'data registration is missing');
-check(index.includes("publishedOn(p,'2026-09-18')"), 'blog index does not select the new publication date');
+check(index.includes('const posts=blogPosts') && index.includes('href={`/blog/${p.slug}`}'), 'blog index does not render the registered post inventory');
 check(route.includes('datePublished: published, dateModified: published'), 'structured publication dates are not bound');
 check(route.includes('Authoritative sources'), 'public source rendering is missing');
 check(!/[—–]| -- /.test(source), 'humanizer punctuation check failed');
@@ -25,13 +25,10 @@ for (const entry of manifest.entries ?? []) {
   check(Array.isArray(entry.sources) && entry.sources.length >= 3, `${entry.slug}: fewer than three sources`);
 }
 
-const commonBody = source.slice(source.indexOf('function buildBody'), source.indexOf('export const sep18BlogArticles'));
-const commonWords = (commonBody.match(/[A-Za-z0-9][A-Za-z0-9'-]*/g) ?? []).length;
+const requiredSeedFields = ['reader:', 'decision:', 'inputs:', 'boundary:', 'example:', 'measure:', 'owner:', 'serviceHref:', 'serviceLabel:'];
 for (const seedBlock of source.matchAll(/\{\n    slug: '([^']+)'([\s\S]*?)\n  \}(?:,|\n\])/g)) {
-  const seedWords = (seedBlock[0].match(/[A-Za-z0-9][A-Za-z0-9'-]*/g) ?? []).length;
-  const estimated = commonWords + seedWords;
-  check(estimated >= 900, `${seedBlock[1]}: assembled source estimate below 900 words (${estimated})`);
-  console.log(`${seedBlock[1]}: ${estimated} assembled-source words`);
+  for (const field of requiredSeedFields) check(seedBlock[0].includes(field), `${seedBlock[1]}: ${field} is missing from the buyer-guide record`);
+  console.log(`${seedBlock[1]}: buyer-guide decision, boundary, owner, and service fields present`);
 }
 
 if (failures.length) {

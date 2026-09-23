@@ -19,8 +19,8 @@ check(data.includes("import { sep03ResearchArticles } from './sep03Research';"),
 check(data.includes('...sep03ResearchArticles,'),'batch index registration missing');
 check(sitemap.includes('...researchPosts.map(p=>`/research/${p.slug}`)'),'sitemap research expansion missing');
 check(page.includes('datePublished:publicationDate'),'structured publication binding missing');
-check(page.includes('<time dateTime={publicationDate}>{formatPublicDate(publicationDate)}</time>'),'visible date renderer missing');
-check(page.includes('alternates:{canonical:`https://${site.domain.toLowerCase()}/research/${p.slug}`}'),'canonical metadata missing');
+check(page.includes('<time dateTime={publicationDate}')&&page.includes('formatPublicDate(publicationDate)'),'visible date renderer missing');
+check(page.includes('const canonical=`https://${site.domain.toLowerCase()}/research/${p.slug}`')&&page.includes('alternates:{canonical}'),'canonical metadata missing');
 check(!/[—–]| -- /.test(source),'Humanizer punctuation check failed');
 
 for(const entry of manifest.entries??[]){

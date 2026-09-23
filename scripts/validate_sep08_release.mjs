@@ -36,8 +36,15 @@ const [blogIndex, researchIndex, sitemap, image] = await Promise.all([
   fetch(`${origin}/helpdesk-team.jpg`),
 ]);
 
+const blogPagePaths = [...new Set([...blogIndex.matchAll(/href="(\/blog\/page\/\d+)"/g)].map((match) => match[1]))];
+const blogIndexHtml = [blogIndex, ...(await Promise.all(blogPagePaths.map(async (pagePath) => {
+  const response = await fetch(`${origin}${pagePath}`);
+  if (response.status !== 200) failures.push(`${pagePath}: HTTP ${response.status}`);
+  return response.text();
+})))].join('\n');
+
 for (const slug of blogs) {
-  if (!blogIndex.includes(`/blog/${slug}`)) failures.push(`/blog/${slug}: family-index membership`);
+  if (!blogIndexHtml.includes(`/blog/${slug}`)) failures.push(`/blog/${slug}: family-index membership`);
   if (!sitemap.includes(`/blog/${slug}`)) failures.push(`/blog/${slug}: sitemap membership`);
 }
 for (const slug of research) {

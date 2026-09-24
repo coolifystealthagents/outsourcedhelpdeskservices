@@ -1,0 +1,17 @@
+{
+  "family": "blog", "publicationDate": "2026-09-24", "repository": "coolifystealthagents/outsourcedhelpdeskservices", "productionBranch": "main", "deploymentResource": "Coolify3 application r4h89rsa3zpni1j0fj8fngaz",
+  "entries": [
+    {"family":"commercial-governance","topic":"contract negotiation checklist","slug":"outsourced-help-desk-contract-negotiation-checklist","contentHash":"6bc38fe1bbd7d40e9651c65affc761cbb0d4a7e57356791d091c79198f4bef12"},
+    {"family":"transition-planning","topic":"controlled pilot framework","slug":"outsourced-help-desk-controlled-pilot-framework","contentHash":"3fc9f4e2144eeef701a1370aa5aeeaf114f670762ca5003ac6c6f22f9991faa6"},
+    {"family":"transition-planning","topic":"ticket migration plan","slug":"outsourced-help-desk-ticket-migration-plan","contentHash":"a8bbfc5e7652906b6c50ad82fd993663ea63d40628ed23ab9bc56f0cc1d7c329"},
+    {"family":"coverage-design","topic":"after-hours triage model","slug":"outsourced-help-desk-after-hours-triage-model","contentHash":"1aa80c9947c563d236958891caf4d202e32c1b32a56a60972aa85ba968be2eca"},
+    {"family":"coverage-design","topic":"multilingual support plan","slug":"outsourced-help-desk-multilingual-support-plan","contentHash":"2f4506ea89c5bfc6f490f9d49c1ea47f38fa90a4352665cf9e0ddfe692380105"},
+    {"family":"quality-governance","topic":"call quality scorecard","slug":"outsourced-help-desk-call-quality-scorecard","contentHash":"d31d9aa89577691ab0d2527ccc8181ac0595e0313009159b37651f35a63beec8"},
+    {"family":"automation-governance","topic":"chatbot escalation design","slug":"outsourced-help-desk-chatbot-escalation-design","contentHash":"00ada455b059f1eeefbf0f69e8d85f0be94b614214cce5871088e97452e815e0"},
+    {"family":"security-controls","topic":"remote agent device controls","slug":"outsourced-help-desk-remote-agent-device-controls","contentHash":"4d943f3c1e75e43e1b47ad439b1a38e09a981c24914348cbdc4f76cec6205227"},
+    {"family":"continuity-planning","topic":"business continuity test","slug":"outsourced-help-desk-business-continuity-test","contentHash":"2403bd81cc920539eb306ca695df8197fb6e99d005a115796c6efb13fae48437"},
+    {"family":"service-governance","topic":"responsibility matrix","slug":"outsourced-help-desk-responsibility-matrix","contentHash":"04b9011e47a7287644795de8a78d7b8e47350831b2e22dfecc0b6da5a66e5b39"},
+    {"family":"change-governance","topic":"change request process","slug":"outsourced-help-desk-change-request-process","contentHash":"ec94ba05e7c0f5956026301af0776c3a6386b42c64cf23f6ef0ba1ebd3e16a63"},
+    {"family":"exit-planning","topic":"provider exit plan","slug":"outsourced-help-desk-provider-exit-plan","contentHash":"c5989eea0de8283e0f360c58d98bd34a6768c968897697e1eb5a12b2d45fb89a"}
+  ]
+}

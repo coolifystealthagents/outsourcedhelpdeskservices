@@ -24,6 +24,7 @@ import { sep18BlogArticles } from './sep18BlogArticles';
 import { sep22BlogArticles } from './sep22BlogArticles';
 import { sep23BlogArticles } from './sep23BlogArticles';
 import { sep24BlogArticles } from './sep24BlogArticles';
+import { sep25BlogArticles } from './sep25BlogArticles';
 import { sep03ResearchArticles } from './sep03Research';
 import { sep18ResearchArticles } from './sep18Research';
 import { sep22ResearchArticles, sep22ResearchRun2Articles } from './sep22Research';
@@ -296,6 +297,7 @@ const blogPostsSource = [
 ] as const;
 
 export const blogPosts = [
+  ...sep25BlogArticles,
   ...sep24BlogArticles,
   ...sep23BlogArticles,
   ...sep22BlogArticles,

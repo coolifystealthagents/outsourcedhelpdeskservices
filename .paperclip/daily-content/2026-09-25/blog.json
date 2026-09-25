@@ -1,0 +1,22 @@
+{
+  "family": "blog",
+  "publicationDate": "2026-09-25",
+  "timezone": "UTC",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "deploymentResource": "Coolify3 application r4h89rsa3zpni1j0fj8fngaz",
+  "entries": [
+    {"family":"capacity-planning","topic":"capacity planning model","slug":"outsourced-help-desk-capacity-planning-model","contentHash":"1cd29fac40ff2b16027b1c56a8237f9580803daabbed156bb8ad13763a80ec65"},
+    {"family":"queue-design","topic":"queue segmentation","slug":"outsourced-help-desk-queue-segmentation-guide","contentHash":"a1d695e3c9a77f698956d469312def7c438b4817340d44e2b15c95afb2b8f3da"},
+    {"family":"transition-planning","topic":"knowledge transfer acceptance","slug":"outsourced-help-desk-knowledge-transfer-acceptance","contentHash":"27ba1049eabb3b3b783141a8a56b4362c94f387bbdcf789f9e5d2298854c13dd"},
+    {"family":"incident-management","topic":"incident severity matrix","slug":"outsourced-help-desk-incident-severity-matrix","contentHash":"8b11a521d6e382d3212df2274b94d0b9aa7e7e4cf5085c35bbb988c0b5ce462b"},
+    {"family":"service-governance","topic":"governance meeting cadence","slug":"outsourced-help-desk-governance-meeting-cadence","contentHash":"ac1fffea1bb647dd5f8a8b66dcd088a419ad8150272cce9c1438023cf6fb117e"},
+    {"family":"identity-controls","topic":"customer verification flow","slug":"outsourced-help-desk-customer-verification-flow","contentHash":"624b0de5b94b4f05e25efec45f7ee25f4083d92b77c84d1c936006cbd2bfff94"},
+    {"family":"coverage-design","topic":"seasonal demand plan","slug":"outsourced-help-desk-seasonal-demand-plan","contentHash":"7c33fe9e134e293d89bc2b19fef63666f561706b1d8568a8d71f764336476a79"},
+    {"family":"transition-planning","topic":"shadow to live transition","slug":"outsourced-help-desk-shadow-to-live-transition","contentHash":"9d58e30536e3d57fe865c8a356756dee12234376b36e85c3a62bc6c294ed8a63"},
+    {"family":"privacy-governance","topic":"ticket retention schedule","slug":"outsourced-help-desk-ticket-retention-schedule","contentHash":"6ef96dca663f8ca6c73cc282b466b78f0f725b9545ceccbf7800ab2ba370782b"},
+    {"family":"escalation-design","topic":"escalation simulation","slug":"outsourced-help-desk-escalation-simulation","contentHash":"a169dbb73017ebf3c459a92d674a831d83656f35291c41574507fef9a274a8de"},
+    {"family":"reporting-governance","topic":"reporting glossary","slug":"outsourced-help-desk-reporting-glossary","contentHash":"f2388dc946915abbd9c709666b88dc5c0a2bbb009488210e381d822b74914798"},
+    {"family":"launch-governance","topic":"launch acceptance checklist","slug":"outsourced-help-desk-launch-acceptance-checklist","contentHash":"c57b9f49b4c9b003ec53bb25d2eb1f41ac3522669428305bea8c0010b455ab2d"}
+  ]
+}

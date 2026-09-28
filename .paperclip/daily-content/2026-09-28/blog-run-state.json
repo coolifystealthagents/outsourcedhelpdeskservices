@@ -31,15 +31,18 @@
     "maximumPairwiseFiveWordShingleJaccard": 0.0008123476848090983
   },
   "blogDraftAudit": {
-    "status": "rewrite-required",
-    "minimumBodyWords": 1240,
+    "status": "rewrite-in-progress",
+    "independentlyRewritten": 3,
+    "remainingSharedScaffoldBodies": 9,
+    "rewrittenBodyWords": [923, 943, 916],
+    "minimumBodyWords": 916,
     "maximumBodyWords": 1259,
     "maximumPairwiseFiveWordShingleJaccard": 0.7937995674116799,
     "failingPair": [
       "outsourced-help-desk-discovery-workshop",
       "outsourced-help-desk-ticket-taxonomy"
     ],
-    "requiredAction": "Substantively rewrite the same 12 article bodies until every article remains at least 900 body-only words and maximum pairwise five-word-shingle Jaccard is below 0.50."
+    "requiredAction": "Substantively rewrite the remaining nine article bodies, then recompute the full-family rendered audit until every article remains at least 900 body-only words and maximum pairwise five-word-shingle Jaccard is below 0.50."
   },
   "notes": [
     "Publication dates must be reconciled to each article's actual first public verification date; the cycle label is not a publication date.",

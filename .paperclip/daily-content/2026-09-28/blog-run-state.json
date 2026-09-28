@@ -1,0 +1,33 @@
+{
+  "cycleLabel": "September 28, 2026",
+  "family": "blog",
+  "task": "OUTAAA-80",
+  "pairedResearchTask": "OUTAAA-79",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "baselineSha": "00568f7125c5dea25b60f552299aa113caf58e6c",
+  "branch": "routine/outaaa-80-20260928",
+  "worktree": "repo/routine-worktrees/outaaa-80-20260928",
+  "timezone": "UTC",
+  "required": {
+    "blog": 12,
+    "research": 5
+  },
+  "current": {
+    "blogDrafts": 0,
+    "researchHandoffReceived": false,
+    "productionPushes": 0,
+    "deploymentSubmissions": 0
+  },
+  "releaseOwner": "OUTAAA-80",
+  "deploymentOwner": "BROWSER OPERATOR",
+  "blockedOn": {
+    "owner": "OUTAAA-79",
+    "action": "Commit exactly five validated Research articles on its local durable branch and report the full commit SHA, worktree, manifest, hashes, word counts, and overlap audit to OUTAAA-80."
+  },
+  "notes": [
+    "Publication dates must be reconciled to each article's actual first public verification date; the cycle label is not a publication date.",
+    "No production push or deployment is permitted until the exact 12 Blog plus 5 Research combined release passes validation and a clean build.",
+    "The Blog routine must make the single non-force production push; neither content routine may submit a Coolify deployment."
+  ]
+}

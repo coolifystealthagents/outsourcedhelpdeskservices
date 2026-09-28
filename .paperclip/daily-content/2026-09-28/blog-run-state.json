@@ -44,6 +44,15 @@
     ],
     "requiredAction": "Create final Blog manifest and hashes, validate combined metadata/routes/assets/internal links, reconcile the actual UTC publication date immediately before the sole push, then run the clean combined production build."
   },
+  "combinedValidation": {
+    "typescript": "passed",
+    "cleanProductionBuild": "passed with existing autoprefixer warning",
+    "staticPages": 749,
+    "blogRoutesPresent": 12,
+    "researchRoutesPresent": 5,
+    "publicationDate": "2026-09-28",
+    "timezone": "UTC"
+  },
   "notes": [
     "Publication dates must be reconciled to each article's actual first public verification date; the cycle label is not a publication date.",
     "No production push or deployment is permitted until the exact 12 Blog plus 5 Research combined release passes validation and a clean build.",

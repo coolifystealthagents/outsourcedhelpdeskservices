@@ -15,15 +15,20 @@
   },
   "current": {
     "blogDrafts": 0,
-    "researchHandoffReceived": false,
+    "researchHandoffReceived": true,
     "productionPushes": 0,
     "deploymentSubmissions": 0
   },
   "releaseOwner": "OUTAAA-80",
   "deploymentOwner": "BROWSER OPERATOR",
-  "blockedOn": {
-    "owner": "OUTAAA-79",
-    "action": "Commit exactly five validated Research articles on its local durable branch and report the full commit SHA, worktree, manifest, hashes, word counts, and overlap audit to OUTAAA-80."
+  "researchHandoff": {
+    "task": "OUTAAA-79",
+    "sourceCommit": "a626e3185a050210799a6b06961e0a33f78eeda5",
+    "integratedCommit": "db43cfe7ab95613d9037544aaaeb95d7331da31b",
+    "manifest": ".paperclip/daily-content/2026-09-28/research.json",
+    "count": 5,
+    "minimumBodyWords": 1216,
+    "maximumPairwiseFiveWordShingleJaccard": 0.0008123476848090983
   },
   "notes": [
     "Publication dates must be reconciled to each article's actual first public verification date; the cycle label is not a publication date.",

@@ -26,6 +26,7 @@ import { sep23BlogArticles } from './sep23BlogArticles';
 import { sep24BlogArticles } from './sep24BlogArticles';
 import { sep25BlogArticles } from './sep25BlogArticles';
 import { sep03ResearchArticles } from './sep03Research';
+import { sep28ResearchArticles } from './sep28Research';
 import { sep18ResearchArticles } from './sep18Research';
 import { sep22ResearchArticles, sep22ResearchRun2Articles } from './sep22Research';
 import { sep24ResearchArticles } from './sep24Research';
@@ -824,6 +825,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...sep28ResearchArticles,
   ...sep25ResearchArticles,
   ...sep24ResearchArticles,
   ...sep22ResearchRun2Articles,

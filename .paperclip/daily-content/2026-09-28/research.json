@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-09-28",
+  "family": "research",
+  "domain": "outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "baselineSha": "00568f7125c5dea25b60f552299aa113caf58e6c",
+  "taskId": "c6ae1250-5aae-46c5-9548-2fba75ded3bb",
+  "taskIdentifier": "OUTAAA-79",
+  "runId": "bcb0a116-744f-44dc-8dd0-fb91ea1e06b0",
+  "worktree": "routine-worktrees/outaaa-79-20260928",
+  "branch": "routine/outaaa-79-20260928",
+  "siteTimezone": "UTC",
+  "releaseDateCandidate": "2026-09-28",
+  "releaseDateReconciliationRequired": true,
+  "releaseDateNote": "Research does not publish. Blog integrator must reconcile published/sourceDate to the actual first-publication date in the configured site timezone immediately before the sole combined push.",
+  "required": 5,
+  "staged": 5,
+  "verifiedLive": 0,
+  "maxPairwiseFiveWordShingleJaccard": 0.0008123476848090983,
+  "validation": {
+    "typescript": "passed",
+    "cleanProductionBuild": "passed",
+    "renderedRoutes": "passed: all five appeared in Next.js static route generation",
+    "bodyOnlyMinimumWords": 1200,
+    "sourceCheckedDate": "2026-09-28"
+  },
+  "entries": [
+    {"slug":"outsourced-helpdesk-triage-severity-calibration-study","route":"/research/outsourced-helpdesk-triage-severity-calibration-study","bodyWords":1266,"bodySha256":"9360ceb8fc9d1e7ba73468d17e6b0470befeadf886ebf2621b255e7d532f873d","hero":"/research-thumbnails/helpdesk-ticket-priority-research.svg"},
+    {"slug":"outsourced-helpdesk-email-thread-integrity-study","route":"/research/outsourced-helpdesk-email-thread-integrity-study","bodyWords":1216,"bodySha256":"d91c0265200b13a9f01429a38e30b717f1dbd15107cd678ce23574009c3d6cc2","hero":"/research-thumbnails/helpdesk-email-triage-research.svg"},
+    {"slug":"outsourced-helpdesk-saas-tenant-boundary-study","route":"/research/outsourced-helpdesk-saas-tenant-boundary-study","bodyWords":1256,"bodySha256":"002b03915e79f951d6162498bf85c46c72a9aaa92547bae2b9dc29ac1430e605","hero":"/research-thumbnails/helpdesk-account-change-research.svg"},
+    {"slug":"outsourced-helpdesk-ecommerce-payment-data-boundary-study","route":"/research/outsourced-helpdesk-ecommerce-payment-data-boundary-study","bodyWords":1238,"bodySha256":"13417ae19bc2b7ad512e87da1f259d344fa6ef46988480ee3f3617d7ab8302ec","hero":"/research-thumbnails/helpdesk-privacy-redaction-research.svg"},
+    {"slug":"outsourced-helpdesk-quality-sampling-risk-study","route":"/research/outsourced-helpdesk-quality-sampling-risk-study","bodyWords":1238,"bodySha256":"2c4f55e2c7a3f90856339915da02888c4b2da0f6837b999c9a9c05d21d4803e4","hero":"/research-thumbnails/helpdesk-qa-sampling-research.svg"}
+  ]
+}

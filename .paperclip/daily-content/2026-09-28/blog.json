@@ -1,0 +1,14 @@
+{"family":"blog","publicationDate":"2026-09-28","timezone":"UTC","repository":"coolifystealthagents/outsourcedhelpdeskservices","productionBranch":"main","deploymentResource":"Coolify3 application r4h89rsa3zpni1j0fj8fngaz","entries":[
+{"family":"buying-process","topic":"discovery workshop","slug":"outsourced-help-desk-discovery-workshop","contentHash":"f78040f9331e5e9b961f7c0ef59029cd881231ccfbdddc3f229bbc390ed3b72c"},
+{"family":"buying-process","topic":"RFP scorecard","slug":"outsourced-help-desk-rfp-scorecard","contentHash":"7b19bd4b5a298055e03b55ee74fd4c6374bd1698b6e992a7eb9b3d75c08f04b9"},
+{"family":"commercial-model","topic":"cost model","slug":"outsourced-help-desk-cost-model","contentHash":"9063c12f701e9093e97466ea453125d4c57c05ec8c5ed0cbf6c9728bb8b07d8a"},
+{"family":"channel-design","topic":"channel mix","slug":"outsourced-help-desk-channel-mix","contentHash":"e4f39b10310c73733b7c581856e66bd2b782856b043b12bf9ca039c56edbb214"},
+{"family":"queue-design","topic":"ticket taxonomy","slug":"outsourced-help-desk-ticket-taxonomy","contentHash":"c5771c5510439dec5d999b183e8d61a267577324338ce2b1cff8f22b86c85c41"},
+{"family":"transition-planning","topic":"first 30 days","slug":"outsourced-help-desk-first-30-days","contentHash":"f7fb59fdd44f8d36331eb45ee941076b99a2a67d1f6037da9aa191d146b0ceb1"},
+{"family":"service-governance","topic":"service catalog","slug":"outsourced-help-desk-service-catalog","contentHash":"181ee2b41f6cdeafccc6270bd7b0258dbc5486a5d7c541ccecba152ceac52a30"},
+{"family":"knowledge-governance","topic":"knowledge gap log","slug":"outsourced-help-desk-knowledge-gap-log","contentHash":"0655bae5be889392a78b7727d397ea9cb6566f2067c6eae9aa1614153b3f0edf"},
+{"family":"customer-communication","topic":"customer update cadence","slug":"outsourced-help-desk-customer-update-cadence","contentHash":"352082049a18d67868aaa828694da17995aa850516e3a05ca709f5b922cd1a48"},
+{"family":"access-governance","topic":"access request workflow","slug":"outsourced-help-desk-access-request-workflow","contentHash":"cf7ab320fbe266b8f7391ecc497501381cdb2dd5bacd74ee2b3f2f2e60237016"},
+{"family":"change-governance","topic":"contract change control","slug":"outsourced-help-desk-contract-change-control","contentHash":"1ec75cf85c7d41085bce1ec561935dc938f8c6585406970045e4c8d76602a2f3"},
+{"family":"service-improvement","topic":"continuous improvement backlog","slug":"outsourced-help-desk-continuous-improvement-backlog","contentHash":"a187c93f1a0f89752eca52c6187e1b88558427693d16213ccfb9f968db14d8f1"}
+]}

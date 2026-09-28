@@ -31,18 +31,18 @@
     "maximumPairwiseFiveWordShingleJaccard": 0.0008123476848090983
   },
   "blogDraftAudit": {
-    "status": "rewrite-in-progress",
-    "independentlyRewritten": 9,
-    "remainingSharedScaffoldBodies": 3,
-    "rewrittenBodyWords": [923, 943, 916, 946, 970, 988, 951, 970, 965],
-    "minimumBodyWords": 916,
-    "maximumBodyWords": 1259,
-    "maximumPairwiseFiveWordShingleJaccard": 0.7937995674116799,
-    "failingPair": [
-      "outsourced-help-desk-discovery-workshop",
-      "outsourced-help-desk-ticket-taxonomy"
+    "status": "passed",
+    "independentlyRewritten": 12,
+    "remainingSharedScaffoldBodies": 0,
+    "rewrittenBodyWords": [923, 943, 916, 946, 970, 988, 951, 970, 965, 927, 904, 958],
+    "minimumBodyWords": 904,
+    "maximumBodyWords": 988,
+    "maximumPairwiseFiveWordShingleJaccard": 0.0015706806282722514,
+    "highestOverlapPair": [
+      "outsourced-help-desk-ticket-taxonomy",
+      "outsourced-help-desk-service-catalog"
     ],
-    "requiredAction": "Substantively rewrite the remaining three article bodies, then recompute the full-family rendered audit until every article remains at least 900 body-only words and maximum pairwise five-word-shingle Jaccard is below 0.50."
+    "requiredAction": "Create final Blog manifest and hashes, validate combined metadata/routes/assets/internal links, reconcile the actual UTC publication date immediately before the sole push, then run the clean combined production build."
   },
   "notes": [
     "Publication dates must be reconciled to each article's actual first public verification date; the cycle label is not a publication date.",

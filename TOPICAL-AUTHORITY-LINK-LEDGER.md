@@ -24,7 +24,7 @@ Each proposed destination already exists. Add the link in the relevant body para
 | Supporting page | Exact reader transition | Proposed existing destination | Priority | Status |
 | --- | --- | --- | --- | --- |
 | `/blog/help-desk-ticket-triage-workflow` | After the article explains categories, priority, and owners, a reader may need to define the first live tier 1 lane. | `/services/level-one-ticket-triage` | First | Delivered in route-local main; one exact href verified on 2026-09-06. Do not duplicate. |
-| `/blog/help-desk-password-reset-boundaries` | A reader who reaches the identity stopping point may need the service scope for recovery coordination. | `/services/password-reset-coordination` | Second | Verified absent in route-local main on 2026-09-06. |
+| `/blog/help-desk-password-reset-boundaries` | A reader who reaches the identity stopping point may need the service scope for recovery coordination. | `/services/password-reset-coordination` | Second | Rendered source delivered in route-local main on 2026-09-30 (`5ba75b3077a8e6b0d94cfd23232fa3c7f8f11d44`). Local artifact has one exact href, the identity stopping marker, and BlogPosting `dateModified` 2026-09-30. Apex and www still serve the prior marker and date; deployment is pending public verification. Do not duplicate. |
 | `/blog/help-desk-knowledge-base-maintenance` | A reader who finds an outdated answer may need the service page for controlled article upkeep. | `/services/knowledge-base-maintenance` | Third | Verified absent in route-local main on 2026-09-06. |
 | `/blog/help-desk-escalation-rules` | A reader who has the facts but no clear receiving route may need the escalation-coordination scope. | `/services/ticket-escalation-coordination` | Fourth | Delivered in route-local main; one exact href verified on 2026-09-06. Do not duplicate. |
 | `/blog/help-desk-quality-review-checklist` | A reader choosing a review sample may need the service boundary for quality work. | `/services/helpdesk-quality-review` | Fifth | Delivered in route-local main; one exact href verified on 2026-09-06. Do not duplicate. |
@@ -40,4 +40,4 @@ The sitemap route derives service, blog, and research URLs from `app/data.ts`. A
 
 ## Next bounded release
 
-Audit `/blog/help-desk-password-reset-boundaries` in its generated form. If the article still lacks a body-level link to `/services/password-reset-coordination`, add one short sentence at the identity stopping point; do not change unrelated pages or shared template links.
+Audit `/blog/help-desk-knowledge-base-maintenance` in its generated form. If the article still lacks a body-level link to `/services/knowledge-base-maintenance`, add one short sentence where an outdated answer reaches its owner-controlled update path; do not change unrelated pages or shared template links.

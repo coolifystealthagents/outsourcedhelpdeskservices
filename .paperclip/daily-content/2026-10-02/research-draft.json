@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-02",
+  "family": "research",
+  "status": "draft-requires-independent-structure-rewrite",
+  "domain": "outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "baselineSha": "d0af3d4128acdb2cc90d5f693b5b399b0ebb8840",
+  "taskIdentifier": "OUTAAA-81",
+  "pairedBlogTask": "OUTAAA-82",
+  "worktree": "repo/routine-worktrees/outaaa-81-20261002",
+  "branch": "routine/outaaa-81-20261002",
+  "siteTimezone": "UTC",
+  "required": 5,
+  "drafted": 5,
+  "handoffReady": false,
+  "typescript": "passed",
+  "maximumPairwiseFiveWordShingleJaccard": 0.3969465648854962,
+  "qualitativeOriginality": "failed: shared argumentative scaffold remains despite topic-specific analysis",
+  "requiredAction": "Rewrite the same five articles with independent structures, examples, methodologies, and reader outcomes; then rerun hashes, originality, routes, assets, typecheck, tests, and a clean build before local handoff.",
+  "entries": [
+    {"slug":"outsourced-helpdesk-ai-summary-evidence-loss-study","bodyWords":2193,"hero":"/research-thumbnails/helpdesk-ticket-evidence-research.svg"},
+    {"slug":"outsourced-helpdesk-remote-session-consent-study","bodyWords":2237,"hero":"/research-thumbnails/helpdesk-account-change-research.svg"},
+    {"slug":"outsourced-helpdesk-multilingual-escalation-fidelity-study","bodyWords":2222,"hero":"/research-thumbnails/helpdesk-email-triage-research.svg"},
+    {"slug":"outsourced-helpdesk-saas-offboarding-dependency-study","bodyWords":2196,"hero":"/research-thumbnails/helpdesk-qa-sampling-research.svg"},
+    {"slug":"outsourced-helpdesk-refund-status-ownership-study","bodyWords":2225,"hero":"/research-thumbnails/helpdesk-privacy-redaction-research.svg"}
+  ]
+}

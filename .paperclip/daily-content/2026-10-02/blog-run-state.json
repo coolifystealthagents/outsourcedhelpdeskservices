@@ -19,6 +19,20 @@
     "repeatedParagraphs":0,
     "sharedArgumentReview":"passed"
   },
+  "draftValidation": {
+    "typescript":"passed",
+    "cleanProductionBuild":"passed with existing workspace-root and autoprefixer warnings",
+    "staticPages":761,
+    "blogRoutesPresent":12,
+    "renderedTitles":12,
+    "renderedPublicationDates":12,
+    "renderedCanonicals":12,
+    "renderedHeroReferences":12,
+    "blogIndexEntries":12,
+    "sitemapEntries":12,
+    "internalServiceLinks":"passed",
+    "heroAsset":"public/helpdesk-team.jpg exists; clean build emitted all references"
+  },
   "blockedOn": {
     "owner":"OUTAAA-81",
     "action":"Commit exactly five new October 2 Research articles on its durable local branch and report the full handoff SHA, inventory, manifest, body counts, hashes, and originality audit to OUTAAA-82."

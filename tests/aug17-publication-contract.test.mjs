@@ -43,9 +43,10 @@ async function waitUntilReady(baseUrl, processState) {
 
 const port = await availablePort();
 const baseUrl = `http://${host}:${port}`;
-const server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'dev', '-H', host, '-p', String(port)], {
+const testEnv = { ...process.env, NEXT_TELEMETRY_DISABLED: '1' };
+const server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '-H', host, '-p', String(port)], {
   cwd,
-  env: { ...process.env, NEXT_TELEMETRY_DISABLED: '1' },
+  env: testEnv,
   stdio: ['ignore', 'pipe', 'pipe'],
 });
 let logs = '';

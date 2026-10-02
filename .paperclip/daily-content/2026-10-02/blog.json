@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-02",
+  "family": "blog",
+  "domain": "outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "baselineSha": "d0af3d4128acdb2cc90d5f693b5b399b0ebb8840",
+  "taskIdentifier": "OUTAAA-82",
+  "branch": "routine/outaaa-82-20261002",
+  "worktree": "repo/routine-worktrees/outaaa-82-20261002",
+  "siteTimezone": "UTC",
+  "releaseDateCandidate": "2026-10-02",
+  "releaseDateReconciliationRequired": true,
+  "required": 12,
+  "staged": 12,
+  "verifiedLive": 0,
+  "maxPairwiseFiveWordShingleJaccard": 0.0005515719801434088,
+  "repeatedParagraphs": 0,
+  "sharedArgumentReview": "passed: each article has its own decision, evidence model, worked example, failure modes, controls, and reader outcome",
+  "sources": [
+    "https://www.nist.gov/cyberframework",
+    "https://csrc.nist.gov/pubs/sp/1305/final",
+    "https://pages.nist.gov/800-63-4/",
+    "https://www.cisa.gov/securebydesign",
+    "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/"
+  ],
+  "entries": [
+    {"slug":"outsourced-help-desk-knowledge-transfer-acceptance","route":"/blog/outsourced-help-desk-knowledge-transfer-acceptance","bodyWords":925,"bodySha256":"16b3bde87cdaaa741d1b895f89bf748c842ae427bf063fc36fea5ad5b399f6b8","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-backlog-migration-acceptance","route":"/blog/outsourced-help-desk-backlog-migration-acceptance","bodyWords":984,"bodySha256":"95130c8e93bc9f46f0a575d5ef455f0580cb08090c5a75df1b1e08948543c0d6","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-provider-governance-decision-log","route":"/blog/outsourced-help-desk-provider-governance-decision-log","bodyWords":952,"bodySha256":"5d3565d114e285e17459f5c74cda1ec1d29068855332d785de88befd89c64d14","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-root-cause-feedback-loop","route":"/blog/outsourced-help-desk-root-cause-feedback-loop","bodyWords":956,"bodySha256":"5f5f3d58e536e5674e37c176c903b88380ea7bd838c3c3c570faf98fb9b4265a","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-tool-integration-readiness","route":"/blog/outsourced-help-desk-tool-integration-readiness","bodyWords":917,"bodySha256":"93146ab4fe8adbd13df0bbf3a81060c754d6e6ad2e22865e2aab4c84a55703ab","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-pilot-exit-criteria","route":"/blog/outsourced-help-desk-pilot-exit-criteria","bodyWords":917,"bodySha256":"dd31ab2087b3db85395a9cacc5a4ed6bad8d8bbc4576e35f794a3aec2253a683","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-staffing-change-notice","route":"/blog/outsourced-help-desk-staffing-change-notice","bodyWords":934,"bodySha256":"aeacd37cbf8ff00cd9e6ff1618ecf31d2418f40c6ef90b1184aa7c382260df70","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-subcontractor-access-boundary","route":"/blog/outsourced-help-desk-subcontractor-access-boundary","bodyWords":921,"bodySha256":"29ed9eda8da7e2072be806b413bca7523baa14d8e187f40c988bc01ebf5d0398","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-business-continuity-tabletop","route":"/blog/outsourced-help-desk-business-continuity-tabletop","bodyWords":905,"bodySha256":"05134d77febac2ea65afcdcfe47745c5dff8548e3f27d5fe029aeb594447f042","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-service-credit-evidence-pack","route":"/blog/outsourced-help-desk-service-credit-evidence-pack","bodyWords":914,"bodySha256":"f76dd1218046bbee8c3e6b287ffc8b6c316232bfcadc83b408b2838f88d5b259","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-language-scenario-test","route":"/blog/outsourced-help-desk-language-scenario-test","bodyWords":923,"bodySha256":"d7ac97fefd167d5ea4db33b06c8ec0965bd7bc9f6a16326b829ae4797ae0af17","hero":"/helpdesk-team.jpg"},
+    {"slug":"outsourced-help-desk-call-recording-consent","route":"/blog/outsourced-help-desk-call-recording-consent","bodyWords":925,"bodySha256":"2c9d562f66063ceecb844c0de2cfa22041bcbba114fd436919bcd608d50a1afd","hero":"/helpdesk-team.jpg"}
+  ]
+}

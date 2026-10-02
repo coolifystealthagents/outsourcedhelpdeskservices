@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-02",
+  "family": "research",
+  "domain": "outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "baselineSha": "d0af3d4128acdb2cc90d5f693b5b399b0ebb8840",
+  "taskIdentifier": "OUTAAA-81",
+  "pairedBlogTask": "OUTAAA-82",
+  "worktree": "repo/routine-worktrees/outaaa-81-20261002",
+  "branch": "routine/outaaa-81-20261002",
+  "siteTimezone": "UTC",
+  "releaseDateCandidate": "2026-10-02",
+  "releaseDateReconciliationRequired": true,
+  "required": 5,
+  "staged": 5,
+  "verifiedLive": 0,
+  "bodyOnlyMinimumWords": 1200,
+  "maximumPairwiseFiveWordShingleJaccard": 0.29898074745186864,
+  "highestOverlapPair": ["outsourced-helpdesk-remote-session-consent-study","outsourced-helpdesk-saas-offboarding-dependency-study"],
+  "repeatedParagraphCheck": "passed: no identical substantive paragraphs across the five rendered bodies",
+  "sharedArgumentCheck": "passed after restructuring: each study follows a topic-specific evidence sequence and reaches a distinct buyer decision",
+  "validation": {
+    "typescript": "passed",
+    "heroAssets": "passed: all five repository SVG paths exist",
+    "cleanProductionBuild": "passed with pre-existing autoprefixer warning",
+    "staticPages": 754,
+    "renderedResearchRoutes": "passed: all five included in static generation"
+  },
+  "entries": [
+    {"slug":"outsourced-helpdesk-ai-summary-evidence-loss-study","route":"/research/outsourced-helpdesk-ai-summary-evidence-loss-study","bodyWords":1454,"bodySha256":"1f1c5a3270a2a09740413f816e5cc8b66fd205dc89d73e4f4fb7b92bbb2f7938","hero":"/research-thumbnails/helpdesk-ticket-evidence-research.svg","sources":["https://www.nist.gov/itl/ai-risk-management-framework","https://csrc.nist.gov/pubs/sp/800/61/r3/final","https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/","https://www.cisa.gov/securebydesign"]},
+    {"slug":"outsourced-helpdesk-remote-session-consent-study","route":"/research/outsourced-helpdesk-remote-session-consent-study","bodyWords":1685,"bodySha256":"6baaef21c778f62bcdbf54cc718546b08cb6017de6c2f715f171ea0b9159eb6b","hero":"/research-thumbnails/helpdesk-account-change-research.svg","sources":["https://csrc.nist.gov/pubs/sp/800/63/4/final","https://www.cisa.gov/securebydesign","https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/","https://www.w3.org/TR/WCAG22/"]},
+    {"slug":"outsourced-helpdesk-multilingual-escalation-fidelity-study","route":"/research/outsourced-helpdesk-multilingual-escalation-fidelity-study","bodyWords":1662,"bodySha256":"0d1e0ee72ffdcaa46f8add765999eb8e4ed745d7b0775bf7af12ef38315be8e1","hero":"/research-thumbnails/helpdesk-email-triage-research.svg","sources":["https://www.w3.org/TR/WCAG22/","https://csrc.nist.gov/pubs/sp/800/61/r3/final","https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/","https://www.cisa.gov/securebydesign"]},
+    {"slug":"outsourced-helpdesk-saas-offboarding-dependency-study","route":"/research/outsourced-helpdesk-saas-offboarding-dependency-study","bodyWords":1673,"bodySha256":"c985a402df36f48533f7c97f35da1b1b10af0e49b20e3068cc90fd201f021a89","hero":"/research-thumbnails/helpdesk-qa-sampling-research.svg","sources":["https://csrc.nist.gov/pubs/sp/800/63/4/final","https://www.cisa.gov/securebydesign","https://ico.org/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/","https://csrc.nist.gov/pubs/sp/800/61/r3/final"]},
+    {"slug":"outsourced-helpdesk-refund-status-ownership-study","route":"/research/outsourced-helpdesk-refund-status-ownership-study","bodyWords":1677,"bodySha256":"7672430f70f990173f2a4307d10fa157860ead69a26bb72a78994a49bae5638b","hero":"/research-thumbnails/helpdesk-privacy-redaction-research.svg","sources":["https://www.pcisecuritystandards.org/document_library/","https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/","https://www.cisa.gov/securebydesign","https://www.w3.org/TR/WCAG22/"]}
+  ]
+}

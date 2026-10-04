@@ -7,7 +7,7 @@ const data=fs.readFileSync('app/data.ts','utf8'),page=fs.readFileSync('app/resea
 const failures=[],check=(ok,msg)=>{if(!ok)failures.push(msg)};
 check(manifest.publicationDate===date,'manifest date mismatch');check(manifest.family==='research','family mismatch');
 check(manifest.entries?.length===5,'exactly five entries required');check(new Set(manifest.entries.map(x=>x.slug)).size===5,'slugs must be unique');
-check(data.includes("import { sep22ResearchArticles } from './sep22Research';"),'import missing');check(data.includes('...sep22ResearchArticles,'),'registration missing');
+const sep22Import=data.match(/import\s*\{([^}]+)\}\s*from\s*'\.\/sep22Research';/);const importedNames=sep22Import?.[1].split(',').map(name=>name.trim())??[];check(importedNames.includes('sep22ResearchArticles')&&importedNames.includes('sep22ResearchRun2Articles'),'both September 22 research imports are required');check(data.includes('...sep22ResearchArticles,')&&data.includes('...sep22ResearchRun2Articles,'),'both September 22 research batches must be registered');
 check(page.includes('datePublished:publicationDate'),'datePublished binding missing');check(page.includes('alternates:{canonical}'),'canonical missing');
 check(sitemap.includes('...researchPosts.map(p=>`/research/${p.slug}`)'),'sitemap registration missing');
 const common=source.slice(source.indexOf('function body'),source.indexOf('export const sep22'));

@@ -67,7 +67,13 @@ Use current authoritative sources only for claims they directly support. Candida
 | # | Slug | Substantive body words | Body SHA-256 | Maximum five-word-shingle overlap against an existing source file | Exact repeated substantive paragraphs | Qualitative review |
 |---|---|---:|---|---:|---:|---|
 | 1 | `outsourced-help-desk-ticket-sampling-plan` | 1,306 | `e829902d231a673e7c56f59c79542db2323779eac46f7dcf0b45c1bf8e51c539` | 0.08% (`app/aug21BlogArticles.ts`) | 0 | Independent sampling argument, mixed representative/risk method, worked 1,200-ticket example, cause-class analysis, and correction-verification outcome. No shared paragraph or reusable prose generator. |
+| 2 | `outsourced-help-desk-shadow-queue-launch` | 1,076 | `f686ad46a0684ae3782e44d738e5d4bdd677bdcdf8253437dbc240add572e19b` | pending final corpus audit | 0 | Distinct pre-launch simulation structure, read-only operating boundary, live-versus-shadow comparison, 80-ticket launch example, and lane-specific acceptance outcome. |
+| 3 | `outsourced-help-desk-macro-approval-register` | 1,011 | `7d90ec9b04409ad0bafd17a7126f8d1eece7ab23347b666b5a39fa496b441712` | pending final corpus audit | 0 | Distinct content-governance structure, claim-owner approval model, event-driven suspension, billing-contact example, and versioned correction outcome. |
 
 The draft remains outside `app/data.ts` and carries `publicationDate: pending-live-verification`; it is not publicly routable and cannot be mistaken for a published article. All three cited authority URLs returned HTTP 200 on 2026-10-05 UTC. The dynamic service route exists and the CTA slug is already present in the registered service inventory; rendered local HTTP validation remains a pre-push gate.
 
-Current count: Blog drafted `1/12`; Research handoff received `0/5`; live verified `0/17`. No production push or deployment action has occurred.
+Research handoff commit `6b252126693589ac5271a4aa0cd647a5f28d9a14` was incorporated as Blog commit `6d65431304d12e67c608fe47d84d9a385e7fbed7`. Its validator passes five articles at 1,204 to 1,286 substantive words with zero measured pairwise five-word-shingle overlap. Research source and asset files remain unchanged from the handoff.
+
+Across the first three Blog drafts, maximum pairwise five-word-shingle overlap is 0.20%. All cited NIST and CISA URLs returned HTTP 200. One initially selected ICO URL was unreachable during the live check and was replaced in draft 3 with the directly relevant NIST Privacy Framework, which returned HTTP 200.
+
+Current count: Blog drafted `3/12`; Research handoff received `5/5`; live verified `0/17`. No production push or deployment action has occurred.

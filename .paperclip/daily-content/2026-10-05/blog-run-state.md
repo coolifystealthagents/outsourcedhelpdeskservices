@@ -75,6 +75,9 @@ Use current authoritative sources only for claims they directly support. Candida
 | 7 | `outsourced-help-desk-knowledge-conflict-resolution` | 925 | `53eaeda32b8b97c96c306e80c93565cb70a16e3fc890e85044016ab2d512cf6c` | pending final corpus audit | 0 | Distinct source-hierarchy and contradiction workflow, warehouse-pick policy scenario, dependent-content tracing, and localized follow-up outcome. |
 | 8 | `outsourced-help-desk-channel-switch-handoff` | 909 | `c7a8668242c4c2588676903fe6334c0fe59f9459c4e6801595c885cdc0d114c6` | pending final corpus audit | 0 | Distinct cross-channel continuity model, identity-state minimization, invoice/account-owner scenario, split-history controls, and customer-effort outcome. |
 | 9 | `outsourced-help-desk-temporary-access-expiry` | 957 | `4a0d4e6c30bc3a3957e4d7941e4c706336d94acebd7ded636905b9c7d9c2e57b` | pending final corpus audit | 0 | Distinct time-bounded access lifecycle, actual-role testing, ten-day retail scenario, multi-view revocation evidence, and extension review outcome. |
+| 10 | `outsourced-help-desk-product-change-readiness` | 952 | `007def7ec0cc6bda1ed2562361d0347c2cda689f693724e1e4a90758ceccc098` | pending final corpus audit | 0 | Distinct release-to-support translation, invitation-flow scenario, rollout-state handling, early live evidence, and stabilization outcome. |
+| 11 | `outsourced-help-desk-unclear-ticket-ownership` | 919 | `563fbdddcd778c7b4b5040410f188292730e852f470445d9bbeb197f3e42e87f` | pending final corpus audit | 0 | Distinct decision decomposition and acceptance model, failed-upgrade multi-owner scenario, automation audit, and ownership-rule outcome. |
+| 12 | `outsourced-help-desk-service-recovery-review` | 956 | `5e0c04e40bdbc3f5d3301c34fe533f9c4c10c043e61a4572d62b50ac822639f5` | pending final corpus audit | 0 | Distinct evidence-timeline review, domain-verification failure scenario, proportional review depth, correction testing, and control-usability outcome. |
 
 The draft remains outside `app/data.ts` and carries `publicationDate: pending-live-verification`; it is not publicly routable and cannot be mistaken for a published article. All three cited authority URLs returned HTTP 200 on 2026-10-05 UTC. The dynamic service route exists and the CTA slug is already present in the registered service inventory; rendered local HTTP validation remains a pre-push gate.
 
@@ -82,4 +85,6 @@ Research handoff commit `6b252126693589ac5271a4aa0cd647a5f28d9a14` was incorpora
 
 Across the first three Blog drafts, maximum pairwise five-word-shingle overlap is 0.20%. All cited NIST and CISA URLs returned HTTP 200. One initially selected ICO URL was unreachable during the live check and was replaced in draft 3 with the directly relevant NIST Privacy Framework, which returned HTTP 200.
 
-Current count: Blog drafted `9/12`; Research handoff received `5/5`; live verified `0/17`. No production push or deployment action has occurred.
+All 12 Blog drafts exceed 900 substantive body words. Maximum pairwise five-word-shingle overlap within the draft family is 0.66% (articles 11 and 12). The articles have separate section sequences, worked examples, decision paths, and reader outcomes; no reusable prose generator was used.
+
+Current count: Blog drafted `12/12`; Research handoff received `5/5`; live verified `0/17`. No production push or deployment action has occurred.

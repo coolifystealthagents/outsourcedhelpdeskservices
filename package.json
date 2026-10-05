@@ -22,6 +22,7 @@
     "validate:sep25-blog": "node scripts/validate_sep25_blog.mjs",
     "validate:sep25-research": "node scripts/validate_sep25_research.mjs",
     "validate:oct05-research": "node scripts/validate_oct05_research.mjs",
+    "validate:oct05-blog": "node scripts/validate_oct05_blog.mjs",
     "generate:oct05-blog": "node scripts/build_oct05_blog_from_drafts.mjs",
     "validate:sep08-release": "node scripts/validate_sep08_release.mjs",
     "dev": "next dev",

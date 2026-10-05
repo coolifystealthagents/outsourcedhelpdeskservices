@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-05",
+  "family": "blog",
+  "domain": "outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "baselineSha": "7b359e63d2ce49c3dfb1ad335f81cd5eaa44ea62",
+  "taskIdentifier": "OUTAAA-84",
+  "branch": "routine/outaaa-84-20261005",
+  "siteTimezone": "UTC",
+  "publicationDate": "2026-10-05",
+  "publicationDateStatus": "provisional-until-combined-live-verification",
+  "required": 12,
+  "staged": 12,
+  "verifiedLive": 0,
+  "entries": [
+    {
+      "topic": "Build a Ticket Sampling Plan for an Outsourced Help Desk",
+      "slug": "outsourced-help-desk-ticket-sampling-plan",
+      "route": "/blog/outsourced-help-desk-ticket-sampling-plan",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 1316,
+      "contentHash": "94c84170aabe3137bba20e53918da306046639163b0ab088951219619f6bce47",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/securebydesign"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Use a Shadow Queue Before an Outsourced Help Desk Launch",
+      "slug": "outsourced-help-desk-shadow-queue-launch",
+      "route": "/blog/outsourced-help-desk-shadow-queue-launch",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 1086,
+      "contentHash": "5c5479543be0433cf3a046b5a90da3456bfda19cf1aab5fff87a1baa6fdba471",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Keep an Approval Register for Outsourced Help Desk Reply Macros",
+      "slug": "outsourced-help-desk-macro-approval-register",
+      "route": "/blog/outsourced-help-desk-macro-approval-register",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 1021,
+      "contentHash": "9ed324f0a900e404564afdd90b29126bf379b13b49f1e0d0074f8aca1799dcc4",
+      "sources": [
+        "https://www.cisa.gov/securebydesign",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Triage an Unplanned Demand Spike in an Outsourced Help Desk",
+      "slug": "outsourced-help-desk-demand-spike-triage",
+      "route": "/blog/outsourced-help-desk-demand-spike-triage",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 945,
+      "contentHash": "3262021bf30f900886fff2438f6e512e1e85b9f0c839327c71bde1054556d559",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Hand Off Customer Complaints From an Outsourced Help Desk",
+      "slug": "outsourced-help-desk-customer-complaint-handoff",
+      "route": "/blog/outsourced-help-desk-customer-complaint-handoff",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 976,
+      "contentHash": "1d6a4313329bebba568934993d634e46388d27d699c49beacc379b481564c180",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Set AI Assistance Boundaries for an Outsourced Help Desk",
+      "slug": "outsourced-help-desk-ai-assistance-boundaries",
+      "route": "/blog/outsourced-help-desk-ai-assistance-boundaries",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 913,
+      "contentHash": "c848f6024bdb783c3a1c4fb164e0ca501e5b71531ff854f1a3022b787e314baf",
+      "sources": [
+        "https://www.nist.gov/itl/ai-risk-management-framework",
+        "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Resolve Conflicting Knowledge in an Outsourced Help Desk",
+      "slug": "outsourced-help-desk-knowledge-conflict-resolution",
+      "route": "/blog/outsourced-help-desk-knowledge-conflict-resolution",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 933,
+      "contentHash": "470e4634f3b612947ca858ba144ba15f44e30db72789b1498f31c6d36de6156c",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Preserve Context When Help Desk Customers Switch Channels",
+      "slug": "outsourced-help-desk-channel-switch-handoff",
+      "route": "/blog/outsourced-help-desk-channel-switch-handoff",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 917,
+      "contentHash": "eb24b652d859599f80419296cb02dff4388025e7e5d00c2edd2924a4eac5161c",
+      "sources": [
+        "https://pages.nist.gov/800-63-4/",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Make Temporary Outsourced Help Desk Access Expire Safely",
+      "slug": "outsourced-help-desk-temporary-access-expiry",
+      "route": "/blog/outsourced-help-desk-temporary-access-expiry",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 965,
+      "contentHash": "bf90d48f2935e3ea4f75787306d0c898b96b7f21264304fca308b056fb856a56",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Prepare an Outsourced Help Desk for a Product Change",
+      "slug": "outsourced-help-desk-product-change-readiness",
+      "route": "/blog/outsourced-help-desk-product-change-readiness",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 961,
+      "contentHash": "ea95039a7733b7a06b9ee3be55151f741e64d7f2a990dc866279426224efc787",
+      "sources": [
+        "https://www.cisa.gov/securebydesign",
+        "https://www.nist.gov/cyberframework"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Resolve Unclear Ownership in an Outsourced Help Desk Ticket",
+      "slug": "outsourced-help-desk-unclear-ticket-ownership",
+      "route": "/blog/outsourced-help-desk-unclear-ticket-ownership",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 928,
+      "contentHash": "65f06c7ca6d4fc13e7682fec3861e6678bb4f931adf28a3e0ce2336a9b0d8b58",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "topic": "Review a Help Desk Service Failure Without Blame",
+      "slug": "outsourced-help-desk-service-recovery-review",
+      "route": "/blog/outsourced-help-desk-service-recovery-review",
+      "publicationDate": "2026-10-05",
+      "bodyWords": 964,
+      "contentHash": "5d6687a40a6de6e02a23229856c5bd50e2437a9775549b9760f1ab7991a2d6ff",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+      ],
+      "hero": "/helpdesk-team.jpg"
+    }
+  ]
+}

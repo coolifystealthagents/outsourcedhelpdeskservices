@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 
 const publicationDate = process.env.PUBLICATION_DATE;
 if (!/^\d{4}-\d{2}-\d{2}$/.test(publicationDate ?? '')) {
@@ -53,4 +54,18 @@ const output = `// Generated mechanically from the reviewed October 5 Markdown d
   `.map((article) => ({ ...article, published }));\n`;
 
 fs.writeFileSync('app/oct05BlogArticles.ts', output);
+const manifest = {
+  schemaVersion: 1, cycleLabel: '2026-10-05', family: 'blog', domain: 'outsourcedhelpdeskservices.com',
+  repository: 'coolifystealthagents/outsourcedhelpdeskservices', productionBranch: 'main',
+  baselineSha: '7b359e63d2ce49c3dfb1ad335f81cd5eaa44ea62', taskIdentifier: 'OUTAAA-84',
+  branch: 'routine/outaaa-84-20261005', siteTimezone: 'UTC', publicationDate,
+  publicationDateStatus: 'provisional-until-combined-live-verification', required: 12, staged: 12, verifiedLive: 0,
+  entries: articles.map((article) => ({
+    topic: article.title, slug: article.slug, route: `/blog/${article.slug}`, publicationDate,
+    bodyWords: article.body.join(' ').match(/[A-Za-z0-9]+(?:['-][A-Za-z0-9]+)*/g)?.length ?? 0,
+    contentHash: crypto.createHash('sha256').update(article.body.join('\n')).digest('hex'),
+    sources: article.sources.map((source) => source.url), hero: article.heroImage,
+  })),
+};
+fs.writeFileSync('.paperclip/daily-content/2026-10-05/blog.json', `${JSON.stringify(manifest, null, 2)}\n`);
 console.log(`Generated app/oct05BlogArticles.ts with ${articles.length} articles for ${publicationDate}.`);

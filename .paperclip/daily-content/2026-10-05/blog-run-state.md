@@ -62,4 +62,12 @@ Use current authoritative sources only for claims they directly support. Candida
 - Stop production mutations after reporting the full pushed SHA. The browser operator alone may select the exact SHA in Coolify3 and deploy.
 - After exact-SHA Success evidence is posted, the existing company agent must live-verify every one of the 17 routes before completion.
 
-Current count: Blog drafted `0/12`; Research handoff received `0/5`; live verified `0/17`. No production push or deployment action has occurred.
+## Draft audit
+
+| # | Slug | Substantive body words | Body SHA-256 | Maximum five-word-shingle overlap against an existing source file | Exact repeated substantive paragraphs | Qualitative review |
+|---|---|---:|---|---:|---:|---|
+| 1 | `outsourced-help-desk-ticket-sampling-plan` | 1,306 | `e829902d231a673e7c56f59c79542db2323779eac46f7dcf0b45c1bf8e51c539` | 0.08% (`app/aug21BlogArticles.ts`) | 0 | Independent sampling argument, mixed representative/risk method, worked 1,200-ticket example, cause-class analysis, and correction-verification outcome. No shared paragraph or reusable prose generator. |
+
+The draft remains outside `app/data.ts` and carries `publicationDate: pending-live-verification`; it is not publicly routable and cannot be mistaken for a published article. All three cited authority URLs returned HTTP 200 on 2026-10-05 UTC. The dynamic service route exists and the CTA slug is already present in the registered service inventory; rendered local HTTP validation remains a pre-push gate.
+
+Current count: Blog drafted `1/12`; Research handoff received `0/5`; live verified `0/17`. No production push or deployment action has occurred.

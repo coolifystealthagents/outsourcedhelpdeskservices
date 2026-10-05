@@ -1,0 +1,67 @@
+{
+  "cycleLabel": "2026-10-05",
+  "publicationDate": "2026-10-05",
+  "publicationDateStatus": "provisional-until-combined-live-verification",
+  "timezone": "UTC",
+  "family": "research",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "routineBranch": "routine/outaaa-83-20261005",
+  "baseSha": "7b359e63d2ce49c3dfb1ad335f81cd5eaa44ea62",
+  "entries": [
+    {
+      "topic": "Customer notification delivery evidence",
+      "slug": "outsourced-helpdesk-notification-delivery-evidence-study",
+      "route": "/research/outsourced-helpdesk-notification-delivery-evidence-study",
+      "publicationDate": "2026-10-05",
+      "contentHash": "f4017c4195f7d54c59c2de9161b59185e956dd1507b6adc2dbe66c2265f5167c",
+      "sources": ["https://www.w3.org/TR/WCAG22/", "https://www.nist.gov/privacy-framework/privacy-framework", "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"]
+    },
+    {
+      "topic": "Client approver availability",
+      "slug": "outsourced-helpdesk-approver-availability-study",
+      "route": "/research/outsourced-helpdesk-approver-availability-study",
+      "publicationDate": "2026-10-05",
+      "contentHash": "2daf8b835c1031081a32f667f004c194bde7e829ac71963b99c5fe04937cddcc",
+      "sources": ["https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final", "https://csrc.nist.gov/pubs/sp/800/61/r3/final", "https://www.nist.gov/privacy-framework/privacy-framework"]
+    },
+    {
+      "topic": "Cross-system ticket chronology integrity",
+      "slug": "outsourced-helpdesk-ticket-timeline-integrity-study",
+      "route": "/research/outsourced-helpdesk-ticket-timeline-integrity-study",
+      "publicationDate": "2026-10-05",
+      "contentHash": "f42899ff86edb772d3c6221ee6124cf2e025b7639c35e326a1d722ec34d00eec",
+      "sources": ["https://www.cisa.gov/resources-tools/resources/best-practices-event-logging-and-threat-detection", "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final", "https://csrc.nist.gov/pubs/sp/800/61/r3/final"]
+    },
+    {
+      "topic": "Safe customer issue reproduction",
+      "slug": "outsourced-helpdesk-safe-customer-reproduction-study",
+      "route": "/research/outsourced-helpdesk-safe-customer-reproduction-study",
+      "publicationDate": "2026-10-05",
+      "contentHash": "92faadc59428da3897f47afff8dcfddecfaeb7d5142b944f99b1c8f58bd9adf9",
+      "sources": ["https://www.cisa.gov/securebydesign", "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final", "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/"]
+    },
+    {
+      "topic": "Automation fallback readiness",
+      "slug": "outsourced-helpdesk-automation-fallback-readiness-study",
+      "route": "/research/outsourced-helpdesk-automation-fallback-readiness-study",
+      "publicationDate": "2026-10-05",
+      "contentHash": "eed5b0578e7fbeee586876057ec857361caedcff48a1676fbaa601ae9f9ce4e1",
+      "sources": ["https://csrc.nist.gov/pubs/sp/800/61/r3/final", "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final", "https://www.nist.gov/privacy-framework/privacy-framework"]
+    }
+  ],
+  "combinedRelease": {
+    "requiredBlogCount": 12,
+    "requiredResearchCount": 5,
+    "integratorIssue": "OUTAAA-84",
+    "integrator": "Blog",
+    "productionPushOwner": "Blog/browser operator",
+    "researchMustNotPushOrDeploy": true
+  },
+  "deploymentEvidence": {
+    "provider": "Coolify3",
+    "applicationUuid": "r4h89rsa3zpni1j0fj8fngaz",
+    "status": "not-requested-research-local-handoff-only"
+  },
+  "verifiedAt": null
+}

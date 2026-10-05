@@ -33,6 +33,7 @@ import { sep18ResearchArticles } from './sep18Research';
 import { sep22ResearchArticles, sep22ResearchRun2Articles } from './sep22Research';
 import { sep24ResearchArticles } from './sep24Research';
 import { sep25ResearchArticles } from './sep25Research';
+import { oct05ResearchArticles } from './oct05Research';
 import { oct02ResearchArticles } from './oct02Research';
 import { aug23BlogFleetV8 } from './aug23BlogFleetV8';
 
@@ -833,6 +834,7 @@ export const researchPosts: ResearchPost[] = [
   ...oct02ResearchArticles,
   ...sep28ResearchArticles,
   ...sep25ResearchArticles,
+  ...oct05ResearchArticles,
   ...sep24ResearchArticles,
   ...sep22ResearchRun2Articles,
   ...sep22ResearchArticles,

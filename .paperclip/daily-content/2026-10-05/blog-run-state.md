@@ -73,6 +73,8 @@ Use current authoritative sources only for claims they directly support. Candida
 | 5 | `outsourced-help-desk-customer-complaint-handoff` | 967 | `ef6f59859479cd68a530f0fa3e816fef3e6bbf62aed1ad463a9c432ce2c46b80` | pending final corpus audit | 0 | Distinct complaint decision-rights model, acknowledgement and acceptance stages, cancellation-charge scenario, remedy verification, and systemic-correction outcome. |
 | 6 | `outsourced-help-desk-ai-assistance-boundaries` | 904 | `1dea5307fd418dac891e4dfd812f2fdaceda50a7ffd6c1f118ea7a362a0fabe0` | pending final corpus audit | 0 | Distinct task-risk classification, data-flow and human-source-check controls, erroneous verification-summary scenario, and assisted-versus-unassisted measurement outcome. |
 | 7 | `outsourced-help-desk-knowledge-conflict-resolution` | 925 | `53eaeda32b8b97c96c306e80c93565cb70a16e3fc890e85044016ab2d512cf6c` | pending final corpus audit | 0 | Distinct source-hierarchy and contradiction workflow, warehouse-pick policy scenario, dependent-content tracing, and localized follow-up outcome. |
+| 8 | `outsourced-help-desk-channel-switch-handoff` | 909 | `c7a8668242c4c2588676903fe6334c0fe59f9459c4e6801595c885cdc0d114c6` | pending final corpus audit | 0 | Distinct cross-channel continuity model, identity-state minimization, invoice/account-owner scenario, split-history controls, and customer-effort outcome. |
+| 9 | `outsourced-help-desk-temporary-access-expiry` | 957 | `4a0d4e6c30bc3a3957e4d7941e4c706336d94acebd7ded636905b9c7d9c2e57b` | pending final corpus audit | 0 | Distinct time-bounded access lifecycle, actual-role testing, ten-day retail scenario, multi-view revocation evidence, and extension review outcome. |
 
 The draft remains outside `app/data.ts` and carries `publicationDate: pending-live-verification`; it is not publicly routable and cannot be mistaken for a published article. All three cited authority URLs returned HTTP 200 on 2026-10-05 UTC. The dynamic service route exists and the CTA slug is already present in the registered service inventory; rendered local HTTP validation remains a pre-push gate.
 
@@ -80,4 +82,4 @@ Research handoff commit `6b252126693589ac5271a4aa0cd647a5f28d9a14` was incorpora
 
 Across the first three Blog drafts, maximum pairwise five-word-shingle overlap is 0.20%. All cited NIST and CISA URLs returned HTTP 200. One initially selected ICO URL was unreachable during the live check and was replaced in draft 3 with the directly relevant NIST Privacy Framework, which returned HTTP 200.
 
-Current count: Blog drafted `7/12`; Research handoff received `5/5`; live verified `0/17`. No production push or deployment action has occurred.
+Current count: Blog drafted `9/12`; Research handoff received `5/5`; live verified `0/17`. No production push or deployment action has occurred.

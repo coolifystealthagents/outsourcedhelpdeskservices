@@ -1,5 +1,5 @@
 export type Source={name:string;url:string;note:string};
-export type ResearchPost={slug:string;title:string;excerpt:string;published:string;sourceDate:string;keyStats:{value:string;label:string}[];body:string[];sources:Source[];related:string[]};
+export type ResearchPost={slug:string;title:string;excerpt:string;published:string;sourceDate:string;hero?:string;keyStats:{value:string;label:string}[];body:string[];sources:Source[];related:string[]};
 export type Seed={slug:string;title:string;excerpt:string;question:string;decision:string;unit:string;fields:string;comparison:string;conclusion:string;boundary:string;scenarios:string;limits:string;stats:{value:string;label:string}[];sources:Source[];related:string[]};
 
 const nistLogs:Source={name:'Guide to Computer Security Log Management, SP 800-92',url:'https://www.nist.gov/publications/guide-computer-security-log-management',note:'National Institute of Standards and Technology guidance on log infrastructure and robust log-management processes. Checked September 24, 2026.'};

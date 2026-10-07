@@ -1,0 +1,21 @@
+{
+  "cycleLabel": "2026-10-07",
+  "publicationDate": "2026-10-07",
+  "publicationDateStatus": "provisional-until-combined-live-verification",
+  "timezone": "UTC",
+  "family": "research",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "routineBranch": "routine/outaaa-87-20261007",
+  "baseSha": "69e758b5880a05eab0599370eb78d3436968fbff",
+  "entries": [
+    {"topic":"Shared support inbox custody","slug":"outsourced-helpdesk-shared-inbox-custody-study","route":"/research/outsourced-helpdesk-shared-inbox-custody-study","publicationDate":"2026-10-07","contentHash":"d656b430b019d2adec42136434e7301ee8fa82fac4fdf9009dbacdf5d5ed6064","sources":["https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://csrc.nist.gov/pubs/sp/800/61/r3/final","https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/"]},
+    {"topic":"Remote support session control","slug":"outsourced-helpdesk-remote-support-session-control-study","route":"/research/outsourced-helpdesk-remote-support-session-control-study","publicationDate":"2026-10-07","contentHash":"96f55a2c798322dd65fdab2ae0bca090c6eedec2dc3cc072e6763bd645eb59f3","sources":["https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://pages.nist.gov/800-63-4/sp800-63.html","https://www.w3.org/TR/WCAG22/","https://ico.org/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/"]},
+    {"topic":"Self-service containment","slug":"outsourced-helpdesk-self-service-containment-study","route":"/research/outsourced-helpdesk-self-service-containment-study","publicationDate":"2026-10-07","contentHash":"b11cc2f1cc2f9864113c9634728e7565d1e2dc51021bd87148bbdb8cd28b17e4","sources":["https://www.w3.org/TR/WCAG22/","https://www.cisa.gov/securebydesign","https://pages.nist.gov/800-63-4/sp800-63.html","https://ico.org/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/"]},
+    {"topic":"Vendor knowledge-change propagation","slug":"outsourced-helpdesk-vendor-knowledge-change-propagation-study","route":"/research/outsourced-helpdesk-vendor-knowledge-change-propagation-study","publicationDate":"2026-10-07","contentHash":"a1f239efd9a0962c1a02cacf1ebb94f3386b6181c5529c44dcb04931668d61f4","sources":["https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://csrc.nist.gov/pubs/sp/800/61/r3/final","https://www.cisa.gov/securebydesign"]},
+    {"topic":"Failed-authentication support routing","slug":"outsourced-helpdesk-failed-authentication-routing-study","route":"/research/outsourced-helpdesk-failed-authentication-routing-study","publicationDate":"2026-10-07","contentHash":"3181dd13c9c28ecac9359102479e74b60dbce0b056fab4eda15ee4ad7cf733f7","sources":["https://pages.nist.gov/800-63-4/sp800-63.html","https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://csrc.nist.gov/pubs/sp/800/61/r3/final","https://www.w3.org/TR/WCAG22/"]}
+  ],
+  "combinedRelease":{"requiredBlogCount":12,"requiredResearchCount":5,"integratorIssue":"OUTAAA-88","integrator":"Blog","productionPushOwner":"Blog/browser operator","researchMustNotPushOrDeploy":true},
+  "deploymentEvidence":{"provider":"Coolify3","applicationUuid":"r4h89rsa3zpni1j0fj8fngaz","status":"not-requested-research-local-handoff-only"},
+  "verifiedAt": null
+}

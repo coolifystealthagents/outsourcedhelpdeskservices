@@ -14,6 +14,7 @@
   "required": 12,
   "staged": 12,
   "verifiedLive": 0,
+  "contentCommitSha": "f1550a71198399b535f69c5f2f9de0438639bfe0",
   "entries": [
     {"slug":"outsourced-help-desk-remote-support-session-boundary","route":"/blog/outsourced-help-desk-remote-support-session-boundary","bodyWords":1015,"contentHash":"0db1131860d0170793834876b6e3506a6f898a8998ae3ac0e015d45ad376ddf4"},
     {"slug":"outsourced-help-desk-status-page-evidence-workflow","route":"/blog/outsourced-help-desk-status-page-evidence-workflow","bodyWords":972,"contentHash":"77287bb4fb3c621211a3bec4d517f20eb40a1154cafd4b709beec160ee292f25"},
@@ -30,5 +31,5 @@
   ],
   "sources": ["https://www.nist.gov/cyberframework","https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final","https://www.cisa.gov/securebydesign"],
   "hero": "/helpdesk-team.jpg",
-  "validation": {"typecheck":"passed","productionBuild":"passed-before-final-three-copy-expansions; rerun-required-on-combined-head","maximumPairwiseFiveWordShingleOverlap":0.0033076075,"duplicateSubstantiveParagraphs":0,"qualitativeSharedArgumentSequence":"passed-manual-review"}
+  "validation": {"blogValidator":"passed","researchValidator":"passed-on-combined-head","typecheck":"passed","productionBuild":"passed-on-combined-head-801-static-pages","localAll17RenderedRoutes":"passed","localImagesAndSignatures":"passed","localSitemapAndCanonicals":"passed","internalAndAuthorityDestinations":"passed","maximumPairwiseFiveWordShingleOverlap":0.0033333333,"duplicateSubstantiveParagraphs":0,"qualitativeSharedArgumentSequence":"passed-manual-review"}
 }

@@ -17,7 +17,7 @@ Each article links to an existing relevant service conversion path, uses the exi
 ## Validation
 
 - TypeScript (`npm run lint`): passed on the staged head.
-- Production build (`npm run build`): passed with 796 static pages before three final topic-specific copy expansions; the required clean combined-head build remains pending after Research integration.
+- Production build (`npm run build`): passed on the combined Blog and Research head with 801 static pages.
 - Routes: generated from `blogPosts` and included by the existing sitemap route.
 - Structured data: `BlogPosting` uses the article's publication date and canonical route.
 - Rendered source links, on-site CTA, title, full body, and repository image are handled by the updated default Blog renderer.

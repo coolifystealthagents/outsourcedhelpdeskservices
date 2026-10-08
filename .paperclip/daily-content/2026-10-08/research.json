@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-08",
+  "publicationDate": "2026-10-08",
+  "domain": "outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "siteTimezone": "UTC",
+  "requiredBlogCount": 12,
+  "requiredResearchCount": 5,
+  "family": "research",
+  "required": 5,
+  "staged": 5,
+  "entries": [
+    {
+      "slug": "outsourced-helpdesk-ticket-ownership-acceptance-latency-study",
+      "route": "/research/outsourced-helpdesk-ticket-ownership-acceptance-latency-study",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 5287,
+      "contentHash": "4051e2c02536e70eb371be5ca14ab70761096996ddbb7d4d8d655e5fa89347cc",
+      "hero": "/research-thumbnails/helpdesk-escalation-ownership-research.svg",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "https://www.cisa.gov/securebydesign",
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "slug": "outsourced-helpdesk-knowledge-article-change-propagation-study",
+      "route": "/research/outsourced-helpdesk-knowledge-article-change-propagation-study",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 5328,
+      "contentHash": "e17eda830b6ec083790422185c505c7e0604e5688c24d26887f10a64e130ea65",
+      "hero": "/research-thumbnails/helpdesk-knowledge-owner-research.svg",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "https://www.cisa.gov/securebydesign",
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "slug": "outsourced-helpdesk-escalation-packet-completeness-study",
+      "route": "/research/outsourced-helpdesk-escalation-packet-completeness-study",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 5340,
+      "contentHash": "0f64b4fe6b534bfecbbf7b0fd1bf759df9e216c7ca70f76b9f1a931cd8525d83",
+      "hero": "/research-thumbnails/helpdesk-escalation-evidence-research.svg",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "https://www.cisa.gov/securebydesign",
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "slug": "outsourced-helpdesk-account-access-revocation-evidence-study",
+      "route": "/research/outsourced-helpdesk-account-access-revocation-evidence-study",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 5765,
+      "contentHash": "8692f2e0ad0168e4382b48f57cd15e54cedcaee4ca26a7b8cfb10913de3abb86",
+      "hero": "/research-thumbnails/helpdesk-account-change-research.svg",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "https://www.cisa.gov/securebydesign",
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    },
+    {
+      "slug": "outsourced-helpdesk-customer-checkpoint-reliability-study",
+      "route": "/research/outsourced-helpdesk-customer-checkpoint-reliability-study",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 5766,
+      "contentHash": "d65212517d1c852d90ee71e9e01a5377ddbacb8b756a06b3227d6660802b3d41",
+      "hero": "/research-thumbnails/helpdesk-customer-context-research.svg",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "https://www.cisa.gov/securebydesign",
+        "https://www.w3.org/TR/WCAG22/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-08",
+  "publicationDate": "2026-10-08",
+  "domain": "outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "productionBranch": "main",
+  "siteTimezone": "UTC",
+  "requiredBlogCount": 12,
+  "requiredResearchCount": 5,
+  "family": "blog",
+  "required": 12,
+  "staged": 12,
+  "entries": [
+    {
+      "slug": "outsourced-help-desk-ticket-intake-completeness-gate",
+      "route": "/blog/outsourced-help-desk-ticket-intake-completeness-gate",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4200,
+      "contentHash": "5f2bacfad4dde6b57f674f83823fd830d7344d584393d49650e168919c670171",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-identity-verification-evidence-packet",
+      "route": "/blog/outsourced-help-desk-identity-verification-evidence-packet",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4215,
+      "contentHash": "8a4caf1eb4574b32af874d776a1864a51c5f0f1fc551431b82373f1bdd253ef3",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-shift-handoff-open-ticket-register",
+      "route": "/blog/outsourced-help-desk-shift-handoff-open-ticket-register",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4264,
+      "contentHash": "e53ddb8cca26b88c3148e3fd9cc02fc03f1e80ad6125134305a0ee6c16aa35cc",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-priority-override-approval-log",
+      "route": "/blog/outsourced-help-desk-priority-override-approval-log",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4224,
+      "contentHash": "0de3f4a7caa6229d8b2c288f9f8ac139438b42e3c9a2375ff6bb422e4c4c97a3",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-knowledge-article-applicability-check",
+      "route": "/blog/outsourced-help-desk-knowledge-article-applicability-check",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4258,
+      "contentHash": "c2e2ac06fae081963cc9d8477169d9bf80a233617310d7750f560e9e26ea4e70",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-duplicate-ticket-merge-boundary",
+      "route": "/blog/outsourced-help-desk-duplicate-ticket-merge-boundary",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4252,
+      "contentHash": "6abd894ad34049c1ac868102b596cd4a4a965746f0e4da47ccae71ce29f7c5db",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-vendor-escalation-evidence-packet",
+      "route": "/blog/outsourced-help-desk-vendor-escalation-evidence-packet",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4544,
+      "contentHash": "b0e534624f4c67de93eff502dd4dffd2d80b3292360f808c94471ba203ea472c",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-customer-callback-identity-boundary",
+      "route": "/blog/outsourced-help-desk-customer-callback-identity-boundary",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4258,
+      "contentHash": "bfa5a43c2c86aab5be66eb87d6eb9d82bcc8e72cd3c88fc9195f97f647d87b19",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-attachment-quarantine-handoff",
+      "route": "/blog/outsourced-help-desk-attachment-quarantine-handoff",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4303,
+      "contentHash": "3def5a1b31d6aad08425fc4d3147a2ac7a45d2512735ab1b7469ea4ac6a90c16",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-sla-pause-resume-record",
+      "route": "/blog/outsourced-help-desk-sla-pause-resume-record",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4402,
+      "contentHash": "026eaf5bbba6e055bf3c18608de030331e85c54cea7bdcd591fcfcfd8b02032b",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-service-recovery-acceptance-check",
+      "route": "/blog/outsourced-help-desk-service-recovery-acceptance-check",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4033,
+      "contentHash": "66cb570efb5b814ecc7b69304bafc6c8fe06033995cf75d41604f052820795a4",
+      "hero": "/helpdesk-team.jpg"
+    },
+    {
+      "slug": "outsourced-help-desk-access-removal-reconciliation",
+      "route": "/blog/outsourced-help-desk-access-removal-reconciliation",
+      "publicationDate": "2026-10-08",
+      "bodyWords": 4315,
+      "contentHash": "6f8749431f2702d16978b0e6d68bcbf3cb7e276b11e27d04e43a6309508a78b4",
+      "hero": "/helpdesk-team.jpg"
+    }
+  ]
+}

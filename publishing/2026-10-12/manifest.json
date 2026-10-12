@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "site": "OutsourcedHelpdeskServices.com",
+  "canonicalDomain": "outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "branch": "main",
+  "baseSha": "cb997b93d1adcfce111d9e2bc1327a6bd54c0027",
+  "publicationDate": "2026-10-12",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "total": 17,
+    "thumbnails": 17
+  },
+  "registryPaths": [
+    "app/data.ts"
+  ],
+  "routePaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexPaths": [
+    "app/blog/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "sidebarPaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "sitemapPaths": [
+    "app/sitemap.xml/route.ts"
+  ],
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "SSO Signing Certificate Rollover Handoff for Help Desk Teams",
+      "slug": "helpdesk-sso-signing-certificate-rollover-handoff",
+      "route": "/blog/helpdesk-sso-signing-certificate-rollover-handoff",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-sso-signing-certificate-rollover-handoff.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Captive Portal Access Evidence Handoff for Remote Support",
+      "slug": "helpdesk-captive-portal-access-evidence-handoff",
+      "route": "/blog/helpdesk-captive-portal-access-evidence-handoff",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-captive-portal-access-evidence-handoff.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Secure Print Release Queue Handoff for Outsourced Support",
+      "slug": "helpdesk-secure-print-release-queue-handoff",
+      "route": "/blog/helpdesk-secure-print-release-queue-handoff",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-secure-print-release-queue-handoff.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Mobile Deep-Link Routing Failure Guide for Help Desk Agents",
+      "slug": "helpdesk-mobile-deep-link-routing-failure-guide",
+      "route": "/blog/helpdesk-mobile-deep-link-routing-failure-guide",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-mobile-deep-link-routing-failure-guide.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Email Suppression List Handoff Without Guessing Delivery",
+      "slug": "helpdesk-email-suppression-list-customer-handoff",
+      "route": "/blog/helpdesk-email-suppression-list-customer-handoff",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-email-suppression-list-customer-handoff.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "License Seat Exhaustion Request Handoff for SaaS Support",
+      "slug": "helpdesk-license-seat-exhaustion-request-handoff",
+      "route": "/blog/helpdesk-license-seat-exhaustion-request-handoff",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-license-seat-exhaustion-request-handoff.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Daylight-Saving Coverage Clock Review for Global Help Desks",
+      "slug": "helpdesk-daylight-saving-coverage-clock-review",
+      "route": "/blog/helpdesk-daylight-saving-coverage-clock-review",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-daylight-saving-coverage-clock-review.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Keyboard Focus Trap Escalation Guide for Support Queues",
+      "slug": "helpdesk-keyboard-focus-trap-escalation-guide",
+      "route": "/blog/helpdesk-keyboard-focus-trap-escalation-guide",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-keyboard-focus-trap-escalation-guide.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Locale-Specific Number and Date Display Handoff for Support",
+      "slug": "helpdesk-locale-number-date-display-handoff",
+      "route": "/blog/helpdesk-locale-number-date-display-handoff",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-locale-number-date-display-handoff.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Webhook Retry Duplicate Event Report for Help Desk Handoffs",
+      "slug": "helpdesk-webhook-retry-duplicate-event-report",
+      "route": "/blog/helpdesk-webhook-retry-duplicate-event-report",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-webhook-retry-duplicate-event-report.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Account Data Export Status Handoff for Customer Support",
+      "slug": "helpdesk-account-data-export-status-handoff",
+      "route": "/blog/helpdesk-account-data-export-status-handoff",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-account-data-export-status-handoff.svg"
+    },
+    {
+      "section": "Blog",
+      "title": "Hardware Asset Tag Mismatch Handoff for Remote Help Desks",
+      "slug": "helpdesk-hardware-asset-tag-mismatch-handoff",
+      "route": "/blog/helpdesk-hardware-asset-tag-mismatch-handoff",
+      "sourcePath": "app/oct12BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-hardware-asset-tag-mismatch-handoff.svg"
+    },
+    {
+      "section": "Research",
+      "title": "Ticket Categorization Drift Across Outsourced Help Desk Shifts",
+      "slug": "outsourced-helpdesk-ticket-categorization-drift-study",
+      "route": "/research/outsourced-helpdesk-ticket-categorization-drift-study",
+      "sourcePath": "app/oct12Research.ts",
+      "thumbnailPath": "public/research-thumbnails/outsourced-helpdesk-ticket-categorization-drift-study.svg"
+    },
+    {
+      "section": "Research",
+      "title": "Customer Callback Number Provenance in Outsourced Support",
+      "slug": "outsourced-helpdesk-callback-number-provenance-study",
+      "route": "/research/outsourced-helpdesk-callback-number-provenance-study",
+      "sourcePath": "app/oct12Research.ts",
+      "thumbnailPath": "public/research-thumbnails/outsourced-helpdesk-callback-number-provenance-study.svg"
+    },
+    {
+      "section": "Research",
+      "title": "Portal Upload Link Expiry Reliability for Help Desk Evidence",
+      "slug": "outsourced-helpdesk-portal-upload-link-expiry-study",
+      "route": "/research/outsourced-helpdesk-portal-upload-link-expiry-study",
+      "sourcePath": "app/oct12Research.ts",
+      "thumbnailPath": "public/research-thumbnails/outsourced-helpdesk-portal-upload-link-expiry-study.svg"
+    },
+    {
+      "section": "Research",
+      "title": "Ticket Watcher Notification Completeness in Shared Support Queues",
+      "slug": "outsourced-helpdesk-watcher-notification-completeness-study",
+      "route": "/research/outsourced-helpdesk-watcher-notification-completeness-study",
+      "sourcePath": "app/oct12Research.ts",
+      "thumbnailPath": "public/research-thumbnails/outsourced-helpdesk-watcher-notification-completeness-study.svg"
+    },
+    {
+      "section": "Research",
+      "title": "Routing Confidence Calibration for Automated Help Desk Triage",
+      "slug": "outsourced-helpdesk-routing-confidence-calibration-study",
+      "route": "/research/outsourced-helpdesk-routing-confidence-calibration-study",
+      "sourcePath": "app/oct12Research.ts",
+      "thumbnailPath": "public/research-thumbnails/outsourced-helpdesk-routing-confidence-calibration-study.svg"
+    }
+  ]
+}

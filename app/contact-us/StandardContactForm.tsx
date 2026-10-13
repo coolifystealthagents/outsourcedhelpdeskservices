@@ -60,15 +60,8 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
       try { (window as TrackerWindow).acrTracker?.trackLead?.(payload); } catch {}
       window.location.assign("/thank-you");
     } catch {
-      try {
-        const tracker = (window as TrackerWindow).acrTracker?.trackLead;
-        if (tracker) {
-          tracker(payload);
-          window.location.assign("/thank-you");
-          return;
-        }
-      } catch {}
-      setError("We could not submit your request. Please try again.");
+      setError("We could not submit the form. Please refresh and try again.");
+    } finally {
       setSubmitting(false);
     }
   }
@@ -76,7 +69,7 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
   return (
     <div className="sa-form-card">
       <h2>Find Growth In Your Business By Hiring Industry Experienced Virtual Assistants</h2>
-      <form action={endpoint} method="post" onSubmit={submit} id="contactPageForm">
+      <form action={endpoint} method="post" onSubmit={submit} id="contactPageForm" data-acr-managed="true">
         <input className="sa-hp" name="website_url" type="hidden" tabIndex={-1} autoComplete="off" aria-label="Leave this field empty" />
         <div className="sa-grid">
           <label>First Name *<input name="firstName" required autoComplete="given-name" /></label>

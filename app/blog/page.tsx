@@ -1,12 +1,15 @@
 import { Header, Footer } from "../components";
 import { blogPosts, site } from "../data";
+import aug19Meta from "../aug19-meta.json";
 export const metadata = {
   title: `Blog | ${site.brand}`,
   description: "Practical Philippines staffing guides.",
+  alternates: { canonical: "https://outsourcedhelpdeskservices.com/blog" },
 };
 const publishedOn = (post: (typeof blogPosts)[number], date: string) =>
   "published" in post && post.published === date;
 export default function Blog() {
+  const operationsLibrary = Object.entries(aug19Meta).filter(([, value]) => value.family === "blog");
   const campaignPosts = blogPosts.filter((p) => publishedOn(p, "2026-10-12"));
   const posts = blogPosts
     .filter((p) => !publishedOn(p, "2026-10-12"))
@@ -55,6 +58,16 @@ export default function Blog() {
               </a>
             ))}
           </nav>
+          <h2>Help desk operations library</h2>
+          <div className="cards">
+            {operationsLibrary.map(([slug, entry]) => (
+              <a className="card" href={`/blog/${slug}`} key={slug}>
+                <h3>{entry.title}</h3>
+                <p>{entry.description}</p>
+                <span>Read operations guide →</span>
+              </a>
+            ))}
+          </div>
         </div>
       </main>
       <Footer />

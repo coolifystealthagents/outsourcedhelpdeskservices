@@ -6,6 +6,13 @@ export function generateStaticParams() {
   const n = Math.max(1, Math.ceil(blogPosts.length / 20));
   return Array.from({ length: n }, (_, i) => ({ page: String(i + 1) }));
 }
+export async function generateMetadata({ params }: { params: Promise<{ page: string }> }) {
+  const { page } = await params;
+  return {
+    title: `Blog page ${page}`,
+    alternates: { canonical: `https://outsourcedhelpdeskservices.com/blog/page/${page}` },
+  };
+}
 export default async function BlogPage({
   params,
 }: {

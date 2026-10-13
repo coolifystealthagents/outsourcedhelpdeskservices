@@ -1,12 +1,15 @@
 import { Header, Footer } from "../components";
 import { researchPosts, site } from "../data";
+import aug19Meta from "../aug19-meta.json";
 
 export const metadata = {
   title: `Research | ${site.brand}`,
   description: "Research notes for Philippines-based staffing decisions.",
+  alternates: { canonical: "https://outsourcedhelpdeskservices.com/research" },
 };
 
 export default function Research() {
+  const operationsLibrary = Object.entries(aug19Meta).filter(([, value]) => value.family === "research");
   const campaignPosts = researchPosts.filter(
     (p) => p.published === "2026-10-12",
   );
@@ -46,6 +49,16 @@ export default function Research() {
                 <span>
                   {p.keyStats[0].value} {p.keyStats[0].label}
                 </span>
+              </a>
+            ))}
+          </div>
+          <h2>Help desk operations research</h2>
+          <div className="cards">
+            {operationsLibrary.map(([slug, entry]) => (
+              <a className="card" href={`/research/${slug}`} key={slug}>
+                <h3>{entry.title}</h3>
+                <p>{entry.description}</p>
+                <span>Read research brief →</span>
               </a>
             ))}
           </div>

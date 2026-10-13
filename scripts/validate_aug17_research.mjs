@@ -178,10 +178,11 @@ assert.ok(route.includes('rel="noreferrer"'), 'external Research sources must re
 assert.ok(route.includes('failed?source.title:<a'), 'failed source URLs must never render as links');
 assert.ok(route.includes('this failed URL does not substantiate a finding'), 'paired historical failures need an explicit evidence disclaimer');
 assert.ok(route.includes('scope="row"') && route.includes('aria-labelledby="research-results-heading"'), 'evidence tables need row headers and an accessible programmatic name');
-assert.ok(route.includes('p.hero??`/research-thumbnails/${p.slug}.svg`') && route.includes('width="1200" height="630"') && route.includes("alt={p.title + ' research hero'}") && route.includes('loading="eager"'), 'Research hero image fallback, dimensions, descriptive alt text, or eager loading changed');
+assert.ok(route.includes('researchHero(p.hero)') && route.includes('/illustrations/getillustrations/communication-illustrations-pack-svg/ticket-support.webp') && route.includes('width="1200" height="630"') && route.includes("alt={p.title + ' research hero'}") && route.includes('loading="eager"'), 'Research hero image fallback, dimensions, descriptive alt text, or eager loading changed');
 for (const moduleName of renderedModules) assert.ok(route.includes(`data-research-module="${moduleName}"`), `production route does not render ${moduleName}`);
 
 const indexRoute = read('app/research/page.tsx');
-assert.ok(indexRoute.includes('<Header hidePricing/>') && indexRoute.includes('<Footer hidePricing/>'), 'Research index Header and Footer must use hidePricing');
+assert.match(indexRoute, /<Header\s+hidePricing\s*\/>/, 'Research index Header must use hidePricing');
+assert.match(indexRoute, /<Footer\s+hidePricing\s*\/>/, 'Research index Footer must use hidePricing');
 
 console.log(`August 17 Research contract passed: ${reports.length} exact unique routes, >=900 route-specific words, positive N with reconciled rows/calculations, all modules, ${publicationDate} visible/JSON-LD dates, hidePricing, source-access safeguards, and prohibited-copy checks`);

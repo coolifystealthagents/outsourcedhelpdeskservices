@@ -56,7 +56,7 @@ const articles: Aug21BlogPost[] = [
   },
   {
     slug: 'help-desk-queue-reasonable-clarification', title: 'Set a reasonable clarification limit for help desk triage', excerpt: 'Ask enough to choose a safe route while preventing endless questioning and unnecessary collection of customer detail.', minutes: 9, published: '2026-08-21',
-    ...hero('reasonable-clarification', 'Editorial illustration of a help desk specialist choosing one focused clarification before a safe route, dark teal and amber, no text, no logos'),
+    ...hero('queue-reasonable-clarification', 'Editorial illustration of a help desk specialist choosing one focused clarification before a safe route, dark teal and amber, no text, no logos'),
     body: [
       'Clarification is part of help desk work, but an intake that keeps asking questions can become its own failure. Set a reasonable limit by identifying the minimum fact that changes the safe action, then stop when the route is known. The customer should not have to answer a long questionnaire to receive a clear next step. For outsourced support, this protects time, reduces unnecessary exposure, and gives different specialists a shared boundary for when to route incomplete work.',
       'Start with the outcome, affected service, impact, and timing. Then ask one focused question that separates the plausible routes. For example, a request may need to distinguish a routine usage problem from account ownership, a service-wide symptom from one-user impact, or an information request from a policy exception. Explain why the question matters in customer-safe language. Avoid collecting secrets or sensitive records merely because the specialist has not yet decided which owner should review the case.',

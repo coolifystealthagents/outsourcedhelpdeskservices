@@ -1,5 +1,9 @@
 import { Footer, Header, JsonLd } from './components';
 
+export const metadata = {
+  alternates: { canonical: 'https://outsourcedhelpdeskservices.com/' },
+};
+
 const supportLanes = [
   { number: '01', title: 'Ticket triage and routing', text: 'Sort new requests, set priority, add clean notes, and send urgent work to the right owner.', href: '/services/level-one-ticket-triage' },
   { number: '02', title: 'User and customer support', text: 'Handle repeat questions across inbox, chat, and portal with an approved answer path.', href: '/services/email-helpdesk-support' },

@@ -2,7 +2,7 @@
   "name": "outsourcedhelpdeskservices",
   "private": true,
   "scripts": {
-    "test": "npm run build && node tests/homepage-image-labels.test.mjs && node tests/aug17-publication-contract.test.mjs && npm run validate:aug17-blog && npm run validate:aug17-research",
+    "test": "npm run build && node --test tests/audit-remediation.test.mjs && node tests/homepage-image-labels.test.mjs && node tests/aug17-publication-contract.test.mjs && npm run validate:aug17-blog && npm run validate:aug17-research",
     "test:password-reset-handoff": "node tests/password-reset-contextual-handoff.test.mjs",
     "validate:aug17-blog": "node scripts/validate_aug17_blog.mjs",
     "validate:aug17-research": "node scripts/validate_aug17_research.mjs",
@@ -41,7 +41,7 @@
   "overrides": {
     "nanoid": "3.3.18",
     "postcss": "8.5.28",
-    "sharp": "0.35.4"
+    "sharp": "0.35.5"
   },
   "devDependencies": {
     "@types/node": "^22.10.7",

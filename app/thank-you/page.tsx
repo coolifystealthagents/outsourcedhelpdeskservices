@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Header, Footer } from '../components';
-import { TestimonialsRail } from '../booking-components';
+
 
 export const metadata: Metadata = {
   title: 'Thank You - Book A Meeting',
-  description: 'Choose a convenient time to speak with the Stealth Agents team.',
+  description: 'Thank you. Choose a time for your consultation.',
   robots: { index: false, follow: false },
 };
 
@@ -19,7 +19,7 @@ export default function ThankYouPage() {
             <h1>Step 2 - Book A Meeting</h1>
             <p className="sa-booking-lead">No commitment. No risk. Just expert guidance.</p>
             <img className="sa-booking-image" src="/thank-you-hero.png" alt="Stealth Agents team ready to help" width="619" height="402" />
-            <TestimonialsRail />
+
           </div>
           <section className="sa-booking-calendar" aria-labelledby="booking-calendar-title">
             <h2 id="booking-calendar-title">Pick a Time That Works for You</h2>

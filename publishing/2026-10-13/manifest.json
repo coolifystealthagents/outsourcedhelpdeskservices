@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "site": "OutsourcedHelpdeskServices.com",
+  "canonicalDomain": "https://outsourcedhelpdeskservices.com",
+  "repository": "coolifystealthagents/outsourcedhelpdeskservices",
+  "branch": "main",
+  "baseSha": "5dfd358544bd4c5cdde427eacfcd19c55e6d5531",
+  "publicationDate": "2026-10-13",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "total": 17,
+    "thumbnails": 17
+  },
+  "registryPaths": [
+    "app/data.ts"
+  ],
+  "routePaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexPaths": [
+    "app/blog/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "sidebarPaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "sitemapPaths": [
+    "app/sitemap.xml/route.ts"
+  ],
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "Resolve Stale Device Enrollment Profiles without Guessing",
+      "slug": "helpdesk-device-enrollment-stale-profile",
+      "route": "/blog/helpdesk-device-enrollment-stale-profile",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-device-enrollment-stale-profile-oct13.svg",
+      "wordCount": 1792,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Review Shared Mailbox Send-As Failures Safely",
+      "slug": "helpdesk-shared-mailbox-send-as-review",
+      "route": "/blog/helpdesk-shared-mailbox-send-as-review",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-shared-mailbox-send-as-review-oct13.svg",
+      "wordCount": 1791,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Handoff Browser Extension Conflicts with Evidence",
+      "slug": "helpdesk-browser-extension-conflict-handoff",
+      "route": "/blog/helpdesk-browser-extension-conflict-handoff",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-browser-extension-conflict-handoff-oct13.svg",
+      "wordCount": 1778,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Route Passwordless Enrollment Recovery Requests",
+      "slug": "helpdesk-passwordless-enrollment-recovery",
+      "route": "/blog/helpdesk-passwordless-enrollment-recovery",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-passwordless-enrollment-recovery-oct13.svg",
+      "wordCount": 1777,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Document VPN Split-Tunnel Exceptions for Review",
+      "slug": "helpdesk-vpn-split-tunnel-exception",
+      "route": "/blog/helpdesk-vpn-split-tunnel-exception",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-vpn-split-tunnel-exception-oct13.svg",
+      "wordCount": 1791,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Verify Calendar Delegation Removal across Clients",
+      "slug": "helpdesk-calendar-delegation-removal",
+      "route": "/blog/helpdesk-calendar-delegation-removal",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-calendar-delegation-removal-oct13.svg",
+      "wordCount": 1778,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Trace Mobile App Notification Gaps before Escalation",
+      "slug": "helpdesk-mobile-app-notification-gap",
+      "route": "/blog/helpdesk-mobile-app-notification-gap",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-mobile-app-notification-gap-oct13.svg",
+      "wordCount": 1792,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Publish Knowledge Article Expiry Banners with Ownership",
+      "slug": "helpdesk-knowledge-article-expiry-banner",
+      "route": "/blog/helpdesk-knowledge-article-expiry-banner",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-knowledge-article-expiry-banner-oct13.svg",
+      "wordCount": 1792,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Track Courier Evidence for Remote Asset Returns",
+      "slug": "helpdesk-asset-return-courier-evidence",
+      "route": "/blog/helpdesk-asset-return-courier-evidence",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-asset-return-courier-evidence-oct13.svg",
+      "wordCount": 1792,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Control Conference Room Device Resets Safely",
+      "slug": "helpdesk-conference-room-device-reset",
+      "route": "/blog/helpdesk-conference-room-device-reset",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-conference-room-device-reset-oct13.svg",
+      "wordCount": 1804,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Update Customers during API Token Expiry Incidents",
+      "slug": "helpdesk-api-token-expiry-customer-update",
+      "route": "/blog/helpdesk-api-token-expiry-customer-update",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-api-token-expiry-customer-update-oct13.svg",
+      "wordCount": 1792,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Blog",
+      "title": "Route Suspected Malicious Ticket Attachments",
+      "slug": "helpdesk-ticket-attachment-malware-route",
+      "route": "/blog/helpdesk-ticket-attachment-malware-route",
+      "sourcePath": "app/oct13BlogArticles.ts",
+      "thumbnailPath": "public/blog-thumbnails/helpdesk-ticket-attachment-malware-route-oct13.svg",
+      "wordCount": 1790,
+      "sha256": "d32721bd12a868df035846c1bfdbcd35798580f428389afee1a118d572b99964"
+    },
+    {
+      "section": "Research",
+      "title": "Study First-Contact Resolution Denominator Choices",
+      "slug": "helpdesk-first-contact-resolution-denominator-study",
+      "route": "/research/helpdesk-first-contact-resolution-denominator-study",
+      "sourcePath": "app/oct13Research.ts",
+      "thumbnailPath": "public/research-thumbnails/helpdesk-first-contact-resolution-denominator-study-oct13.svg",
+      "wordCount": 1915,
+      "sha256": "bbf28870a0ca0cd89171abab0e6c3b2c976add519a491db99a294fd061ba7cb4"
+    },
+    {
+      "section": "Research",
+      "title": "Measure Escalation Acceptance Latency in Outsourced Support",
+      "slug": "helpdesk-escalation-acceptance-latency-research",
+      "route": "/research/helpdesk-escalation-acceptance-latency-research",
+      "sourcePath": "app/oct13Research.ts",
+      "thumbnailPath": "public/research-thumbnails/helpdesk-escalation-acceptance-latency-research-oct13.svg",
+      "wordCount": 1945,
+      "sha256": "bbf28870a0ca0cd89171abab0e6c3b2c976add519a491db99a294fd061ba7cb4"
+    },
+    {
+      "section": "Research",
+      "title": "Analyze Zero-Result Searches in Help Desk Knowledge",
+      "slug": "helpdesk-knowledge-search-zero-result-analysis",
+      "route": "/research/helpdesk-knowledge-search-zero-result-analysis",
+      "sourcePath": "app/oct13Research.ts",
+      "thumbnailPath": "public/research-thumbnails/helpdesk-knowledge-search-zero-result-analysis-oct13.svg",
+      "wordCount": 1947,
+      "sha256": "bbf28870a0ca0cd89171abab0e6c3b2c976add519a491db99a294fd061ba7cb4"
+    },
+    {
+      "section": "Research",
+      "title": "Review Remote Access Exception Evidence Quality",
+      "slug": "helpdesk-remote-access-exception-review-study",
+      "route": "/research/helpdesk-remote-access-exception-review-study",
+      "sourcePath": "app/oct13Research.ts",
+      "thumbnailPath": "public/research-thumbnails/helpdesk-remote-access-exception-review-study-oct13.svg",
+      "wordCount": 1931,
+      "sha256": "bbf28870a0ca0cd89171abab0e6c3b2c976add519a491db99a294fd061ba7cb4"
+    },
+    {
+      "section": "Research",
+      "title": "Study Corrections to Customer-Facing Help Desk Updates",
+      "slug": "helpdesk-customer-update-correction-study",
+      "route": "/research/helpdesk-customer-update-correction-study",
+      "sourcePath": "app/oct13Research.ts",
+      "thumbnailPath": "public/research-thumbnails/helpdesk-customer-update-correction-study-oct13.svg",
+      "wordCount": 1947,
+      "sha256": "bbf28870a0ca0cd89171abab0e6c3b2c976add519a491db99a294fd061ba7cb4"
+    }
+  ]
+}

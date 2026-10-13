@@ -31,6 +31,7 @@ import { oct05BlogArticles } from './oct05BlogArticles';
 import { oct07BlogArticles } from './oct07BlogArticles';
 import { oct08BlogArticles } from './oct08BlogArticles';
 import { oct12BlogArticles } from './oct12BlogArticles';
+import { oct13BlogArticles } from './oct13BlogArticles';
 import { sep03ResearchArticles } from './sep03Research';
 import { sep28ResearchArticles } from './sep28Research';
 import { sep18ResearchArticles } from './sep18Research';
@@ -41,6 +42,7 @@ import { oct05ResearchArticles } from './oct05Research';
 import { oct07ResearchArticles } from './oct07Research';
 import { oct08ResearchArticles } from './oct08Research';
 import { oct12ResearchArticles } from './oct12Research';
+import { oct13ResearchArticles } from './oct13Research';
 import { oct02ResearchArticles } from './oct02Research';
 import { aug23BlogFleetV8 } from './aug23BlogFleetV8';
 
@@ -310,6 +312,7 @@ const blogPostsSource = [
 ] as const;
 
 export const blogPosts = [
+  ...oct13BlogArticles,
   ...oct12BlogArticles,
   ...oct08BlogArticles,
   ...oct07BlogArticles,
@@ -842,6 +845,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...oct13ResearchArticles,
   ...oct12ResearchArticles,
   ...oct08ResearchArticles,
   ...oct07ResearchArticles,

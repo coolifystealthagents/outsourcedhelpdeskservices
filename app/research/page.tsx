@@ -11,7 +11,7 @@ export const metadata = {
 export default function Research() {
   const operationsLibrary = Object.entries(aug19Meta).filter(([, value]) => value.family === "research");
   const campaignPosts = researchPosts.filter(
-    (p) => p.published === "2026-10-12",
+    (p) => p.published === "2026-10-13",
   );
   const earlierPosts = researchPosts.filter(
     (p) => p.published !== "2026-10-12",
@@ -27,13 +27,13 @@ export default function Research() {
             Sourced research about Philippines-based staffing, ticket ownership,
             access, escalation, and quality routines.
           </p>
-          <h2>Published October 12, 2026</h2>
+          <h2>Published October 13, 2026</h2>
           <div className="cards">
             {campaignPosts.map((p) => (
               <a className="card" href={`/research/${p.slug}`} key={p.slug}>
                 <h3>{p.title}</h3>
                 <p>{p.excerpt}</p>
-                <time dateTime={p.published}>Published October 12, 2026</time>
+                <time dateTime={p.published}>Published October 13, 2026</time>
                 <span>
                   {p.keyStats[0].value} {p.keyStats[0].label}
                 </span>

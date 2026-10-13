@@ -10,9 +10,9 @@ const publishedOn = (post: (typeof blogPosts)[number], date: string) =>
   "published" in post && post.published === date;
 export default function Blog() {
   const operationsLibrary = Object.entries(aug19Meta).filter(([, value]) => value.family === "blog");
-  const campaignPosts = blogPosts.filter((p) => publishedOn(p, "2026-10-12"));
+  const campaignPosts = blogPosts.filter((p) => publishedOn(p, "2026-10-13"));
   const posts = blogPosts
-    .filter((p) => !publishedOn(p, "2026-10-12"))
+    .filter((p) => !publishedOn(p, "2026-10-13"))
     .slice(0, 20 - campaignPosts.length);
   const pages = Math.max(1, Math.ceil(blogPosts.length / 20));
   return (
@@ -26,13 +26,13 @@ export default function Blog() {
             Read practical guidance for choosing, scoping, and managing Filipino
             help desk support. Existing article addresses remain available.
           </p>
-          <h2>Published October 12, 2026</h2>
+          <h2>Published October 13, 2026</h2>
           <div className="cards">
             {campaignPosts.map((p) => (
               <a className="card" href={`/blog/${p.slug}`} key={p.slug}>
                 <h3>{p.title}</h3>
                 <p>{p.excerpt}</p>
-                <time dateTime="2026-10-12">Published October 12, 2026</time>
+                <time dateTime="2026-10-13">Published October 13, 2026</time>
                 <span>{p.minutes} min read</span>
               </a>
             ))}

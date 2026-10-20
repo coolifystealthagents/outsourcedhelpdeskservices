@@ -73,14 +73,17 @@ try {
   const pricingResponse = await fetch(`${baseUrl}/pricing`, { redirect: 'manual' });
   if (pricingResponse.status !== 308) failures.push(`/pricing must return permanent redirect status 308, got ${pricingResponse.status}`);
   const location = pricingResponse.headers.get('location');
-  if (location !== '/contact') failures.push(`/pricing must redirect to /contact, got ${location}`);
+  if (location !== '/contact-us') failures.push(`/pricing must redirect to /contact-us, got ${location}`);
 
   const homeResponse = await fetch(baseUrl, { redirect: 'manual' });
   assert.equal(homeResponse.status, 200, 'home page must render successfully');
   const homeHtml = await homeResponse.text();
   if (/href=["']\/pricing["']/.test(homeHtml)) failures.push('public home page must not expose a Pricing link or CTA');
 
-  const contactResponse = await fetch(`${baseUrl}/contact`, { redirect: 'manual' });
+  const aliasResponse = await fetch(`${baseUrl}/contact`, { redirect: 'manual' });
+  assert.equal(aliasResponse.status, 308, 'legacy contact alias must permanently redirect');
+  assert.equal(aliasResponse.headers.get('location'), '/contact-us', 'legacy contact alias must redirect to /contact-us');
+  const contactResponse = await fetch(`${baseUrl}/contact-us`, { redirect: 'manual' });
   assert.equal(contactResponse.status, 200, 'contact page must render successfully');
   const contactHtml = await contactResponse.text();
   if (/\$(?:10|15|18)\s*\/\s*hour/i.test(contactHtml)) failures.push('public contact page must not expose hourly rates');

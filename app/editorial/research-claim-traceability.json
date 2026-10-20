@@ -1,11 +1,11 @@
 {
   "helpdesk-article-claim-traceability-research": {
     "executiveAnswer": [
-      "A completed claim-level desk audit found that source presence alone did not make a candidate helpdesk statement traceable. The study tested 12 deliberately paired claim sentences against six passages in three public, authoritative publications: NIST SP 800-53 Revision 5, the Federal Trade Commission’s Safeguards Rule compliance guide, and the UK Information Commissioner’s data-minimisation guidance. For each passage, one sentence preserved the source’s actor, object, condition, and modality, while a paired stress sentence removed or enlarged one of those boundaries. Six of 12 sentences passed all four predeclared tests: direct textual support, preserved scope, identifiable issuing authority, and an identifiable version or update marker. All 12 could name an authoritative publisher and a dated or versioned source, yet only six retained what the source actually allowed the writer to say. The direct result is 6/12, or 50%, fully traceable candidate claims in this purpose-built boundary test—not a benchmark for real helpdesks.",
+      "A completed claim-level desk audit found that source presence alone did not make a candidate helpdesk statement traceable. The study tested 12 deliberately paired claim sentences against six passages in three public, authoritative publications: NIST SP 800-53 Revision 5, the Federal Trade Commission’s Safeguards Rule compliance guide, and the UK Information Commissioner’s data-minimisation guidance. For each passage, one sentence preserved the source’s actor, object, condition, and modality, while a paired stress sentence removed or enlarged one of those boundaries. Six of 12 sentences passed all four predeclared tests: direct textual support, preserved scope, identifiable issuing authority, and an identifiable version or update marker. All 12 could name an authoritative publisher and a dated or versioned source, yet only six retained what the source actually allowed the writer to say. The direct result is 6/12, or 50%, fully traceable candidate claims in this purpose-built boundary test-not a benchmark for real helpdesks.",
       "The failures were not citation failures in the narrow sense. Every failed sentence could still be placed beside an official URL. They failed because the wording converted a bounded control into a universal helpdesk rule: configuration-change control became approval for every article edit; a rule for covered financial institutions became a rule for every outsourced helpdesk; minimising personal data became collecting none; and a periodic review principle became a fictional 30-day deletion deadline. This demonstrates why a URL, publisher name, or recent date cannot substitute for claim-to-passage alignment. A reviewer must be able to locate the supporting passage and show that the article preserves its subject, regulated population, object, conditions, and strength of obligation.",
       "The audit also found a separate ownership gap. None of the 12 external-source mappings established the organization-specific person or role authorized to approve a support article or decide a customer-specific exception. NIST identifies controls, the FTC explains obligations for entities within the Safeguards Rule’s scope, and the ICO explains a data-protection principle; none appoints a particular helpdesk’s policy, security, privacy, service, or account owner. Therefore, a reusable material claim needs two links rather than one: an authoritative external or internal source that supports the wording, and a locally designated decision owner who can confirm applicability and resolve conflict. This conclusion is based entirely on public documents and constructed test sentences; no customer, ticket, workforce, or proprietary records were used."
     ],
-    "researchQuestion": "When candidate helpdesk-article claims are checked against the route’s named authoritative sources, how often can the exact wording be traced to a locatable passage while preserving the source’s scope, authority, and currency—and does that external evidence identify the local owner empowered to approve use?",
+    "researchQuestion": "When candidate helpdesk-article claims are checked against the route’s named authoritative sources, how often can the exact wording be traced to a locatable passage while preserving the source’s scope, authority, and currency-and does that external evidence identify the local owner empowered to approve use?",
     "observationWindow": "Single-day reproducible desk review conducted on 2026-08-18. The measured source versions were NIST SP 800-53 Revision 5 with updates through 2020-12-10, the FTC compliance guide published 2022-04-27 and modified 2024-12-23, and ICO guidance carrying a 2025-09-09 date marker. HTTP status was checked by GET with redirects followed on 2026-08-18. This is a document-coding window, not a period of observed helpdesk operations.",
     "sampleDefinition": {
       "population": "The bounded population was the 12 candidate claim sentences generated from the first substantive occurrence of two predeclared search strings in each of three accessible official sources. The strings were “configuration-controlled changes” and “content of audit records” for NIST; “Qualified Individual” and “monitor your service providers” for the FTC; and “adequate, relevant and limited” and “periodically review the data we hold” for the ICO. Each located passage produced one scope-faithful paraphrase and one paired boundary-stress sentence that removed or enlarged an actor, object, condition, deadline, or modality.",
@@ -91,7 +91,7 @@
         [
           "N2",
           "NIST requires a manager to approve every helpdesk-article edit.",
-          "Compared with NIST SP 800-53 Rev. 5, CM-3(a–g), pages 98–99",
+          "Compared with NIST SP 800-53 Rev. 5, CM-3(a-g), pages 98-99",
           "Fail: neither every article edit nor a manager is stated",
           "Fail: a system configuration control was universalized",
           "Pass",
@@ -101,7 +101,7 @@
         [
           "N3",
           "NIST AU-3 says audit records should establish what happened, when and where it happened, its source and outcome, and associated identities.",
-          "NIST SP 800-53 Rev. 5, AU-3(a–f), page 67",
+          "NIST SP 800-53 Rev. 5, AU-3(a-f), page 67",
           "Pass",
           "Pass",
           "Pass",
@@ -237,7 +237,7 @@
         "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf",
         "publishedOrUpdated": "September 2020; updated 2020-12-10",
         "accessed": "2026-08-18",
-        "claimNote": "Measured control text came from CM-3 Configuration Change Control on PDF pages 98–99 and AU-3 Content of Audit Records on PDF page 67. The controls concern organizational systems and audit records; they do not independently mandate approval of every helpdesk article or identity in every support note.",
+        "claimNote": "Measured control text came from CM-3 Configuration Change Control on PDF pages 98-99 and AU-3 Content of Audit Records on PDF page 67. The controls concern organizational systems and audit records; they do not independently mandate approval of every helpdesk article or identity in every support note.",
         "httpStatus": 200
       },
       {

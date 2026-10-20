@@ -1,20 +1,21 @@
 import { Footer, Header, JsonLd } from './components';
+import { ReviewsMarquee } from './ReviewsMarquee';
 
 export const metadata = {
   alternates: { canonical: 'https://outsourcedhelpdeskservices.com/' },
 };
 
 const supportLanes = [
-  { number: '01', title: 'Ticket triage and routing', text: 'Sort new requests, set priority, add clean notes, and send urgent work to the right owner.', href: '/services/level-one-ticket-triage' },
-  { number: '02', title: 'User and customer support', text: 'Handle repeat questions across inbox, chat, and portal with an approved answer path.', href: '/services/email-helpdesk-support' },
-  { number: '03', title: 'Knowledge base upkeep', text: 'Turn solved tickets into clear help articles so the same issue is easier next time.', href: '/services/knowledge-base-maintenance' },
-  { number: '04', title: 'QA and service reporting', text: 'Review ticket notes, missed handoffs, response windows, and the fixes your team should make.', href: '/services/helpdesk-quality-review' },
+  { title: 'Ticket triage and routing', text: 'Sort new requests, set priority, add clean notes, and send urgent work to the right owner.', href: '/services/level-one-ticket-triage' },
+  { title: 'User and customer support', text: 'Handle repeat questions across inbox, chat, and portal with an approved answer path.', href: '/services/email-helpdesk-support' },
+  { title: 'Knowledge base upkeep', text: 'Turn solved tickets into clear help articles so the same issue is easier next time.', href: '/services/knowledge-base-maintenance' },
+  { title: 'QA and service reporting', text: 'Review ticket notes, missed handoffs, response windows, and the fixes your team should make.', href: '/services/helpdesk-quality-review' },
 ];
 
 const launchSteps = [
   { day: 'Day 1', title: 'Draw the boundary', text: 'List what support can solve, what needs approval, and what must escalate at once.' },
-  { day: 'Days 2–3', title: 'Build the answer path', text: 'Share sample tickets, approved replies, tool access, and the owner for each exception.' },
-  { day: 'Days 4–5', title: 'Run tickets with review', text: 'Start with a small queue. Check notes and handoffs before adding more volume.' },
+  { day: 'Days 2 to 3', title: 'Build the answer path', text: 'Share sample tickets, approved replies, tool access, and the owner for each exception.' },
+  { day: 'Days 4 to 5', title: 'Run tickets with review', text: 'Start with a small queue. Check notes and handoffs before adding more volume.' },
 ];
 
 const guides = [
@@ -55,11 +56,11 @@ export default function Home() {
           <p className="desk-kicker"><span /> Philippines-only help desk staffing</p>
           <h1>Build a calmer help desk with Filipino support staff.</h1>
           <p className="desk-lead">Add a Philippines-based team around the queue you have now. Give them clear ticket ownership, safe access, and an escalation path people can follow.</p>
-          <a className="desk-button" href="/contact">Build my helpdesk plan <span aria-hidden="true">→</span></a>
+          <a className="desk-button" href="/contact-us">Build my help desk plan <span aria-hidden="true">→</span></a>
           <p className="desk-tagline">Ticket coverage, clear escalation, one accountable launch.</p>
         </div>
         <div className="desk-hero-visual">
-          <img src="/illustrations/getillustrations/inkdex-saas-illustrations-svg/filipino-helpdesk-team.webp" alt="Illustration of Filipino help desk staff working in a connected support workspace" />
+          <img src="/brand/stealth-agents-team-bacolod.jpg" alt="Official Stealth Agents team in Bacolod" />
           <div className="desk-ticket-rail" aria-label="Example ticket flow">
             <p>Queue status</p>
             <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt="Support ticket inbox"/><b>New</b><small>triage and tag</small></div>
@@ -81,8 +82,8 @@ export default function Home() {
           <p>Start with work your team can explain and review. Add harder tickets after the handoff is steady.</p>
         </div>
         <div className="desk-lanes">
-          {supportLanes.map((lane) => <a href={lane.href} key={lane.number} className="desk-lane">
-            <span>{lane.number}</span><h3>{lane.title}</h3><p>{lane.text}</p><b>Open service guide →</b>
+          {supportLanes.map((lane) => <a href={lane.href} key={lane.title} className="desk-lane">
+            <h3>{lane.title}</h3><p>{lane.text}</p><b>Open service guide →</b>
           </a>)}
         </div>
       </section>
@@ -92,13 +93,13 @@ export default function Home() {
           <p className="desk-kicker light"><span /> A working queue</p>
           <h2>Support should feel boring in the best way.</h2>
           <p>New tickets arrive. Someone owns the next step. Risky requests go to a manager. Solved issues leave a useful note behind.</p>
-          <a href="/contact">Build my helpdesk plan →</a>
+          <a href="/contact-us">Build my help desk plan →</a>
         </div>
         <div className="desk-flow-board" aria-label="Example help desk handoff board">
           <header><span>Today’s support path</span><small>Example operating view</small></header>
-          <div className="desk-flow-row"><b>01</b><span><strong>Password and access</strong><small>Verify identity before any reset</small></span><em>Manager rule</em></div>
-          <div className="desk-flow-row"><b>02</b><span><strong>Product how-to</strong><small>Use approved answer and source link</small></span><em>Support owned</em></div>
-          <div className="desk-flow-row"><b>03</b><span><strong>Billing or refund</strong><small>Gather facts, then send for approval</small></span><em className="icon-status"><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt="Support escalation path"/>Escalate</em></div>
+          <div className="desk-flow-row"><span><strong>Password and access</strong><small>Verify identity before any reset</small></span><em>Manager rule</em></div>
+          <div className="desk-flow-row"><span><strong>Product guidance</strong><small>Use approved answer and source link</small></span><em>Support owned</em></div>
+          <div className="desk-flow-row"><span><strong>Billing or refund</strong><small>Gather facts, then send for approval</small></span><em className="icon-status"><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt="Support escalation path"/>Escalate</em></div>
         </div>
       </section>
 
@@ -123,11 +124,13 @@ export default function Home() {
         </div>
       </section>
 
+      <ReviewsMarquee />
+
       <section className="desk-final">
         <p className="desk-kicker"><span /> Ready when the queue is</p>
         <h2>Plan the handoff before you add headcount.</h2>
         <p>Tell us what comes in, who needs help, and which decisions must stay with your team.</p>
-        <a className="desk-button" href="/contact">Build my helpdesk plan <span aria-hidden="true">→</span></a>
+        <a className="desk-button" href="/contact-us">Build my help desk plan <span aria-hidden="true">→</span></a>
       </section>
     </main>
     <Footer />

@@ -36,12 +36,12 @@ const oct02ResearchBase:Post[]=[
         "note": "Checked 2026-10-02. Primary voluntary framework for governing and measuring AI risks."
       },
       {
-        "name": "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations",
+        "name": "NIST SP 800-61 Rev. 3 - Incident Response Recommendations and Considerations",
         "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
         "note": "Checked 2026-10-02. Primary guidance on incident-response roles, preparation, detection, response, and improvement."
       },
       {
-        "name": "ICO — A guide to the data protection principles",
+        "name": "ICO - A guide to the data protection principles",
         "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/",
         "note": "Checked 2026-10-02. Regulator guidance on purpose limitation, minimisation, accuracy, security, retention, and accountability."
       },
@@ -86,7 +86,7 @@ const oct02ResearchBase:Post[]=[
     ],
     "sources": [
       {
-        "name": "NIST SP 800-63-4 — Digital Identity Guidelines",
+        "name": "NIST SP 800-63-4 - Digital Identity Guidelines",
         "url": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
         "note": "Checked 2026-10-02. Primary guidance on identity proofing, authentication, and authenticator management."
       },
@@ -96,7 +96,7 @@ const oct02ResearchBase:Post[]=[
         "note": "Checked 2026-10-02. Authoritative principles for safe defaults and organizational responsibility."
       },
       {
-        "name": "ICO — A guide to the data protection principles",
+        "name": "ICO - A guide to the data protection principles",
         "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/",
         "note": "Checked 2026-10-02. Regulator guidance on purpose limitation, minimisation, accuracy, security, retention, and accountability."
       },
@@ -137,7 +137,7 @@ const oct02ResearchBase:Post[]=[
       "Governance test: The commissioning team must approve protected terminology, language owners, escalation triggers, and the response when no qualified reviewer is available. Version the rule, source list, receiving authority map, and effective time. Give specialists a escalation path to challenge factual errors and reviewers a way to classify a system defect without converting it into individual coaching. When an exception repeats, decide whether it represents a new supported lane, a missing protected receiving authority, or demand the service should explicitly decline. Expanding a macro is not governance. The commissioning team and provider should equivalence check systemic findings together while the commissioning team keeps decisions tied to its risk appetite, permissions, contracts, and regulated duties.",
       "Measurement should report denominators and layers rather than a single quality percentage. Count eligible source messages, translated records, and receiving-receiving authority outcomes, records with required language evidence, protected signals, correctly stopped actions, receiving authority acceptance, returned handoffs, repeat contacts, speaker checkpoints, and verified outcomes. Report time to escalation path separately from time to acceptance and time to result. A rapid transfer that nobody accepts has not created ownership. A cautious escalation later found benign may still be correct under the declared risk rule. Interpret changes with workflow, mix, coverage, and detection history rather than claiming causation from a before-and-after chart.",
       "Limitations: Dialect, code-switching, cultural context, and channel constraints resist word-for-word comparison; back-translation can miss shared assumptions. Ticket records can omit calls, private tools, or context available only to the commissioning team. Reviewer knowledge introduces hindsight, rare events may not appear, and synthetic cases cannot prove every production integration. The protocol cannot certify compliance, determine liability, establish staffing sufficiency, or promise a speaker outcome. Findings belong to the declared window, population, workflow version, channels, and authority map. Publish uncertainty and unavailable language evidence instead of converting a bounded equivalence check into a universal benchmark.",
-      "Language evidence-led conclusion: translation quality should be judged by decision equivalence, preserved uncertainty, and consistent ownership—not surface fluency alone. For a buyer of outsourced tier-one support, the practical test is whether the operating lane produces a reconstructable translated case, a safe stopping point, an accepted next receiving authority, and an honest speaker checkpoint. That is narrower than transferring full operational authority, but it is valuable and measurable. Equivalence check the decision interface after material changes, keep protected language evidence at its approved source, and judge success from supported outcomes and corrected system conditions rather than activity counts alone."
+      "Language evidence-led conclusion: translation quality should be judged by decision equivalence, preserved uncertainty, and consistent ownership-not surface fluency alone. For a buyer of outsourced tier-one support, the practical test is whether the operating lane produces a reconstructable translated case, a safe stopping point, an accepted next receiving authority, and an honest speaker checkpoint. That is narrower than transferring full operational authority, but it is valuable and measurable. Equivalence check the decision interface after material changes, keep protected language evidence at its approved source, and judge success from supported outcomes and corrected system conditions rather than activity counts alone."
     ],
     "sources": [
       {
@@ -146,12 +146,12 @@ const oct02ResearchBase:Post[]=[
         "note": "Checked 2026-10-02. W3C Recommendation for accessible digital content."
       },
       {
-        "name": "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations",
+        "name": "NIST SP 800-61 Rev. 3 - Incident Response Recommendations and Considerations",
         "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
         "note": "Checked 2026-10-02. Primary guidance on incident-response roles, preparation, detection, response, and improvement."
       },
       {
-        "name": "ICO — A guide to the data protection principles",
+        "name": "ICO - A guide to the data protection principles",
         "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/",
         "note": "Checked 2026-10-02. Regulator guidance on purpose limitation, minimisation, accuracy, security, retention, and accountability."
       },
@@ -196,7 +196,7 @@ const oct02ResearchBase:Post[]=[
     ],
     "sources": [
       {
-        "name": "NIST SP 800-63-4 — Digital Identity Guidelines",
+        "name": "NIST SP 800-63-4 - Digital Identity Guidelines",
         "url": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
         "note": "Checked 2026-10-02. Primary guidance on identity proofing, authentication, and authenticator management."
       },
@@ -206,12 +206,12 @@ const oct02ResearchBase:Post[]=[
         "note": "Checked 2026-10-02. Authoritative principles for safe defaults and organizational responsibility."
       },
       {
-        "name": "ICO — A guide to the data protection principles",
+        "name": "ICO - A guide to the data protection principles",
         "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/",
         "note": "Checked 2026-10-02. Regulator guidance on purpose limitation, minimisation, accuracy, security, retention, and accountability."
       },
       {
-        "name": "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations",
+        "name": "NIST SP 800-61 Rev. 3 - Incident Response Recommendations and Considerations",
         "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
         "note": "Checked 2026-10-02. Primary guidance on incident-response roles, preparation, detection, response, and improvement."
       }
@@ -251,12 +251,12 @@ const oct02ResearchBase:Post[]=[
     ],
     "sources": [
       {
-        "name": "PCI DSS v4.0.1 — Requirements and Testing Procedures",
+        "name": "PCI DSS v4.0.1 - Requirements and Testing Procedures",
         "url": "https://www.pcisecuritystandards.org/document_library/",
         "note": "Checked 2026-10-02. Official PCI SSC standard library; applicability requires authorized local assessment."
       },
       {
-        "name": "ICO — A guide to the data protection principles",
+        "name": "ICO - A guide to the data protection principles",
         "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/",
         "note": "Checked 2026-10-02. Regulator guidance on purpose limitation, minimisation, accuracy, security, retention, and accountability."
       },

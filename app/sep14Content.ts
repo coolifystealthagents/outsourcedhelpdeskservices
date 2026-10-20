@@ -136,7 +136,7 @@ const blogSeeds = [
   }
 ] as const;
 
-export const sep14BlogArticles = blogSeeds.map((article) => ({ ...article, title: article.title + ' — September 14 review', body: ['September 14 focus: ' + article.excerpt, ...article.body], published, minutes: 8, heroImage }));
+export const sep14BlogArticles = blogSeeds.map((article) => ({ ...article, title: article.title + ' - September 14 review', body: ['September 14 focus: ' + article.excerpt, ...article.body], published, minutes: 8, heroImage }));
 
 const sources = [
   { name: 'NIST Cybersecurity Framework 2.0', url: 'https://www.nist.gov/cyberframework', note: 'Primary NIST framework for governing and measuring cybersecurity risk.' },
@@ -206,7 +206,7 @@ const researchSeeds = [
 
 export const sep14ResearchArticles = researchSeeds.map((study) => ({
   slug: study.slug,
-  title: study.title + ' — September 14 protocol',
+  title: study.title + ' - September 14 protocol',
   excerpt: study.excerpt,
   published,
   sourceDate: published,

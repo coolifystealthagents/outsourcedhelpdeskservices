@@ -5,7 +5,7 @@
       "NIST SP 800-53 Revision 5 supplied the most explicit dependency-control structure. CM-3 joins controlled change types to review, approval, decisions, records, monitoring, and oversight. CM-4 requires impact analysis before a system change and says that analysis can inspect plans, policies, procedures, design documentation, operational procedures, controls, and supply-chain partners. CM-8 requires a complete, non-duplicative component inventory at a useful level of granularity and updates during installation, removal, and system updates. AC-22 designates people authorized to post public information, requires review before posting and periodically afterward, and requires removal of non-public information. Those controls govern systems and publicly accessible organizational content; they do not state that a helpdesk must use a particular form, macro, queue, article platform, review interval, or staffing model.",
       "The FTC and ICO provisions add two bounded lessons. For financial institutions covered by the Safeguards Rule, the FTC guide places responsibility for the information-security program with a Qualified Individual, requires inventory and reassessment, calls for contractual safeguards and monitoring of service providers, and says the program should remain current as operations, threats, personnel, and other material circumstances change. The ICO data-minimisation page ties personal data to a specified purpose, accountable processes, periodic review, and deletion when it is no longer needed. Together, the corpus supports maintaining a local dependency register and escalating protected applicability decisions to the responsible owner. It does not demonstrate that article length predicts burden, that five dependency classes are universal, or that an unowned relationship caused any operational outcome. No customer, ticket, workforce, vendor-performance, contract, article-analytics, or proprietary data was used or inferred."
     ],
-    "researchQuestion": "Across a fixed set of provisions in the article’s existing NIST, FTC, and ICO authorities, how often are five controls needed to keep a change-sensitive information asset maintainable made explicit—a bounded object or relationship, accountable ownership, a review trigger, an impact or monitoring step, and a recorded lifecycle action—and what can those provisions support about hidden helpdesk-article dependencies?",
+    "researchQuestion": "Across a fixed set of provisions in the article’s existing NIST, FTC, and ICO authorities, how often are five controls needed to keep a change-sensitive information asset maintainable made explicit-a bounded object or relationship, accountable ownership, a review trigger, an impact or monitoring step, and a recorded lifecycle action-and what can those provisions support about hidden helpdesk-article dependencies?",
     "observationWindow": "The cross-sectional retrieval, text inspection, coding, calculation, and consistency review were completed on 2026-08-18. The measured editions were NIST SP 800-53 Revision 5 updated 2020-12-10, the FTC compliance guide published 2022-04-27 and modified 2024-12-23, and the ICO page carrying a 2025-09-09 metadata date and an under-review notice. This is a document-observation window, not a period of helpdesk operations or article maintenance work.",
     "sampleDefinition": {
       "population": "A purposive corpus of 10 predeclared provision bundles drawn from the three authoritative publications already associated with the article. Seven bundles came from NIST SP 800-53 Revision 5 controls CM-3, CM-4, CM-8, and AC-22; two came from the current FTC Safeguards Rule compliance guide; and one came from the ICO data-minimisation page. A provision bundle was a base-control subsection, enhancement, or contiguous official-guide section that expressed one coherent maintenance action. The sample was constructed to inspect inventory, change, ownership, review, and lifecycle language; it is not a census of either publication and is not a representative sample of knowledge-management standards.",
@@ -14,7 +14,7 @@
       "exclusion": "Navigation, glossaries, unrelated controls, secondary commentary, vendor knowledge-management material, commercial benchmarks, search snippets, inaccessible text, and provisions that did not address the declared maintenance fields were excluded. The FTC URL originally associated with the article returned HTTP 404 and was retained in the source ledger as an access failure but excluded from coding; the title- and subject-matched current FTC compliance guide on ftc.gov returned HTTP 200 and supplied the two FTC rows. No local form, macro, routing configuration, permission matrix, article inventory, owner directory, change log, support note, customer record, ticket, contract, time sheet, or simulated outcome entered the study."
     },
     "methodology": [
-      "Freeze the 10 provision bundles before calculation. The NIST bundles were CM-3(a–d), CM-3(e–g), CM-3(2), CM-4, CM-8(a–b), CM-8(1), and AC-22(a–d). The FTC bundles were the adjacent Qualified Individual/risk-assessment/inventory requirements in sections 3(a–b) and the service-provider/current-program requirements in sections 3(f–g). The ICO bundle was the data-minimisation definition, accountability explanation, and periodic-review instruction. Count each bundle once even when it contains several clauses.",
+      "Freeze the 10 provision bundles before calculation. The NIST bundles were CM-3(a-d), CM-3(e-g), CM-3(2), CM-4, CM-8(a-b), CM-8(1), and AC-22(a-d). The FTC bundles were the adjacent Qualified Individual/risk-assessment/inventory requirements in sections 3(a-b) and the service-provider/current-program requirements in sections 3(f-g). The ICO bundle was the data-minimisation definition, accountability explanation, and periodic-review instruction. Count each bundle once even when it contains several clauses.",
       "Retrieve the official NIST landing page and PDF, current FTC guide, and ICO page by HTTP GET with redirects followed. All four included resources returned HTTP 200 on 2026-08-18. Preserve the failed route-listed FTC URL separately as HTTP 404. Access status establishes inspectability at the cutoff, not continued legal effect, applicability, or future availability.",
       "Apply M1, bounded maintained object or relationship. M1 equals 1 only if the bundle identifies what is controlled, inventoried, reviewed, posted, provided, retained, or removed, or identifies the relationship whose suitability is maintained. Generic advice to be careful does not pass. This field supplies the object side of a dependency register without asserting that the object is a helpdesk article.",
       "Apply M2, accountable role, approval, or oversight. M2 equals 1 only when the bundle assigns action to an organization, designated individual, Qualified Individual, approval authority, oversight element, personnel with relevant responsibility, or another explicit accountable party. A passive instruction to update a record without an actor or approval relationship does not pass. An official publisher does not count as a local article owner merely because it issued the source.",
@@ -22,7 +22,7 @@
       "Apply M4, impact assessment, testing, review, or monitoring. M4 equals 1 when the bundle requires an impact analysis, test, validation, pre-publication review, periodic review, reassessment, monitoring, or a comparable inspection. Merely updating an inventory after an event does not qualify unless the same bundle also requires inspection. The field identifies a check, not proof that the check reduces maintenance effort or errors.",
       "Apply M5, recorded lifecycle action. M5 equals 1 when the bundle requires documentation, a written assessment, decision record, implementation of an approved change, retention, inventory update, program modification, removal, deletion, or another explicit disposition that leaves the maintained state or result inspectable. Discussion of possible impact without a required record or disposition does not qualify.",
       "Mark a bundle complete only when M1 through M5 all equal 1. Read the surrounding control or section before coding, preserve a concise anchor in the full table, and perform a second consistency pass against the definitions. One desk reviewer performed both passes, so no independent agreement statistic is claimed. Calculate percentages from the fixed denominator of 10 and display every row used in every numerator.",
-      "Translate the source structure conservatively. For a local article, a dependency register may distinguish five operational object classes: intake or form fields, reusable saved language or macros, queue and route rules, source or permission claims, and the responsible review owner. That five-class register is a proposed implementation frame derived from the article’s stated scope, not a frequency or causal finding from the public documents. The measured five fields M1–M5 are maintenance controls, not five empirically ranked helpdesk dependency types."
+      "Translate the source structure conservatively. For a local article, a dependency register may distinguish five operational object classes: intake or form fields, reusable saved language or macros, queue and route rules, source or permission claims, and the responsible review owner. That five-class register is a proposed implementation frame derived from the article’s stated scope, not a frequency or causal finding from the public documents. The measured five fields M1-M5 are maintenance controls, not five empirically ranked helpdesk dependency types."
     ],
     "measurements": [
       {
@@ -103,7 +103,7 @@
       ],
       "rows": [
         [
-          "N1 — NIST CM-3(a–d), controlled-change definition and decision",
+          "N1 - NIST CM-3(a-d), controlled-change definition and decision",
           1,
           1,
           1,
@@ -113,7 +113,7 @@
           "Determines and documents controlled change types, reviews proposed changes with security and privacy impact considered, approves or disapproves, documents decisions, and implements approved changes."
         ],
         [
-          "N2 — NIST CM-3(e–g), records, monitoring, and oversight",
+          "N2 - NIST CM-3(e-g), records, monitoring, and oversight",
           1,
           1,
           1,
@@ -123,7 +123,7 @@
           "Retains controlled-change records, monitors and reviews related activity, and provides oversight through an organization-defined element at a defined frequency or condition."
         ],
         [
-          "N3 — NIST CM-3(2), test, validate, and document changes",
+          "N3 - NIST CM-3(2), test, validate, and document changes",
           1,
           0,
           1,
@@ -133,7 +133,7 @@
           "Requires system changes to be tested, validated, and documented before implementation is finalized; this enhancement does not itself designate the approving or owning role."
         ],
         [
-          "N4 — NIST CM-4, impact analyses",
+          "N4 - NIST CM-4, impact analyses",
           1,
           1,
           1,
@@ -143,7 +143,7 @@
           "Requires analysis before change implementation and describes review of plans, policies, procedures, design documentation, operational procedures, controls, and supply-chain partner impacts by responsible personnel and stakeholders; it does not itself require a resulting lifecycle record or disposition."
         ],
         [
-          "N5 — NIST CM-8(a–b), component inventory",
+          "N5 - NIST CM-8(a-b), component inventory",
           1,
           1,
           1,
@@ -153,7 +153,7 @@
           "Requires an accurate, complete, non-duplicative inventory at a useful granularity, including information needed for accountability, and requires review and update at an organization-defined frequency."
         ],
         [
-          "N6 — NIST CM-8(1), installation/removal/update events",
+          "N6 - NIST CM-8(1), installation/removal/update events",
           1,
           0,
           1,
@@ -163,7 +163,7 @@
           "Requires inventory updates during component installation, removal, and system updates; the enhancement does not itself name an owner or require impact analysis, testing, review, or monitoring."
         ],
         [
-          "N7 — NIST AC-22(a–d), publicly accessible content",
+          "N7 - NIST AC-22(a-d), publicly accessible content",
           1,
           1,
           1,
@@ -173,7 +173,7 @@
           "Designates authorized posters, requires training and review before publication, requires periodic review for non-public information, and requires removal when such information is found."
         ],
         [
-          "F1 — FTC sections 3(a–b), accountable program, inventory, and reassessment",
+          "F1 - FTC sections 3(a-b), accountable program, inventory, and reassessment",
           1,
           1,
           1,
@@ -183,7 +183,7 @@
           "For covered financial institutions, designates a Qualified Individual, requires a written risk assessment after inventory, and calls for periodic reassessment as operations change or new threats emerge."
         ],
         [
-          "F2 — FTC sections 3(f–g), provider monitoring and program currency",
+          "F2 - FTC sections 3(f-g), provider monitoring and program currency",
           1,
           1,
           1,
@@ -193,7 +193,7 @@
           "Requires suitable providers, contractual security expectations, monitoring and periodic suitability reassessment, and a current program responsive to operational, threat, personnel, and other material changes."
         ],
         [
-          "I1 — ICO data minimisation, purpose, accountability, and periodic deletion",
+          "I1 - ICO data minimisation, purpose, accountability, and periodic deletion",
           1,
           1,
           1,
@@ -229,7 +229,7 @@
       "NIST CM-3, CM-4, and CM-8 govern organizational systems and components; AC-22 governs publicly accessible organizational content. The FTC guide applies to financial institutions covered by the Safeguards Rule. The ICO page explains a UK data-protection principle and was marked under review following legal change. None is a universal helpdesk knowledge-management specification, legal opinion, or authorization for an unnamed organization.",
       "The five M-fields compress distinctions. Approval is not identical to ownership; inventory update is not identical to retirement; monitoring a provider is not the same as reviewing article wording; removing non-public content is not the same as withdrawing inaccurate instructions. A binary 1 indicates explicit qualifying text under the declared rule, not equal depth or interchangeability.",
       "One reviewer selected, extracted, coded, and rechecked the provisions. There was no independent duplicate coder or inter-rater statistic. The complete table and strict definitions expose judgments, but another reviewer could reasonably split the FTC bundles or classify CM-4’s discussion and CM-8’s review language differently.",
-      "The proposed five local object classes—forms, saved language, routes, source or permission claims, and owners—are an operational translation of the article’s scope, not an empirical taxonomy validated by these documents. Other dependencies may include search indexes, translations, screenshots, integrations, contracts, product versions, or publication surfaces. Only an authorized local inventory can establish what exists and which relationship is material.",
+      "The proposed five local object classes-forms, saved language, routes, source or permission claims, and owners-are an operational translation of the article’s scope, not an empirical taxonomy validated by these documents. Other dependencies may include search indexes, translations, screenshots, integrations, contracts, product versions, or publication surfaces. Only an authorized local inventory can establish what exists and which relationship is material.",
       "HTTP 200 means a resource was retrievable at the cutoff, not that it remains unchanged, legally effective, complete, or applicable. HTTP 404 means the requested FTC route failed at retrieval, not that no historical page existed. The current official FTC guide was selected by official domain, title, and subject match, but replacement history is disclosed rather than silently rewriting the source record.",
       "No causal or workload study was possible. Testing whether unowned dependencies increase confirmation time, downstream findings, repeat contact, or escalation would require an authorized article inventory, stable dependency definitions, change records, outcome windows, missing-data treatment, and controls for article scope, product change, routing, staffing, and owner availability. No such data was available or fabricated."
     ],
@@ -249,7 +249,7 @@
         "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf",
         "publishedOrUpdated": "September 2020; updated 2020-12-10",
         "accessed": "2026-08-18",
-        "claimNote": "Returned HTTP 200. Measured text came from AC-22 on PDF page 56, CM-3 on pages 98–99, CM-4 on page 101, and CM-8 on pages 107–108. These controls concern systems, components, and publicly accessible content rather than prescribing a universal helpdesk architecture.",
+        "claimNote": "Returned HTTP 200. Measured text came from AC-22 on PDF page 56, CM-3 on pages 98-99, CM-4 on page 101, and CM-8 on pages 107-108. These controls concern systems, components, and publicly accessible content rather than prescribing a universal helpdesk architecture.",
         "httpStatus": 200
       },
       {
@@ -267,7 +267,7 @@
         "url": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know",
         "publishedOrUpdated": "Published 2022-04-27; modified 2024-12-23",
         "accessed": "2026-08-18",
-        "claimNote": "Returned HTTP 200. Sections 3(a–b) and 3(f–g) supplied the measured Qualified Individual, inventory, reassessment, service-provider monitoring, and program-currency text. The guide’s obligations are bounded to financial institutions within the Safeguards Rule’s scope.",
+        "claimNote": "Returned HTTP 200. Sections 3(a-b) and 3(f-g) supplied the measured Qualified Individual, inventory, reassessment, service-provider monitoring, and program-currency text. The guide’s obligations are bounded to financial institutions within the Safeguards Rule’s scope.",
         "httpStatus": 200
       },
       {

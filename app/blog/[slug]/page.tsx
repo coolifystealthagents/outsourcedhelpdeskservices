@@ -4,6 +4,8 @@ import { blogPosts, site } from "../../data";
 import { publisherArticles, type PublisherArticle } from "../../publisherArticles";
 import { AUG17_BLOG_MODIFIED_DATE, AUG17_BLOG_PUBLICATION_DATE, aug17BlogArticles, isAug17BlogSlug, type Aug17BlogArticle } from "../../aug17BlogArticles";
 import { isAug23BlogSlug } from "../../aug23BlogArticles";
+import { EditorialToc } from "../../EditorialToc";
+import { sanitizeEditorialText } from "../../editorial-text";
 
 const licensedHelpdeskIllustration = '/illustrations/getillustrations/communication-illustrations-pack-svg/ticket-support.webp';
 const blogHero=(hero?:string)=>!hero||hero==='/helpdesk-team.jpg'?licensedHelpdeskIllustration:hero;
@@ -27,6 +29,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 const baseUrl = `https://${site.domain.toLowerCase()}`;
 const formatPublicDate = (date: string) => new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+
+function renderArticleText(text: string, key: string | number) {
+  const clean = sanitizeEditorialText(text);
+  const trimmed = clean.trim();
+  if (trimmed.startsWith('### ')) return <h3 key={key}>{trimmed.slice(4)}</h3>;
+  if (trimmed.startsWith('## ')) return <h2 key={key}>{trimmed.slice(3)}</h2>;
+  return <p key={key}>{clean}</p>;
+}
 
 type StrictSlug = keyof typeof publisherArticles;
 
@@ -67,10 +77,12 @@ function Aug17Article({ article, slug, title, excerpt }: { article: Aug17BlogArt
       <Header hidePricing />
       <main className="section">
         <JsonLd data={schema} />
+        <div className="editorial-layout">
         <article className="container guide-article" data-editorial-batch="2026-08-17-blog">
           <p className="eyebrow">Philippines staffing blog · <time dateTime={AUG17_BLOG_PUBLICATION_DATE}>{formatPublicDate(AUG17_BLOG_PUBLICATION_DATE)}</time></p>
           <h1>{title}</h1>
           <p className="lead">{excerpt}</p>
+          <img className="editorial-hero-image" src={blogHero()} alt={`${title} help desk operations illustration`} width="1200" height="675" loading="eager" />
 
           <section className="article-module answer-module" aria-labelledby="direct-answer-heading">
             <p className="module-kicker">Direct answer</p>
@@ -123,6 +135,8 @@ function Aug17Article({ article, slug, title, excerpt }: { article: Aug17BlogArt
             {article.cautions.map((caution, index) => <p key={index}>{caution}</p>)}
           </section>
         </article>
+        <EditorialToc family="Blog" published={AUG17_BLOG_PUBLICATION_DATE} updated={AUG17_BLOG_MODIFIED_DATE} publisher={site.brand} related={[{href:"/services/level-one-ticket-triage",label:"Level one ticket triage"},{href:"/services/helpdesk-quality-review",label:"Help desk quality review"}]} />
+        </div>
       </main>
       <Footer hidePricing />
     </>
@@ -246,12 +260,14 @@ function StrictArticle({ article, slug, published }: { article: PublisherArticle
       <Header hidePricing />
       <main className="guide-page strict-publisher-page">
         <JsonLd data={schema} />
-        <article className="container strict-article" data-article-marker="philippines-provider-vetting-2026">
+        <div className="editorial-layout">
+        <article className="container strict-article" data-editorial-content data-article-marker="philippines-provider-vetting-2026">
           <header className="article-hero">
             <p className="eyebrow">Philippines help desk buyer guide · <time dateTime={published}>{['2026-09-11', '2026-09-14'].includes(published) ? 'Published: ' + formatPublicDate(published) : formatPublicDate(published)}</time></p>
             <h1>{article.title}</h1>
             <p className="lead">{article.excerpt}</p>
             <div className="article-meta"><span>{article.minutes} min read</span><span>Evidence checked July 25, 2026</span></div>
+            <img className="editorial-hero-image" src={blogHero()} alt={`${article.title} help desk provider illustration`} width="1200" height="675" loading="eager" />
           </header>
 
           <section className="article-module answer-module">
@@ -319,6 +335,8 @@ function StrictArticle({ article, slug, published }: { article: PublisherArticle
             <ol>{article.sources.map((source) => <li id={`source-${source.index}`} key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a>. {source.note}</li>)}</ol>
           </section>
         </article>
+        <EditorialToc family="Blog" published={published} readingTime={article.minutes} publisher={site.brand} sourceCount={article.sources.length} related={article.relatedLinks.slice(0,3)} />
+        </div>
       </main>
       <Footer hidePricing />
     </>
@@ -355,10 +373,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: baseUrl }, { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` }, { "@type": "ListItem", position: 3, name: post.title, item: url }] },
           { "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: "How should this help desk workflow start?", acceptedAnswer: { "@type": "Answer", text: "Start with a narrow set of recurring requests, approved answers, named ownership, and a review sample." } }, { "@type": "Question", name: "What should stay with an owner?", acceptedAnswer: { "@type": "Answer", text: "Keep identity, money, security, policy, and unusual technical decisions with named owners until the controls are proven." } }] }
         ] }} />
-        <article className="container guide-article">
-          <p className="eyebrow">Philippines staffing blog · {published ? <time dateTime={published}>{['2026-09-11', '2026-09-14'].includes(published) ? 'Published: ' + formatPublicDate(published) : formatPublicDate(published)}</time> : null}{updated ? <> · Updated <time dateTime={updated}>{formatPublicDate(updated)}</time></> : null}</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p>{'heroImage' in post ? <img src={blogHero(post.heroImage)} alt="Help desk operations illustration" width="1200" height="675" loading="eager" /> : null}
-          <div className="card"><p className="eyebrow">Direct answer</p><h2>{body[0]}</h2>{body.slice(1).map((paragraph, index) => <><p key={paragraph}>{paragraph}</p>{'contextualLink' in post && post.contextualLink && index + 1 === post.contextualLink.after ? <p key={post.contextualLink.href}>{post.contextualLink.lead} <a href={post.contextualLink.href}>{post.contextualLink.label}</a></p> : null}</>)}{publicSources.length ? <><h2>Authoritative sources</h2><ul>{publicSources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a></li>)}</ul></> : null}<h2>Related planning pages</h2><ul>{articleCta ? <li><a href={articleCta.href}>Explore {articleCta.label}</a></li> : null}<li><a href="/services/level-one-ticket-triage">Level one ticket triage</a></li><li><a href="/services/ticket-escalation-coordination">Ticket escalation coordination</a></li><li><a href="/services/helpdesk-quality-review">Help desk quality review</a></li></ul></div>
+        <div className="editorial-layout">
+        <article className="container guide-article" data-editorial-content>
+          <p className="eyebrow">Philippines staffing blog · {published ? <time dateTime={published}>{['2026-09-11', '2026-09-14'].includes(published) ? 'Published: ' + formatPublicDate(published) : formatPublicDate(published)}</time> : null}{updated ? <> · Updated <time dateTime={updated}>{formatPublicDate(updated)}</time></> : null}</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p><img className="editorial-hero-image" src={blogHero('heroImage' in post ? post.heroImage : undefined)} alt={`${post.title} help desk operations illustration`} width="1200" height="675" loading="eager" />
+          <div className="card"><p className="eyebrow">Direct answer</p><h2>Operational guidance</h2>{body.map((paragraph, index) => <>{renderArticleText(paragraph, paragraph)}{'contextualLink' in post && post.contextualLink && index + 1 === post.contextualLink.after ? <p key={post.contextualLink.href}>{post.contextualLink.lead} <a href={post.contextualLink.href}>{post.contextualLink.label}</a></p> : null}</>)}{publicSources.length ? <><h2>Authoritative sources</h2><ul>{publicSources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a></li>)}</ul></> : null}<h2>Related planning pages</h2><ul>{articleCta ? <li><a href={articleCta.href}>Explore {articleCta.label}</a></li> : null}<li><a href="/services/level-one-ticket-triage">Level one ticket triage</a></li><li><a href="/services/ticket-escalation-coordination">Ticket escalation coordination</a></li><li><a href="/services/helpdesk-quality-review">Help desk quality review</a></li></ul></div>
         </article>
+        <EditorialToc family="Blog" published={published} updated={updated} readingTime={post.minutes} publisher={site.brand} sourceCount={publicSources.length} related={[{href:"/services/level-one-ticket-triage",label:"Level one ticket triage"},{href:"/services/ticket-escalation-coordination",label:"Ticket escalation coordination"},{href:"/services/helpdesk-quality-review",label:"Help desk quality review"}]} />
+        </div>
       </main>
       <Footer hidePricing />
     </>
@@ -371,5 +392,6 @@ function DefaultArticle({ article, slug }: { article: typeof blogPosts[number]; 
   const body = 'body' in article && Array.isArray(article.body) ? article.body : [];
   const articleSources = 'sources' in article && Array.isArray(article.sources) ? article.sources : [];
   const cta = 'cta' in article && article.cta && typeof article.cta === 'object' ? article.cta as { href: string; label: string } : undefined;
-  return <><Header hidePricing /><main className="section"><JsonLd data={{ "@context": "https://schema.org", "@type": "BlogPosting", headline: article.title, description: article.excerpt, datePublished: published, dateModified: published, url, mainEntityOfPage: url, author: { "@type": "Organization", name: site.brand, url: baseUrl }, publisher: { "@type": "Organization", name: site.brand, url: baseUrl }, citation: articleSources.map((source) => source.url) }} /><article className="container guide-article" data-editorial-batch={published === '2026-10-07' ? '2026-10-07-blog' : '2026-08-23-blog'}><p className="eyebrow">Philippines staffing blog · <time dateTime={published}>{published ? formatPublicDate(published) : ''}</time></p><h1>{article.title}</h1><p className="lead">{article.excerpt}</p><img src={blogHero('heroImage' in article ? article.heroImage : undefined)} alt={`${article.title} illustration`} width="1200" height="675" loading="eager" />{body.map((paragraph, index) => <p key={index}>{paragraph}</p>)}{articleSources.length ? <section><h2>Sources</h2><ul>{articleSources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a></li>)}</ul></section> : null}{cta ? <p><a className="btn primary" href={cta.href}>{cta.label}</a></p> : null}</article></main><Footer hidePricing /></>;
+  const related = [{href:'/services/level-one-ticket-triage',label:'Level one ticket triage'},{href:'/services/helpdesk-quality-review',label:'Help desk quality review'}];
+  return <><Header hidePricing/><main className="section"><JsonLd data={{ "@context": "https://schema.org", "@type": "BlogPosting", headline: article.title, description: article.excerpt, datePublished: published, dateModified: published, url, mainEntityOfPage: url, author: { "@type": "Organization", name: site.brand, url: baseUrl }, publisher: { "@type": "Organization", name: site.brand, url: baseUrl }, citation: articleSources.map((source) => source.url) }} /><div className="editorial-layout"><article className="container guide-article" data-editorial-content data-editorial-batch={published === '2026-10-07' ? '2026-10-07-blog' : '2026-08-23-blog'}><p className="eyebrow">Philippines staffing blog · <time dateTime={published}>{published ? formatPublicDate(published) : ''}</time></p><h1>{article.title}</h1><p className="lead">{article.excerpt}</p><img className="editorial-hero-image" src={blogHero('heroImage' in article ? article.heroImage : undefined)} alt={`${article.title} illustration`} width="1200" height="675" loading="eager" /><section className="article-section"><h2>Operational guidance</h2>{body.map((paragraph, index) => renderArticleText(paragraph,index))}</section>{articleSources.length ? <section className="article-section"><h2>Sources</h2><ul>{articleSources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a></li>)}</ul></section> : null}{cta ? <p><a className="btn primary" href={cta.href}>{cta.label}</a></p> : null}</article><EditorialToc family="Blog" published={published} readingTime={article.minutes} publisher={site.brand} sourceCount={articleSources.length} related={related}/></div></main><Footer hidePricing/></>;
 }

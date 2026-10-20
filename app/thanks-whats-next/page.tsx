@@ -1,0 +1,3 @@
+import { Footer, Header } from '../components';
+export const metadata={title:'Thanks, what happens next',description:'Your meeting request has been received.',robots:{index:false,follow:false}};
+export default function ThanksWhatsNext(){return <><Header/><main className="service-page"><section className="service-hero"><div className="container"><p className="eyebrow">Meeting requested</p><h1>Thanks. Here is what happens next.</h1><p className="lead">Keep a few representative tickets, your coverage window, tool list, and escalation owners nearby. Those details help make the consultation practical.</p><a className="btn primary" href="/services">Review service lanes</a></div></section></main><Footer/></>}

@@ -57,9 +57,9 @@ test('public contact and thank-you routes do not render unverified testimonials 
   assert.doesNotMatch(thankYou, unsupportedProof);
 });
 
-test('contact page uses the licensed help-desk illustration instead of the generic office photo', () => {
+test('contact page uses the approved official Bacolod team asset instead of the generic office photo', () => {
   assert.doesNotMatch(contactUs, /helpdesk-team\.jpg/);
-  assert.match(contactUs, /illustrations\/getillustrations\/inkdex-saas-illustrations-svg\/filipino-helpdesk-team\.webp/);
+  assert.match(contactUs, /brand\/stealth-agents-team-bacolod\.jpg/);
 });
 
 test('research heroes use a present licensed fallback and hide unresolved related slugs', () => {
@@ -92,7 +92,7 @@ test('all audited static and pagination pages declare page-specific canonical me
   for (const [name, path] of [
     ['home', 'app/page.tsx'],
     ['services', 'app/services/page.tsx'],
-    ['contact', 'app/contact/page.tsx'],
+    ['contact us', 'app/contact-us/page.tsx'],
     ['privacy', 'app/privacy/page.tsx'],
     ['terms', 'app/terms/page.tsx'],
     ['cancellation policy', 'app/cancellation-policy/page.tsx'],
@@ -103,6 +103,7 @@ test('all audited static and pagination pages declare page-specific canonical me
   }
   assert.match(blogPagination, /generateMetadata/);
   assert.match(blogPagination, /alternates\s*:\s*\{\s*canonical/);
+  assert.match(contact, /permanentRedirect\(['"]\/contact-us['"]\)/);
 });
 
 test('pagination titles rely on the root title template without duplicating the brand', () => {

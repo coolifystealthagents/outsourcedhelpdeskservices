@@ -24,7 +24,7 @@ function blogBody(s:BlogSeed){return [
   `${s.boundary} When the boundary is reached, acknowledge the request, preserve permitted evidence, name the decision needed, and route it to the authorized owner.`,
   `For example: ${s.example} The customer update should reflect the same evidence state shown internally.`,
   `Review the routine with a small weekly sample. Look for missing ownership, repeated questions, bounced handoffs, stale promises, unnecessary data, and guidance that no longer matches its source. Give each finding one repair owner and follow-up date.`,
-  `Published September 4, 2026 for OutsourcedHelpdeskServices.com. The measure of a good daily article is safer, clearer work in the help desk—not publication volume by itself.`
+  `Published September 4, 2026 for OutsourcedHelpdeskServices.com. The measure of a good daily article is safer, clearer work in the help desk-not publication volume by itself.`
 ]}
 
 export const sep04BlogArticles=blogSeeds.map(s=>({...s,published,minutes:8,heroImage:'/helpdesk-team.jpg',body:blogBody(s)}));

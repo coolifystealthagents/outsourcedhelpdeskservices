@@ -6,7 +6,7 @@
       "The eight apparent conflicts show why scope must be tested before wording is reconciled. NIST audit-record content and retention controls concern defined audit purposes and organization-set periods; the FTC disposal provision concerns customer information held by financial institutions within the Safeguards Rule’s scope and contains explicit exceptions. The FTC statement that a Qualified Individual may work for an employee, affiliate, or service provider answers who may supervise a program, while NIST least privilege answers how much access a user or process should receive. Those propositions can coexist. Likewise, the FTC’s encryption, multi-factor-authentication, and disposal instructions each carry an alternative or exception in the same passage. Removing that condition manufactures a contradiction that the source itself resolves.",
       "None of the 12 packets (0%) identified the organization-specific person or role authorized to settle wording in a particular helpdesk article. The FTC names a Qualified Individual for a covered financial institution’s information-security program, and NIST assigns controls to an organization, but neither appoints a local article approver for an unnamed company. The evidence-led answer is therefore bounded: preserve both propositions and their locators, identify the exact actor, object, condition, and authority layer, and treat a pair as unresolved only when all four tests align and outcomes remain incompatible. Public authority can define the issue; a locally designated owner must decide local applicability. No customer, ticket, employee, vendor-performance, contract, or proprietary data was used or inferred."
     ],
-    "researchQuestion": "When two candidate instructions relevant to helpdesk article reuse appear to conflict, how often does a four-test comparison of actor or population, decision object or action, conditions, and prescribed outcome identify a direct contradiction rather than different scope, an explicit exception, or compatible wording—and do the public sources identify the local owner empowered to resolve article wording?",
+    "researchQuestion": "When two candidate instructions relevant to helpdesk article reuse appear to conflict, how often does a four-test comparison of actor or population, decision object or action, conditions, and prescribed outcome identify a direct contradiction rather than different scope, an explicit exception, or compatible wording-and do the public sources identify the local owner empowered to resolve article wording?",
     "observationWindow": "Single-day cross-sectional desk review completed on 2026-08-18. Source text, visible edition or modification markers, redirects, and HTTP responses were recorded on that date. The measured editions were NIST SP 800-53 Revision 5, update 1; the NIST least-privilege glossary entries then served; and the FTC compliance guide published 2022-04-27 and modified 2024-12-23. This was a document-coding window, not an observation period for helpdesk operations.",
     "sampleDefinition": {
       "population": "The bounded population was 12 predeclared contradiction packets made from propositions at six route-relevant public-source locations: NIST SP 800-53 controls AC-6, AU-3, AU-11, and CM-3; the NIST least-privilege glossary; and FTC Safeguards Rule guide sections covering the Qualified Individual, safeguards, and service-provider monitoring. Four packets were positive-control stress tests pairing a faithful proposition with an explicitly constructed opposite instruction. Eight paired faithful public propositions that can look incompatible when actor, object, purpose, or exception language is omitted. The unit of analysis was one two-proposition packet, not a source, sentence, article, ticket, organization, or customer.",
@@ -116,7 +116,7 @@
       "rows": [
         [
           "D1",
-          "NIST CM-3: review and approve or disapprove a configuration-controlled system change before implementing an approved change; versus constructed stress instruction: implement that same change without review or approval. Locator: SP 800-53 Rev. 5, CM-3(a–d), publication pages 98–99.",
+          "NIST CM-3: review and approve or disapprove a configuration-controlled system change before implementing an approved change; versus constructed stress instruction: implement that same change without review or approval. Locator: SP 800-53 Rev. 5, CM-3(a-d), publication pages 98-99.",
           "Pass",
           "Pass",
           "Pass",
@@ -270,7 +270,7 @@
         "httpStatus": 200
       },
       {
-        "title": "least privilege — Glossary",
+        "title": "least privilege - Glossary",
         "organization": "National Institute of Standards and Technology",
         "url": "https://csrc.nist.gov/glossary/term/least_privilege",
         "publishedOrUpdated": "Page served definitions attributed to CNSSI 4009-2015, NIST SP 800-12 Rev. 1, NIST SP 800-53 Rev. 5, and NIST SP 800-171 Rev. 3; no separate page-update date was displayed",

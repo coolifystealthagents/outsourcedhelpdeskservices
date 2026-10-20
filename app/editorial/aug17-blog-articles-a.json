@@ -44,7 +44,7 @@
       "heading": "Worked example: a two-day unplanned absence",
       "body": [
         "At 09:00 Monday, a queue owner is unexpectedly unavailable. The recovery lead finds 18 open tickets: nine routine questions, four waiting for customer details, two promised updates due that day, one refund exception, one suspected account takeover, and one vendor investigation. The lead assigns routine work in groups of three, keeps waiting tickets with a single watcher, sends the two due updates first, and routes the protected cases to their existing decision owners.",
-        "The refund ticket is not handed to a general backup with a note saying handle this. Its record says: requested decision—approve or decline the documented exception; amount and order reference—stored in the approved fields; decision owner—commerce manager; customer checkpoint—15:00 Monday; communication owner—backup specialist until accepted. On Wednesday, the returning owner receives the decision status and changed checkpoint, not an unexplained pile of reassigned work."
+        "The refund ticket is not handed to a general backup with a note saying handle this. Its record says: requested decision-approve or decline the documented exception; amount and order reference-stored in the approved fields; decision owner-commerce manager; customer checkpoint-15:00 Monday; communication owner-backup specialist until accepted. On Wednesday, the returning owner receives the decision status and changed checkpoint, not an unexplained pile of reassigned work."
       ]
     },
     "checklist": [
@@ -71,7 +71,7 @@
       ["Customer goal", "The outcome the requester needs, written separately from the symptom or the queue's proposed fix."],
       ["Observed impact", "Who or what function is affected, whether work is blocked, and whether a verified workaround exists."],
       ["Evidence provenance", "Who supplied an artifact, when it was captured, what it represents, and where the approved original is stored."],
-      ["Attempted action", "A permitted check actually performed, its timestamp, and its observable result—not a copied troubleshooting list."],
+      ["Attempted action", "A permitted check actually performed, its timestamp, and its observable result-not a copied troubleshooting list."],
       ["Uncertainty label", "A direct statement of what support could not verify, including conflicting observations or inaccessible evidence."],
       ["Decision request", "One precise request to the receiving owner: confirm scope, approve an action, assess risk, or provide customer-safe wording."
       ]
@@ -107,7 +107,7 @@
       "heading": "Worked example: escalation from a failed export",
       "body": [
         "Weak handoff: Customer cannot export; probably a permissions bug; screenshots attached; please investigate. The recipient cannot tell which export, whether permission was checked, what the customer expected, or what decision is requested. The diagnosis may also bias the investigation before facts are established.",
-        "Actionable handoff: Goal—download the August order summary as CSV. Impact—one operations analyst is blocked; browser view still works. Environment—workspace ending 41, reporting page, application version shown in footer. Verified—approved role check shows Export enabled; issue reproduced at 10:14 and 10:21 UTC in two supported browsers; blank file returned; no secrets in attached redacted capture. Unknown—whether other workspaces are affected. Requested decision—product owner to confirm defect route and next customer-safe checkpoint."
+        "Actionable handoff: Goal-download the August order summary as CSV. Impact-one operations analyst is blocked; browser view still works. Environment-workspace ending 41, reporting page, application version shown in footer. Verified-approved role check shows Export enabled; issue reproduced at 10:14 and 10:21 UTC in two supported browsers; blank file returned; no secrets in attached redacted capture. Unknown-whether other workspaces are affected. Requested decision-product owner to confirm defect route and next customer-safe checkpoint."
       ]
     },
     "checklist": [
@@ -253,7 +253,7 @@
   },
   "help-desk-support-coverage-gap-review": {
     "directAnswer": [
-      "Review a coverage gap by matching ticket arrival and consequence with the capabilities available in each interval. Count substantive first actions, missed customer checkpoints, high-risk arrivals, unaccepted handoffs, and unavailable decision owners—not just ticket volume. A quiet hour can still be a serious gap if the only request needs an incident or identity owner who is unreachable.",
+      "Review a coverage gap by matching ticket arrival and consequence with the capabilities available in each interval. Count substantive first actions, missed customer checkpoints, high-risk arrivals, unaccepted handoffs, and unavailable decision owners-not just ticket volume. A quiet hour can still be a serious gap if the only request needs an incident or identity owner who is unreachable.",
       "Before extending hours, determine whether the constraint is frontline capacity, skill, access, knowledge, approval availability, or customer expectation. More agents cannot repair an absent approver or an unreliable alert. Pilot the smallest change that addresses the observed condition, then compare equivalent periods."
     ],
     "fields": [
@@ -296,7 +296,7 @@
       "heading": "Worked example: the apparent 06:00 gap",
       "body": [
         "A queue shows 34 tickets arriving between 06:00 and 08:00 each week, with a median first reply after 09:00. Review finds 26 are low-risk receipt questions answerable from one approved article, six are portal duplicates, and two are possible service-impact reports. The existing early specialist can handle routine answers but has no incident owner until 09:00.",
-        "The team first fixes duplicate routing, adds a 07:00–09:00 specialist overlap for the routine lane, and creates an explicit urgent-signal route to the existing on-call owner. The after-hours message says which signals are monitored and gives routine requests a 09:30 checkpoint. The next review compares substantive actions, urgent-route acceptance, quality samples, and repeat contacts—not simply total replies before 09:00."
+        "The team first fixes duplicate routing, adds a 07:00-09:00 specialist overlap for the routine lane, and creates an explicit urgent-signal route to the existing on-call owner. The after-hours message says which signals are monitored and gives routine requests a 09:30 checkpoint. The next review compares substantive actions, urgent-route acceptance, quality samples, and repeat contacts-not simply total replies before 09:00."
       ]
     },
     "checklist": [
@@ -324,7 +324,7 @@
       ["Affected object", "The account, order, user, system, or case to which the decision applies."],
       ["Validity start", "The timestamp or event after which the executor may act; it prevents premature execution."],
       ["Expiry", "The timestamp or business event after which the decision must not be used without review."],
-      ["Invalidating change", "A changed fact—scope, requester, amount, risk, object, or action—that requires a fresh decision."],
+      ["Invalidating change", "A changed fact-scope, requester, amount, risk, object, or action-that requires a fresh decision."],
       ["Revalidation owner", "The role authorized to renew, amend, or decline the approval; frontline support cannot self-extend it."
       ]
     ],
@@ -484,7 +484,7 @@
     "example": {
       "heading": "Worked example: a constrained afternoon queue",
       "body": [
-        "At 13:00, the queue has 22 ready routine tickets, six active tickets, four customer updates due by 15:00, two unaccepted escalations, and 10 usable skill-hours through close. Recent comparable work suggests 7–11 routine hours plus three hours for current actions and updates. The range already exceeds available time before the two escalations are considered.",
+        "At 13:00, the queue has 22 ready routine tickets, six active tickets, four customer updates due by 15:00, two unaccepted escalations, and 10 usable skill-hours through close. Recent comparable work suggests 7-11 routine hours plus three hours for current actions and updates. The range already exceeds available time before the two escalations are considered.",
         "The queue lead declares constrained mode: specialists finish active work, one person owns the four updates, routine new work stays ordered by the normal rule, and the sending owners call the fallback for the two escalations. They do not reclassify tickets as waiting or close incomplete work. At 15:00, the lead recalculates with actual completions and checks whether quality review or tomorrow's handoff needs protection."
       ]
     },
@@ -532,7 +532,7 @@
       {
         "heading": "Write a claim map for common replies",
         "body": [
-          "List the claims a reply can make—receipt, verified observation, documented instruction, current ownership, expected update, diagnosis, exception, or guaranteed result. Map each to an authoritative source and role. This makes the boundary inspectable and lets specialists move quickly on low-risk communication without guessing which phrase will trigger review.",
+          "List the claims a reply can make-receipt, verified observation, documented instruction, current ownership, expected update, diagnosis, exception, or guaranteed result. Map each to an authoritative source and role. This makes the boundary inspectable and lets specialists move quickly on low-risk communication without guessing which phrase will trigger review.",
           "Place the stop rule next to the relevant claim. An article can authorize a specialist to say a feature is available without authorizing an account-specific change. A known-issue note may support a symptom description without proving that a customer's case belongs to the incident. Scope must be checked at send time rather than inferred from a familiar macro title."
         ]
       },
@@ -540,7 +540,7 @@
         "heading": "Make review fast without making it superficial",
         "body": [
           "Use a short approval brief: intended recipient, customer goal and impact, confirmed facts, proposed consequential sentence, uncertainty, source, requested decision, and reply deadline. Highlight the sentence under review. The owner can approve, revise, decline, or request one missing fact; a vague looks good response should not authorize additional claims.",
-          "If facts change after approval, re-evaluate the affected claim. Do not continue using wording that states a smaller incident, a specific completion time, or a permitted exception after the underlying condition changes. Track recurring returned wording by reason. Repeated edits usually indicate a missing source statement, poor macro boundary, or unclear owner—not a need to submit all replies forever."
+          "If facts change after approval, re-evaluate the affected claim. Do not continue using wording that states a smaller incident, a specific completion time, or a permitted exception after the underlying condition changes. Track recurring returned wording by reason. Repeated edits usually indicate a missing source statement, poor macro boundary, or unclear owner-not a need to submit all replies forever."
         ]
       }
     ],

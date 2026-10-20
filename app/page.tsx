@@ -59,8 +59,8 @@ export default function Home() {
           <a className="desk-button" href="/contact-us">Build my help desk plan <span aria-hidden="true">→</span></a>
           <p className="desk-tagline">Ticket coverage, clear escalation, one accountable launch.</p>
         </div>
-        <div className="desk-hero-visual">
-          <img src="/brand/stealth-agents-team-bacolod.jpg" alt="Official Stealth Agents team in Bacolod" />
+        <div className="desk-hero-visual desk-hero-graphic">
+          <img src="/blog-thumbnails/help-desk-queue-dashboard-routine.svg" alt="Help desk queue dashboard and ticket operations workflow" />
           <div className="desk-ticket-rail" aria-label="Example ticket flow">
             <p>Queue status</p>
             <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt="Support ticket inbox"/><b>New</b><small>triage and tag</small></div>

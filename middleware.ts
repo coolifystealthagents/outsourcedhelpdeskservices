@@ -2,12 +2,25 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const canonicalHost = 'outsourcedhelpdeskservices.com';
 
+function cloudflareVisitorScheme(request: NextRequest) {
+  const visitor = request.headers.get('cf-visitor');
+  if (!visitor) return undefined;
+
+  try {
+    const parsed = JSON.parse(visitor) as { scheme?: unknown };
+    return parsed.scheme === 'http' || parsed.scheme === 'https' ? parsed.scheme : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export function middleware(request: NextRequest) {
   const forwardedProto = request.headers.get('x-forwarded-proto')?.split(',')[0]?.trim();
+  const visitorScheme = cloudflareVisitorScheme(request);
   const forwardedHost = request.headers.get('x-forwarded-host')?.split(',')[0]?.trim();
   const requestHost = (forwardedHost || request.headers.get('host') || '').split(':')[0].toLowerCase();
   const isLocal = requestHost === 'localhost' || requestHost === '127.0.0.1';
-  const needsHttps = forwardedProto === 'http' && !isLocal;
+  const needsHttps = (visitorScheme === 'http' || forwardedProto === 'http') && !isLocal;
   const needsCanonicalHost = requestHost === `www.${canonicalHost}`;
 
   if (needsHttps || needsCanonicalHost) {

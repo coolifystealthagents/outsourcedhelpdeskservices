@@ -21,9 +21,15 @@
 .tags { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
 .tags span { padding: 16px 18px; border-left: 4px solid #ff6b4a; background: #fffaf3; font-weight: 750; }
 .textLink { display: inline-block; margin-top: 18px; color: #0f735e; font-weight: 850; text-decoration: underline; }
-.official { background: #fffaf3; }
-.official img { display: block; width: 100%; height: 460px; object-fit: cover; clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 34px, 100% 100%, 0 100%); }
-.official .partnerLogo { width: 150px; height: 48px; margin-bottom: 18px; object-fit: contain; clip-path: none; }
+.official { padding: 64px 0; background: #fffaf3; }
+.officialGrid { grid-template-columns: minmax(0, 476px) minmax(0, 1fr); gap: clamp(42px, 7vw, 92px); }
+.teamPhoto { width: min(100%, 476px); margin: 0; overflow: hidden; border: 1px solid #d8e0dc; border-radius: 8px; background: #fff; box-shadow: 14px 14px 0 #dff4ed; }
+.teamPhoto img { display: block; width: 100%; height: auto; aspect-ratio: 953 / 540; object-fit: cover; }
+.teamPhoto figcaption { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 16px; border-top: 1px solid #d8e0dc; color: #526674; font-size: 12px; }
+.teamPhoto figcaption span { text-transform: uppercase; letter-spacing: .1em; font-weight: 900; color: #0f735e; }
+.teamPhoto figcaption strong { color: #102c38; }
+.officialCopy { max-width: 540px; }
+.official .partnerLogo { display: block; width: 138px; height: 44px; margin-bottom: 24px; object-fit: contain; }
 .official p:not(.kicker) { font-size: 18px; line-height: 1.7; }
 .final { padding: 72px 0; text-align: center; color: #fff; background: #0b1f2a; }
 .final p { font-size: 18px; color: #d2e1e3; }
@@ -36,5 +42,7 @@
   .lead { font-size: 17px; }
   .section { padding: 62px 0; }
   .cards, .tags { grid-template-columns: 1fr; }
-  .official img { height: 300px; }
+  .official { padding: 54px 0; }
+  .officialGrid { gap: 38px; }
+  .teamPhoto { width: min(100%, 476px); justify-self: center; box-shadow: 9px 9px 0 #dff4ed; }
 }

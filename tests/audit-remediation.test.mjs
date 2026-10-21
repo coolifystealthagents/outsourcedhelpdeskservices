@@ -9,6 +9,9 @@ const acrClient = read('app/acr-client.tsx');
 const contactApi = read('app/api/contact/route.ts');
 const packageJson = JSON.parse(read('package.json'));
 const contactUs = read('app/contact-us/page.tsx');
+const contactCss = read('app/contact-us/contact.module.css');
+const homepage = read('app/page.tsx');
+const globalCss = read('app/globals.css');
 const contact = read('app/contact/page.tsx');
 const thankYou = read('app/thank-you/page.tsx');
 const researchPost = read('app/research/[slug]/page.tsx');
@@ -60,6 +63,36 @@ test('public contact and thank-you routes do not render unverified testimonials 
 test('contact page uses the approved official Bacolod team asset instead of the generic office photo', () => {
   assert.doesNotMatch(contactUs, /helpdesk-team\.jpg/);
   assert.match(contactUs, /brand\/stealth-agents-team-bacolod\.jpg/);
+});
+
+test('documentary team photo stays within its Retina-safe display width', () => {
+  const photo = readFileSync(new URL('../public/brand/stealth-agents-team-bacolod.jpg', import.meta.url));
+  let width = 0;
+  let height = 0;
+  for (let offset = 2; offset < photo.length - 9;) {
+    if (photo[offset] !== 0xff) { offset += 1; continue; }
+    const marker = photo[offset + 1];
+    const length = photo.readUInt16BE(offset + 2);
+    if ([0xc0, 0xc1, 0xc2].includes(marker)) {
+      height = photo.readUInt16BE(offset + 5);
+      width = photo.readUInt16BE(offset + 7);
+      break;
+    }
+    offset += 2 + length;
+  }
+  assert.deepEqual({ width, height }, { width: 953, height: 540 });
+  assert.match(contactUs, /width=["']953["'] height=["']540["']/);
+  assert.match(contactUs, /stealth-agents-team-bacolod\.jpg\?v=2/);
+  assert.match(contactCss, /\.teamPhoto\s*\{[^}]*476px/);
+  assert.match(contactCss, /aspect-ratio:\s*953\s*\/\s*540/);
+});
+
+test('homepage hero and service cards cannot regress to the blurry overlapping composition', () => {
+  assert.match(homepage, /className=["']desk-console["']/);
+  assert.doesNotMatch(homepage, /help-desk-queue-dashboard-routine\.svg|stealth-agents-team-bacolod\.jpg/);
+  assert.match(globalCss, /\.desk-home \.desk-lane>span\{grid-column:1;grid-row:1\}/);
+  assert.match(globalCss, /\.desk-home \.desk-lane h3\{grid-column:2;grid-row:1/);
+  assert.match(globalCss, /\.desk-home \.desk-lane p\{grid-column:2;grid-row:2/);
 });
 
 test('research heroes use a present licensed fallback and hide unresolved related slugs', () => {

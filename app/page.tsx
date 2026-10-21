@@ -59,13 +59,24 @@ export default function Home() {
           <a className="desk-button" href="/contact-us">Build my help desk plan <span aria-hidden="true">→</span></a>
           <p className="desk-tagline">Ticket coverage, clear escalation, one accountable launch.</p>
         </div>
-        <div className="desk-hero-visual desk-hero-graphic">
-          <img src="/blog-thumbnails/help-desk-queue-dashboard-routine.svg" alt="Help desk queue dashboard and ticket operations workflow" />
-          <div className="desk-ticket-rail" aria-label="Example ticket flow">
-            <p>Queue status</p>
-            <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt="Support ticket inbox"/><b>New</b><small>triage and tag</small></div>
-            <div><img className="status-icon" src="/icons/getillustrations/blueprint-communication-icons-svg/support-chat.svg" alt="Customer support conversation"/><b>In progress</b><small>answer or route</small></div>
-            <div><span className="status-dot done" /><b>Resolved</b><small>note the fix</small></div>
+        <div className="desk-hero-visual">
+          <div className="desk-console" aria-label="Example help desk operations console">
+            <header className="desk-console-head">
+              <span><img src="/icons/getillustrations/blueprint-communication-icons-svg/ticket-inbox.svg" alt="Support ticket inbox"/>Support operations</span>
+              <b><i /> Queue online</b>
+            </header>
+            <div className="desk-console-metrics">
+              <div><small>Open</small><strong>24</strong><span>6 need triage</span></div>
+              <div><small>In progress</small><strong>11</strong><span>owners assigned</span></div>
+              <div><small>Escalated</small><strong>03</strong><span>manager review</span></div>
+            </div>
+            <div className="desk-console-queue">
+              <p><span>Priority queue</span><small>Owner · next action</small></p>
+              <article><i className="priority high">P1</i><span><strong>Account access</strong><small>Verify identity before reset</small></span><em>Escalate</em></article>
+              <article><i className="priority medium">P2</i><span><strong>Product question</strong><small>Reply from approved article</small></span><em>In progress</em></article>
+              <article><i className="priority low">P3</i><span><strong>Portal guidance</strong><small>Send steps and confirm</small></span><em>Assigned</em></article>
+            </div>
+            <footer className="desk-console-foot"><span>Clear ownership</span><span>Safe access</span><span>Named escalation</span></footer>
           </div>
         </div>
       </section>
@@ -82,8 +93,8 @@ export default function Home() {
           <p>Start with work your team can explain and review. Add harder tickets after the handoff is steady.</p>
         </div>
         <div className="desk-lanes">
-          {supportLanes.map((lane) => <a href={lane.href} key={lane.title} className="desk-lane">
-            <h3>{lane.title}</h3><p>{lane.text}</p><b>Open service guide →</b>
+          {supportLanes.map((lane, index) => <a href={lane.href} key={lane.title} className="desk-lane">
+            <span>{String(index + 1).padStart(2, '0')}</span><h3>{lane.title}</h3><p>{lane.text}</p><b>Open service guide →</b>
           </a>)}
         </div>
       </section>
@@ -97,9 +108,9 @@ export default function Home() {
         </div>
         <div className="desk-flow-board" aria-label="Example help desk handoff board">
           <header><span>Today’s support path</span><small>Example operating view</small></header>
-          <div className="desk-flow-row"><span><strong>Password and access</strong><small>Verify identity before any reset</small></span><em>Manager rule</em></div>
-          <div className="desk-flow-row"><span><strong>Product guidance</strong><small>Use approved answer and source link</small></span><em>Support owned</em></div>
-          <div className="desk-flow-row"><span><strong>Billing or refund</strong><small>Gather facts, then send for approval</small></span><em className="icon-status"><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt="Support escalation path"/>Escalate</em></div>
+          <div className="desk-flow-row"><b>01</b><span><strong>Password and access</strong><small>Verify identity before any reset</small></span><em>Manager rule</em></div>
+          <div className="desk-flow-row"><b>02</b><span><strong>Product guidance</strong><small>Use approved answer and source link</small></span><em>Support owned</em></div>
+          <div className="desk-flow-row"><b>03</b><span><strong>Billing or refund</strong><small>Gather facts, then send for approval</small></span><em className="icon-status"><img src="/icons/getillustrations/blueprint-communication-icons-svg/escalation.svg" alt="Support escalation path"/>Escalate</em></div>
         </div>
       </section>
 

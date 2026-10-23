@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 type Item = { id: string; label: string; level: 2 | 3 };
 type RelatedLink = { href: string; label: string };
 
+type TocItem = { id: string; label: string; level: 2 | 3 };
+
 type EditorialTocProps = {
+  items?: TocItem[];
   published?: string;
   updated?: string;
   readingTime?: number;
@@ -23,6 +26,7 @@ const formatDate = (date: string) => new Intl.DateTimeFormat("en-US", {
 }).format(new Date(`${date}T00:00:00Z`));
 
 export function EditorialToc({
+  items: initialItems = [],
   published,
   updated,
   readingTime,
@@ -31,8 +35,8 @@ export function EditorialToc({
   sourceCount = 0,
   family = "Blog",
 }: EditorialTocProps) {
-  const [items, setItems] = useState<Item[]>([]);
-  const [active, setActive] = useState("");
+  const [items, setItems] = useState<Item[]>(initialItems);
+  const [active, setActive] = useState(initialItems[0]?.id || "");
 
   useEffect(() => {
     const root = document.querySelector<HTMLElement>("[data-editorial-content]") ?? document.querySelector("article");
@@ -73,11 +77,11 @@ export function EditorialToc({
   return (
     <aside className="editorial-sidebar" aria-label="Article tools">
       <div className="editorial-sidebar-sticky">
-        <details className="editorial-toc" open>
+        <details className="editorial-toc">
           <summary>On this page</summary>
           <nav aria-label="Table of contents">
             {items.map((item) => (
-              <a className={item.level === 3 ? "toc-subitem" : undefined} key={item.id} href={`#${item.id}`} aria-current={active === item.id ? "location" : undefined}>
+              <a className={item.level === 3 ? "toc-subitem" : undefined} key={item.id} href={`#${item.id}`} aria-current={active === item.id ? "location" : undefined} onClick={(event) => { const d = event.currentTarget.closest('details'); if (d) d.removeAttribute('open'); }}>
                 {item.label}
               </a>
             ))}

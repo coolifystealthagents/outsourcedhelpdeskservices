@@ -311,7 +311,11 @@ const blogPostsSource = [
   { slug: 'help-desk-service-level-targets', title: 'How to set usable help desk service-level targets', excerpt: 'Define response and resolution measures with scope, pause rules, ownership, exceptions, and honest customer updates.', minutes: 8, published: '2026-08-10' },
 ] as const;
 
+import { oct22BlogArticles } from './oct22BlogArticles';
+import { oct22ResearchArticles } from './oct22Research';
+
 export const blogPosts = [
+  ...oct22BlogArticles,
   ...oct13BlogArticles,
   ...oct12BlogArticles,
   ...oct08BlogArticles,
@@ -845,6 +849,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...oct22ResearchArticles,
   ...oct13ResearchArticles,
   ...oct12ResearchArticles,
   ...oct08ResearchArticles,

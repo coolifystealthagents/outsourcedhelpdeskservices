@@ -22,8 +22,8 @@ export const oct22BlogArticles = [
     ],
     "sources": [
       {
-        "name": "NIST Special Publication 800-63B, Digital Identity Guidelines: Authentication and Lifecycle Management",
-        "url": "https://csrc.nist.gov/pubs/sp/800/63b/final"
+        "name": "NIST SP 800-63B, Digital Identity Guidelines: Authentication and Lifecycle Management",
+        "url": "https://pages.nist.gov/800-63-4/sp800-63b.html"
       },
       {
         "name": "CISA, Require Multifactor Authentication",
@@ -57,8 +57,8 @@ export const oct22BlogArticles = [
     ],
     "sources": [
       {
-        "name": "Atlassian Support, What is an SLA?",
-        "url": "https://support.atlassian.com/jira-service-management-cloud/docs/what-is-an-sla/"
+        "name": "Atlassian, Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management"
       },
       {
         "name": "Google Site Reliability Engineering, Managing Incidents",
@@ -166,8 +166,8 @@ export const oct22BlogArticles = [
         "url": "https://www.pcisecuritystandards.org/"
       },
       {
-        "name": "FTC Safeguards Rule: What Your Business Should Know",
-        "url": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule"
+        "name": "Consumer Financial Protection Bureau, Submit a Complaint",
+        "url": "https://www.consumerfinance.gov/complaint/"
       },
       {
         "name": "NIST Privacy Framework",
@@ -232,8 +232,8 @@ export const oct22BlogArticles = [
     ],
     "sources": [
       {
-        "name": "Atlassian Support, What is an SLA?",
-        "url": "https://support.atlassian.com/jira-service-management-cloud/docs/what-is-an-sla/"
+        "name": "Atlassian, Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management"
       },
       {
         "name": "Google Site Reliability Engineering, Managing Incidents",
@@ -372,8 +372,8 @@ export const oct22BlogArticles = [
     ],
     "sources": [
       {
-        "name": "FTC Safeguards Rule: What Your Business Should Know",
-        "url": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule"
+        "name": "Consumer Financial Protection Bureau, Submit a Complaint",
+        "url": "https://www.consumerfinance.gov/complaint/"
       },
       {
         "name": "PCI Security Standards Council",

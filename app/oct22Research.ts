@@ -11,6 +11,7 @@ export const oct22ResearchArticles = [
     "excerpt": "First-contact resolution is easy to quote and hard to defend. This protocol freezes the eligible population before anyone inspects outcomes.",
     "published": "2026-10-22",
     "sourceDate": "2026-10-22",
+    "hero": "/research-thumbnails/helpdesk-first-contact-resolution-denominator-method.png",
     "keyStats": [
       { "value": "6", "label": "denominator rules" },
       { "value": "5", "label": "adverse cases" }
@@ -30,8 +31,8 @@ export const oct22ResearchArticles = [
     ],
     "sources": [
       {
-        "name": "Atlassian Support, What is an SLA?",
-        "url": "https://support.atlassian.com/jira-service-management-cloud/docs/what-is-an-sla/",
+        "name": "Atlassian, Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management",
         "note": "Service-level definitions and clock concepts. Checked October 22, 2026."
       },
       {
@@ -56,6 +57,7 @@ export const oct22ResearchArticles = [
     "excerpt": "A reopen is not one failure. This study separates unclear answers, incomplete fixes, new symptoms, and customer behavior before counting.",
     "published": "2026-10-22",
     "sourceDate": "2026-10-22",
+    "hero": "/research-thumbnails/helpdesk-reopen-taxonomy-study-design.png",
     "keyStats": [
       { "value": "7", "label": "reopen classes" },
       { "value": "4", "label": "evidence checks" }
@@ -100,6 +102,7 @@ export const oct22ResearchArticles = [
     "excerpt": "Around-the-clock coverage is a set of tradeoffs, not a staffing slogan. This protocol makes handoff cost, authority, and customer wait visible.",
     "published": "2026-10-22",
     "sourceDate": "2026-10-22",
+    "hero": "/research-thumbnails/helpdesk-follow-the-sun-coverage-tradeoffs.png",
     "keyStats": [
       { "value": "5", "label": "coverage models" },
       { "value": "6", "label": "handoff costs" }
@@ -146,6 +149,7 @@ export const oct22ResearchArticles = [
     "excerpt": "A knowledge gap is a measurable mismatch between customer language, search results, and the answer an agent actually needs.",
     "published": "2026-10-22",
     "sourceDate": "2026-10-22",
+    "hero": "/research-thumbnails/helpdesk-knowledge-gap-detection-method.png",
     "keyStats": [
       { "value": "6", "label": "gap signals" },
       { "value": "3", "label": "review passes" }
@@ -190,6 +194,7 @@ export const oct22ResearchArticles = [
     "excerpt": "A QA score is only as good as the sample behind it. Test coverage, selection bias, rubric clarity, and reviewer agreement before trusting the number.",
     "published": "2026-10-22",
     "sourceDate": "2026-10-22",
+    "hero": "/research-thumbnails/helpdesk-qa-sample-validity-method.png",
     "keyStats": [
       { "value": "5", "label": "validity threats" },
       { "value": "4", "label": "agreement tests" }

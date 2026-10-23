@@ -37,6 +37,7 @@ export function EditorialToc({
 }: EditorialTocProps) {
   const [items, setItems] = useState<Item[]>(initialItems);
   const [active, setActive] = useState(initialItems[0]?.id || "");
+  const [tocRevealed, setTocRevealed] = useState(false);
 
   useEffect(() => {
     const root = document.querySelector<HTMLElement>("[data-editorial-content]") ?? document.querySelector("article");
@@ -73,11 +74,18 @@ export function EditorialToc({
     };
   }, []);
 
+  useEffect(() => {
+    const updateReveal = () => setTocRevealed(window.scrollY > 220);
+    updateReveal();
+    window.addEventListener("scroll", updateReveal, { passive: true });
+    return () => window.removeEventListener("scroll", updateReveal);
+  }, []);
+
   if (!items.length) return null;
   return (
     <aside className="editorial-sidebar" aria-label="Article tools">
       <div className="editorial-sidebar-sticky">
-        <details className="editorial-toc">
+        <details className={`editorial-toc${tocRevealed ? " toc-revealed" : ""}`}>
           <summary>On this page</summary>
           <nav aria-label="Table of contents">
             {items.map((item) => (

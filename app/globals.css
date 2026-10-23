@@ -95,3 +95,16 @@
   .editorial-sidebar { position: sticky !important; top: 96px; align-self: start; max-height: calc(100vh - 116px); overflow: auto; }
   .editorial-sidebar-sticky { position: static; max-height: none; overflow: visible; }
 }
+/* OutsourcedHelpdeskServices 2026-10-22 mobile ToC reveal.
+ * The 52px compact bar is fixed at top: 12px. Without this rule it covers the
+ * hero at page load. Keep it off-screen until the reader passes the hero.
+ */
+@media (max-width: 980px) {
+  .editorial-toc {
+    transform: translateY(-160%);
+    transition: transform 180ms ease;
+  }
+  .editorial-toc.toc-revealed {
+    transform: translateY(0);
+  }
+}

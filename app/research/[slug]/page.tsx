@@ -128,7 +128,7 @@ export default async function ResearchPost({params}:{params:Promise<{slug:string
   const report=isAug17ResearchSlug(slug)?aug17ResearchReports[slug]:undefined;
   const canonical=`https://${site.domain.toLowerCase()}/research/${p.slug}`;
   const publicationDate=report?AUG17_RESEARCH_PUBLICATION_DATE:p.published;
-  const modifiedDate=report?AUG17_RESEARCH_MODIFIED_DATE:(p.sourceDate??p.published);
+  const modifiedDate=report?AUG17_RESEARCH_MODIFIED_DATE:(p.updated??p.sourceDate??p.published);
   const relatedResearch=p.related.filter(relatedSlug=>researchPosts.some(candidate=>candidate.slug===relatedSlug));
   const related=relatedResearch.slice(0,3).map(relatedSlug=>({href:`/research/${relatedSlug}`,label:researchPosts.find(r=>r.slug===relatedSlug)?.title??relatedSlug}));
   const schema={"@context":"https://schema.org","@type":"Article",headline:p.title,datePublished:publicationDate,dateModified:modifiedDate,mainEntityOfPage:canonical,author:{"@type":"Organization",name:site.brand},publisher:{"@type":"Organization",name:site.brand}};

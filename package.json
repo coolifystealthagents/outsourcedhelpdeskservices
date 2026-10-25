@@ -2,7 +2,8 @@
   "name": "outsourcedhelpdeskservices",
   "private": true,
   "scripts": {
-    "test": "node --test tests/contact-endpoint-size.test.mjs && npm run build && node --test tests/v3-remediation.test.mjs tests/audit-remediation.test.mjs && node tests/homepage-image-labels.test.mjs && node tests/aug17-publication-contract.test.mjs && npm run validate:aug17-blog && npm run validate:aug17-research",
+    "test": "node --test tests/contact-endpoint-size.test.mjs && npm run build && node --test tests/v3-remediation.test.mjs tests/audit-remediation.test.mjs && node tests/chat-support-contextual-handoff.test.mjs && node tests/homepage-image-labels.test.mjs && node tests/aug17-publication-contract.test.mjs && npm run validate:aug17-blog && npm run validate:aug17-research",
+    "test:chat-support-handoff": "node tests/chat-support-contextual-handoff.test.mjs",
     "test:v3": "node --test tests/v3-remediation.test.mjs",
     "test:password-reset-handoff": "node tests/password-reset-contextual-handoff.test.mjs",
     "test:knowledge-base-handoff": "node tests/knowledge-base-contextual-handoff.test.mjs",

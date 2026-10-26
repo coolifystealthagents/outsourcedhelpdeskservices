@@ -13,8 +13,14 @@ export const oct22ResearchArticles = [
     "sourceDate": "2026-10-22",
     "hero": "/research-thumbnails/helpdesk-first-contact-resolution-denominator-method.png",
     "keyStats": [
-      { "value": "6", "label": "denominator rules" },
-      { "value": "5", "label": "adverse cases" }
+      {
+        "value": "6",
+        "label": "denominator rules"
+      },
+      {
+        "value": "5",
+        "label": "adverse cases"
+      }
     ],
     "body": [
       "## Research question\n\nHow does the choice of eligible population change a reported first-contact resolution rate, and what evidence does a buyer need before treating that rate as a service measure? The unit of analysis is one customer request followed from the first recorded contact through the first accepted outcome or the first handoff. The study does not estimate a universal benchmark. It tests whether a local definition can be reproduced by a second reviewer using the same records.",
@@ -59,8 +65,14 @@ export const oct22ResearchArticles = [
     "sourceDate": "2026-10-22",
     "hero": "/research-thumbnails/helpdesk-reopen-taxonomy-study-design.png",
     "keyStats": [
-      { "value": "7", "label": "reopen classes" },
-      { "value": "4", "label": "evidence checks" }
+      {
+        "value": "7",
+        "label": "reopen classes"
+      },
+      {
+        "value": "4",
+        "label": "evidence checks"
+      }
     ],
     "body": [
       "## Research question\n\nWhat does a reopened help desk ticket actually prove, and how can a queue classify reopens so that the count leads to a useful repair? The unit is one original request and its later contact about the same or a related problem. The study treats a reopen as an observable event with several possible causes, not as automatic evidence of agent error.",
@@ -104,8 +116,14 @@ export const oct22ResearchArticles = [
     "sourceDate": "2026-10-22",
     "hero": "/research-thumbnails/helpdesk-follow-the-sun-coverage-tradeoffs.png",
     "keyStats": [
-      { "value": "5", "label": "coverage models" },
-      { "value": "6", "label": "handoff costs" }
+      {
+        "value": "5",
+        "label": "coverage models"
+      },
+      {
+        "value": "6",
+        "label": "handoff costs"
+      }
     ],
     "body": [
       "## Research question\n\nWhen does follow-the-sun help desk coverage improve customer outcomes, and when does it add handoff cost without reducing the customer's wait? The unit is one request that crosses at least one shift or regional boundary. The study compares coverage models on time to first meaningful action, handoff loss, authority continuity, and customer-visible updates rather than on hours of nominal coverage alone.",
@@ -118,7 +136,6 @@ export const oct22ResearchArticles = [
       "## Model the cost honestly\n\nInclude wages, shift differentials, management, tooling, handoff time, error correction, and the cost of unused capacity. Do not compare a fully loaded internal team with a vendor rate that excludes onboarding, equipment, and oversight. The cheapest model may also be the one with the highest customer wait or the highest risk of unauthorized action. Present the tradeoff as a set of explicit choices rather than a single efficiency score.",
       "## Limitations\n\nA short study cannot capture seasonal peaks, attrition, regional holidays, or a major incident. Time-zone data may be inconsistent. Customer satisfaction may reflect the outcome more than the coverage model. The study is descriptive and comparative; it does not prove that one model causes better outcomes. Use it to frame a bounded pilot, not to declare a universal staffing answer. Record the roster, the actual coverage, and the absence of coverage separately, because a schedule that exists on paper may not be filled on the night the sample was taken.",
       "## Decision record\n\nClose the study with a one-page decision record: the models compared, the request family, the observation window, the measured waits, the handoffs reviewed, the authority gaps found, and the change selected. Name the owner, the cost, the expected effect, and the date of the retest. If the evidence does not support a change, say so and keep the current model rather than adopting a more complex roster without a reason.",
-
       "## Practical use\n\nPick one request family and one cross-shift failure that matters. Run the measurement for a month, review the handoffs with both shifts, and choose one change: a delegated authority, a better note template, a channel extension, or a narrower service promise. Retest before expanding the model."
     ],
     "sources": [
@@ -151,8 +168,14 @@ export const oct22ResearchArticles = [
     "sourceDate": "2026-10-22",
     "hero": "/research-thumbnails/helpdesk-knowledge-gap-detection-method.png",
     "keyStats": [
-      { "value": "6", "label": "gap signals" },
-      { "value": "3", "label": "review passes" }
+      {
+        "value": "6",
+        "label": "gap signals"
+      },
+      {
+        "value": "3",
+        "label": "review passes"
+      }
     ],
     "body": [
       "## Research question\n\nWhich signals reliably indicate that a help desk knowledge base is missing or mislabeling an answer, and how can a team distinguish a content gap from a search, routing, or product problem? The unit is one search or one repeated question linked to the article set shown and the action the agent took next.",
@@ -196,8 +219,14 @@ export const oct22ResearchArticles = [
     "sourceDate": "2026-10-22",
     "hero": "/research-thumbnails/helpdesk-qa-sample-validity-method.png",
     "keyStats": [
-      { "value": "5", "label": "validity threats" },
-      { "value": "4", "label": "agreement tests" }
+      {
+        "value": "5",
+        "label": "validity threats"
+      },
+      {
+        "value": "4",
+        "label": "agreement tests"
+      }
     ],
     "body": [
       "## Research question\n\nWhat makes a help desk quality assurance sample valid enough to support a coaching decision, a vendor review, or a service claim? The unit is one sampled ticket and the review record attached to it. The study examines coverage, selection, rubric clarity, reviewer agreement, and the link between the score and the customer outcome.",
@@ -210,7 +239,6 @@ export const oct22ResearchArticles = [
       "## Report with uncertainty\n\nShow the sample size, the population, the selection rule, the exclusions, the score distribution, and the confidence interval where appropriate. Do not present a single percentage as if it described every agent and every request type. Segment by request family and by risk. If the sample is too small to support a claim, say that. A cautious statement is more useful than a precise number built on ten convenience cases.",
       "## Limitations\n\nQA sampling observes the record, not the customer's full experience. Reviewers may be influenced by the agent's name, the customer's tone, or the outcome. The rubric may encode local preferences that do not generalize. A valid sample for coaching may be too small for a contractual claim. These limits should shape the decision, not be buried in an appendix. Where a score is used in a vendor review, keep the sampled tickets, the rubric version, and the reviewer notes available for the buyer's own review, subject to privacy and access controls.",
       "## Decision record\n\nRecord the sample frame, the selection method, the rubric version, the reviewers, the agreement result, the outcome comparison, and the limitations in one page. State whether the score is fit for coaching, for a vendor review, or only for exploration. Name the next calibration date and the owner of the rubric. A score that cannot be explained at this level of detail should not be used to make a personnel or contract decision.",
-
       "## Practical use\n\nAudit one QA cycle before changing the score. Check the frame, the selection, the rubric, and the agreement. Fix the weakest link, then rerun the same sample. A QA program earns trust by showing its work, not by producing a confident number."
     ],
     "sources": [
@@ -233,6 +261,581 @@ export const oct22ResearchArticles = [
     "related": [
       "helpdesk-first-contact-resolution-denominator-method",
       "helpdesk-reopen-taxonomy-study-design"
+    ]
+  },
+  {
+    "slug": "outsourcedhelpdeskservices-intake-completeness-study",
+    "title": "Help Desk Intake Completeness Study",
+    "excerpt": "A practical Help Desk workflow for help desk intake completeness study, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "sourceDate": "2026-10-25",
+    "hero": "/research-thumbnails/outsourcedhelpdeskservices-intake-completeness-study.svg",
+    "keyStats": [
+      {
+        "value": "1 record",
+        "label": "defined unit of review"
+      },
+      {
+        "value": "2 reviewers",
+        "label": "independent first-pass coding"
+      },
+      {
+        "value": "0",
+        "label": "unresolved exceptions hidden by an average"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines which required fields and source artifacts are present at the point of assignment across intake records for the defined service in Help Desk operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is which required fields and source artifacts are present at the point of assignment. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define intake records for the defined service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for field completeness, missing evidence, owner assignment, exception state, and correction time, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for field completeness, missing evidence, owner assignment, exception state, and correction time. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for intake records for the defined service, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The help desk support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The study cannot determine service quality, legal compliance, or the correctness of a professional decision. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "name": "Atlassian, Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management",
+        "note": "Service-level definitions and clock concepts. Checked October 22, 2026."
+      },
+      {
+        "name": "NIST Special Publication 800-61 Revision 3, Incident Response Recommendations",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "note": "Incident lifecycle and evidence context. Checked October 22, 2026."
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g",
+        "note": "Provenance, completeness, and fitness-for-use questions. Checked October 22, 2026."
+      }
+    ],
+    "related": [
+      "helpdesk-reopen-taxonomy-study-design",
+      "helpdesk-qa-sample-validity-method"
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines which required fields and source artifacts are present at the point of assignment across intake records for the defined service in Help Desk operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define intake records for the defined service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for field completeness, missing evidence, owner assignment, exception state, and correction time. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for field completeness, missing evidence, owner assignment, exception state, and correction time. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot determine service quality, legal compliance, or the correctness of a professional decision. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for intake records for the defined service, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedhelpdeskservices-handoff-latency-study",
+    "title": "Help Desk Handoff Latency Study",
+    "excerpt": "A practical Help Desk workflow for help desk handoff latency study, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "sourceDate": "2026-10-25",
+    "hero": "/research-thumbnails/outsourcedhelpdeskservices-handoff-latency-study.svg",
+    "keyStats": [
+      {
+        "value": "1 record",
+        "label": "defined unit of review"
+      },
+      {
+        "value": "2 reviewers",
+        "label": "independent first-pass coding"
+      },
+      {
+        "value": "0",
+        "label": "unresolved exceptions hidden by an average"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines how long each handoff takes and where acknowledgement or context is lost across records that move between two named owners in Help Desk operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is how long each handoff takes and where acknowledgement or context is lost. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define records that move between two named owners from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for handoff time, acknowledgement, missing context, rework, and unresolved records, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for handoff time, acknowledgement, missing context, rework, and unresolved records. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for records that move between two named owners, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The help desk support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The study cannot establish causation or whether a shorter handoff produced a better outcome. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "name": "Atlassian, Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management",
+        "note": "Service-level definitions and clock concepts. Checked October 22, 2026."
+      },
+      {
+        "name": "NIST Special Publication 800-61 Revision 3, Incident Response Recommendations",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "note": "Incident lifecycle and evidence context. Checked October 22, 2026."
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g",
+        "note": "Provenance, completeness, and fitness-for-use questions. Checked October 22, 2026."
+      }
+    ],
+    "related": [
+      "helpdesk-reopen-taxonomy-study-design",
+      "helpdesk-qa-sample-validity-method"
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines how long each handoff takes and where acknowledgement or context is lost across records that move between two named owners in Help Desk operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define records that move between two named owners from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for handoff time, acknowledgement, missing context, rework, and unresolved records. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for handoff time, acknowledgement, missing context, rework, and unresolved records. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot establish causation or whether a shorter handoff produced a better outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for records that move between two named owners, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedhelpdeskservices-exception-pattern-audit",
+    "title": "Help Desk Exception Pattern Audit",
+    "excerpt": "A practical Help Desk workflow for help desk exception pattern audit, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "sourceDate": "2026-10-25",
+    "hero": "/research-thumbnails/outsourcedhelpdeskservices-exception-pattern-audit.svg",
+    "keyStats": [
+      {
+        "value": "1 record",
+        "label": "defined unit of review"
+      },
+      {
+        "value": "2 reviewers",
+        "label": "independent first-pass coding"
+      },
+      {
+        "value": "0",
+        "label": "unresolved exceptions hidden by an average"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines which exception reasons recur and whether they receive a consistent owner and disposition across exception records from the review window in Help Desk operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is which exception reasons recur and whether they receive a consistent owner and disposition. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define exception records from the review window from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for reason mix, repeat rate, age, owner, resolution, and reopened exceptions, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for reason mix, repeat rate, age, owner, resolution, and reopened exceptions. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for exception records from the review window, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The help desk support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The audit describes documented exceptions and cannot infer undocumented causes. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "name": "Atlassian, Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management",
+        "note": "Service-level definitions and clock concepts. Checked October 22, 2026."
+      },
+      {
+        "name": "NIST Special Publication 800-61 Revision 3, Incident Response Recommendations",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "note": "Incident lifecycle and evidence context. Checked October 22, 2026."
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g",
+        "note": "Provenance, completeness, and fitness-for-use questions. Checked October 22, 2026."
+      }
+    ],
+    "related": [
+      "helpdesk-reopen-taxonomy-study-design",
+      "helpdesk-qa-sample-validity-method"
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines which exception reasons recur and whether they receive a consistent owner and disposition across exception records from the review window in Help Desk operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define exception records from the review window from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for reason mix, repeat rate, age, owner, resolution, and reopened exceptions. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for reason mix, repeat rate, age, owner, resolution, and reopened exceptions. Inspect case narratives behind important differences before assigning a cause.",
+          "The audit describes documented exceptions and cannot infer undocumented causes. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for exception records from the review window, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedhelpdeskservices-evidence-reliability-study",
+    "title": "Help Desk Evidence Reliability Study",
+    "excerpt": "A practical Help Desk workflow for help desk evidence reliability study, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "sourceDate": "2026-10-25",
+    "hero": "/research-thumbnails/outsourcedhelpdeskservices-evidence-reliability-study.svg",
+    "keyStats": [
+      {
+        "value": "1 record",
+        "label": "defined unit of review"
+      },
+      {
+        "value": "2 reviewers",
+        "label": "independent first-pass coding"
+      },
+      {
+        "value": "0",
+        "label": "unresolved exceptions hidden by an average"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines whether the source is reconstructable and consistent with the recorded final state across records with a source artifact and a later outcome in Help Desk operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is whether the source is reconstructable and consistent with the recorded final state. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define records with a source artifact and a later outcome from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for source presence, match, missing state, correction, reviewer agreement, and time, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for source presence, match, missing state, correction, reviewer agreement, and time. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for records with a source artifact and a later outcome, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The help desk support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The study cannot prove that the source is truthful or that the final decision was correct. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "name": "Atlassian, Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management",
+        "note": "Service-level definitions and clock concepts. Checked October 22, 2026."
+      },
+      {
+        "name": "NIST Special Publication 800-61 Revision 3, Incident Response Recommendations",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "note": "Incident lifecycle and evidence context. Checked October 22, 2026."
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g",
+        "note": "Provenance, completeness, and fitness-for-use questions. Checked October 22, 2026."
+      }
+    ],
+    "related": [
+      "helpdesk-reopen-taxonomy-study-design",
+      "helpdesk-qa-sample-validity-method"
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines whether the source is reconstructable and consistent with the recorded final state across records with a source artifact and a later outcome in Help Desk operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define records with a source artifact and a later outcome from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for source presence, match, missing state, correction, reviewer agreement, and time. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for source presence, match, missing state, correction, reviewer agreement, and time. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot prove that the source is truthful or that the final decision was correct. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for records with a source artifact and a later outcome, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedhelpdeskservices-access-recertification-study",
+    "title": "Help Desk Access Recertification Study",
+    "excerpt": "A practical Help Desk workflow for help desk access recertification study, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "sourceDate": "2026-10-25",
+    "hero": "/research-thumbnails/outsourcedhelpdeskservices-access-recertification-study.svg",
+    "keyStats": [
+      {
+        "value": "1 record",
+        "label": "defined unit of review"
+      },
+      {
+        "value": "2 reviewers",
+        "label": "independent first-pass coding"
+      },
+      {
+        "value": "0",
+        "label": "unresolved exceptions hidden by an average"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines whether current access matches the approved role and whether removals are evidenced across role-based access records for the service in Help Desk operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is whether current access matches the approved role and whether removals are evidenced. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define role-based access records for the service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for role match, excess access, temporary access age, removal evidence, and reviewer sign-off, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for role match, excess access, temporary access age, removal evidence, and reviewer sign-off. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for role-based access records for the service, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The help desk support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The study cannot determine legal sufficiency or whether a specific access decision was appropriate. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "name": "Atlassian, Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management",
+        "note": "Service-level definitions and clock concepts. Checked October 22, 2026."
+      },
+      {
+        "name": "NIST Special Publication 800-61 Revision 3, Incident Response Recommendations",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "note": "Incident lifecycle and evidence context. Checked October 22, 2026."
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g",
+        "note": "Provenance, completeness, and fitness-for-use questions. Checked October 22, 2026."
+      }
+    ],
+    "related": [
+      "helpdesk-reopen-taxonomy-study-design",
+      "helpdesk-qa-sample-validity-method"
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines whether current access matches the approved role and whether removals are evidenced across role-based access records for the service in Help Desk operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define role-based access records for the service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for role match, excess access, temporary access age, removal evidence, and reviewer sign-off. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for role match, excess access, temporary access age, removal evidence, and reviewer sign-off. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot determine legal sufficiency or whether a specific access decision was appropriate. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for role-based access records for the service, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
     ]
   }
 ];

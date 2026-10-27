@@ -24,7 +24,7 @@ function BlogCard({post}:{post:(typeof blogPosts)[number]}) {
 export default function Blog() {
   const operationsLibrary = Object.entries(aug19Meta).filter(([, value]) => value.family === "blog");
   const campaignPosts = blogPosts.filter((p) => publishedOn(p, "2026-10-13"));
-  const posts = blogPosts.filter((p) => !publishedOn(p, "2026-10-13") && publishedDate(p)).slice(0, 20 - campaignPosts.length);
+  const posts = blogPosts.filter((p) => !publishedOn(p, "2026-10-13") && publishedDate(p)).slice(0, 20);
   const pages = Math.max(1, Math.ceil(blogPosts.length / 20));
   return <><Header/><main className="editorial-index">
     <header className="editorial-index-hero"><div className="container editorial-index-hero-grid"><div><p className="eyebrow">Philippines staffing blog</p><h1>Practical role and handoff guides.</h1><p className="lead">Guidance for choosing, scoping, and managing Filipino help desk support, with clear ownership and operating boundaries.</p></div><img src="/illustrations/getillustrations/communication-illustrations-pack-svg/ticket-support.webp" width="1200" height="675" alt="Illustration of a help desk team coordinating customer tickets" loading="eager"/></div></header>

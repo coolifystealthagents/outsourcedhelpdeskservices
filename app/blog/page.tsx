@@ -23,12 +23,14 @@ function BlogCard({post}:{post:(typeof blogPosts)[number]}) {
 
 export default function Blog() {
   const operationsLibrary = Object.entries(aug19Meta).filter(([, value]) => value.family === "blog");
+  const latestPosts = blogPosts.filter((p) => publishedOn(p, "2026-10-28"));
   const campaignPosts = blogPosts.filter((p) => publishedOn(p, "2026-10-27"));
-  const posts = blogPosts.filter((p) => !publishedOn(p, "2026-10-27") && publishedDate(p)).slice(0, 20);
+  const posts = blogPosts.filter((p) => !publishedOn(p, "2026-10-27") && !publishedOn(p, "2026-10-28") && publishedDate(p)).slice(0, 20);
   const pages = Math.max(1, Math.ceil(blogPosts.length / 20));
   return <><Header/><main className="editorial-index">
     <header className="editorial-index-hero"><div className="container editorial-index-hero-grid"><div><p className="eyebrow">Philippines staffing blog</p><h1>Practical role and handoff guides.</h1><p className="lead">Guidance for choosing, scoping, and managing Filipino help desk support, with clear ownership and operating boundaries.</p></div><img src="/illustrations/getillustrations/communication-illustrations-pack-svg/ticket-support.webp" width="1200" height="675" alt="Illustration of a help desk team coordinating customer tickets" loading="eager"/></div></header>
-    <div className="container editorial-index-content"><section aria-labelledby="latest-blog-heading"><h2 id="latest-blog-heading">Published October 27, 2026</h2><div className="editorial-card-grid">{campaignPosts.map((post)=><BlogCard post={post} key={post.slug}/>)}</div></section>
+    <div className="container editorial-index-content"><section aria-labelledby="latest-blog-heading"><h2 id="latest-blog-heading">Published October 28, 2026</h2><div className="editorial-card-grid">{latestPosts.map((post)=><BlogCard post={post} key={post.slug}/>)}</div></section>
+    <section aria-labelledby="oct27-blog-heading"><h2 id="oct27-blog-heading">Published October 27, 2026</h2><div className="editorial-card-grid">{campaignPosts.map((post)=><BlogCard post={post} key={post.slug}/>)}</div></section>
     <section aria-labelledby="earlier-blog-heading"><h2 id="earlier-blog-heading">Earlier articles</h2><div className="editorial-card-grid">{posts.map((post)=><BlogCard post={post} key={post.slug}/>)}</div></section>
     <nav className="pagination" aria-label="Blog pages">{Array.from({length:pages},(_,i)=><a aria-current={i===0?"page":undefined} href={i===0?"/blog":`/blog/page/${i+1}`} key={i}>{i+1}</a>)}</nav>
     <section aria-labelledby="operations-blog-heading"><h2 id="operations-blog-heading">Help desk operations library</h2><div className="editorial-card-grid">{operationsLibrary.map(([slug,entry])=><a className="editorial-index-card" href={`/blog/${slug}`} key={slug}><img src={entry.hero} width="640" height="400" alt="" loading="lazy"/><div><p className="editorial-card-meta"><time dateTime="2026-08-19">August 19, 2026</time> · Operations guide</p><h3>{entry.title}</h3><p>{entry.description}</p><span>Read operations guide</span></div></a>)}</div></section></div>

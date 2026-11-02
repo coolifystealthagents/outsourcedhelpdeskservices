@@ -311,7 +311,7 @@ export const november02ResearchArticles = [
     "image": "/images/november-02/ohs02-quality-defects.svg"
   },
   {
-    "slug": "ohs02-backlog-aging",
+    "slug": "ohs02-backlog-aging-study",
     "title": "Backlog Aging",
     "excerpt": "A bounded record review for backlog aging.",
     "body": [
@@ -331,7 +331,7 @@ export const november02ResearchArticles = [
     "sources": [],
     "related": [],
     "faqs": [],
-    "image": "/images/november-02/ohs02-backlog-aging.svg"
+    "image": "/images/november-02/ohs02-backlog-aging-study.svg"
   },
   {
     "slug": "ohs02-callback-completion",

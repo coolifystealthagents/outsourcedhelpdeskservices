@@ -1,0 +1,359 @@
+export const november02BlogArticles = [
+  {
+    "slug": "ohs02-ticket-triage",
+    "title": "Ticket Triage",
+    "excerpt": "A written control for ticket triage in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-ticket-triage.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Ticket Triage is a written record.",
+      "## Open the record",
+      "For Ticket Triage, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Ticket Triage to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Ticket Triage, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-escalation-owner",
+    "title": "Escalation Owner",
+    "excerpt": "A written control for escalation owner in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-escalation-owner.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Escalation Owner is a written record.",
+      "## Open the record",
+      "For Escalation Owner, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Escalation Owner to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Escalation Owner, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-shift-handoff",
+    "title": "Shift Handoff",
+    "excerpt": "A written control for shift handoff in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-shift-handoff.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Shift Handoff is a written record.",
+      "## Open the record",
+      "For Shift Handoff, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Shift Handoff to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Shift Handoff, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-quality-sample",
+    "title": "Quality Sample",
+    "excerpt": "A written control for quality sample in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-quality-sample.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Quality Sample is a written record.",
+      "## Open the record",
+      "For Quality Sample, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Quality Sample to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Quality Sample, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-knowledge-base-update",
+    "title": "Knowledge Base Update",
+    "excerpt": "A written control for knowledge base update in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-knowledge-base-update.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Knowledge Base Update is a written record.",
+      "## Open the record",
+      "For Knowledge Base Update, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Knowledge Base Update to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Knowledge Base Update, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-sla-evidence",
+    "title": "SLA Evidence",
+    "excerpt": "A written control for sla evidence in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-sla-evidence.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, SLA Evidence is a written record.",
+      "## Open the record",
+      "For SLA Evidence, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies SLA Evidence to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For SLA Evidence, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-refund-authority",
+    "title": "Refund Authority",
+    "excerpt": "A written control for refund authority in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-refund-authority.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Refund Authority is a written record.",
+      "## Open the record",
+      "For Refund Authority, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Refund Authority to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Refund Authority, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-access-offboarding",
+    "title": "Access Offboarding",
+    "excerpt": "A written control for access offboarding in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-access-offboarding.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Access Offboarding is a written record.",
+      "## Open the record",
+      "For Access Offboarding, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Access Offboarding to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Access Offboarding, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-vendor-handoff",
+    "title": "Vendor Handoff",
+    "excerpt": "A written control for vendor handoff in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-vendor-handoff.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Vendor Handoff is a written record.",
+      "## Open the record",
+      "For Vendor Handoff, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Vendor Handoff to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Vendor Handoff, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-callback-promise",
+    "title": "Callback Promise",
+    "excerpt": "A written control for callback promise in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-callback-promise.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Callback Promise is a written record.",
+      "## Open the record",
+      "For Callback Promise, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Callback Promise to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Callback Promise, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-backlog-aging",
+    "title": "Backlog Aging",
+    "excerpt": "A written control for backlog aging in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-backlog-aging.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Backlog Aging is a written record.",
+      "## Open the record",
+      "For Backlog Aging, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Backlog Aging to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Backlog Aging, close when the source, approval, action, and destination evidence agree."
+    ]
+  },
+  {
+    "slug": "ohs02-weekly-review",
+    "title": "Weekly Review",
+    "excerpt": "A written control for weekly review in outsourced helpdesk teams.",
+    "service": "helpdesk-operations",
+    "minutes": 8,
+    "published": "2026-11-02",
+    "image": "/images/november-02/ohs02-weekly-review.svg",
+    "sources": [],
+    "body": [
+      "## Why this control matters",
+      "For outsourced helpdesk operations, Weekly Review is a written record.",
+      "## Open the record",
+      "For Weekly Review, record the source, date, owner, and next action.",
+      "## A worked example",
+      "A team applies Weekly Review to one ticket and records the change and confirmation.",
+      "## Close and review",
+      "For Weekly Review, close when the source, approval, action, and destination evidence agree."
+    ]
+  }
+];
+export const november02ResearchArticles = [
+  {
+    "slug": "ohs02-first-response-lag",
+    "title": "First Response Lag",
+    "excerpt": "A bounded record review for first response lag.",
+    "body": [
+      "## Question and scope",
+      "First Response Lag is examined from the documented helpdesk record in a defined window.",
+      "## Population and unit",
+      "The unit is one ticket, handoff, callback, or escalation.",
+      "## Definitions and measures",
+      "Freeze the window and evidence standard before sampling.",
+      "## Operational use and limits",
+      "Report unresolved items and limitations beside the finding."
+    ],
+    "published": "2026-11-02",
+    "updated": "2026-11-02",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "Fleet record review",
+    "sources": [],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-02/ohs02-first-response-lag.svg"
+  },
+  {
+    "slug": "ohs02-handoff-drop-rate",
+    "title": "Handoff Drop Rate",
+    "excerpt": "A bounded record review for handoff drop rate.",
+    "body": [
+      "## Question and scope",
+      "Handoff Drop Rate is examined from the documented helpdesk record in a defined window.",
+      "## Population and unit",
+      "The unit is one ticket, handoff, callback, or escalation.",
+      "## Definitions and measures",
+      "Freeze the window and evidence standard before sampling.",
+      "## Operational use and limits",
+      "Report unresolved items and limitations beside the finding."
+    ],
+    "published": "2026-11-02",
+    "updated": "2026-11-02",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "Fleet record review",
+    "sources": [],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-02/ohs02-handoff-drop-rate.svg"
+  },
+  {
+    "slug": "ohs02-quality-defects",
+    "title": "Quality Defects",
+    "excerpt": "A bounded record review for quality defects.",
+    "body": [
+      "## Question and scope",
+      "Quality Defects is examined from the documented helpdesk record in a defined window.",
+      "## Population and unit",
+      "The unit is one ticket, handoff, callback, or escalation.",
+      "## Definitions and measures",
+      "Freeze the window and evidence standard before sampling.",
+      "## Operational use and limits",
+      "Report unresolved items and limitations beside the finding."
+    ],
+    "published": "2026-11-02",
+    "updated": "2026-11-02",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "Fleet record review",
+    "sources": [],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-02/ohs02-quality-defects.svg"
+  },
+  {
+    "slug": "ohs02-backlog-aging",
+    "title": "Backlog Aging",
+    "excerpt": "A bounded record review for backlog aging.",
+    "body": [
+      "## Question and scope",
+      "Backlog Aging is examined from the documented helpdesk record in a defined window.",
+      "## Population and unit",
+      "The unit is one ticket, handoff, callback, or escalation.",
+      "## Definitions and measures",
+      "Freeze the window and evidence standard before sampling.",
+      "## Operational use and limits",
+      "Report unresolved items and limitations beside the finding."
+    ],
+    "published": "2026-11-02",
+    "updated": "2026-11-02",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "Fleet record review",
+    "sources": [],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-02/ohs02-backlog-aging.svg"
+  },
+  {
+    "slug": "ohs02-callback-completion",
+    "title": "Callback Completion",
+    "excerpt": "A bounded record review for callback completion.",
+    "body": [
+      "## Question and scope",
+      "Callback Completion is examined from the documented helpdesk record in a defined window.",
+      "## Population and unit",
+      "The unit is one ticket, handoff, callback, or escalation.",
+      "## Definitions and measures",
+      "Freeze the window and evidence standard before sampling.",
+      "## Operational use and limits",
+      "Report unresolved items and limitations beside the finding."
+    ],
+    "published": "2026-11-02",
+    "updated": "2026-11-02",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "Fleet record review",
+    "sources": [],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-02/ohs02-callback-completion.svg"
+  }
+];

@@ -317,8 +317,10 @@ import { oct27BlogArticles } from './oct27BlogArticles';
 import { oct27ResearchArticles } from './oct27Research';
 import { october28BlogArticles, october28ResearchArticles } from './oct28-batch';
 import { november02BlogArticles, november02ResearchArticles } from './nov02-batch';
+import { november03BlogArticles, november03ResearchArticles } from './nov03-batch';
 
 export const blogPosts = [
+  ...november03BlogArticles,
   ...november02BlogArticles,
   ...october28BlogArticles,
   ...oct27BlogArticles,
@@ -856,6 +858,7 @@ const aug17ValidatedResearchBatch: ResearchPost[] = [
   ], sources: [researchSources[3], researchSources[0], researchSources[4]], related: ['helpdesk-knowledge-base-maintenance-research', 'helpdesk-article-review-cadence-research', 'helpdesk-knowledge-article-creation-research'] },
 ];
 export const researchPosts: ResearchPost[] = [
+  ...(november03ResearchArticles as unknown as ResearchPost[]),
   ...(november02ResearchArticles as unknown as ResearchPost[]),
   ...(october28ResearchArticles as unknown as ResearchPost[]),
   ...oct27ResearchArticles,

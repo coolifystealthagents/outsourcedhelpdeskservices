@@ -85,11 +85,11 @@ export function EditorialToc({
   return (
     <aside className="editorial-sidebar" aria-label="Article tools">
       <div className="editorial-sidebar-sticky">
-        <details className={`editorial-toc${tocRevealed ? " toc-revealed" : ""}`}>
+        <details className={`editorial-toc${tocRevealed ? " toc-revealed" : ""}`} open>
           <summary>On this page</summary>
           <nav aria-label="Table of contents">
             {items.map((item) => (
-              <a className={item.level === 3 ? "toc-subitem" : undefined} key={item.id} href={`#${item.id}`} aria-current={active === item.id ? "location" : undefined} onClick={(event) => { const d = event.currentTarget.closest('details'); if (d) d.removeAttribute('open'); }}>
+              <a className={item.level === 3 ? "toc-subitem" : undefined} key={item.id} href={`#${item.id}`} aria-current={active === item.id ? "location" : undefined} onClick={(event) => { if (window.innerWidth > 980) return; const d = event.currentTarget.closest('details'); if (d) d.removeAttribute('open'); }}>
                 {item.label}
               </a>
             ))}

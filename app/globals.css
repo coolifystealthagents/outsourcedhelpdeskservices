@@ -74,21 +74,21 @@
 
 /* 2026-10-22 batch: static ToC anchors and compact mobile ToC */
 @media (min-width: 981px) {
-  .editorial-toc > nav { display: block !important; }
+  .editorial-toc > nav { display: grid !important; gap: 4px; }
   .editorial-toc > summary { pointer-events: none; }
 }
 @media (max-width: 980px) {
   .editorial-sidebar { position: static !important; }
   .editorial-side-module, .editorial-side-cta { display: none !important; }
   .editorial-sidebar-sticky { display: block; position: static; max-height: none; overflow: visible; }
-  .editorial-toc { position: fixed; top: 12px; left: 12px; right: 12px; z-index: 60; margin: 0; padding: 0; background: #fff; border: 1px solid var(--line, #d8e0dc); border-radius: 10px; box-shadow: 0 12px 26px rgba(12, 40, 55, 0.16); }
+  .editorial-toc { position: static; margin: 0 0 14px; padding: 14px 16px; background: #fff; border: 1px solid var(--line, #d8e0dc); border-radius: 10px; box-shadow: none; }
   .editorial-toc:not([open]) { height: 52px; overflow: hidden; }
   .editorial-toc > summary { display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 18px; list-style: none; cursor: pointer; font-weight: 800; }
   .editorial-toc > summary::-webkit-details-marker { display: none; }
   .editorial-toc > summary::after { content: "+"; font-size: 20px; line-height: 1; }
   .editorial-toc[open] > summary::after { content: "-"; }
   .editorial-toc:not([open]) > nav { display: none; }
-  .editorial-toc[open] > nav { position: absolute; top: 100%; left: -1px; right: -1px; max-height: 42vh; overflow: auto; padding: 10px 16px 14px; background: #fff; border: 1px solid var(--line, #d8e0dc); border-radius: 0 0 10px 10px; }
+  .editorial-toc[open] > nav { position: static; max-height: 42vh; overflow: auto; padding: 4px 0 0; background: #fff; border: 0; border-radius: 0; }
   .guide-article :is(h2, h3) { scroll-margin-top: 150px; }
 }
 @media (min-width: 981px) {

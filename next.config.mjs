@@ -5,7 +5,7 @@ const securityHeaders = [
   { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
   { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
   { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-  { key: 'Content-Security-Policy', value: "default-src 'self';  https://databull.stealthagents.us 'self' 'unsafe-inline' https://acrtracking.stealthagents.us; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;  https://databull.stealthagents.us 'self' https://acrtracking.stealthagents.us; frame-src https://go.oncehub.com; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests" },
+  { key: 'Content-Security-Policy', value: "default-src 'self'; script-src https://databull.stealthagents.us 'self' 'unsafe-inline' https://acrtracking.stealthagents.us; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src https://databull.stealthagents.us 'self' https://acrtracking.stealthagents.us; frame-src https://go.oncehub.com; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests" },
 ];
 const nextConfig = {
   poweredByHeader: false,

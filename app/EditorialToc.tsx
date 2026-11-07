@@ -37,7 +37,7 @@ export function EditorialToc({
 }: EditorialTocProps) {
   const [items, setItems] = useState<Item[]>(initialItems);
   const [active, setActive] = useState(initialItems[0]?.id || "");
-  const [tocRevealed, setTocRevealed] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const root = document.querySelector<HTMLElement>("[data-editorial-content]") ?? document.querySelector("article");
@@ -75,17 +75,28 @@ export function EditorialToc({
   }, []);
 
   useEffect(() => {
-    const updateReveal = () => setTocRevealed(window.scrollY > 220);
-    updateReveal();
-    window.addEventListener("scroll", updateReveal, { passive: true });
-    return () => window.removeEventListener("scroll", updateReveal);
+    const media = window.matchMedia("(min-width: 981px)");
+    const update = () => setIsDesktop(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
+    const collapseOnScroll = () => {
+      if (window.innerWidth > 980 || window.scrollY < 480) return;
+      const openToc = document.querySelector<HTMLDetailsElement>(".editorial-toc[open]");
+      if (openToc) openToc.removeAttribute("open");
+    };
+    window.addEventListener("scroll", collapseOnScroll, { passive: true });
+    return () => window.removeEventListener("scroll", collapseOnScroll);
   }, []);
 
   if (!items.length) return null;
   return (
     <aside className="editorial-sidebar" aria-label="Article tools">
       <div className="editorial-sidebar-sticky">
-        <details className={`editorial-toc${tocRevealed ? " toc-revealed" : ""}`} open>
+        <details className="editorial-toc" open={isDesktop || undefined}>
           <summary>On this page</summary>
           <nav aria-label="Table of contents">
             {items.map((item) => (

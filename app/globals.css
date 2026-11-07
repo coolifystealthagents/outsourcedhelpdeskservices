@@ -95,16 +95,28 @@
   .editorial-sidebar { position: sticky !important; top: 96px; align-self: start; max-height: calc(100vh - 116px); overflow: auto; }
   .editorial-sidebar-sticky { position: static; max-height: none; overflow: visible; }
 }
-/* OutsourcedHelpdeskServices 2026-10-22 mobile ToC reveal.
- * The 52px compact bar is fixed at top: 12px. Without this rule it covers the
- * hero at page load. Keep it off-screen until the reader passes the hero.
+/* 2026-11-06 mobile ToC repair.
+ * Keep the compact disclosure in normal flow below the header. The previous
+ * transform hid the control while still reserving its expanded height, which
+ * left a large blank gap above the title. Opening the list now pushes the
+ * article down instead of floating over it.
  */
 @media (max-width: 980px) {
-  .editorial-toc {
-    transform: translateY(-160%);
-    transition: transform 180ms ease;
+  .editorial-sidebar,
+  .editorial-sidebar-sticky {
+    display: contents;
   }
-  .editorial-toc.toc-revealed {
-    transform: translateY(0);
+  .editorial-toc {
+    order: -1;
+    position: sticky;
+    top: 112px;
+    z-index: 25;
+    transform: none;
+    transition: none;
+  }
+}
+@media (max-width: 680px) {
+  .editorial-toc {
+    top: 183px;
   }
 }

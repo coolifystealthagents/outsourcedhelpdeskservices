@@ -233,7 +233,7 @@ export const november06BlogArticles = [
 
 export const november06ResearchArticles = [
   {
-    "slug": "outsourcedhelpdeskservices-intake-field-design-and-routing-accuracy",
+    "slug": "outsourcedhelpdeskservices-intake-field-design-and-routing-accuracy-in-outsourced-help-desks",
     "title": "Intake field design and routing accuracy in outsourced help desks",
     "excerpt": "An analysis of how required fields, option labels, and fallback routes shape whether a request reaches the right queue.",
     "body": [
@@ -312,7 +312,7 @@ export const november06ResearchArticles = [
     ]
   },
   {
-    "slug": "outsourcedhelpdeskservices-outage-communication-cadence",
+    "slug": "outsourcedhelpdeskservices-outage-communication-cadence-what-documented-practice-supports",
     "title": "Outage communication cadence: what documented practice supports",
     "excerpt": "A review of incident guidance applied to customer update timing, ownership, and the difference between confirmed and provisional facts.",
     "body": [
@@ -391,7 +391,7 @@ export const november06ResearchArticles = [
     ]
   },
   {
-    "slug": "outsourcedhelpdeskservices-why-qa-coaching-fades-after-the-review",
+    "slug": "outsourcedhelpdeskservices-why-qa-coaching-fades-after-the-review-meeting",
     "title": "Why QA coaching fades after the review meeting",
     "excerpt": "An analysis of the conditions that turn a reviewed ticket into a lasting behavior change, and the ones that leave it in the meeting.",
     "body": [
@@ -549,7 +549,7 @@ export const november06ResearchArticles = [
     ]
   },
   {
-    "slug": "outsourcedhelpdeskservices-commitment-authority-in-outsourced-support",
+    "slug": "outsourcedhelpdeskservices-commitment-authority-in-outsourced-support-a-boundary-analysis",
     "title": "Commitment authority in outsourced support: a boundary analysis",
     "excerpt": "An analysis of the promises support agents make, the language that creates them, and the approval paths that keep them honest.",
     "body": [

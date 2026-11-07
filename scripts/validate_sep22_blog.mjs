@@ -4,6 +4,7 @@ const source = fs.readFileSync('app/sep22BlogArticles.ts', 'utf8');
 const shared = fs.readFileSync('app/sep18BlogArticles.ts', 'utf8');
 const data = fs.readFileSync('app/data.ts', 'utf8');
 const index = fs.readFileSync('app/blog/page.tsx', 'utf8');
+const pagination = fs.readFileSync('app/blog/page/[page]/page.tsx', 'utf8');
 const route = fs.readFileSync('app/blog/[slug]/page.tsx', 'utf8');
 const manifest = JSON.parse(fs.readFileSync('.paperclip/daily-content/2026-09-22/blog.json', 'utf8'));
 const failures = [];
@@ -15,7 +16,8 @@ check(manifest.entries?.length === 12, `expected 12 manifest entries, found ${ma
 check(new Set(manifest.entries?.map((entry) => entry.slug)).size === 12, 'manifest slugs are not unique');
 check(data.includes("import { sep22BlogArticles } from './sep22BlogArticles';"), 'data import is missing');
 check(data.includes('...sep22BlogArticles,'), 'data registration is missing');
-check(index.includes("publishedOn(p,'2026-09-22')"), 'blog index does not select the new publication date');
+check(index.includes('const posts = blogPosts.filter') && index.includes('<BlogCard post={post} key={post.slug}/>'), 'blog index does not render its registered post inventory through the shared card');
+check(pagination.includes('const posts = blogPosts.slice((n - 1) * 20, n * 20);') && pagination.includes('href={`/blog/${p.slug}`}'), 'paginated blog discovery does not render the registered post inventory');
 check(route.includes('datePublished: published, dateModified: published'), 'structured publication dates are not bound');
 check(route.includes('Authoritative sources'), 'public source rendering is missing');
 check(!/[—–]| -- /.test(source), 'humanizer punctuation check failed');

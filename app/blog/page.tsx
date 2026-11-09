@@ -15,8 +15,10 @@ const formatDate = (date:string) => new Intl.DateTimeFormat("en-US",{month:"long
 function BlogCard({post}:{post:(typeof blogPosts)[number]}) {
   const date=publishedDate(post);
   if(!date) return null;
-  return <a className="editorial-index-card" href={`/blog/${post.slug}`}>
-    <img src={postImage(post)} width="640" height="400" alt="" loading="lazy"/>
+  const image=postImage(post);
+  const photoCard=image.includes('/images/november-08/');
+  return <a className={`editorial-index-card${photoCard?' photo-card-1200':''}`} href={`/blog/${post.slug}`}>
+    <img src={image} width="640" height="400" alt="" loading="lazy"/>
     <div><p className="editorial-card-meta"><time dateTime={date}>{formatDate(date)}</time> · {post.minutes} min read</p><h3>{post.title}</h3><p>{post.excerpt}</p><span>Read article</span></div>
   </a>;
 }

@@ -120,3 +120,6 @@
     top: 183px;
   }
 }
+
+/* 2026-11-08: photo cards keep the generated 1200x630 artwork uncropped. */
+.editorial-index-card.photo-card-1200>img{aspect-ratio:1200/630}

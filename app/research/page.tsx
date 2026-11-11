@@ -12,7 +12,7 @@ const researchImage=(hero?:string)=>!hero||hero==='/helpdesk-team.jpg'?'/illustr
 
 function ResearchCard({post}:{post:(typeof researchPosts)[number]}) {
   const image=researchImage(post.hero);
-  const photoCard=image.includes('/images/november-08/')||image.includes('/images/november-09/')||image.includes('/images/november-10/');
+  const photoCard=image.includes('/images/november-08/')||image.includes('/images/november-09/')||image.includes('/images/november-10/')||image.includes('/images/november-11/');
   return <a className={`editorial-index-card${photoCard?' photo-card-1200':''}`} href={`/research/${post.slug}`}>
     <img src={image} width="640" height="400" alt="" loading="lazy"/>
     <div><p className="editorial-card-meta"><time dateTime={post.published}>{formatDate(post.published)}</time> · Research brief</p><h3>{post.title}</h3><p>{post.excerpt}</p><span>{post.keyStats[0].value} {post.keyStats[0].label}</span></div>

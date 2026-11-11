@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
   const declaredLength = contentLengthHeader === null ? null : Number(contentLengthHeader);
   const origin = request.headers.get('origin');
   if (
-    (origin && origin !== request.nextUrl.origin)
+    (origin && origin !== 'https://outsourcedhelpdeskservices.com' && origin !== 'https://www.outsourcedhelpdeskservices.com')
     || (declaredLength !== null && (
       !Number.isFinite(declaredLength)
       || declaredLength < 0
@@ -185,5 +185,5 @@ export async function POST(request: NextRequest) {
     pageUrl,
     userAgent: request.headers.get('user-agent') || '',
   });
-  return NextResponse.redirect(new URL('/thank-you?lead=accepted', request.url), 303);
+  if (request.headers.get('accept')?.includes('application/json')) return NextResponse.json({ok:true,redirect:'/thank-you?lead=accepted'}, {headers:{'cache-control':'no-store'}});return NextResponse.redirect(new URL('/thank-you?lead=accepted', 'https://outsourcedhelpdeskservices.com'), 303);
 }

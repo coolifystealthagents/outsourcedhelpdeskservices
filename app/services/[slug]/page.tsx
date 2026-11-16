@@ -1,3 +1,4 @@
+import refreshContent from '../../_refresh/content.json';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Header, Footer, JsonLd } from '../../components';
@@ -49,7 +50,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   return <>
     <Header />
-    <main className="service-page">
+    <main id="main-content" className="service-page">
       <JsonLd data={{
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -68,7 +69,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <p>{content.audience}</p>
             <a className="btn primary" href="/contact-us">Discuss this service</a>
           </div>
-          <img className="service-hero-image" src={images[service.slug]} alt={`${service.title} workflow schematic`} />
+          <img className="service-hero-image" src={refreshContent.services.find(x=>x.slug===slug)!.image} alt={refreshContent.services.find(x=>x.slug===slug)!.imageAlt} />
         </div>
       </section>
 

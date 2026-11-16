@@ -68,7 +68,7 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
 
   return (
     <div className="sa-form-card">
-      <h2>Tell us what your help desk needs to run well.</h2>
+      <h2>Tell us about your business</h2>
       <form action={endpoint} method="post" onSubmit={submit} id="contactPageForm" data-acr-managed="true">
         <input className="sa-hp" name="website_url" type="hidden" tabIndex={-1} autoComplete="off" aria-label="Leave this field empty" />
         <div className="sa-grid">
@@ -87,7 +87,7 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
         </div>
         <label>How Did You Hear About Us? *<select name="referral" required value={referral} onChange={(e) => setReferral(e.target.value)}><option value="" disabled>Select...</option>{referrals.map((x) => <option key={x}>{x}</option>)}</select></label>
         {referral === "Other" ? <label>Please Specify *<input name="referralSpecify" required /></label> : null}
-        <label>Message<textarea name="message" rows={4} /></label>
+        <label>Message<textarea name="message" rows={2} /></label>
         {error ? <p className="sa-error" role="alert">{error}</p> : null}
         <button type="submit" disabled={submitting}>{submitting ? "Submitting..." : "Book a Free Consultation"}</button>
       </form>

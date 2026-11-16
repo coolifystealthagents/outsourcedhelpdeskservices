@@ -16,9 +16,7 @@ export function TestimonialsRail({ contact = false }: { contact?: boolean }) {
         <span aria-hidden="true">★★★★★</span>
         <h2 id={contact ? 'contact-client-reviews' : 'booking-client-reviews'}>What Stealth Agents clients say</h2>
       </div>
-      <button className="sa-testimonial-toggle" type="button" aria-pressed={paused} onClick={() => setPaused((value) => !value)}>
-        {paused ? 'Play testimonials' : 'Pause testimonials'}
-      </button>
+
       <div className="sa-testimonial-viewport">
         <div className="sa-testimonial-track">
           {repeated.map((review, index) => (

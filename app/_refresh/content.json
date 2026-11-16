@@ -21,12 +21,12 @@
       "title": "Level One Ticket Triage",
       "desc": "Filipino helpdesk specialists can handle level one ticket triage with documented workflows, approval limits, and owner review.",
       "summary": "Classify incoming tickets and route urgent work to the right owner.",
-      "image": "/refresh/level-one-ticket-triage.webp",
-      "imageAlt": "Office professional coordinating work with a headset and binder",
+      "image": "/refresh/level-one-ticket-triage-20261117.jpg",
+      "imageAlt": "Support agents reviewing customer requests on computers",
       "tasks": [
-        "Classify incoming tickets and route urgent work to the right owner.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Categorize incoming requests by issue, impact and urgency",
+        "Check for duplicate tickets and missing account details",
+        "Route each case to the correct queue with a clear next action"
       ]
     },
     {
@@ -34,12 +34,12 @@
       "title": "Email Helpdesk Support",
       "desc": "Filipino helpdesk specialists can handle email helpdesk support with documented workflows, approval limits, and owner review.",
       "summary": "Prepare clear email replies and keep follow-up promises visible.",
-      "image": "/refresh/email-helpdesk-support.webp",
-      "imageAlt": "Professional using a laptop and headset at a desk",
+      "image": "/refresh/email-helpdesk-support-20261117.jpg",
+      "imageAlt": "Customer support professional following up by phone",
       "tasks": [
-        "Prepare clear email replies and keep follow-up promises visible.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Draft replies from approved troubleshooting and policy guidance",
+        "Keep ticket history and promised follow-up dates current",
+        "Escalate unresolved questions with the steps already attempted"
       ]
     },
     {
@@ -47,12 +47,12 @@
       "title": "Chat Helpdesk Support",
       "desc": "Filipino helpdesk specialists can handle chat helpdesk support with documented workflows, approval limits, and owner review.",
       "summary": "Help customers through approved answers in live chat.",
-      "image": "/refresh/chat-helpdesk-support.webp",
-      "imageAlt": "Colleagues reviewing information on a laptop",
+      "image": "/refresh/chat-helpdesk-support-20261117.jpg",
+      "imageAlt": "Support agents working at adjacent computer desks",
       "tasks": [
-        "Help customers through approved answers in live chat.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Clarify the issue before choosing an approved response",
+        "Record chat context and troubleshooting outcomes in the ticket",
+        "Transfer complex requests with a concise conversation summary"
       ]
     },
     {
@@ -60,12 +60,12 @@
       "title": "Account Access Support",
       "desc": "Filipino helpdesk specialists can handle account access support with documented workflows, approval limits, and owner review.",
       "summary": "Coordinate account requests with identity checks and authorized owners.",
-      "image": "/refresh/account-access-support.webp",
-      "imageAlt": "Colleagues reviewing documents together at a laptop",
+      "image": "/refresh/account-access-support-20261117.jpg",
+      "imageAlt": "Technical colleagues working at computer workstations",
       "tasks": [
-        "Coordinate account requests with identity checks and authorized owners.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Follow your approved identity-verification procedure",
+        "Record requested access and the authorized approver",
+        "Route permission changes to your designated administrator"
       ]
     },
     {
@@ -73,12 +73,12 @@
       "title": "Password Reset Coordination",
       "desc": "Filipino helpdesk specialists can handle password reset coordination with documented workflows, approval limits, and owner review.",
       "summary": "Guide approved reset steps and escalate recovery exceptions.",
-      "image": "/refresh/password-reset-coordination.webp",
-      "imageAlt": "Office professional coordinating work with a headset and binder",
+      "image": "/refresh/password-reset-coordination-20261117.jpg",
+      "imageAlt": "Technical staff discussing a computer issue",
       "tasks": [
-        "Guide approved reset steps and escalate recovery exceptions.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Guide users through your official self-service reset process",
+        "Record failed recovery steps without collecting passwords",
+        "Escalate identity mismatches and locked accounts to authorized staff"
       ]
     },
     {
@@ -86,12 +86,12 @@
       "title": "SaaS User Support",
       "desc": "Filipino helpdesk specialists can handle saas user support with documented workflows, approval limits, and owner review.",
       "summary": "Help users navigate routine product questions and common workflows.",
-      "image": "/refresh/saas-user-support.webp",
-      "imageAlt": "Colleagues reviewing information on a laptop",
+      "image": "/refresh/saas-user-support-20261117.jpg",
+      "imageAlt": "Software professionals reviewing an application",
       "tasks": [
-        "Help users navigate routine product questions and common workflows.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Explain documented product workflows and settings",
+        "Collect the account context and steps behind a reported issue",
+        "Separate routine usage questions from suspected product defects"
       ]
     },
     {
@@ -99,12 +99,12 @@
       "title": "Ecommerce Customer Helpdesk",
       "desc": "Filipino helpdesk specialists can handle ecommerce customer helpdesk with documented workflows, approval limits, and owner review.",
       "summary": "Keep order questions, delivery updates and customer follow-ups moving.",
-      "image": "/refresh/ecommerce-customer-helpdesk.webp",
-      "imageAlt": "Professional using a laptop and headset at a desk",
+      "image": "/refresh/ecommerce-customer-helpdesk-20261117.jpg",
+      "imageAlt": "Professional reviewing payment and order paperwork",
       "tasks": [
-        "Keep order questions, delivery updates and customer follow-ups moving.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Check order and shipment status in approved systems",
+        "Explain delivery and return policies using current guidance",
+        "Prepare damaged-item and refund exceptions for an authorized decision"
       ]
     },
     {
@@ -112,12 +112,12 @@
       "title": "Knowledge Base Maintenance",
       "desc": "Filipino helpdesk specialists can handle knowledge base maintenance with documented workflows, approval limits, and owner review.",
       "summary": "Turn approved solutions into useful, up-to-date help articles.",
-      "image": "/refresh/knowledge-base-maintenance.webp",
-      "imageAlt": "Documents and laptops arranged for a team discussion",
+      "image": "/refresh/knowledge-base-maintenance-20261117.jpg",
+      "imageAlt": "Colleagues writing reference notes on a whiteboard",
       "tasks": [
-        "Turn approved solutions into useful, up-to-date help articles.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Identify recurring questions and outdated instructions",
+        "Draft help articles from approved solutions and screenshots",
+        "Track reviewer approval, publication dates and follow-up revisions"
       ]
     },
     {
@@ -125,12 +125,12 @@
       "title": "Ticket Escalation Coordination",
       "desc": "Filipino helpdesk specialists can handle ticket escalation coordination with documented workflows, approval limits, and owner review.",
       "summary": "Bring context, evidence and next actions to the receiving specialist.",
-      "image": "/refresh/ticket-escalation-coordination.webp",
-      "imageAlt": "Colleagues preparing documents around a meeting table",
+      "image": "/refresh/ticket-escalation-coordination-20261117.jpg",
+      "imageAlt": "A support team discussing a customer escalation",
       "tasks": [
-        "Bring context, evidence and next actions to the receiving specialist.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Confirm the receiving team and escalation criteria",
+        "Package symptoms, attempted fixes and relevant evidence",
+        "Track ownership and relay approved progress updates"
       ]
     },
     {
@@ -138,12 +138,12 @@
       "title": "Bug Report Documentation",
       "desc": "Filipino helpdesk specialists can handle bug report documentation with documented workflows, approval limits, and owner review.",
       "summary": "Capture reproducible steps and useful evidence for technical teams.",
-      "image": "/refresh/bug-report-documentation.webp",
-      "imageAlt": "Colleagues reviewing information on a laptop",
+      "image": "/refresh/bug-report-documentation-20261117.jpg",
+      "imageAlt": "Technical colleagues reviewing code and an issue together",
       "tasks": [
-        "Capture reproducible steps and useful evidence for technical teams.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Capture reproduction steps and expected versus actual behavior",
+        "Record browser, device and product-version details",
+        "Attach permitted evidence and link related reports"
       ]
     },
     {
@@ -151,12 +151,12 @@
       "title": "Helpdesk Quality Review",
       "desc": "Filipino helpdesk specialists can handle helpdesk quality review with documented workflows, approval limits, and owner review.",
       "summary": "Review ticket samples for accuracy, clarity and complete handoffs.",
-      "image": "/refresh/helpdesk-quality-review.webp",
-      "imageAlt": "Colleagues reviewing documents together at a laptop",
+      "image": "/refresh/helpdesk-quality-review-20261117.jpg",
+      "imageAlt": "Colleagues reviewing work at a whiteboard",
       "tasks": [
-        "Review ticket samples for accuracy, clarity and complete handoffs.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Sample tickets against your documented review criteria",
+        "Check response accuracy, tone and completeness of handoffs",
+        "Summarize coaching opportunities with specific examples"
       ]
     },
     {
@@ -164,15 +164,17 @@
       "title": "Support Queue Reporting",
       "desc": "Filipino helpdesk specialists can handle support queue reporting with documented workflows, approval limits, and owner review.",
       "summary": "Make queue volume, aging and recurring issues easier to review.",
-      "image": "/refresh/support-queue-reporting.webp",
-      "imageAlt": "Documents and laptops arranged for a team discussion",
+      "image": "/refresh/support-queue-reporting-20261117.jpg",
+      "imageAlt": "A team discussing an operational report",
       "tasks": [
-        "Make queue volume, aging and recurring issues easier to review.",
-        "Maintain clear source notes and the next action.",
-        "Flag exceptions for the responsible team member."
+        "Summarize ticket volume, age and unresolved workload",
+        "Highlight recurring issues and cases waiting on another team",
+        "Prepare a regular report with clear owners and follow-up needs"
       ]
     }
   ],
   "heroImage": "/refresh/hero.webp",
-  "heroAlt": "Professional using a laptop and headset at a desk"
+  "heroAlt": "Professional using a laptop and headset at a desk",
+  "servicesHeroImage": "/refresh/services-overview-20261117.jpg",
+  "servicesHeroAlt": "Two colleagues planning a workflow on a whiteboard"
 }

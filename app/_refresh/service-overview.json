@@ -1,0 +1,19 @@
+{
+  "title": "Give each part of support a clear owner.",
+  "intro": "Build a helpdesk around the work between a new request and a useful resolution. Explore ticket handling, access coordination, knowledge maintenance and quality support, then choose the responsibilities that fit your queue.",
+  "caption": "From a well-described ticket to an accepted handoff.",
+  "groups": [
+    [
+      "Where requests arrive",
+      "Map the inboxes, chat channels and ticket queues that need attention. Define urgent categories, required information and the response an agent can give immediately."
+    ],
+    [
+      "Where work gets stuck",
+      "Look for missing screenshots, unclear ownership and repeated follow-up. Choose the role that can collect the evidence and give the next team a usable record."
+    ],
+    [
+      "How a ticket can close",
+      "Write the acceptance criteria for resolution, escalation and customer updates. Your technical owners retain system changes and access approvals outside the agreed procedure."
+    ]
+  ]
+}

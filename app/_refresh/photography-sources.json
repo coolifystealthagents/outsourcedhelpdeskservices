@@ -1,113 +1,5 @@
 [
   {
-    "asset": "/refresh/level-one-ticket-triage.webp",
-    "pexelsPhotoId": 8101449,
-    "source": "https://www.pexels.com/photo/8101449/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Office professional coordinating work with a headset and binder",
-    "sha256": "14479f589b35b78e79e658b3f6d288dd7efceea011f868788d1fe80eb4023acb",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/email-helpdesk-support.webp",
-    "pexelsPhotoId": 7682093,
-    "source": "https://www.pexels.com/photo/7682093/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Professional using a laptop and headset at a desk",
-    "sha256": "4d9e5115e7056854aef87aa391908fb2d71a172e5e9aaf65352d775e36a8ebd6",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/chat-helpdesk-support.webp",
-    "pexelsPhotoId": 7693683,
-    "source": "https://www.pexels.com/photo/7693683/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Colleagues reviewing information on a laptop",
-    "sha256": "a35505301ea221feea57db21c14c8e2b1b57ae693415c20ccd537dde816d5d25",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/account-access-support.webp",
-    "pexelsPhotoId": 7731381,
-    "source": "https://www.pexels.com/photo/7731381/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Colleagues reviewing documents together at a laptop",
-    "sha256": "467a79a70719703aa650b5b5a4006f8cf41f1e039f0299816d2f4d9376778a8a",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/password-reset-coordination.webp",
-    "pexelsPhotoId": 8101449,
-    "source": "https://www.pexels.com/photo/8101449/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Office professional coordinating work with a headset and binder",
-    "sha256": "14479f589b35b78e79e658b3f6d288dd7efceea011f868788d1fe80eb4023acb",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/saas-user-support.webp",
-    "pexelsPhotoId": 7693683,
-    "source": "https://www.pexels.com/photo/7693683/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Colleagues reviewing information on a laptop",
-    "sha256": "a35505301ea221feea57db21c14c8e2b1b57ae693415c20ccd537dde816d5d25",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/ecommerce-customer-helpdesk.webp",
-    "pexelsPhotoId": 7682093,
-    "source": "https://www.pexels.com/photo/7682093/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Professional using a laptop and headset at a desk",
-    "sha256": "4d9e5115e7056854aef87aa391908fb2d71a172e5e9aaf65352d775e36a8ebd6",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/knowledge-base-maintenance.webp",
-    "pexelsPhotoId": 7964540,
-    "source": "https://www.pexels.com/photo/7964540/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Documents and laptops arranged for a team discussion",
-    "sha256": "fa3041a668ddb2d577a216a753ce322c45b1b910c3f045f42ea0920afe225b34",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/ticket-escalation-coordination.webp",
-    "pexelsPhotoId": 6964119,
-    "source": "https://www.pexels.com/photo/6964119/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Colleagues preparing documents around a meeting table",
-    "sha256": "ee35f617fb18d676ef9bca4ef0ec0334d27ecb3f5611b828eae7b86e88c7a20e",
-    "note": "Licensed stock photograph illustrating the service; not company staff."
-  },
-  {
-    "asset": "/refresh/bug-report-documentation.webp",
-    "pexelsPhotoId": 7693683,
-    "source": "https://www.pexels.com/photo/7693683/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Colleagues reviewing information on a laptop",
-    "sha256": "a35505301ea221feea57db21c14c8e2b1b57ae693415c20ccd537dde816d5d25",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/helpdesk-quality-review.webp",
-    "pexelsPhotoId": 7731381,
-    "source": "https://www.pexels.com/photo/7731381/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Colleagues reviewing documents together at a laptop",
-    "sha256": "467a79a70719703aa650b5b5a4006f8cf41f1e039f0299816d2f4d9376778a8a",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
-    "asset": "/refresh/support-queue-reporting.webp",
-    "pexelsPhotoId": 7964540,
-    "source": "https://www.pexels.com/photo/7964540/",
-    "license": "https://www.pexels.com/license/",
-    "alt": "Documents and laptops arranged for a team discussion",
-    "sha256": "fa3041a668ddb2d577a216a753ce322c45b1b910c3f045f42ea0920afe225b34",
-    "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
-  },
-  {
     "asset": "/refresh/hero.webp",
     "pexelsPhotoId": 7682093,
     "source": "https://www.pexels.com/photo/7682093/",
@@ -115,5 +7,148 @@
     "alt": "Professional using a laptop and headset at a desk",
     "sha256": "4d9e5115e7056854aef87aa391908fb2d71a172e5e9aaf65352d775e36a8ebd6",
     "note": "Licensed stock photograph illustrating the work context; not presented as company staff or a client."
+  },
+  {
+    "asset": "/refresh/services-overview-20261117.jpg",
+    "pexelsPhotoId": 7984479,
+    "source": "https://www.pexels.com/photo/7984479/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Two colleagues planning a workflow on a whiteboard",
+    "sha256": "278714fdc1a3103d3e755e352f9d24f85c53919d59dc052d4b527e2dd766a0e2",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/level-one-ticket-triage-20261117.jpg",
+    "pexelsPhotoId": 7689751,
+    "source": "https://www.pexels.com/photo/7689751/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Support agents reviewing customer requests on computers",
+    "sha256": "e328030540cd0fb352a4e7a4e44da3a26642d28a7609b4c952c68fe10dc6c5f4",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/email-helpdesk-support-20261117.jpg",
+    "pexelsPhotoId": 7709194,
+    "source": "https://www.pexels.com/photo/7709194/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Customer support professional following up by phone",
+    "sha256": "89b6244e884dd8fc0b91071e97cac353d209a8322debc1e1480d1dbc00fdd07b",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/chat-helpdesk-support-20261117.jpg",
+    "pexelsPhotoId": 7709142,
+    "source": "https://www.pexels.com/photo/7709142/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Support agents working at adjacent computer desks",
+    "sha256": "5ff538e604e7e0315f36170edbb8b84468c81cecf983724d03ca28a7012d8dc6",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/account-access-support-20261117.jpg",
+    "pexelsPhotoId": 6804068,
+    "source": "https://www.pexels.com/photo/6804068/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Technical colleagues working at computer workstations",
+    "sha256": "e87446be89dfd4072e278e46aa1313a7535149b39dc038af5106b2a37f1c7c19",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/password-reset-coordination-20261117.jpg",
+    "pexelsPhotoId": 6804602,
+    "source": "https://www.pexels.com/photo/6804602/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Technical staff discussing a computer issue",
+    "sha256": "8250be194a82f87d01668d8feb87d81a73155a9e32f732dba077624123ea6802",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/saas-user-support-20261117.jpg",
+    "pexelsPhotoId": 7988079,
+    "source": "https://www.pexels.com/photo/7988079/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Software professionals reviewing an application",
+    "sha256": "95e5c185238aa33c6c4fe5aff92a23e3f8910175afe477f8c42d287a1a2be0bd",
+    "width": 2000,
+    "height": 1335,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/ecommerce-customer-helpdesk-20261117.jpg",
+    "pexelsPhotoId": 8296970,
+    "source": "https://www.pexels.com/photo/8296970/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Professional reviewing payment and order paperwork",
+    "sha256": "e242df82ad6f308565ec41cafcecaee1fb89c4983f5443c308499ea1ec38d020",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/knowledge-base-maintenance-20261117.jpg",
+    "pexelsPhotoId": 7964496,
+    "source": "https://www.pexels.com/photo/7964496/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Colleagues writing reference notes on a whiteboard",
+    "sha256": "aece1d827802e27ab1d71ef9c12744c37f2daf7f9120457165b3f89e77029f6c",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/ticket-escalation-coordination-20261117.jpg",
+    "pexelsPhotoId": 8866791,
+    "source": "https://www.pexels.com/photo/8866791/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "A support team discussing a customer escalation",
+    "sha256": "592d22243e147be74e1c8e1b021a51866f26351c6c2c03033c3fce2f4c6f3206",
+    "width": 2000,
+    "height": 1754,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/bug-report-documentation-20261117.jpg",
+    "pexelsPhotoId": 7988742,
+    "source": "https://www.pexels.com/photo/7988742/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Technical colleagues reviewing code and an issue together",
+    "sha256": "dc6414b7db33925e52bf181981fe054eb57d543e8ae0cc8fdd1c0e64abf23594",
+    "width": 2000,
+    "height": 1335,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/helpdesk-quality-review-20261117.jpg",
+    "pexelsPhotoId": 8067819,
+    "source": "https://www.pexels.com/photo/8067819/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "Colleagues reviewing work at a whiteboard",
+    "sha256": "b92f418342e7da7b00190c6edbf29eb32c53ac6fc9cf66f641eaf2ca83660a77",
+    "width": 2000,
+    "height": 3000,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
+  },
+  {
+    "asset": "/refresh/support-queue-reporting-20261117.jpg",
+    "pexelsPhotoId": 8276671,
+    "source": "https://www.pexels.com/photo/8276671/",
+    "license": "https://www.pexels.com/license/",
+    "alt": "A team discussing an operational report",
+    "sha256": "97c76382836e33913b6508abc23aa4ba5ad2cbe5510fa7e14d3bfbcc70ef5402",
+    "width": 2000,
+    "height": 1333,
+    "note": "Stock photography illustrating the work; not represented as StealthAgents employees or clients."
   }
 ]

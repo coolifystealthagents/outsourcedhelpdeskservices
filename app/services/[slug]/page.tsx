@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Header, Footer, JsonLd } from '../../components';
 import { services, site } from '../../data';
 import { serviceContent } from './service-content';
+import './service-detail.css';
 
 const base = `https://${String(site.domain).toLowerCase()}`;
 const images: Record<string, string> = {
@@ -29,11 +30,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
   if (!service) return { title: 'Service not found' };
+  const photo = refreshContent.services.find((item) => item.slug === slug);
   return {
     title: service.title,
-    description: service.desc,
+    description: photo?.summary || service.desc,
     alternates: { canonical: `/services/${service.slug}` },
-    openGraph: { images: [{ url: images[service.slug], alt: `${service.title} workflow schematic` }] },
+    openGraph: { images: [{ url: photo?.image || images[service.slug], alt: photo?.imageAlt || service.title }] },
   };
 }
 
@@ -42,6 +44,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const service = services.find((item) => item.slug === slug);
   const content = serviceContent[slug];
   if (!service || !content) notFound();
+  const photo = refreshContent.services.find((item) => item.slug === slug);
+  if (!photo) notFound();
 
   const related = content.related
     .map((relatedSlug) => services.find((item) => item.slug === relatedSlug))
@@ -50,12 +54,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   return <>
     <Header />
-    <main id="main-content" className="service-page">
+    <main id="main-content" className="service-page helpdesk-detail">
       <JsonLd data={{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: service.title,
-        description: service.desc,
+        description: photo.summary,
         url,
         provider: { '@type': 'Organization', name: site.brand },
         areaServed: 'US',
@@ -63,22 +67,21 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="service-hero">
         <div className="container two">
           <div>
+            <a className="helpdesk-back" href="/services">â† All services</a>
             <p className="eyebrow">Managed help desk operation</p>
             <h1>{service.title}</h1>
-            <p className="lead">{service.desc}</p>
+            <p className="lead">{photo.summary}</p>
             <p>{content.audience}</p>
             <a className="btn primary" href="/contact-us">Discuss this service</a>
           </div>
-          <img className="service-hero-image" src={refreshContent.services.find(x=>x.slug===slug)!.image} alt={refreshContent.services.find(x=>x.slug===slug)!.imageAlt} />
+          <img className="service-hero-image" src={photo.image} alt={photo.imageAlt} />
         </div>
       </section>
 
       <div className="container service-detail">
-        <section>
-          <p className="eyebrow">Audience and problem</p>
-          <h2>Where {service.title.toLowerCase()} helps</h2>
-          <p>{content.audience}</p>
-          <p>{content.problem}</p>
+        <section className="helpdesk-intro">
+          <div><p className="eyebrow">Audience and problem</p><h2>Where {service.title.toLowerCase()} helps</h2></div>
+          <div><p>{content.audience}</p><p>{content.problem}</p></div>
         </section>
 
         <section>
@@ -138,7 +141,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section>
           <p className="eyebrow">Related services</p>
           <h2>Connect the adjacent operating lanes</h2>
-          <div className="service-grid">{related.map((item) => <a className="service-link-card" href={`/services/${item.slug}`} key={item.slug}><h3>{item.title}</h3><p>{item.desc}</p><strong>View service</strong></a>)}</div>
+          <div className="service-grid">{related.map((item) => { const relatedPhoto = refreshContent.services.find((entry) => entry.slug === item.slug); return <a className="service-link-card" href={`/services/${item.slug}`} key={item.slug}>{relatedPhoto && <img src={relatedPhoto.image} alt={relatedPhoto.imageAlt} width="600" height="400" loading="lazy" />}<h3>{item.title}</h3><p>{relatedPhoto?.summary || item.desc}</p><strong>View service â†—</strong></a>; })}</div>
         </section>
       </div>
 

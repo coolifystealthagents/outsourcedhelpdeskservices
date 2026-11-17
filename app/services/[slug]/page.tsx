@@ -141,7 +141,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section>
           <p className="eyebrow">Related services</p>
           <h2>Connect the adjacent operating lanes</h2>
-          <div className="service-grid">{related.map((item) => { const relatedPhoto = refreshContent.services.find((entry) => entry.slug === item.slug); return <a className="service-link-card" href={`/services/${item.slug}`} key={item.slug}>{relatedPhoto && <img src={relatedPhoto.image} alt={relatedPhoto.imageAlt} width="600" height="400" loading="lazy" />}<h3>{item.title}</h3><p>{relatedPhoto?.summary || item.desc}</p><strong>View service &nearr;</strong></a>; })}</div>
+          <div className="service-grid">{related.map((item) => { const relatedPhoto = refreshContent.services.find((entry) => entry.slug === item.slug); return <a className="service-link-card" href={`/services/${item.slug}`} key={item.slug}>{relatedPhoto && <img src={relatedPhoto.image} alt={relatedPhoto.imageAlt} width="600" height="400" loading="lazy" />}<h3>{item.title}</h3><p>{relatedPhoto?.summary || item.desc}</p><strong>View service {'\u2197'}</strong></a>; })}</div>
         </section>
       </div>
 

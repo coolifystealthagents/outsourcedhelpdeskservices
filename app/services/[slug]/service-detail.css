@@ -25,8 +25,7 @@
 .helpdesk-detail .service-detail>section:nth-child(7){grid-column:1/6}
 .helpdesk-detail .service-detail>section:nth-child(8){grid-column:6/-1}
 .helpdesk-detail .service-detail>section:nth-child(9){grid-column:1/-1}
-.helpdesk-detail .service-detail>section:nth-child(10){grid-column:1/8}
-.helpdesk-detail .service-detail>section:nth-child(11){grid-column:8/-1}
+.helpdesk-detail .service-detail>section:nth-child(10),.helpdesk-detail .service-detail>section:nth-child(11){grid-column:1/-1}
 .helpdesk-detail.service-page .service-detail>.helpdesk-intro{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(36px,6vw,90px);align-items:start;padding:44px 0 34px;background:transparent;border:0}
 .helpdesk-detail .helpdesk-intro h2{max-width:500px;font-size:clamp(34px,3.4vw,48px)}
 .helpdesk-detail .helpdesk-intro>div:last-child{padding-top:15px}
@@ -57,14 +56,15 @@
 .helpdesk-detail .faq-list{margin-top:10px}
 .helpdesk-detail .faq-list details{padding:15px 0}
 .helpdesk-detail .faq-list summary{font-size:17px}
-.helpdesk-detail .service-detail>section:nth-child(11) .service-grid{grid-template-columns:1fr;gap:12px}
-.helpdesk-detail .service-link-card{display:grid!important;grid-template-columns:105px 1fr;gap:0 15px;padding:0!important;overflow:hidden;background:#faf9fd!important}
-.helpdesk-detail .service-link-card img{grid-row:1/4;display:block;width:105px;height:100%;min-height:112px;object-fit:cover}
-.helpdesk-detail .service-link-card h3{margin:12px 12px 4px 0!important;font-size:17px!important}
-.helpdesk-detail .service-link-card p{margin:0 12px 3px 0;font-size:14px!important;line-height:1.4!important}
-.helpdesk-detail .service-link-card strong{margin:0 12px 12px 0;color:#5e489f;font-size:13px}
+.helpdesk-detail .service-detail>section:nth-child(11) .service-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.helpdesk-detail .service-link-card{display:flex!important;flex-direction:column;padding:0!important;overflow:hidden;background:#faf9fd!important;min-width:0}
+.helpdesk-detail .service-link-card img{display:block;width:100%;height:180px;object-fit:cover}
+.helpdesk-detail .service-link-card h3{margin:17px 18px 7px!important;font-size:19px!important}
+.helpdesk-detail .service-link-card p{margin:0 18px 14px;font-size:15px!important;line-height:1.45!important}
+.helpdesk-detail .service-link-card strong{margin:auto 18px 18px;color:#5e489f;font-size:14px}
 .helpdesk-detail .final-cta{margin:0;padding:62px max(32px,calc((100% - 1280px)/2));background:#242333}
 .helpdesk-detail .final-cta .eyebrow{color:#c7b7ff}
+.helpdesk-detail .final-cta>p:not(.eyebrow){color:#efedf8}
 .helpdesk-detail .final-cta .btn.primary{background:#8c75d4;color:#fff}
-@media(max-width:1050px){.helpdesk-detail .workflow-list{grid-template-columns:repeat(2,minmax(0,1fr))}.helpdesk-detail .service-detail>section:nth-child(8) .service-grid{grid-template-columns:1fr}}
-@media(max-width:760px){.helpdesk-detail .container{width:calc(100% - 32px)}.helpdesk-detail .service-hero{padding:30px 0 38px}.helpdesk-detail .service-hero .two,.helpdesk-detail.service-page .service-detail>.helpdesk-intro{grid-template-columns:1fr;gap:24px}.helpdesk-detail .service-hero h1{font-size:clamp(39px,10vw,56px)}.helpdesk-detail .service-hero-image{height:270px}.helpdesk-detail .service-detail{grid-template-columns:1fr;gap:16px;padding:18px 0 46px}.helpdesk-detail .service-detail>section:nth-child(n){grid-column:1/-1}.helpdesk-detail.service-page .service-detail>section{padding:23px}.helpdesk-detail.service-page .service-detail>.helpdesk-intro{padding:25px 0 18px}.helpdesk-detail .helpdesk-intro>div:last-child{padding-top:0}.helpdesk-detail .workflow-list{grid-template-columns:1fr;gap:14px}.helpdesk-detail.service-page .service-detail>section:nth-child(9){display:block}.helpdesk-detail .final-cta{padding:48px 16px}}
+@media(max-width:1050px){.helpdesk-detail .workflow-list{grid-template-columns:repeat(2,minmax(0,1fr))}.helpdesk-detail .service-detail>section:nth-child(8) .service-grid{grid-template-columns:1fr}.helpdesk-detail .service-detail>section:nth-child(11) .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.helpdesk-detail .container{width:calc(100% - 32px)}.helpdesk-detail .service-hero{padding:30px 0 38px}.helpdesk-detail .service-hero .two,.helpdesk-detail.service-page .service-detail>.helpdesk-intro{grid-template-columns:1fr;gap:24px}.helpdesk-detail .service-hero h1{font-size:clamp(39px,10vw,56px)}.helpdesk-detail .service-hero-image{height:270px}.helpdesk-detail .service-detail{grid-template-columns:1fr;gap:16px;padding:18px 0 46px}.helpdesk-detail .service-detail>section:nth-child(n){grid-column:1/-1}.helpdesk-detail.service-page .service-detail>section{padding:23px}.helpdesk-detail.service-page .service-detail>.helpdesk-intro{padding:25px 0 18px}.helpdesk-detail .helpdesk-intro>div:last-child{padding-top:0}.helpdesk-detail .workflow-list{grid-template-columns:1fr;gap:14px}.helpdesk-detail.service-page .service-detail>section:nth-child(9){display:block}.helpdesk-detail .service-detail>section:nth-child(11) .service-grid{grid-template-columns:1fr}.helpdesk-detail .final-cta{padding:48px 16px}}

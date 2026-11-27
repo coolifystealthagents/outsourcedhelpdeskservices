@@ -1,6 +1,4 @@
 'use client';
-import { useState } from 'react';
-
 const testimonials = [
   { name: "Sarah Jacoby", quote: "Great communication, efficient and proactive assistant, visible business growth." },
   { name: "Alex Behrens", quote: "They have made a real difference in our day-to-day operations and truly feel like part of our internal team." },
@@ -8,7 +6,7 @@ const testimonials = [
 ];
 
 export function TestimonialsRail({ contact = false }: { contact?: boolean }) {
-  const [paused, setPaused] = useState(false);
+  const paused = false;
   const repeated = [...testimonials, ...testimonials];
   return (
     <section className={`sa-testimonials${contact ? ' sa-testimonials-contact' : ''}${paused ? ' is-paused' : ''}`} aria-labelledby={contact ? 'contact-client-reviews' : 'booking-client-reviews'}>
